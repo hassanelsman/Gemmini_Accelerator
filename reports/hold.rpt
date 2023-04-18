@@ -1,0 +1,2286 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 20
+Design : ChipTop
+Version: K-2015.06
+Date   : Wed Apr  5 17:11:46 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c   Library: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c
+Wire Load Model Mode: top
+
+  Startpoint: system/debug_1/dmInner/dmactive_synced_dmInner_io_innerCtrl_sink/ridx_gray_reg
+              (rising edge-triggered flip-flop clocked by clk_gating)
+  Endpoint: system/debug_1/dmOuter/io_innerCtrl_source/ridx_ridx_gray/output_chain/sync_2_reg
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_gating (rise edge)                          100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  system/debug_1/dmInner/dmactive_synced_dmInner_io_innerCtrl_sink/ridx_gray_reg/CK (DFFRQX4M)
+                                                          0.00     100.00 r
+  system/debug_1/dmInner/dmactive_synced_dmInner_io_innerCtrl_sink/ridx_gray_reg/Q (DFFRQX4M)
+                                                          0.74     100.74 f
+  system/debug_1/dmOuter/io_innerCtrl_source/ridx_ridx_gray/output_chain/sync_2_reg/D (DFFRQX1M)
+                                                          0.00     100.74 f
+  data arrival time                                                100.74
+
+  clock JTAG_CLK (rise edge)                            100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                       0.20     100.20
+  system/debug_1/dmOuter/io_innerCtrl_source/ridx_ridx_gray/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00     100.20 r
+  library hold time                                      -0.06     100.14
+  data required time                                               100.14
+  --------------------------------------------------------------------------
+  data required time                                               100.14
+  data arrival time                                               -100.74
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.60
+
+
+  Startpoint: system/debug_1/dmInner/dmiXing/bundleOut_0_a_sink/ridx_gray_reg
+              (rising edge-triggered flip-flop clocked by clk_gating)
+  Endpoint: system/debug_1/dmOuter/asource/bundleOut_0_a_source/ridx_ridx_gray/output_chain/sync_2_reg
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_gating (rise edge)                          100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  system/debug_1/dmInner/dmiXing/bundleOut_0_a_sink/ridx_gray_reg/CK (DFFRQX4M)
+                                                          0.00     100.00 r
+  system/debug_1/dmInner/dmiXing/bundleOut_0_a_sink/ridx_gray_reg/Q (DFFRQX4M)
+                                                          0.74     100.74 f
+  system/debug_1/dmOuter/asource/bundleOut_0_a_source/ridx_ridx_gray/output_chain/sync_2_reg/D (DFFRQX1M)
+                                                          0.00     100.74 f
+  data arrival time                                                100.74
+
+  clock JTAG_CLK (rise edge)                            100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                       0.20     100.20
+  system/debug_1/dmOuter/asource/bundleOut_0_a_source/ridx_ridx_gray/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00     100.20 r
+  library hold time                                      -0.06     100.14
+  data required time                                               100.14
+  --------------------------------------------------------------------------
+  data required time                                               100.14
+  data arrival time                                               -100.74
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.60
+
+
+  Startpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/widx_gray_reg
+              (rising edge-triggered flip-flop clocked by clk_gating)
+  Endpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/widx_widx_gray/output_chain/sync_2_reg
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_gating (rise edge)                          100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/widx_gray_reg/CK (DFFRQX4M)
+                                                          0.00     100.00 r
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/widx_gray_reg/Q (DFFRQX4M)
+                                                          0.75     100.75 f
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/widx_widx_gray/output_chain/sync_2_reg/D (DFFRQX1M)
+                                                          0.00     100.75 f
+  data arrival time                                                100.75
+
+  clock JTAG_CLK (rise edge)                            100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                       0.20     100.20
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/widx_widx_gray/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00     100.20 r
+  library hold time                                      -0.06     100.14
+  data required time                                               100.14
+  --------------------------------------------------------------------------
+  data required time                                               100.14
+  data arrival time                                               -100.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.62
+
+
+  Startpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_1/io_out_source_valid_0/output_chain/sync_0_reg
+              (rising edge-triggered flip-flop clocked by clk_gating)
+  Endpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_extend/io_out_source_valid_0/output_chain/sync_2_reg
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_gating (rise edge)                          100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_1/io_out_source_valid_0/output_chain/sync_0_reg/CK (DFFRQX1M)
+                                                          0.00     100.00 r
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_1/io_out_source_valid_0/output_chain/sync_0_reg/Q (DFFRQX1M)
+                                                          0.75     100.75 f
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_extend/io_out_source_valid_0/output_chain/sync_2_reg/D (DFFRQX1M)
+                                                          0.00     100.75 f
+  data arrival time                                                100.75
+
+  clock JTAG_CLK (rise edge)                            100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                       0.20     100.20
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_extend/io_out_source_valid_0/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00     100.20 r
+  library hold time                                      -0.07     100.13
+  data required time                                               100.13
+  --------------------------------------------------------------------------
+  data required time                                               100.13
+  data arrival time                                               -100.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.62
+
+
+  Startpoint: system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/sync_2_reg/CK
+              (internal path startpoint clocked by JTAG_CLK)
+  Endpoint: system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/sync_1_reg
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/sync_2_reg/Q (DFFRQX1M)
+                                                          0.76       0.76 f
+  system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/sync_1_reg/D (DFFRQX1M)
+                                                          0.00       0.76 f
+  data arrival time                                                  0.76
+
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.07       0.13
+  data required time                                                 0.13
+  --------------------------------------------------------------------------
+  data required time                                                 0.13
+  data arrival time                                                 -0.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.63
+
+
+  Startpoint: system/debug_1/dmOuter/dmactiveAck_dmactiveAckSync/output_chain/sync_2_reg
+              (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Endpoint: system/debug_1/dmOuter/dmactiveAck_dmactiveAckSync/output_chain/sync_1_reg
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmOuter/dmactiveAck_dmactiveAckSync/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmOuter/dmactiveAck_dmactiveAckSync/output_chain/sync_2_reg/Q (DFFRQX1M)
+                                                          0.76       0.76 f
+  system/debug_1/dmOuter/dmactiveAck_dmactiveAckSync/output_chain/sync_1_reg/D (DFFRQX1M)
+                                                          0.00       0.76 f
+  data arrival time                                                  0.76
+
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/debug_1/dmOuter/dmactiveAck_dmactiveAckSync/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.07       0.13
+  data required time                                                 0.13
+  --------------------------------------------------------------------------
+  data required time                                                 0.13
+  data arrival time                                                 -0.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.63
+
+
+  Startpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_extend/io_out_source_valid_0/output_chain/sync_0_reg
+              (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Endpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_valid/io_out_source_valid_0/output_chain/sync_2_reg
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_extend/io_out_source_valid_0/output_chain/sync_0_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_extend/io_out_source_valid_0/output_chain/sync_0_reg/Q (DFFRQX1M)
+                                                          0.76       0.76 f
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_valid/io_out_source_valid_0/output_chain/sync_2_reg/D (DFFRQX1M)
+                                                          0.00       0.76 f
+  data arrival time                                                  0.76
+
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_valid/io_out_source_valid_0/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.07       0.13
+  data required time                                                 0.13
+  --------------------------------------------------------------------------
+  data required time                                                 0.13
+  data arrival time                                                 -0.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.63
+
+
+  Startpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_valid/io_out_source_valid_0/output_chain/sync_2_reg
+              (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Endpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_valid/io_out_source_valid_0/output_chain/sync_1_reg
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_valid/io_out_source_valid_0/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_valid/io_out_source_valid_0/output_chain/sync_2_reg/Q (DFFRQX1M)
+                                                          0.76       0.76 f
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_valid/io_out_source_valid_0/output_chain/sync_1_reg/D (DFFRQX1M)
+                                                          0.00       0.76 f
+  data arrival time                                                  0.76
+
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_valid/io_out_source_valid_0/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.07       0.13
+  data required time                                                 0.13
+  --------------------------------------------------------------------------
+  data required time                                                 0.13
+  data arrival time                                                 -0.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.63
+
+
+  Startpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/widx_widx_gray/output_chain/sync_2_reg
+              (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Endpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/widx_widx_gray/output_chain/sync_1_reg
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/widx_widx_gray/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/widx_widx_gray/output_chain/sync_2_reg/Q (DFFRQX1M)
+                                                          0.76       0.76 f
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/widx_widx_gray/output_chain/sync_1_reg/D (DFFRQX1M)
+                                                          0.00       0.76 f
+  data arrival time                                                  0.76
+
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/widx_widx_gray/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.07       0.13
+  data required time                                                 0.13
+  --------------------------------------------------------------------------
+  data required time                                                 0.13
+  data arrival time                                                 -0.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.63
+
+
+  Startpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/widx_widx_gray/output_chain/sync_1_reg
+              (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Endpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/widx_widx_gray/output_chain/sync_0_reg
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/widx_widx_gray/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/widx_widx_gray/output_chain/sync_1_reg/Q (DFFRQX1M)
+                                                          0.76       0.76 f
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/widx_widx_gray/output_chain/sync_0_reg/D (DFFRQX1M)
+                                                          0.00       0.76 f
+  data arrival time                                                  0.76
+
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/widx_widx_gray/output_chain/sync_0_reg/CK (DFFRQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.07       0.13
+  data required time                                                 0.13
+  --------------------------------------------------------------------------
+  data required time                                                 0.13
+  data arrival time                                                 -0.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.63
+
+
+  Startpoint: system/debug_1/dmOuter/io_innerCtrl_source/ridx_ridx_gray/output_chain/sync_2_reg
+              (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Endpoint: system/debug_1/dmOuter/io_innerCtrl_source/ridx_ridx_gray/output_chain/sync_1_reg
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmOuter/io_innerCtrl_source/ridx_ridx_gray/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmOuter/io_innerCtrl_source/ridx_ridx_gray/output_chain/sync_2_reg/Q (DFFRQX1M)
+                                                          0.76       0.76 f
+  system/debug_1/dmOuter/io_innerCtrl_source/ridx_ridx_gray/output_chain/sync_1_reg/D (DFFRQX1M)
+                                                          0.00       0.76 f
+  data arrival time                                                  0.76
+
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/debug_1/dmOuter/io_innerCtrl_source/ridx_ridx_gray/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.07       0.13
+  data required time                                                 0.13
+  --------------------------------------------------------------------------
+  data required time                                                 0.13
+  data arrival time                                                 -0.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.63
+
+
+  Startpoint: system/debug_1/dmOuter/asource/bundleOut_0_a_source/ridx_ridx_gray/output_chain/sync_2_reg
+              (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Endpoint: system/debug_1/dmOuter/asource/bundleOut_0_a_source/ridx_ridx_gray/output_chain/sync_1_reg
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmOuter/asource/bundleOut_0_a_source/ridx_ridx_gray/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmOuter/asource/bundleOut_0_a_source/ridx_ridx_gray/output_chain/sync_2_reg/Q (DFFRQX1M)
+                                                          0.76       0.76 f
+  system/debug_1/dmOuter/asource/bundleOut_0_a_source/ridx_ridx_gray/output_chain/sync_1_reg/D (DFFRQX1M)
+                                                          0.00       0.76 f
+  data arrival time                                                  0.76
+
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/debug_1/dmOuter/asource/bundleOut_0_a_source/ridx_ridx_gray/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.07       0.13
+  data required time                                                 0.13
+  --------------------------------------------------------------------------
+  data required time                                                 0.13
+  data arrival time                                                 -0.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.63
+
+
+  Startpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_extend/io_out_source_valid_0/output_chain/sync_2_reg
+              (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Endpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_extend/io_out_source_valid_0/output_chain/sync_1_reg
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_extend/io_out_source_valid_0/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_extend/io_out_source_valid_0/output_chain/sync_2_reg/Q (DFFRQX1M)
+                                                          0.76       0.76 f
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_extend/io_out_source_valid_0/output_chain/sync_1_reg/D (DFFRQX1M)
+                                                          0.00       0.76 f
+  data arrival time                                                  0.76
+
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_extend/io_out_source_valid_0/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.07       0.13
+  data required time                                                 0.13
+  --------------------------------------------------------------------------
+  data required time                                                 0.13
+  data arrival time                                                 -0.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.63
+
+
+  Startpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_extend/io_out_source_valid_0/output_chain/sync_1_reg
+              (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Endpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_extend/io_out_source_valid_0/output_chain/sync_0_reg
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_extend/io_out_source_valid_0/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_extend/io_out_source_valid_0/output_chain/sync_1_reg/Q (DFFRQX1M)
+                                                          0.76       0.76 f
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_extend/io_out_source_valid_0/output_chain/sync_0_reg/D (DFFRQX1M)
+                                                          0.00       0.76 f
+  data arrival time                                                  0.76
+
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/source_extend/io_out_source_valid_0/output_chain/sync_0_reg/CK (DFFRQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.07       0.13
+  data required time                                                 0.13
+  --------------------------------------------------------------------------
+  data required time                                                 0.13
+  data arrival time                                                 -0.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.63
+
+
+  Startpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/sync_0_reg
+              (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Endpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_1/io_out_source_valid_0/output_chain/sync_2_reg
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/sync_0_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/sync_0_reg/Q (DFFRQX1M)
+                                                          0.76       0.76 f
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_1/io_out_source_valid_0/output_chain/sync_2_reg/D (DFFRQX1M)
+                                                          0.00       0.76 f
+  data arrival time                                                  0.76
+
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_1/io_out_source_valid_0/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.07       0.13
+  data required time                                                 0.13
+  --------------------------------------------------------------------------
+  data required time                                                 0.13
+  data arrival time                                                 -0.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.63
+
+
+  Startpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_1/io_out_source_valid_0/output_chain/sync_2_reg
+              (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Endpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_1/io_out_source_valid_0/output_chain/sync_1_reg
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_1/io_out_source_valid_0/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_1/io_out_source_valid_0/output_chain/sync_2_reg/Q (DFFRQX1M)
+                                                          0.76       0.76 f
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_1/io_out_source_valid_0/output_chain/sync_1_reg/D (DFFRQX1M)
+                                                          0.00       0.76 f
+  data arrival time                                                  0.76
+
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_1/io_out_source_valid_0/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.07       0.13
+  data required time                                                 0.13
+  --------------------------------------------------------------------------
+  data required time                                                 0.13
+  data arrival time                                                 -0.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.63
+
+
+  Startpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_1/io_out_source_valid_0/output_chain/sync_1_reg
+              (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Endpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_1/io_out_source_valid_0/output_chain/sync_0_reg
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_1/io_out_source_valid_0/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_1/io_out_source_valid_0/output_chain/sync_1_reg/Q (DFFRQX1M)
+                                                          0.76       0.76 f
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_1/io_out_source_valid_0/output_chain/sync_0_reg/D (DFFRQX1M)
+                                                          0.00       0.76 f
+  data arrival time                                                  0.76
+
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_1/io_out_source_valid_0/output_chain/sync_0_reg/CK (DFFRQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.07       0.13
+  data required time                                                 0.13
+  --------------------------------------------------------------------------
+  data required time                                                 0.13
+  data arrival time                                                 -0.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.63
+
+
+  Startpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/sync_2_reg/CK
+              (internal path startpoint clocked by JTAG_CLK)
+  Endpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/sync_1_reg
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/sync_2_reg/Q (DFFRQX1M)
+                                                          0.76       0.76 f
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/sync_1_reg/D (DFFRQX1M)
+                                                          0.00       0.76 f
+  data arrival time                                                  0.76
+
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.07       0.13
+  data required time                                                 0.13
+  --------------------------------------------------------------------------
+  data required time                                                 0.13
+  data arrival time                                                 -0.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.63
+
+
+  Startpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/sync_1_reg
+              (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Endpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/sync_0_reg
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/sync_1_reg/Q (DFFRQX1M)
+                                                          0.76       0.76 f
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/sync_0_reg/D (DFFRQX1M)
+                                                          0.00       0.76 f
+  data arrival time                                                  0.76
+
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/sync_0_reg/CK (DFFRQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.07       0.13
+  data required time                                                 0.13
+  --------------------------------------------------------------------------
+  data required time                                                 0.13
+  data arrival time                                                 -0.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.63
+
+
+  Startpoint: system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/sync_1_reg
+              (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Endpoint: system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/sync_1_reg/Q (DFFRQX1M)
+                                                          0.76       0.76 f
+  system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg/D (DFFRQX4M)
+                                                          0.00       0.76 f
+  data arrival time                                                  0.76
+
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg/CK (DFFRQX4M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.08       0.12
+  data required time                                                 0.12
+  --------------------------------------------------------------------------
+  data required time                                                 0.12
+  data arrival time                                                 -0.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.64
+
+
+  Startpoint: system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleOut_0_a_q/ram_size_reg[0][0]
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_size_reg[0][0]
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleOut_0_a_q/ram_size_reg[0][0]/CK (EDFFHQX8M)
+                                                          0.00 #     0.00 r
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleOut_0_a_q/ram_size_reg[0][0]/Q (EDFFHQX8M)
+                                                          0.33       0.33 r
+  system/subsystem_cbus/auto_coupler_to_l2_ctrl_buffer_out_a_bits_size[0] (PeripheryBus_1)
+                                                          0.00       0.33 r
+  system/subsystem_l2_wrapper/auto_l2_ctl_in_a_bits_size[0] (CoherenceManagerWrapper)
+                                                          0.00       0.33 r
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_size_reg[0][0]/D (EDFFHQX8M)
+                                                          0.00       0.33 r
+  data arrival time                                                  0.33
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_size_reg[0][0]/CK (EDFFHQX8M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.10       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.33
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.24
+
+
+  Startpoint: system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleOut_0_a_q/ram_size_reg[0][1]
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_size_reg[0][1]
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleOut_0_a_q/ram_size_reg[0][1]/CK (EDFFHQX8M)
+                                                          0.00 #     0.00 r
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleOut_0_a_q/ram_size_reg[0][1]/Q (EDFFHQX8M)
+                                                          0.33       0.33 r
+  system/subsystem_cbus/auto_coupler_to_l2_ctrl_buffer_out_a_bits_size[1] (PeripheryBus_1)
+                                                          0.00       0.33 r
+  system/subsystem_l2_wrapper/auto_l2_ctl_in_a_bits_size[1] (CoherenceManagerWrapper)
+                                                          0.00       0.33 r
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_size_reg[0][1]/D (EDFFHQX8M)
+                                                          0.00       0.33 r
+  data arrival time                                                  0.33
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_size_reg[0][1]/CK (EDFFHQX8M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.10       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.33
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.24
+
+
+  Startpoint: system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][1]
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][1]
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][1]/CK (EDFFHQX8M)
+                                                          0.00 #     0.00 r
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][1]/Q (EDFFHQX8M)
+                                                          0.33       0.33 r
+  system/subsystem_l2_wrapper/auto_l2_ctl_in_d_bits_source[1] (CoherenceManagerWrapper)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/auto_coupler_to_l2_ctrl_buffer_out_d_bits_source[1] (PeripheryBus_1)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][1]/D (EDFFHQX4M)
+                                                          0.00       0.33 r
+  data arrival time                                                  0.33
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][1]/CK (EDFFHQX4M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.10       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.33
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.24
+
+
+  Startpoint: system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][2]
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][2]
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][2]/CK (EDFFHQX8M)
+                                                          0.00 #     0.00 r
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][2]/Q (EDFFHQX8M)
+                                                          0.33       0.33 r
+  system/subsystem_l2_wrapper/auto_l2_ctl_in_d_bits_source[2] (CoherenceManagerWrapper)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/auto_coupler_to_l2_ctrl_buffer_out_d_bits_source[2] (PeripheryBus_1)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][2]/D (EDFFHQX4M)
+                                                          0.00       0.33 r
+  data arrival time                                                  0.33
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][2]/CK (EDFFHQX4M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.10       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.33
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.24
+
+
+  Startpoint: system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_size_reg[0][0]
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_size_reg[0][0]
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_size_reg[0][0]/CK (EDFFHQX8M)
+                                                          0.00 #     0.00 r
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_size_reg[0][0]/Q (EDFFHQX8M)
+                                                          0.33       0.33 r
+  system/subsystem_l2_wrapper/auto_l2_ctl_in_d_bits_size[0] (CoherenceManagerWrapper)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/auto_coupler_to_l2_ctrl_buffer_out_d_bits_size[0] (PeripheryBus_1)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_size_reg[0][0]/D (EDFFHQX4M)
+                                                          0.00       0.33 r
+  data arrival time                                                  0.33
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_size_reg[0][0]/CK (EDFFHQX4M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.10       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.33
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.24
+
+
+  Startpoint: system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_size_reg[0][1]
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_size_reg[0][1]
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_size_reg[0][1]/CK (EDFFHQX8M)
+                                                          0.00 #     0.00 r
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_size_reg[0][1]/Q (EDFFHQX8M)
+                                                          0.33       0.33 r
+  system/subsystem_l2_wrapper/auto_l2_ctl_in_d_bits_size[1] (CoherenceManagerWrapper)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/auto_coupler_to_l2_ctrl_buffer_out_d_bits_size[1] (PeripheryBus_1)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_size_reg[0][1]/D (EDFFHQX4M)
+                                                          0.00       0.33 r
+  data arrival time                                                  0.33
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_size_reg[0][1]/CK (EDFFHQX4M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.10       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.33
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.24
+
+
+  Startpoint: system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][0]
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][0]
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][0]/CK (EDFFHQX8M)
+                                                          0.00 #     0.00 r
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][0]/Q (EDFFHQX8M)
+                                                          0.33       0.33 r
+  system/subsystem_l2_wrapper/auto_l2_ctl_in_d_bits_source[0] (CoherenceManagerWrapper)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/auto_coupler_to_l2_ctrl_buffer_out_d_bits_source[0] (PeripheryBus_1)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][0]/D (EDFFHQX4M)
+                                                          0.00       0.33 r
+  data arrival time                                                  0.33
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][0]/CK (EDFFHQX4M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.10       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.33
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.24
+
+
+  Startpoint: system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][3]
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][3]
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][3]/CK (EDFFHQX8M)
+                                                          0.00 #     0.00 r
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][3]/Q (EDFFHQX8M)
+                                                          0.33       0.33 r
+  system/subsystem_l2_wrapper/auto_l2_ctl_in_d_bits_source[3] (CoherenceManagerWrapper)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/auto_coupler_to_l2_ctrl_buffer_out_d_bits_source[3] (PeripheryBus_1)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][3]/D (EDFFHQX1M)
+                                                          0.00       0.33 r
+  data arrival time                                                  0.33
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][3]/CK (EDFFHQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.14       0.06
+  data required time                                                 0.06
+  --------------------------------------------------------------------------
+  data required time                                                 0.06
+  data arrival time                                                 -0.33
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.28
+
+
+  Startpoint: system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][5]
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][5]
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][5]/CK (EDFFHQX8M)
+                                                          0.00 #     0.00 r
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][5]/Q (EDFFHQX8M)
+                                                          0.33       0.33 r
+  system/subsystem_l2_wrapper/auto_l2_ctl_in_d_bits_source[5] (CoherenceManagerWrapper)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/auto_coupler_to_l2_ctrl_buffer_out_d_bits_source[5] (PeripheryBus_1)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][5]/D (EDFFHQX1M)
+                                                          0.00       0.33 r
+  data arrival time                                                  0.33
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][5]/CK (EDFFHQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.14       0.06
+  data required time                                                 0.06
+  --------------------------------------------------------------------------
+  data required time                                                 0.06
+  data arrival time                                                 -0.33
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.28
+
+
+  Startpoint: system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][6]
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][6]
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][6]/CK (EDFFHQX8M)
+                                                          0.00 #     0.00 r
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][6]/Q (EDFFHQX8M)
+                                                          0.33       0.33 r
+  system/subsystem_l2_wrapper/auto_l2_ctl_in_d_bits_source[6] (CoherenceManagerWrapper)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/auto_coupler_to_l2_ctrl_buffer_out_d_bits_source[6] (PeripheryBus_1)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][6]/D (EDFFHQX1M)
+                                                          0.00       0.33 r
+  data arrival time                                                  0.33
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][6]/CK (EDFFHQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.14       0.06
+  data required time                                                 0.06
+  --------------------------------------------------------------------------
+  data required time                                                 0.06
+  data arrival time                                                 -0.33
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.28
+
+
+  Startpoint: system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][7]
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][7]
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][7]/CK (EDFFHQX8M)
+                                                          0.00 #     0.00 r
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][7]/Q (EDFFHQX8M)
+                                                          0.33       0.33 r
+  system/subsystem_l2_wrapper/auto_l2_ctl_in_d_bits_source[7] (CoherenceManagerWrapper)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/auto_coupler_to_l2_ctrl_buffer_out_d_bits_source[7] (PeripheryBus_1)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][7]/D (EDFFHQX1M)
+                                                          0.00       0.33 r
+  data arrival time                                                  0.33
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][7]/CK (EDFFHQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.14       0.06
+  data required time                                                 0.06
+  --------------------------------------------------------------------------
+  data required time                                                 0.06
+  data arrival time                                                 -0.33
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.28
+
+
+  Startpoint: system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][8]
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][8]
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][8]/CK (EDFFHQX8M)
+                                                          0.00 #     0.00 r
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][8]/Q (EDFFHQX8M)
+                                                          0.33       0.33 r
+  system/subsystem_l2_wrapper/auto_l2_ctl_in_d_bits_source[8] (CoherenceManagerWrapper)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/auto_coupler_to_l2_ctrl_buffer_out_d_bits_source[8] (PeripheryBus_1)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][8]/D (EDFFHQX1M)
+                                                          0.00       0.33 r
+  data arrival time                                                  0.33
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][8]/CK (EDFFHQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.14       0.06
+  data required time                                                 0.06
+  --------------------------------------------------------------------------
+  data required time                                                 0.06
+  data arrival time                                                 -0.33
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.28
+
+
+  Startpoint: system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][9]
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][9]
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][9]/CK (EDFFHQX8M)
+                                                          0.00 #     0.00 r
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][9]/Q (EDFFHQX8M)
+                                                          0.33       0.33 r
+  system/subsystem_l2_wrapper/auto_l2_ctl_in_d_bits_source[9] (CoherenceManagerWrapper)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/auto_coupler_to_l2_ctrl_buffer_out_d_bits_source[9] (PeripheryBus_1)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][9]/D (EDFFHQX1M)
+                                                          0.00       0.33 r
+  data arrival time                                                  0.33
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][9]/CK (EDFFHQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.14       0.06
+  data required time                                                 0.06
+  --------------------------------------------------------------------------
+  data required time                                                 0.06
+  data arrival time                                                 -0.33
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.28
+
+
+  Startpoint: system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][10]
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][10]
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][10]/CK (EDFFHQX8M)
+                                                          0.00 #     0.00 r
+  system/subsystem_l2_wrapper/l2/out_back/ram_extra_tlrr_extra_source_reg[0][10]/Q (EDFFHQX8M)
+                                                          0.33       0.33 r
+  system/subsystem_l2_wrapper/auto_l2_ctl_in_d_bits_source[10] (CoherenceManagerWrapper)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/auto_coupler_to_l2_ctrl_buffer_out_d_bits_source[10] (PeripheryBus_1)
+                                                          0.00       0.33 r
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][10]/D (EDFFHQX1M)
+                                                          0.00       0.33 r
+  data arrival time                                                  0.33
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleIn_0_d_q/ram_source_reg[0][10]/CK (EDFFHQX1M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.14       0.06
+  data required time                                                 0.06
+  --------------------------------------------------------------------------
+  data required time                                                 0.06
+  data arrival time                                                 -0.33
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.28
+
+
+  Startpoint: system/subsystem_l2_wrapper/l2/mods_0/sourceD/s5_dat_reg[37]
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: system/subsystem_l2_wrapper/l2/mods_0/sourceD/s6_dat_reg[37]
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/subsystem_l2_wrapper/l2/mods_0/sourceD/s5_dat_reg[37]/CK (EDFFHQX8M)
+                                                          0.00 #     0.00 r
+  system/subsystem_l2_wrapper/l2/mods_0/sourceD/s5_dat_reg[37]/Q (EDFFHQX8M)
+                                                          0.41       0.41 r
+  system/subsystem_l2_wrapper/l2/mods_0/sourceD/s6_dat_reg[37]/D (EDFFHQX2M)
+                                                          0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/subsystem_l2_wrapper/l2/mods_0/sourceD/s6_dat_reg[37]/CK (EDFFHQX2M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.16       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                 -0.41
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.37
+
+
+  Startpoint: system/subsystem_l2_wrapper/l2/mods_0/sourceD/s5_dat_reg[13]
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: system/subsystem_l2_wrapper/l2/mods_0/sourceD/s6_dat_reg[13]
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/subsystem_l2_wrapper/l2/mods_0/sourceD/s5_dat_reg[13]/CK (EDFFHQX8M)
+                                                          0.00 #     0.00 r
+  system/subsystem_l2_wrapper/l2/mods_0/sourceD/s5_dat_reg[13]/Q (EDFFHQX8M)
+                                                          0.41       0.41 r
+  system/subsystem_l2_wrapper/l2/mods_0/sourceD/s6_dat_reg[13]/D (EDFFHQX2M)
+                                                          0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/subsystem_l2_wrapper/l2/mods_0/sourceD/s6_dat_reg[13]/CK (EDFFHQX2M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.16       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                 -0.41
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.37
+
+
+  Startpoint: system/subsystem_l2_wrapper/l2/mods_0/sourceD/s5_dat_reg[35]
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: system/subsystem_l2_wrapper/l2/mods_0/sourceD/s6_dat_reg[35]
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/subsystem_l2_wrapper/l2/mods_0/sourceD/s5_dat_reg[35]/CK (EDFFHQX8M)
+                                                          0.00 #     0.00 r
+  system/subsystem_l2_wrapper/l2/mods_0/sourceD/s5_dat_reg[35]/Q (EDFFHQX8M)
+                                                          0.42       0.42 r
+  system/subsystem_l2_wrapper/l2/mods_0/sourceD/s6_dat_reg[35]/D (EDFFHQX2M)
+                                                          0.00       0.42 r
+  data arrival time                                                  0.42
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/subsystem_l2_wrapper/l2/mods_0/sourceD/s6_dat_reg[35]/CK (EDFFHQX2M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.16       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                 -0.42
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.37
+
+
+  Startpoint: system/subsystem_l2_wrapper/l2/mods_0/abc_mshrs_6/w_pprobeackfirst_reg
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: system/subsystem_l2_wrapper/l2/mods_0/abc_mshrs_6/w_pprobeackfirst_reg
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/subsystem_l2_wrapper/l2/mods_0/abc_mshrs_6/w_pprobeackfirst_reg/CK (DFFHQX8M)
+                                                          0.00 #     0.00 r
+  system/subsystem_l2_wrapper/l2/mods_0/abc_mshrs_6/w_pprobeackfirst_reg/Q (DFFHQX8M)
+                                                          0.34       0.34 f
+  system/subsystem_l2_wrapper/U16616/Y (NAND2X12M)        0.16       0.49 r
+  system/subsystem_l2_wrapper/U28137/Y (NAND3X12M)        0.14       0.63 f
+  system/subsystem_l2_wrapper/l2/mods_0/abc_mshrs_6/w_pprobeackfirst_reg/D (DFFHQX8M)
+                                                          0.00       0.63 f
+  data arrival time                                                  0.63
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/subsystem_l2_wrapper/l2/mods_0/abc_mshrs_6/w_pprobeackfirst_reg/CK (DFFHQX8M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.08       0.12
+  data required time                                                 0.12
+  --------------------------------------------------------------------------
+  data required time                                                 0.12
+  data arrival time                                                 -0.63
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.51
+
+
+  Startpoint: system/subsystem_l2_wrapper/l2/mods_0/abc_mshrs_4/w_pprobeackfirst_reg
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: system/subsystem_l2_wrapper/l2/mods_0/abc_mshrs_4/w_pprobeackfirst_reg
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/subsystem_l2_wrapper/l2/mods_0/abc_mshrs_4/w_pprobeackfirst_reg/CK (DFFHQX8M)
+                                                          0.00 #     0.00 r
+  system/subsystem_l2_wrapper/l2/mods_0/abc_mshrs_4/w_pprobeackfirst_reg/Q (DFFHQX8M)
+                                                          0.39       0.39 r
+  system/subsystem_l2_wrapper/U16590/Y (NAND2BX12M)       0.14       0.54 f
+  system/subsystem_l2_wrapper/U27576/Y (NAND3X12M)        0.13       0.67 r
+  system/subsystem_l2_wrapper/l2/mods_0/abc_mshrs_4/w_pprobeackfirst_reg/D (DFFHQX8M)
+                                                          0.00       0.67 r
+  data arrival time                                                  0.67
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/subsystem_l2_wrapper/l2/mods_0/abc_mshrs_4/w_pprobeackfirst_reg/CK (DFFHQX8M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.04       0.16
+  data required time                                                 0.16
+  --------------------------------------------------------------------------
+  data required time                                                 0.16
+  data arrival time                                                 -0.67
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.51
+
+
+  Startpoint: system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleOut_0_a_q/ram_data_reg[0][36]
+              (rising edge-triggered flip-flop clocked by REF_CLK)
+  Endpoint: system/subsystem_l2_wrapper/l2/flushInAddress_reg[36]
+            (rising edge-triggered flip-flop clocked by REF_CLK)
+  Path Group: REF_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleOut_0_a_q/ram_data_reg[0][36]/CK (EDFFHQX8M)
+                                                          0.00 #     0.00 r
+  system/subsystem_cbus/coupler_to_l2_ctrl/buffer/bundleOut_0_a_q/ram_data_reg[0][36]/Q (EDFFHQX8M)
+                                                          0.34       0.34 r
+  system/subsystem_cbus/auto_coupler_to_l2_ctrl_buffer_out_a_bits_data[36] (PeripheryBus_1)
+                                                          0.00       0.34 r
+  system/subsystem_l2_wrapper/auto_l2_ctl_in_a_bits_data[36] (CoherenceManagerWrapper)
+                                                          0.00       0.34 r
+  system/subsystem_l2_wrapper/U23202/Y (AO22X4M)          0.30       0.63 r
+  system/subsystem_l2_wrapper/l2/flushInAddress_reg[36]/D (DFFX2M)
+                                                          0.00       0.63 r
+  data arrival time                                                  0.63
+
+  clock REF_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  system/subsystem_l2_wrapper/l2/flushInAddress_reg[36]/CK (DFFX2M)
+                                                          0.00       0.20 r
+  library hold time                                      -0.08       0.12
+  data required time                                                 0.12
+  --------------------------------------------------------------------------
+  data required time                                                 0.12
+  data arrival time                                                 -0.63
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.51
+
+
+  Startpoint: system/debug_1/dmOuter/dmOuter/DMCONTROLReg_dmactive_reg
+              (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Endpoint: system/debug_1/dmInner/dmactive_synced_dmactive_synced_dmactiveSync/output_chain/sync_2_reg
+            (rising edge-triggered flip-flop clocked by clk_gating)
+  Path Group: clk_gating
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmOuter/dmOuter/DMCONTROLReg_dmactive_reg/CK (DFFRHQX8M)
+                                                          0.00       0.00 r
+  system/debug_1/dmOuter/dmOuter/DMCONTROLReg_dmactive_reg/Q (DFFRHQX8M)
+                                                          0.42       0.42 f
+  system/debug_1/U498/Y (BUFX10M)                         0.27       0.69 f
+  system/debug_1/dmInner/dmactive_synced_dmactive_synced_dmactiveSync/output_chain/sync_2_reg/D (DFFRQX1M)
+                                                          0.00       0.69 f
+  data arrival time                                                  0.69
+
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmactive_synced_dmactive_synced_dmactiveSync/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  --------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.69
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.73
+
+
+  Startpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/ridx_gray_reg
+              (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Endpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/ridx_ridx_gray/output_chain/sync_2_reg
+            (rising edge-triggered flip-flop clocked by clk_gating)
+  Path Group: clk_gating
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/ridx_gray_reg/CK (DFFRQX4M)
+                                                          0.00       0.00 r
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/ridx_gray_reg/Q (DFFRQX4M)
+                                                          0.75       0.75 f
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/ridx_ridx_gray/output_chain/sync_2_reg/D (DFFRQX1M)
+                                                          0.00       0.75 f
+  data arrival time                                                  0.75
+
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/ridx_ridx_gray/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  library hold time                                      -0.07      -0.07
+  data required time                                                -0.07
+  --------------------------------------------------------------------------
+  data required time                                                -0.07
+  data arrival time                                                 -0.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.82
+
+
+  Startpoint: system/debug_1/dmInner/dmInner/hartIsInResetSync_0_debug_hartReset_0/output_chain/sync_2_reg
+              (rising edge-triggered flip-flop clocked by clk_gating)
+  Endpoint: system/debug_1/dmInner/dmInner/hartIsInResetSync_0_debug_hartReset_0/output_chain/sync_1_reg
+            (rising edge-triggered flip-flop clocked by clk_gating)
+  Path Group: clk_gating
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmInner/hartIsInResetSync_0_debug_hartReset_0/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmInner/dmInner/hartIsInResetSync_0_debug_hartReset_0/output_chain/sync_2_reg/Q (DFFRQX1M)
+                                                          0.75       0.75 f
+  system/debug_1/dmInner/dmInner/hartIsInResetSync_0_debug_hartReset_0/output_chain/sync_1_reg/D (DFFRQX1M)
+                                                          0.00       0.75 f
+  data arrival time                                                  0.75
+
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmInner/hartIsInResetSync_0_debug_hartReset_0/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  library hold time                                      -0.08      -0.08
+  data required time                                                -0.08
+  --------------------------------------------------------------------------
+  data required time                                                -0.08
+  data arrival time                                                 -0.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.83
+
+
+  Startpoint: system/debug_1/dmInner/dmactive_synced_dmactive_synced_dmactiveSync/output_chain/sync_2_reg
+              (rising edge-triggered flip-flop clocked by clk_gating)
+  Endpoint: system/debug_1/dmInner/dmactive_synced_dmactive_synced_dmactiveSync/output_chain/sync_1_reg
+            (rising edge-triggered flip-flop clocked by clk_gating)
+  Path Group: clk_gating
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmactive_synced_dmactive_synced_dmactiveSync/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmInner/dmactive_synced_dmactive_synced_dmactiveSync/output_chain/sync_2_reg/Q (DFFRQX1M)
+                                                          0.75       0.75 f
+  system/debug_1/dmInner/dmactive_synced_dmactive_synced_dmactiveSync/output_chain/sync_1_reg/D (DFFRQX1M)
+                                                          0.00       0.75 f
+  data arrival time                                                  0.75
+
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmactive_synced_dmactive_synced_dmactiveSync/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  library hold time                                      -0.08      -0.08
+  data required time                                                -0.08
+  --------------------------------------------------------------------------
+  data required time                                                -0.08
+  data arrival time                                                 -0.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.83
+
+
+  Startpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_0/io_out_source_valid_0/output_chain/sync_0_reg
+              (rising edge-triggered flip-flop clocked by clk_gating)
+  Endpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_1/io_out_source_valid_0/output_chain/sync_2_reg
+            (rising edge-triggered flip-flop clocked by clk_gating)
+  Path Group: clk_gating
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_0/io_out_source_valid_0/output_chain/sync_0_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_0/io_out_source_valid_0/output_chain/sync_0_reg/Q (DFFRQX1M)
+                                                          0.75       0.75 f
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_1/io_out_source_valid_0/output_chain/sync_2_reg/D (DFFRQX1M)
+                                                          0.00       0.75 f
+  data arrival time                                                  0.75
+
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_1/io_out_source_valid_0/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  library hold time                                      -0.08      -0.08
+  data required time                                                -0.08
+  --------------------------------------------------------------------------
+  data required time                                                -0.08
+  data arrival time                                                 -0.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.83
+
+
+  Startpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_1/io_out_source_valid_0/output_chain/sync_2_reg
+              (rising edge-triggered flip-flop clocked by clk_gating)
+  Endpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_1/io_out_source_valid_0/output_chain/sync_1_reg
+            (rising edge-triggered flip-flop clocked by clk_gating)
+  Path Group: clk_gating
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_1/io_out_source_valid_0/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_1/io_out_source_valid_0/output_chain/sync_2_reg/Q (DFFRQX1M)
+                                                          0.75       0.75 f
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_1/io_out_source_valid_0/output_chain/sync_1_reg/D (DFFRQX1M)
+                                                          0.00       0.75 f
+  data arrival time                                                  0.75
+
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_1/io_out_source_valid_0/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  library hold time                                      -0.08      -0.08
+  data required time                                                -0.08
+  --------------------------------------------------------------------------
+  data required time                                                -0.08
+  data arrival time                                                 -0.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.83
+
+
+  Startpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_1/io_out_source_valid_0/output_chain/sync_1_reg
+              (rising edge-triggered flip-flop clocked by clk_gating)
+  Endpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_1/io_out_source_valid_0/output_chain/sync_0_reg
+            (rising edge-triggered flip-flop clocked by clk_gating)
+  Path Group: clk_gating
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_1/io_out_source_valid_0/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_1/io_out_source_valid_0/output_chain/sync_1_reg/Q (DFFRQX1M)
+                                                          0.75       0.75 f
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_1/io_out_source_valid_0/output_chain/sync_0_reg/D (DFFRQX1M)
+                                                          0.00       0.75 f
+  data arrival time                                                  0.75
+
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_1/io_out_source_valid_0/output_chain/sync_0_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  library hold time                                      -0.08      -0.08
+  data required time                                                -0.08
+  --------------------------------------------------------------------------
+  data required time                                                -0.08
+  data arrival time                                                 -0.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.83
+
+
+  Startpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_0/io_out_source_valid_0/output_chain/sync_2_reg/CK
+              (internal path startpoint clocked by clk_gating)
+  Endpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_0/io_out_source_valid_0/output_chain/sync_1_reg
+            (rising edge-triggered flip-flop clocked by clk_gating)
+  Path Group: clk_gating
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_0/io_out_source_valid_0/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_0/io_out_source_valid_0/output_chain/sync_2_reg/Q (DFFRQX1M)
+                                                          0.75       0.75 f
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_0/io_out_source_valid_0/output_chain/sync_1_reg/D (DFFRQX1M)
+                                                          0.00       0.75 f
+  data arrival time                                                  0.75
+
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_0/io_out_source_valid_0/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  library hold time                                      -0.08      -0.08
+  data required time                                                -0.08
+  --------------------------------------------------------------------------
+  data required time                                                -0.08
+  data arrival time                                                 -0.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.83
+
+
+  Startpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_0/io_out_source_valid_0/output_chain/sync_1_reg
+              (rising edge-triggered flip-flop clocked by clk_gating)
+  Endpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_0/io_out_source_valid_0/output_chain/sync_0_reg
+            (rising edge-triggered flip-flop clocked by clk_gating)
+  Path Group: clk_gating
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_0/io_out_source_valid_0/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_0/io_out_source_valid_0/output_chain/sync_1_reg/Q (DFFRQX1M)
+                                                          0.75       0.75 f
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_0/io_out_source_valid_0/output_chain/sync_0_reg/D (DFFRQX1M)
+                                                          0.00       0.75 f
+  data arrival time                                                  0.75
+
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/source_valid_0/io_out_source_valid_0/output_chain/sync_0_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  library hold time                                      -0.08      -0.08
+  data required time                                                -0.08
+  --------------------------------------------------------------------------
+  data required time                                                -0.08
+  data arrival time                                                 -0.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.83
+
+
+  Startpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_2_reg
+              (rising edge-triggered flip-flop clocked by clk_gating)
+  Endpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_1_reg
+            (rising edge-triggered flip-flop clocked by clk_gating)
+  Path Group: clk_gating
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_2_reg/Q (DFFRQX1M)
+                                                          0.75       0.75 f
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_1_reg/D (DFFRQX1M)
+                                                          0.00       0.75 f
+  data arrival time                                                  0.75
+
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  library hold time                                      -0.08      -0.08
+  data required time                                                -0.08
+  --------------------------------------------------------------------------
+  data required time                                                -0.08
+  data arrival time                                                 -0.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.83
+
+
+  Startpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_1_reg
+              (rising edge-triggered flip-flop clocked by clk_gating)
+  Endpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_0_reg
+            (rising edge-triggered flip-flop clocked by clk_gating)
+  Path Group: clk_gating
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_1_reg/Q (DFFRQX1M)
+                                                          0.75       0.75 f
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_0_reg/D (DFFRQX1M)
+                                                          0.00       0.75 f
+  data arrival time                                                  0.75
+
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_0_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  library hold time                                      -0.08      -0.08
+  data required time                                                -0.08
+  --------------------------------------------------------------------------
+  data required time                                                -0.08
+  data arrival time                                                 -0.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.83
+
+
+  Startpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_valid/io_out_source_valid_0/output_chain/sync_2_reg
+              (rising edge-triggered flip-flop clocked by clk_gating)
+  Endpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_valid/io_out_source_valid_0/output_chain/sync_1_reg
+            (rising edge-triggered flip-flop clocked by clk_gating)
+  Path Group: clk_gating
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_valid/io_out_source_valid_0/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_valid/io_out_source_valid_0/output_chain/sync_2_reg/Q (DFFRQX1M)
+                                                          0.75       0.75 f
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_valid/io_out_source_valid_0/output_chain/sync_1_reg/D (DFFRQX1M)
+                                                          0.00       0.75 f
+  data arrival time                                                  0.75
+
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_valid/io_out_source_valid_0/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  library hold time                                      -0.08      -0.08
+  data required time                                                -0.08
+  --------------------------------------------------------------------------
+  data required time                                                -0.08
+  data arrival time                                                 -0.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.83
+
+
+  Startpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_0_reg
+              (rising edge-triggered flip-flop clocked by clk_gating)
+  Endpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_valid/io_out_source_valid_0/output_chain/sync_2_reg
+            (rising edge-triggered flip-flop clocked by clk_gating)
+  Path Group: clk_gating
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_0_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_0_reg/Q (DFFRQX1M)
+                                                          0.75       0.75 f
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_valid/io_out_source_valid_0/output_chain/sync_2_reg/D (DFFRQX1M)
+                                                          0.00       0.75 f
+  data arrival time                                                  0.75
+
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_valid/io_out_source_valid_0/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  library hold time                                      -0.08      -0.08
+  data required time                                                -0.08
+  --------------------------------------------------------------------------
+  data required time                                                -0.08
+  data arrival time                                                 -0.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.83
+
+
+  Startpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/ridx_ridx_gray/output_chain/sync_2_reg
+              (rising edge-triggered flip-flop clocked by clk_gating)
+  Endpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/ridx_ridx_gray/output_chain/sync_1_reg
+            (rising edge-triggered flip-flop clocked by clk_gating)
+  Path Group: clk_gating
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/ridx_ridx_gray/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/ridx_ridx_gray/output_chain/sync_2_reg/Q (DFFRQX1M)
+                                                          0.75       0.75 f
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/ridx_ridx_gray/output_chain/sync_1_reg/D (DFFRQX1M)
+                                                          0.00       0.75 f
+  data arrival time                                                  0.75
+
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/ridx_ridx_gray/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  library hold time                                      -0.08      -0.08
+  data required time                                                -0.08
+  --------------------------------------------------------------------------
+  data required time                                                -0.08
+  data arrival time                                                 -0.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.83
+
+
+  Startpoint: system/debug_1/dmInner/dmactive_synced_dmInner_io_innerCtrl_sink/widx_widx_gray/output_chain/sync_2_reg
+              (rising edge-triggered flip-flop clocked by clk_gating)
+  Endpoint: system/debug_1/dmInner/dmactive_synced_dmInner_io_innerCtrl_sink/widx_widx_gray/output_chain/sync_1_reg
+            (rising edge-triggered flip-flop clocked by clk_gating)
+  Path Group: clk_gating
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmactive_synced_dmInner_io_innerCtrl_sink/widx_widx_gray/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmInner/dmactive_synced_dmInner_io_innerCtrl_sink/widx_widx_gray/output_chain/sync_2_reg/Q (DFFRQX1M)
+                                                          0.75       0.75 f
+  system/debug_1/dmInner/dmactive_synced_dmInner_io_innerCtrl_sink/widx_widx_gray/output_chain/sync_1_reg/D (DFFRQX1M)
+                                                          0.00       0.75 f
+  data arrival time                                                  0.75
+
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmactive_synced_dmInner_io_innerCtrl_sink/widx_widx_gray/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  library hold time                                      -0.08      -0.08
+  data required time                                                -0.08
+  --------------------------------------------------------------------------
+  data required time                                                -0.08
+  data arrival time                                                 -0.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.83
+
+
+  Startpoint: system/debug_1/dmInner/dmiXing/bundleOut_0_a_sink/widx_widx_gray/output_chain/sync_2_reg
+              (rising edge-triggered flip-flop clocked by clk_gating)
+  Endpoint: system/debug_1/dmInner/dmiXing/bundleOut_0_a_sink/widx_widx_gray/output_chain/sync_1_reg
+            (rising edge-triggered flip-flop clocked by clk_gating)
+  Path Group: clk_gating
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleOut_0_a_sink/widx_widx_gray/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmInner/dmiXing/bundleOut_0_a_sink/widx_widx_gray/output_chain/sync_2_reg/Q (DFFRQX1M)
+                                                          0.75       0.75 f
+  system/debug_1/dmInner/dmiXing/bundleOut_0_a_sink/widx_widx_gray/output_chain/sync_1_reg/D (DFFRQX1M)
+                                                          0.00       0.75 f
+  data arrival time                                                  0.75
+
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleOut_0_a_sink/widx_widx_gray/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  library hold time                                      -0.08      -0.08
+  data required time                                                -0.08
+  --------------------------------------------------------------------------
+  data required time                                                -0.08
+  data arrival time                                                 -0.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.83
+
+
+  Startpoint: system/debug_1/dmOuter/io_innerCtrl_source/widx_gray_reg
+              (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Endpoint: system/debug_1/dmInner/dmactive_synced_dmInner_io_innerCtrl_sink/widx_widx_gray/output_chain/sync_2_reg
+            (rising edge-triggered flip-flop clocked by clk_gating)
+  Path Group: clk_gating
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmOuter/io_innerCtrl_source/widx_gray_reg/CK (DFFRQX4M)
+                                                          0.00       0.00 r
+  system/debug_1/dmOuter/io_innerCtrl_source/widx_gray_reg/Q (DFFRQX4M)
+                                                          0.77       0.77 f
+  system/debug_1/dmInner/dmactive_synced_dmInner_io_innerCtrl_sink/widx_widx_gray/output_chain/sync_2_reg/D (DFFRQX1M)
+                                                          0.00       0.77 f
+  data arrival time                                                  0.77
+
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmactive_synced_dmInner_io_innerCtrl_sink/widx_widx_gray/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  library hold time                                      -0.07      -0.07
+  data required time                                                -0.07
+  --------------------------------------------------------------------------
+  data required time                                                -0.07
+  data arrival time                                                 -0.77
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.84
+
+
+  Startpoint: system/debug_1/dmInner/dmInner/hartIsInResetSync_0_debug_hartReset_0/output_chain/sync_1_reg
+              (rising edge-triggered flip-flop clocked by clk_gating)
+  Endpoint: system/debug_1/dmInner/dmInner/hartIsInResetSync_0_debug_hartReset_0/output_chain/sync_0_reg
+            (rising edge-triggered flip-flop clocked by clk_gating)
+  Path Group: clk_gating
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmInner/hartIsInResetSync_0_debug_hartReset_0/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmInner/dmInner/hartIsInResetSync_0_debug_hartReset_0/output_chain/sync_1_reg/Q (DFFRQX1M)
+                                                          0.75       0.75 f
+  system/debug_1/dmInner/dmInner/hartIsInResetSync_0_debug_hartReset_0/output_chain/sync_0_reg/D (DFFRQX4M)
+                                                          0.00       0.75 f
+  data arrival time                                                  0.75
+
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmInner/hartIsInResetSync_0_debug_hartReset_0/output_chain/sync_0_reg/CK (DFFRQX4M)
+                                                          0.00       0.00 r
+  library hold time                                      -0.09      -0.09
+  data required time                                                -0.09
+  --------------------------------------------------------------------------
+  data required time                                                -0.09
+  data arrival time                                                 -0.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.84
+
+
+  Startpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_valid/io_out_source_valid_0/output_chain/sync_1_reg
+              (rising edge-triggered flip-flop clocked by clk_gating)
+  Endpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_valid/io_out_source_valid_0/output_chain/sync_0_reg
+            (rising edge-triggered flip-flop clocked by clk_gating)
+  Path Group: clk_gating
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_valid/io_out_source_valid_0/output_chain/sync_1_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_valid/io_out_source_valid_0/output_chain/sync_1_reg/Q (DFFRQX1M)
+                                                          0.75       0.75 f
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_valid/io_out_source_valid_0/output_chain/sync_0_reg/D (DFFRQX4M)
+                                                          0.00       0.75 f
+  data arrival time                                                  0.75
+
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_valid/io_out_source_valid_0/output_chain/sync_0_reg/CK (DFFRQX4M)
+                                                          0.00       0.00 r
+  library hold time                                      -0.09      -0.09
+  data required time                                                -0.09
+  --------------------------------------------------------------------------
+  data required time                                                -0.09
+  data arrival time                                                 -0.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.84
+
+
+  Startpoint: system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_1/io_out_source_valid_0/output_chain/sync_0_reg
+              (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Endpoint: system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_2_reg
+            (rising edge-triggered flip-flop clocked by clk_gating)
+  Path Group: clk_gating
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ChipTop            tsmc13_wl50           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock JTAG_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_1/io_out_source_valid_0/output_chain/sync_0_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  system/debug_1/dmOuter/asource/bundleIn_0_d_sink/sink_valid_1/io_out_source_valid_0/output_chain/sync_0_reg/Q (DFFRQX1M)
+                                                          0.76       0.76 f
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_2_reg/D (DFFRQX1M)
+                                                          0.00       0.76 f
+  data arrival time                                                  0.76
+
+  clock clk_gating (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  system/debug_1/dmInner/dmiXing/bundleIn_0_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_2_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  library hold time                                      -0.08      -0.08
+  data required time                                                -0.08
+  --------------------------------------------------------------------------
+  data required time                                                -0.08
+  data arrival time                                                 -0.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.84
+
+
+1

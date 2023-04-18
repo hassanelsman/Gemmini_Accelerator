@@ -1,0 +1,106 @@
+ 
+****************************************
+Report : area
+Design : ChipTop
+Version: K-2015.06
+Date   : Wed Apr  5 17:11:42 2023
+****************************************
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+Number of ports:                        12044
+Number of nets:                        339619
+Number of cells:                       290459
+Number of combinational cells:         222066
+Number of sequential cells:             68353
+Number of macros/black boxes:               0
+Number of buf/inv:                      69452
+Number of references:                       9
+
+Combinational area:            2344198.223026
+Buf/Inv area:                   544475.566866
+Noncombinational area:         1632004.009745
+Macro/Black Box area:                0.000000
+Net Interconnect area:       159806689.406998
+
+Total cell area:               3976202.232771
+Total area:                  163782891.639768
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area                Local cell area
+                                  ---------------------  ---------------------------------- 
+Hierarchical cell                 Absolute      Percent  Combi-        Noncombi-     Black-
+                                  Total         Total    national      national      boxes   Design
+--------------------------------  ------------  -------  ------------  ------------  ------  ------------------------
+ChipTop                           3976202.2328    100.0       30.5942      261.2274  0.0000  ChipTop
+gated_clock_debug_clock_gate           22.3573      0.0        5.8835       16.4738  0.0000  EICG_wrapper
+system                            3975888.0539    100.0      263.5808      828.3968  0.0000  DigitalTop
+system/bootROMDomainWrapper         50522.7912      1.3    50522.7912        0.0000  0.0000  ClockSinkDomain_1
+system/clint                        13120.2050      0.3    10091.3793     3028.8258  0.0000  CLINT
+system/debug_1                      56551.0251      1.4    36436.5158    20114.5093  0.0000  TLDebugModule
+system/domain                       30730.6971      0.8    14578.1364    16152.5606  0.0000  ClockSinkDomain_2
+system/dtm                           7998.0300      0.2     3005.2918     4992.7382  0.0000  DebugTransportModuleJTAG
+system/implicitClockGrouper             7.0602      0.0        7.0602        0.0000  0.0000  ClockGroup_6
+system/plicDomainWrapper             2961.7540      0.1     1088.4475     1873.3064  0.0000  ClockSinkDomain
+system/prci_ctrl_domain              2136.8872      0.1     1955.6754      181.2118  0.0000  ClockSinkDomain_4
+system/subsystem_cbus              158459.1280      4.0   110033.2173    48425.9107  0.0000  PeripheryBus_1
+system/subsystem_fbus               34923.2791      0.9    16278.4681    18644.8110  0.0000  FrontBus
+system/subsystem_l2_wrapper       3126957.8426     78.6   315803.9243   119770.4082  0.0000  CoherenceManagerWrapper
+system/subsystem_l2_wrapper/l2/mods_0/bankedStore
+                                  1562409.3012     39.3    34887.9781    17835.2425  0.0000  BankedStore
+system/subsystem_l2_wrapper/l2/mods_0/bankedStore/cc_banks_0/cc_banks_0_ext/mem_0_0
+                                   188335.5398      4.7    86899.2968   101436.2430  0.0000  split_cc_banks_0_ext_0
+system/subsystem_l2_wrapper/l2/mods_0/bankedStore/cc_banks_1/cc_banks_0_ext/mem_0_0
+                                   188902.7093      4.8    87464.1128   101438.5964  0.0000  split_cc_banks_0_ext_7
+system/subsystem_l2_wrapper/l2/mods_0/bankedStore/cc_banks_2/cc_banks_0_ext/mem_0_0
+                                   188877.9986      4.8    87504.1206   101373.8780  0.0000  split_cc_banks_0_ext_6
+system/subsystem_l2_wrapper/l2/mods_0/bankedStore/cc_banks_3/cc_banks_0_ext/mem_0_0
+                                   188509.6915      4.7    87199.3552   101310.3363  0.0000  split_cc_banks_0_ext_5
+system/subsystem_l2_wrapper/l2/mods_0/bankedStore/cc_banks_4/cc_banks_0_ext/mem_0_0
+                                   188627.3614      4.7    87195.8252   101431.5362  0.0000  split_cc_banks_0_ext_4
+system/subsystem_l2_wrapper/l2/mods_0/bankedStore/cc_banks_5/cc_banks_0_ext/mem_0_0
+                                   188248.4640      4.7    86809.8675   101438.5964  0.0000  split_cc_banks_0_ext_3
+system/subsystem_l2_wrapper/l2/mods_0/bankedStore/cc_banks_6/cc_banks_0_ext/mem_0_0
+                                   189128.6357      4.8    87784.1752   101344.4605  0.0000  split_cc_banks_0_ext_2
+system/subsystem_l2_wrapper/l2/mods_0/bankedStore/cc_banks_7/cc_banks_0_ext/mem_0_0
+                                   189055.6803      4.8    87681.8023   101373.8780  0.0000  split_cc_banks_0_ext_1
+system/subsystem_l2_wrapper/l2/mods_0/directory/cc_dir/cc_dir_ext/mem_0_0
+                                    66116.4185      1.7    42378.8502    23737.5683  0.0000  split_cc_dir_ext_0
+system/subsystem_l2_wrapper/l2/mods_0/directory/cc_dir/cc_dir_ext/mem_0_1
+                                    66844.7958      1.7    43499.0687    23345.7272  0.0000  split_cc_dir_ext_1
+system/subsystem_l2_wrapper/l2/mods_0/directory/cc_dir/cc_dir_ext/mem_0_2
+                                    66823.6152      1.7    43457.8841    23365.7311  0.0000  split_cc_dir_ext_2
+system/subsystem_l2_wrapper/l2/mods_0/directory/cc_dir/cc_dir_ext/mem_0_3
+                                    67650.8353      1.7    44329.8188    23321.0164  0.0000  split_cc_dir_ext_3
+system/subsystem_l2_wrapper/l2/mods_0/directory/cc_dir/cc_dir_ext/mem_0_4
+                                    66378.8226      1.7    42921.3089    23457.5136  0.0000  split_cc_dir_ext_4
+system/subsystem_l2_wrapper/l2/mods_0/directory/cc_dir/cc_dir_ext/mem_0_5
+                                    65759.8784      1.7    41764.6128    23995.2656  0.0000  split_cc_dir_ext_5
+system/subsystem_l2_wrapper/l2/mods_0/directory/cc_dir/cc_dir_ext/mem_0_6
+                                    66714.1821      1.7    43169.5927    23544.5894  0.0000  split_cc_dir_ext_6
+system/subsystem_l2_wrapper/l2/mods_0/directory/cc_dir/cc_dir_ext/mem_0_7
+                                    67650.8353      1.7    44252.1566    23398.6786  0.0000  split_cc_dir_ext_7
+system/subsystem_l2_wrapper/l2/mods_0/requests
+                                   115124.7975      2.9    71708.0989    43416.6987  0.0000  ListBuffer_2
+system/subsystem_l2_wrapper/l2/mods_0/sinkA/putbuffer
+                                   378556.1514      9.5   234057.3960   144498.7554  0.0000  ListBuffer
+system/subsystem_l2_wrapper/l2/mods_0/sinkC/putbuffer
+                                    54019.9431      1.4    28669.1193    25350.8239  0.0000  ListBuffer_1
+system/subsystem_l2_wrapper/l2/mods_0/sourceC/queue
+                                    47333.9337      1.2    23583.4218    23750.5119  0.0000  QueueCompatibility_32
+system/subsystem_mbus               59841.0784      1.5    43670.8673    16170.2111  0.0000  MemoryBus
+system/subsystem_pbus               69788.9001      1.8    43909.7376    25879.1625  0.0000  PeripheryBus
+system/subsystem_sbus              104056.7575      2.6    93481.7548    10575.0027  0.0000  SystemBus
+system/uartClockDomainWrapper      256740.6407      6.5     6935.4699     2886.4451  0.0000  ClockSinkDomain_3
+system/uartClockDomainWrapper/uart_0/rxq
+                                   145325.9785      3.7   101302.1030    44023.8755  0.0000  QueueCompatibility_35_1
+system/uartClockDomainWrapper/uart_0/txq
+                                   101592.7473      2.6    57579.4621    44013.2852  0.0000  QueueCompatibility_35_0
+--------------------------------  ------------  -------  ------------  ------------  ------  ------------------------
+Total                                                    2344198.2230  1632004.0097  0.0000
+
+1
