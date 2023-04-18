@@ -35,7 +35,7 @@ void VTestHarness::eval_step() {
             Verilated::debug(1);
             __Vchange = _change_request(vlSymsp);
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 27639, "",
+            VL_FATAL_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 28715, "",
                 "Verilated model didn't converge\n"
                 "- See DIDNOTCONVERGE in the Verilator manual");
         } else {
@@ -62,7 +62,7 @@ void VTestHarness::_eval_initial_loop(VTestHarness__Syms* __restrict vlSymsp) {
             Verilated::debug(1);
             __Vchange = _change_request(vlSymsp);
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 27639, "",
+            VL_FATAL_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 28715, "",
                 "Verilated model didn't DC converge\n"
                 "- See DIDNOTCONVERGE in the Verilator manual");
         } else {
@@ -71,12 +71,12 @@ void VTestHarness::_eval_initial_loop(VTestHarness__Syms* __restrict vlSymsp) {
     } while (VL_UNLIKELY(__Vchange));
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__60(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__60\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__59(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__59\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:28065:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:29141:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((2U <= vlTOPp->TestHarness__DOT__SimJTAG__DOT_____05Fexit) 
@@ -87,20 +87,20 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:28076:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:29152:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((2U <= vlTOPp->TestHarness__DOT__SimJTAG__DOT_____05Fexit) 
                          & (~ (IData)(vlTOPp->reset))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:28079: Assertion failed in %NTestHarness\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:29155: Assertion failed in %NTestHarness\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 28079, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 29155, "");
         }
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__61(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__61\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__60(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__60\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_corrupt__v0 = 0U;
@@ -117,41 +117,49 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__61(VTestHarness__Syms* __restric
     vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__srams__DOT__mem__DOT__mem_ext_0__DOT__mem_0_6__DOT__ram__v0 = 0U;
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__62(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__62\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__61(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__61\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Variables
     // Begin mtask footprint all: 
-    WData/*255:0*/ __Vtemp146[8];
-    WData/*255:0*/ __Vtemp147[8];
-    WData/*255:0*/ __Vtemp148[8];
-    WData/*255:0*/ __Vtemp149[8];
-    WData/*1023:0*/ __Vtemp154[32];
-    WData/*1023:0*/ __Vtemp155[32];
-    WData/*1023:0*/ __Vtemp160[32];
-    WData/*1023:0*/ __Vtemp161[32];
-    WData/*1023:0*/ __Vtemp166[32];
-    WData/*1023:0*/ __Vtemp167[32];
-    WData/*1023:0*/ __Vtemp172[32];
-    WData/*1023:0*/ __Vtemp173[32];
-    WData/*1023:0*/ __Vtemp178[32];
-    WData/*1023:0*/ __Vtemp179[32];
-    WData/*1023:0*/ __Vtemp184[32];
-    WData/*1023:0*/ __Vtemp185[32];
-    WData/*1023:0*/ __Vtemp190[32];
-    WData/*1023:0*/ __Vtemp191[32];
-    WData/*1023:0*/ __Vtemp196[32];
-    WData/*1023:0*/ __Vtemp197[32];
-    WData/*1023:0*/ __Vtemp200[32];
-    WData/*1023:0*/ __Vtemp203[32];
-    WData/*1023:0*/ __Vtemp204[32];
-    WData/*1023:0*/ __Vtemp207[32];
-    WData/*1023:0*/ __Vtemp210[32];
-    WData/*1023:0*/ __Vtemp211[32];
-    WData/*255:0*/ __Vtemp212[8];
+    WData/*159:0*/ __Vtemp141[5];
+    WData/*159:0*/ __Vtemp142[5];
+    WData/*159:0*/ __Vtemp143[5];
+    WData/*159:0*/ __Vtemp144[5];
+    WData/*639:0*/ __Vtemp149[20];
+    WData/*639:0*/ __Vtemp150[20];
+    WData/*639:0*/ __Vtemp155[20];
+    WData/*639:0*/ __Vtemp156[20];
+    WData/*639:0*/ __Vtemp161[20];
+    WData/*639:0*/ __Vtemp162[20];
+    WData/*639:0*/ __Vtemp167[20];
+    WData/*639:0*/ __Vtemp168[20];
+    WData/*639:0*/ __Vtemp173[20];
+    WData/*639:0*/ __Vtemp174[20];
+    WData/*639:0*/ __Vtemp179[20];
+    WData/*639:0*/ __Vtemp180[20];
+    WData/*639:0*/ __Vtemp185[20];
+    WData/*639:0*/ __Vtemp186[20];
+    WData/*639:0*/ __Vtemp191[20];
+    WData/*639:0*/ __Vtemp192[20];
+    WData/*639:0*/ __Vtemp195[20];
+    WData/*639:0*/ __Vtemp198[20];
+    WData/*639:0*/ __Vtemp199[20];
+    WData/*639:0*/ __Vtemp202[20];
+    WData/*639:0*/ __Vtemp205[20];
+    WData/*639:0*/ __Vtemp206[20];
+    WData/*255:0*/ __Vtemp207[8];
+    WData/*255:0*/ __Vtemp208[8];
     WData/*255:0*/ __Vtemp213[8];
-    WData/*255:0*/ __Vtemp217[8];
-    WData/*255:0*/ __Vtemp218[8];
+    WData/*255:0*/ __Vtemp214[8];
+    WData/*255:0*/ __Vtemp219[8];
+    WData/*255:0*/ __Vtemp220[8];
+    WData/*255:0*/ __Vtemp225[8];
+    WData/*255:0*/ __Vtemp226[8];
+    WData/*255:0*/ __Vtemp231[8];
+    WData/*255:0*/ __Vtemp232[8];
+    WData/*255:0*/ __Vtemp237[8];
+    WData/*255:0*/ __Vtemp238[8];
     // Body
     vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__srams__DOT__mem__DOT__mem_ext_0__DOT__mem_0_7__DOT__ram__v0 = 0U;
     vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_source__v0 = 0U;
@@ -161,8 +169,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__62(VTestHarness__Syms* __restric
         = vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__value;
     vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_param__v0 = 0U;
     vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_mask__v0 = 0U;
-    vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode__v0 = 0U;
     vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source__v0 = 0U;
+    vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode__v0 = 0U;
     vlTOPp->__Vdly__TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__value 
         = vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__value;
     vlTOPp->__Vdly__TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__value_1 
@@ -180,19 +188,19 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__62(VTestHarness__Syms* __restric
     vlTOPp->__Vdly__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__value_1 
         = vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__value_1;
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6116:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6121:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                           & (6U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                          & (~ (IData)(vlTOPp->reset))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6119: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6124: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6119, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6124, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6127:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6132:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -202,19 +210,19 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6140:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6145:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                           & (6U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                          & (~ (IData)(vlTOPp->reset))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6143: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6148: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6143, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6148, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6151:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6156:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -224,20 +232,44 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6175:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6169:11
+done_reset        
+    ) {
+        if (VL_UNLIKELY(((0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data)) 
+                         & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                             & (6U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
+                            & (~ (IData)(vlTOPp->reset)))))) {
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6172: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+                      64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6172, "");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6180:11
+verbose&&done_reset        
+    ) {
+        if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                           & (6U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
+                          & (~ (IData)(vlTOPp->reset))) 
+                         & (0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data))))) {
+            VL_FWRITEF(0x80000002U,"Assertion failed: 'A' channel AcquireBlock carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6193:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((3U > (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_size_io_deq_bits_MPORT_data)) 
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (6U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6178: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6196: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6178, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6196, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6186:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6204:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -248,7 +280,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6199:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6217:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (7U & (vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
@@ -258,13 +290,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (6U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6202: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6220: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6202, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6220, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6210:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6228:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -278,7 +310,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6223:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6241:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((2U < vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_param
@@ -286,13 +318,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (6U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6226: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6244: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6226, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6244, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6234:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6252:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -304,20 +336,20 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6247:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6265:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (0xffU & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_mask_io_deq_bits_MPORT_data)))) 
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (6U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6250: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6268: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6250, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6268, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6258:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6276:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -328,7 +360,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6271:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6289:11
 done_reset        
     ) {
         if (VL_UNLIKELY((vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_corrupt
@@ -336,13 +368,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (6U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6274: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6292: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6274, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6292, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6282:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6300:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -354,19 +386,19 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6295:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6313:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                           & (7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                          & (~ (IData)(vlTOPp->reset))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6298: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6316: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6298, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6316, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6306:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6324:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -376,19 +408,19 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6319:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6337:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                           & (7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                          & (~ (IData)(vlTOPp->reset))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6322: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6340: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6322, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6340, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6330:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6348:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -398,20 +430,44 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6354:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6361:11
+done_reset        
+    ) {
+        if (VL_UNLIKELY(((0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data)) 
+                         & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                             & (7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
+                            & (~ (IData)(vlTOPp->reset)))))) {
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6364: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+                      64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6364, "");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6372:11
+verbose&&done_reset        
+    ) {
+        if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                           & (7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
+                          & (~ (IData)(vlTOPp->reset))) 
+                         & (0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data))))) {
+            VL_FWRITEF(0x80000002U,"Assertion failed: 'A' channel AcquirePerm carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6385:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((3U > (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_size_io_deq_bits_MPORT_data)) 
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6357: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6388: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6357, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6388, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6365:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6396:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -422,7 +478,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6378:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6409:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (7U & (vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
@@ -432,13 +488,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6381: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6412: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6381, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6412, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6389:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6420:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -452,7 +508,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6402:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6433:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((2U < vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_param
@@ -460,13 +516,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6405: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6436: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6405, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6436, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6413:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6444:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -478,7 +534,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6426:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6457:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U == vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_param
@@ -486,13 +542,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6429: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6460: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6429, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6460, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6437:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6468:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -504,20 +560,20 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6450:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6481:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (0xffU & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_mask_io_deq_bits_MPORT_data)))) 
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6453: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6484: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6453, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6484, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6461:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6492:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -528,7 +584,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6474:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6505:11
 done_reset        
     ) {
         if (VL_UNLIKELY((vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_corrupt
@@ -536,13 +592,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6477: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6508: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6477, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6508, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6485:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6516:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -554,7 +610,31 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6509:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6529:11
+done_reset        
+    ) {
+        if (VL_UNLIKELY(((0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data)) 
+                         & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                             & (4U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
+                            & (~ (IData)(vlTOPp->reset)))))) {
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6532: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+                      64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6532, "");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6540:11
+verbose&&done_reset        
+    ) {
+        if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                           & (4U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
+                          & (~ (IData)(vlTOPp->reset))) 
+                         & (0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data))))) {
+            VL_FWRITEF(0x80000002U,"Assertion failed: 'A' channel carries Get type which master claims it can't emit (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6553:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (0x3ffff000U & (0x10000000U 
@@ -562,13 +642,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (4U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6512: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6556: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6512, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6556, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6520:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6564:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -580,7 +660,31 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6544:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6577:11
+done_reset        
+    ) {
+        if (VL_UNLIKELY(((0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data)) 
+                         & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                             & (4U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
+                            & (~ (IData)(vlTOPp->reset)))))) {
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6580: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+                      64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6580, "");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6588:11
+verbose&&done_reset        
+    ) {
+        if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                           & (4U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
+                          & (~ (IData)(vlTOPp->reset))) 
+                         & (0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data))))) {
+            VL_FWRITEF(0x80000002U,"Assertion failed: 'A' channel Get carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6601:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (7U & (vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
@@ -590,13 +694,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (4U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6547: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6604: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6547, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6604, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6555:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6612:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -610,7 +714,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6568:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6625:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_param
@@ -618,13 +722,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (4U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6571: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6628: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6571, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6628, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6579:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6636:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -636,7 +740,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6592:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6649:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_mask_io_deq_bits_MPORT_data) 
@@ -644,13 +748,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (4U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6595: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6652: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6595, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6652, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6603:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6660:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -662,7 +766,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6616:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6673:11
 done_reset        
     ) {
         if (VL_UNLIKELY((vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_corrupt
@@ -670,13 +774,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (4U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6619: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6676: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6619, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6676, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6627:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6684:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -688,33 +792,61 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6640:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6697:11
 done_reset        
     ) {
-        if (VL_UNLIKELY(((0U != (0x3ffff000U & (0x10000000U 
-                                                ^ vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data))) 
+        if (VL_UNLIKELY(((~ ((0x9fU >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data)) 
+                             & (0U == (0x3ffff000U 
+                                       & (0x10000000U 
+                                          ^ vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data))))) 
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6643: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6700: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6643, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6700, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6651:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6708:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                            & (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                           & (~ (IData)(vlTOPp->reset))) 
-                         & (0U != (0x3ffff000U & (0x10000000U 
-                                                  ^ vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data)))))) {
+                         & (~ ((0x9fU >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data)) 
+                               & (0U == (0x3ffff000U 
+                                         & (0x10000000U 
+                                            ^ vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data)))))))) {
             VL_FWRITEF(0x80000002U,"Assertion failed: 'A' channel carries PutFull type which is unexpected using diplomatic parameters (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6675:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6721:11
+done_reset        
+    ) {
+        if (VL_UNLIKELY(((0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data)) 
+                         & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                             & (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
+                            & (~ (IData)(vlTOPp->reset)))))) {
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6724: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+                      64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6724, "");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6732:11
+verbose&&done_reset        
+    ) {
+        if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                           & (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
+                          & (~ (IData)(vlTOPp->reset))) 
+                         & (0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data))))) {
+            VL_FWRITEF(0x80000002U,"Assertion failed: 'A' channel PutFull carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6745:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (7U & (vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
@@ -724,13 +856,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6678: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6748: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6678, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6748, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6686:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6756:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -744,7 +876,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6699:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6769:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_param
@@ -752,13 +884,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6702: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6772: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6702, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6772, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6710:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6780:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -770,7 +902,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6723:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6793:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_mask_io_deq_bits_MPORT_data) 
@@ -778,13 +910,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6726: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6796: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6726, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6796, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6734:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6804:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -796,33 +928,61 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6747:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6817:11
 done_reset        
     ) {
-        if (VL_UNLIKELY(((0U != (0x3ffff000U & (0x10000000U 
-                                                ^ vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data))) 
+        if (VL_UNLIKELY(((~ ((0x9fU >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data)) 
+                             & (0U == (0x3ffff000U 
+                                       & (0x10000000U 
+                                          ^ vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data))))) 
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (1U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6750: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6820: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6750, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6820, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6758:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6828:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                            & (1U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                           & (~ (IData)(vlTOPp->reset))) 
-                         & (0U != (0x3ffff000U & (0x10000000U 
-                                                  ^ vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data)))))) {
+                         & (~ ((0x9fU >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data)) 
+                               & (0U == (0x3ffff000U 
+                                         & (0x10000000U 
+                                            ^ vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data)))))))) {
             VL_FWRITEF(0x80000002U,"Assertion failed: 'A' channel carries PutPartial type which is unexpected using diplomatic parameters (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6782:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6841:11
+done_reset        
+    ) {
+        if (VL_UNLIKELY(((0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data)) 
+                         & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                             & (1U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
+                            & (~ (IData)(vlTOPp->reset)))))) {
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6844: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+                      64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6844, "");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6852:11
+verbose&&done_reset        
+    ) {
+        if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                           & (1U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
+                          & (~ (IData)(vlTOPp->reset))) 
+                         & (0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data))))) {
+            VL_FWRITEF(0x80000002U,"Assertion failed: 'A' channel PutPartial carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6865:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (7U & (vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
@@ -832,13 +992,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (1U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6785: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6868: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6785, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6868, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6793:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6876:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -852,7 +1012,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6806:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6889:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_param
@@ -860,13 +1020,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (1U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6809: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6892: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6809, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6892, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6817:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6900:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -878,7 +1038,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6830:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6913:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_mask_io_deq_bits_MPORT_data) 
@@ -886,13 +1046,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (1U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6833: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6916: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6833, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6916, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6841:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6924:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -904,19 +1064,19 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6854:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6937:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                           & (2U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                          & (~ (IData)(vlTOPp->reset))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6857: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6940: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6857, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6940, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6865:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6948:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -926,7 +1086,31 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6889:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6961:11
+done_reset        
+    ) {
+        if (VL_UNLIKELY(((0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data)) 
+                         & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                             & (2U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
+                            & (~ (IData)(vlTOPp->reset)))))) {
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6964: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+                      64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6964, "");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6972:11
+verbose&&done_reset        
+    ) {
+        if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                           & (2U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
+                          & (~ (IData)(vlTOPp->reset))) 
+                         & (0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data))))) {
+            VL_FWRITEF(0x80000002U,"Assertion failed: 'A' channel Arithmetic carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6985:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (7U & (vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
@@ -936,13 +1120,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (2U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6892: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6988: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6892, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6988, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6900:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6996:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -956,7 +1140,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6913:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7009:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((4U < vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_param
@@ -964,13 +1148,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (2U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6916: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7012: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6916, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7012, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6924:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7020:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -982,7 +1166,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6937:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7033:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_mask_io_deq_bits_MPORT_data) 
@@ -990,13 +1174,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (2U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6940: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7036: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6940, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7036, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6948:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7044:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -1008,19 +1192,19 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6961:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7057:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                           & (3U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                          & (~ (IData)(vlTOPp->reset))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6964: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7060: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6964, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7060, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6972:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7068:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -1030,7 +1214,31 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6996:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7081:11
+done_reset        
+    ) {
+        if (VL_UNLIKELY(((0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data)) 
+                         & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                             & (3U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
+                            & (~ (IData)(vlTOPp->reset)))))) {
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7084: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+                      64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7084, "");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7092:11
+verbose&&done_reset        
+    ) {
+        if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                           & (3U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
+                          & (~ (IData)(vlTOPp->reset))) 
+                         & (0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data))))) {
+            VL_FWRITEF(0x80000002U,"Assertion failed: 'A' channel Logical carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7105:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (7U & (vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
@@ -1040,13 +1248,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (3U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:6999: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7108: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 6999, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7108, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7007:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7116:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -1060,7 +1268,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7020:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7129:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((3U < vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_param
@@ -1068,13 +1276,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (3U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7023: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7132: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7023, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7132, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7031:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7140:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -1086,7 +1294,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7044:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7153:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_mask_io_deq_bits_MPORT_data) 
@@ -1094,13 +1302,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (3U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7047: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7156: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7047, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7156, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7055:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7164:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -1112,19 +1320,19 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7068:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7177:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                           & (5U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                          & (~ (IData)(vlTOPp->reset))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7071: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7180: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7071, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7180, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7079:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7188:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -1134,7 +1342,31 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7103:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7201:11
+done_reset        
+    ) {
+        if (VL_UNLIKELY(((0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data)) 
+                         & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                             & (5U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
+                            & (~ (IData)(vlTOPp->reset)))))) {
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7204: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+                      64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7204, "");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7212:11
+verbose&&done_reset        
+    ) {
+        if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                           & (5U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
+                          & (~ (IData)(vlTOPp->reset))) 
+                         & (0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data))))) {
+            VL_FWRITEF(0x80000002U,"Assertion failed: 'A' channel Hint carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7225:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (7U & (vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
@@ -1144,13 +1376,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (5U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7106: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7228: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7106, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7228, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7114:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7236:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -1164,7 +1396,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7127:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7249:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((1U < vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_param
@@ -1172,13 +1404,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (5U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7130: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7252: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7130, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7252, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7138:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7260:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -1190,7 +1422,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7151:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7273:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_mask_io_deq_bits_MPORT_data) 
@@ -1198,13 +1430,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (5U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7154: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7276: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7154, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7276, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7162:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7284:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -1216,7 +1448,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7175:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7297:11
 done_reset        
     ) {
         if (VL_UNLIKELY((vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_corrupt
@@ -1224,13 +1456,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (5U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7178: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7300: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7178, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7300, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7186:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7308:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -1242,7 +1474,55 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7662:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7658:11
+done_reset        
+    ) {
+        if (VL_UNLIKELY(((0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source)) 
+                         & (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
+                             & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_read))) 
+                            & (~ (IData)(vlTOPp->reset)))))) {
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7661: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+                      64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7661, "");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7669:11
+verbose&&done_reset        
+    ) {
+        if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
+                           & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_read))) 
+                          & (~ (IData)(vlTOPp->reset))) 
+                         & (0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source))))) {
+            VL_FWRITEF(0x80000002U,"Assertion failed: 'D' channel AccessAck carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:49 assert(cond, message)\n");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7715:11
+done_reset        
+    ) {
+        if (VL_UNLIKELY(((0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source)) 
+                         & (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
+                             & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_read)) 
+                            & (~ (IData)(vlTOPp->reset)))))) {
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7718: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+                      64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7718, "");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7726:11
+verbose&&done_reset        
+    ) {
+        if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
+                           & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_read)) 
+                          & (~ (IData)(vlTOPp->reset))) 
+                         & (0x9fU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source))))) {
+            VL_FWRITEF(0x80000002U,"Assertion failed: 'D' channel AccessAckData carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:49 assert(cond, message)\n");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7862:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data) 
@@ -1250,13 +1530,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter)) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7665: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7865: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7665, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7865, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7673:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7873:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -1268,7 +1548,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7686:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7886:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_param
@@ -1277,13 +1557,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter)) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7689: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7889: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7689, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7889, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7697:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7897:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -1296,7 +1576,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7710:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7910:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_size_io_deq_bits_MPORT_data) 
@@ -1304,13 +1584,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter)) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7713: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7913: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7713, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7913, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7721:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7921:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -1322,7 +1602,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7734:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7934:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data) 
@@ -1330,13 +1610,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter)) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7737: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7937: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7737, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7937, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7745:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7945:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -1348,7 +1628,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7758:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7958:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
@@ -1356,13 +1636,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                              & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter)) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7761: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7961: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7761, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7961, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7769:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7969:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -1374,7 +1654,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7782:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7982:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_read) 
@@ -1382,13 +1662,13 @@ done_reset
                          & (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
                              & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter)) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7785: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7985: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7785, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7985, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7793:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7993:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
@@ -1400,7 +1680,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7817:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8017:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_size) 
@@ -1408,13 +1688,13 @@ done_reset
                          & (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
                              & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter)) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7820: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8020: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7820, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 8020, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7828:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8028:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
@@ -1426,7 +1706,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7841:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8041:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source) 
@@ -1434,13 +1714,13 @@ done_reset
                          & (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
                              & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter)) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7844: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8044: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7844, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 8044, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7852:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8052:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
@@ -1452,56 +1732,56 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7887:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8087:11
 done_reset        
     ) {
-        VL_SHIFTR_WWI(256,256,8, __Vtemp146, vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight, (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data));
-        if (VL_UNLIKELY((__Vtemp146[0U] & (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_done) 
+        VL_SHIFTR_WWI(160,160,8, __Vtemp141, vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight, (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data));
+        if (VL_UNLIKELY((__Vtemp141[0U] & (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_done) 
                                             & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))) 
                                            & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7890: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8090: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7890, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 8090, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7898:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8098:11
 verbose&&done_reset        
     ) {
-        VL_SHIFTR_WWI(256,256,8, __Vtemp147, vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight, (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data));
+        VL_SHIFTR_WWI(160,160,8, __Vtemp142, vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight, (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data));
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_done) 
                            & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))) 
                           & (~ (IData)(vlTOPp->reset))) 
-                         & __Vtemp147[0U]))) {
+                         & __Vtemp142[0U]))) {
             VL_FWRITEF(0x80000002U,"Assertion failed: 'A' channel re-used a source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7911:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8111:11
 done_reset        
     ) {
-        VL_SHIFTR_WWI(256,256,8, __Vtemp148, vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight, (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source));
-        if (VL_UNLIKELY(((~ (__Vtemp148[0U] | (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+        VL_SHIFTR_WWI(160,160,8, __Vtemp143, vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight, (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source));
+        if (VL_UNLIKELY(((~ (__Vtemp143[0U] | (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                                                 & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))) 
                                                & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data) 
                                                   == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source))))) 
                          & (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
                              & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7914: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8114: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7914, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 8114, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7922:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8122:11
 verbose&&done_reset        
     ) {
-        VL_SHIFTR_WWI(256,256,8, __Vtemp149, vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight, (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source));
+        VL_SHIFTR_WWI(160,160,8, __Vtemp144, vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight, (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source));
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
                            & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1))) 
                           & (~ (IData)(vlTOPp->reset))) 
-                         & (~ (__Vtemp149[0U] | (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                         & (~ (__Vtemp144[0U] | (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
                                                   & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))) 
                                                  & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data) 
                                                     == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source)))))))) {
@@ -1509,7 +1789,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7935:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8135:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((~ (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_read) 
@@ -1527,13 +1807,13 @@ done_reset
                                 & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data) 
                                    == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source)))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7938: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8138: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7938, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 8138, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7946:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8146:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY((((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
@@ -1557,7 +1837,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7959:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8159:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_size_io_deq_bits_MPORT_data) 
@@ -1569,13 +1849,13 @@ done_reset
                                 & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data) 
                                    == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source)))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7962: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8162: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7962, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 8162, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7970:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8170:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY((((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
@@ -1591,155 +1871,107 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7983:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8183:11
 done_reset        
     ) {
-        __Vtemp154[0U] = (7U & (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0U] 
+        __Vtemp149[0U] = (7U & (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0U] 
                                 >> 1U));
-        __Vtemp154[1U] = 0U;
-        __Vtemp154[2U] = 0U;
-        __Vtemp154[3U] = 0U;
-        __Vtemp154[4U] = 0U;
-        __Vtemp154[5U] = 0U;
-        __Vtemp154[6U] = 0U;
-        __Vtemp154[7U] = 0U;
-        __Vtemp154[8U] = 0U;
-        __Vtemp154[9U] = 0U;
-        __Vtemp154[0xaU] = 0U;
-        __Vtemp154[0xbU] = 0U;
-        __Vtemp154[0xcU] = 0U;
-        __Vtemp154[0xdU] = 0U;
-        __Vtemp154[0xeU] = 0U;
-        __Vtemp154[0xfU] = 0U;
-        __Vtemp154[0x10U] = 0U;
-        __Vtemp154[0x11U] = 0U;
-        __Vtemp154[0x12U] = 0U;
-        __Vtemp154[0x13U] = 0U;
-        __Vtemp154[0x14U] = 0U;
-        __Vtemp154[0x15U] = 0U;
-        __Vtemp154[0x16U] = 0U;
-        __Vtemp154[0x17U] = 0U;
-        __Vtemp154[0x18U] = 0U;
-        __Vtemp154[0x19U] = 0U;
-        __Vtemp154[0x1aU] = 0U;
-        __Vtemp154[0x1bU] = 0U;
-        __Vtemp154[0x1cU] = 0U;
-        __Vtemp154[0x1dU] = 0U;
-        __Vtemp154[0x1eU] = 0U;
-        __Vtemp154[0x1fU] = 0U;
-        VL_EXTEND_WW(1024,1023, __Vtemp155, __Vtemp154);
-        __Vtemp160[0U] = (7U & (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0U] 
+        __Vtemp149[1U] = 0U;
+        __Vtemp149[2U] = 0U;
+        __Vtemp149[3U] = 0U;
+        __Vtemp149[4U] = 0U;
+        __Vtemp149[5U] = 0U;
+        __Vtemp149[6U] = 0U;
+        __Vtemp149[7U] = 0U;
+        __Vtemp149[8U] = 0U;
+        __Vtemp149[9U] = 0U;
+        __Vtemp149[0xaU] = 0U;
+        __Vtemp149[0xbU] = 0U;
+        __Vtemp149[0xcU] = 0U;
+        __Vtemp149[0xdU] = 0U;
+        __Vtemp149[0xeU] = 0U;
+        __Vtemp149[0xfU] = 0U;
+        __Vtemp149[0x10U] = 0U;
+        __Vtemp149[0x11U] = 0U;
+        __Vtemp149[0x12U] = 0U;
+        __Vtemp149[0x13U] = 0U;
+        VL_EXTEND_WW(640,639, __Vtemp150, __Vtemp149);
+        __Vtemp155[0U] = (7U & (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0U] 
                                 >> 1U));
-        __Vtemp160[1U] = 0U;
-        __Vtemp160[2U] = 0U;
-        __Vtemp160[3U] = 0U;
-        __Vtemp160[4U] = 0U;
-        __Vtemp160[5U] = 0U;
-        __Vtemp160[6U] = 0U;
-        __Vtemp160[7U] = 0U;
-        __Vtemp160[8U] = 0U;
-        __Vtemp160[9U] = 0U;
-        __Vtemp160[0xaU] = 0U;
-        __Vtemp160[0xbU] = 0U;
-        __Vtemp160[0xcU] = 0U;
-        __Vtemp160[0xdU] = 0U;
-        __Vtemp160[0xeU] = 0U;
-        __Vtemp160[0xfU] = 0U;
-        __Vtemp160[0x10U] = 0U;
-        __Vtemp160[0x11U] = 0U;
-        __Vtemp160[0x12U] = 0U;
-        __Vtemp160[0x13U] = 0U;
-        __Vtemp160[0x14U] = 0U;
-        __Vtemp160[0x15U] = 0U;
-        __Vtemp160[0x16U] = 0U;
-        __Vtemp160[0x17U] = 0U;
-        __Vtemp160[0x18U] = 0U;
-        __Vtemp160[0x19U] = 0U;
-        __Vtemp160[0x1aU] = 0U;
-        __Vtemp160[0x1bU] = 0U;
-        __Vtemp160[0x1cU] = 0U;
-        __Vtemp160[0x1dU] = 0U;
-        __Vtemp160[0x1eU] = 0U;
-        __Vtemp160[0x1fU] = 0U;
-        VL_EXTEND_WW(1024,1023, __Vtemp161, __Vtemp160);
-        __Vtemp166[0U] = (7U & (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0U] 
+        __Vtemp155[1U] = 0U;
+        __Vtemp155[2U] = 0U;
+        __Vtemp155[3U] = 0U;
+        __Vtemp155[4U] = 0U;
+        __Vtemp155[5U] = 0U;
+        __Vtemp155[6U] = 0U;
+        __Vtemp155[7U] = 0U;
+        __Vtemp155[8U] = 0U;
+        __Vtemp155[9U] = 0U;
+        __Vtemp155[0xaU] = 0U;
+        __Vtemp155[0xbU] = 0U;
+        __Vtemp155[0xcU] = 0U;
+        __Vtemp155[0xdU] = 0U;
+        __Vtemp155[0xeU] = 0U;
+        __Vtemp155[0xfU] = 0U;
+        __Vtemp155[0x10U] = 0U;
+        __Vtemp155[0x11U] = 0U;
+        __Vtemp155[0x12U] = 0U;
+        __Vtemp155[0x13U] = 0U;
+        VL_EXTEND_WW(640,639, __Vtemp156, __Vtemp155);
+        __Vtemp161[0U] = (7U & (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0U] 
                                 >> 1U));
-        __Vtemp166[1U] = 0U;
-        __Vtemp166[2U] = 0U;
-        __Vtemp166[3U] = 0U;
-        __Vtemp166[4U] = 0U;
-        __Vtemp166[5U] = 0U;
-        __Vtemp166[6U] = 0U;
-        __Vtemp166[7U] = 0U;
-        __Vtemp166[8U] = 0U;
-        __Vtemp166[9U] = 0U;
-        __Vtemp166[0xaU] = 0U;
-        __Vtemp166[0xbU] = 0U;
-        __Vtemp166[0xcU] = 0U;
-        __Vtemp166[0xdU] = 0U;
-        __Vtemp166[0xeU] = 0U;
-        __Vtemp166[0xfU] = 0U;
-        __Vtemp166[0x10U] = 0U;
-        __Vtemp166[0x11U] = 0U;
-        __Vtemp166[0x12U] = 0U;
-        __Vtemp166[0x13U] = 0U;
-        __Vtemp166[0x14U] = 0U;
-        __Vtemp166[0x15U] = 0U;
-        __Vtemp166[0x16U] = 0U;
-        __Vtemp166[0x17U] = 0U;
-        __Vtemp166[0x18U] = 0U;
-        __Vtemp166[0x19U] = 0U;
-        __Vtemp166[0x1aU] = 0U;
-        __Vtemp166[0x1bU] = 0U;
-        __Vtemp166[0x1cU] = 0U;
-        __Vtemp166[0x1dU] = 0U;
-        __Vtemp166[0x1eU] = 0U;
-        __Vtemp166[0x1fU] = 0U;
-        VL_EXTEND_WW(1024,1023, __Vtemp167, __Vtemp166);
-        __Vtemp172[0U] = (7U & (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0U] 
+        __Vtemp161[1U] = 0U;
+        __Vtemp161[2U] = 0U;
+        __Vtemp161[3U] = 0U;
+        __Vtemp161[4U] = 0U;
+        __Vtemp161[5U] = 0U;
+        __Vtemp161[6U] = 0U;
+        __Vtemp161[7U] = 0U;
+        __Vtemp161[8U] = 0U;
+        __Vtemp161[9U] = 0U;
+        __Vtemp161[0xaU] = 0U;
+        __Vtemp161[0xbU] = 0U;
+        __Vtemp161[0xcU] = 0U;
+        __Vtemp161[0xdU] = 0U;
+        __Vtemp161[0xeU] = 0U;
+        __Vtemp161[0xfU] = 0U;
+        __Vtemp161[0x10U] = 0U;
+        __Vtemp161[0x11U] = 0U;
+        __Vtemp161[0x12U] = 0U;
+        __Vtemp161[0x13U] = 0U;
+        VL_EXTEND_WW(640,639, __Vtemp162, __Vtemp161);
+        __Vtemp167[0U] = (7U & (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0U] 
                                 >> 1U));
-        __Vtemp172[1U] = 0U;
-        __Vtemp172[2U] = 0U;
-        __Vtemp172[3U] = 0U;
-        __Vtemp172[4U] = 0U;
-        __Vtemp172[5U] = 0U;
-        __Vtemp172[6U] = 0U;
-        __Vtemp172[7U] = 0U;
-        __Vtemp172[8U] = 0U;
-        __Vtemp172[9U] = 0U;
-        __Vtemp172[0xaU] = 0U;
-        __Vtemp172[0xbU] = 0U;
-        __Vtemp172[0xcU] = 0U;
-        __Vtemp172[0xdU] = 0U;
-        __Vtemp172[0xeU] = 0U;
-        __Vtemp172[0xfU] = 0U;
-        __Vtemp172[0x10U] = 0U;
-        __Vtemp172[0x11U] = 0U;
-        __Vtemp172[0x12U] = 0U;
-        __Vtemp172[0x13U] = 0U;
-        __Vtemp172[0x14U] = 0U;
-        __Vtemp172[0x15U] = 0U;
-        __Vtemp172[0x16U] = 0U;
-        __Vtemp172[0x17U] = 0U;
-        __Vtemp172[0x18U] = 0U;
-        __Vtemp172[0x19U] = 0U;
-        __Vtemp172[0x1aU] = 0U;
-        __Vtemp172[0x1bU] = 0U;
-        __Vtemp172[0x1cU] = 0U;
-        __Vtemp172[0x1dU] = 0U;
-        __Vtemp172[0x1eU] = 0U;
-        __Vtemp172[0x1fU] = 0U;
-        VL_EXTEND_WW(1024,1023, __Vtemp173, __Vtemp172);
+        __Vtemp167[1U] = 0U;
+        __Vtemp167[2U] = 0U;
+        __Vtemp167[3U] = 0U;
+        __Vtemp167[4U] = 0U;
+        __Vtemp167[5U] = 0U;
+        __Vtemp167[6U] = 0U;
+        __Vtemp167[7U] = 0U;
+        __Vtemp167[8U] = 0U;
+        __Vtemp167[9U] = 0U;
+        __Vtemp167[0xaU] = 0U;
+        __Vtemp167[0xbU] = 0U;
+        __Vtemp167[0xcU] = 0U;
+        __Vtemp167[0xdU] = 0U;
+        __Vtemp167[0xeU] = 0U;
+        __Vtemp167[0xfU] = 0U;
+        __Vtemp167[0x10U] = 0U;
+        __Vtemp167[0x11U] = 0U;
+        __Vtemp167[0x12U] = 0U;
+        __Vtemp167[0x13U] = 0U;
+        VL_EXTEND_WW(640,639, __Vtemp168, __Vtemp167);
         if (VL_UNLIKELY(((~ (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_read) 
-                              == ((7U == (7U & __Vtemp155[0U]))
+                              == ((7U == (7U & __Vtemp150[0U]))
                                    ? 4U : ((6U == (7U 
-                                                   & __Vtemp161[0U]))
+                                                   & __Vtemp156[0U]))
                                             ? 4U : (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___GEN_46)))) 
                              | ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_read) 
-                                == ((7U == (7U & __Vtemp167[0U]))
+                                == ((7U == (7U & __Vtemp162[0U]))
                                      ? 4U : ((6U == 
                                               (7U & 
-                                               __Vtemp173[0U]))
+                                               __Vtemp168[0U]))
                                               ? 5U : (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___GEN_46)))))) 
                          & ((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
                               & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1))) 
@@ -1748,151 +1980,103 @@ done_reset
                                    & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data) 
                                       == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source))))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7986: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8186: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 7986, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 8186, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:7994:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8194:11
 verbose&&done_reset        
     ) {
-        __Vtemp178[0U] = (7U & (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0U] 
+        __Vtemp173[0U] = (7U & (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0U] 
                                 >> 1U));
-        __Vtemp178[1U] = 0U;
-        __Vtemp178[2U] = 0U;
-        __Vtemp178[3U] = 0U;
-        __Vtemp178[4U] = 0U;
-        __Vtemp178[5U] = 0U;
-        __Vtemp178[6U] = 0U;
-        __Vtemp178[7U] = 0U;
-        __Vtemp178[8U] = 0U;
-        __Vtemp178[9U] = 0U;
-        __Vtemp178[0xaU] = 0U;
-        __Vtemp178[0xbU] = 0U;
-        __Vtemp178[0xcU] = 0U;
-        __Vtemp178[0xdU] = 0U;
-        __Vtemp178[0xeU] = 0U;
-        __Vtemp178[0xfU] = 0U;
-        __Vtemp178[0x10U] = 0U;
-        __Vtemp178[0x11U] = 0U;
-        __Vtemp178[0x12U] = 0U;
-        __Vtemp178[0x13U] = 0U;
-        __Vtemp178[0x14U] = 0U;
-        __Vtemp178[0x15U] = 0U;
-        __Vtemp178[0x16U] = 0U;
-        __Vtemp178[0x17U] = 0U;
-        __Vtemp178[0x18U] = 0U;
-        __Vtemp178[0x19U] = 0U;
-        __Vtemp178[0x1aU] = 0U;
-        __Vtemp178[0x1bU] = 0U;
-        __Vtemp178[0x1cU] = 0U;
-        __Vtemp178[0x1dU] = 0U;
-        __Vtemp178[0x1eU] = 0U;
-        __Vtemp178[0x1fU] = 0U;
-        VL_EXTEND_WW(1024,1023, __Vtemp179, __Vtemp178);
-        __Vtemp184[0U] = (7U & (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0U] 
+        __Vtemp173[1U] = 0U;
+        __Vtemp173[2U] = 0U;
+        __Vtemp173[3U] = 0U;
+        __Vtemp173[4U] = 0U;
+        __Vtemp173[5U] = 0U;
+        __Vtemp173[6U] = 0U;
+        __Vtemp173[7U] = 0U;
+        __Vtemp173[8U] = 0U;
+        __Vtemp173[9U] = 0U;
+        __Vtemp173[0xaU] = 0U;
+        __Vtemp173[0xbU] = 0U;
+        __Vtemp173[0xcU] = 0U;
+        __Vtemp173[0xdU] = 0U;
+        __Vtemp173[0xeU] = 0U;
+        __Vtemp173[0xfU] = 0U;
+        __Vtemp173[0x10U] = 0U;
+        __Vtemp173[0x11U] = 0U;
+        __Vtemp173[0x12U] = 0U;
+        __Vtemp173[0x13U] = 0U;
+        VL_EXTEND_WW(640,639, __Vtemp174, __Vtemp173);
+        __Vtemp179[0U] = (7U & (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0U] 
                                 >> 1U));
-        __Vtemp184[1U] = 0U;
-        __Vtemp184[2U] = 0U;
-        __Vtemp184[3U] = 0U;
-        __Vtemp184[4U] = 0U;
-        __Vtemp184[5U] = 0U;
-        __Vtemp184[6U] = 0U;
-        __Vtemp184[7U] = 0U;
-        __Vtemp184[8U] = 0U;
-        __Vtemp184[9U] = 0U;
-        __Vtemp184[0xaU] = 0U;
-        __Vtemp184[0xbU] = 0U;
-        __Vtemp184[0xcU] = 0U;
-        __Vtemp184[0xdU] = 0U;
-        __Vtemp184[0xeU] = 0U;
-        __Vtemp184[0xfU] = 0U;
-        __Vtemp184[0x10U] = 0U;
-        __Vtemp184[0x11U] = 0U;
-        __Vtemp184[0x12U] = 0U;
-        __Vtemp184[0x13U] = 0U;
-        __Vtemp184[0x14U] = 0U;
-        __Vtemp184[0x15U] = 0U;
-        __Vtemp184[0x16U] = 0U;
-        __Vtemp184[0x17U] = 0U;
-        __Vtemp184[0x18U] = 0U;
-        __Vtemp184[0x19U] = 0U;
-        __Vtemp184[0x1aU] = 0U;
-        __Vtemp184[0x1bU] = 0U;
-        __Vtemp184[0x1cU] = 0U;
-        __Vtemp184[0x1dU] = 0U;
-        __Vtemp184[0x1eU] = 0U;
-        __Vtemp184[0x1fU] = 0U;
-        VL_EXTEND_WW(1024,1023, __Vtemp185, __Vtemp184);
-        __Vtemp190[0U] = (7U & (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0U] 
+        __Vtemp179[1U] = 0U;
+        __Vtemp179[2U] = 0U;
+        __Vtemp179[3U] = 0U;
+        __Vtemp179[4U] = 0U;
+        __Vtemp179[5U] = 0U;
+        __Vtemp179[6U] = 0U;
+        __Vtemp179[7U] = 0U;
+        __Vtemp179[8U] = 0U;
+        __Vtemp179[9U] = 0U;
+        __Vtemp179[0xaU] = 0U;
+        __Vtemp179[0xbU] = 0U;
+        __Vtemp179[0xcU] = 0U;
+        __Vtemp179[0xdU] = 0U;
+        __Vtemp179[0xeU] = 0U;
+        __Vtemp179[0xfU] = 0U;
+        __Vtemp179[0x10U] = 0U;
+        __Vtemp179[0x11U] = 0U;
+        __Vtemp179[0x12U] = 0U;
+        __Vtemp179[0x13U] = 0U;
+        VL_EXTEND_WW(640,639, __Vtemp180, __Vtemp179);
+        __Vtemp185[0U] = (7U & (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0U] 
                                 >> 1U));
-        __Vtemp190[1U] = 0U;
-        __Vtemp190[2U] = 0U;
-        __Vtemp190[3U] = 0U;
-        __Vtemp190[4U] = 0U;
-        __Vtemp190[5U] = 0U;
-        __Vtemp190[6U] = 0U;
-        __Vtemp190[7U] = 0U;
-        __Vtemp190[8U] = 0U;
-        __Vtemp190[9U] = 0U;
-        __Vtemp190[0xaU] = 0U;
-        __Vtemp190[0xbU] = 0U;
-        __Vtemp190[0xcU] = 0U;
-        __Vtemp190[0xdU] = 0U;
-        __Vtemp190[0xeU] = 0U;
-        __Vtemp190[0xfU] = 0U;
-        __Vtemp190[0x10U] = 0U;
-        __Vtemp190[0x11U] = 0U;
-        __Vtemp190[0x12U] = 0U;
-        __Vtemp190[0x13U] = 0U;
-        __Vtemp190[0x14U] = 0U;
-        __Vtemp190[0x15U] = 0U;
-        __Vtemp190[0x16U] = 0U;
-        __Vtemp190[0x17U] = 0U;
-        __Vtemp190[0x18U] = 0U;
-        __Vtemp190[0x19U] = 0U;
-        __Vtemp190[0x1aU] = 0U;
-        __Vtemp190[0x1bU] = 0U;
-        __Vtemp190[0x1cU] = 0U;
-        __Vtemp190[0x1dU] = 0U;
-        __Vtemp190[0x1eU] = 0U;
-        __Vtemp190[0x1fU] = 0U;
-        VL_EXTEND_WW(1024,1023, __Vtemp191, __Vtemp190);
-        __Vtemp196[0U] = (7U & (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0U] 
+        __Vtemp185[1U] = 0U;
+        __Vtemp185[2U] = 0U;
+        __Vtemp185[3U] = 0U;
+        __Vtemp185[4U] = 0U;
+        __Vtemp185[5U] = 0U;
+        __Vtemp185[6U] = 0U;
+        __Vtemp185[7U] = 0U;
+        __Vtemp185[8U] = 0U;
+        __Vtemp185[9U] = 0U;
+        __Vtemp185[0xaU] = 0U;
+        __Vtemp185[0xbU] = 0U;
+        __Vtemp185[0xcU] = 0U;
+        __Vtemp185[0xdU] = 0U;
+        __Vtemp185[0xeU] = 0U;
+        __Vtemp185[0xfU] = 0U;
+        __Vtemp185[0x10U] = 0U;
+        __Vtemp185[0x11U] = 0U;
+        __Vtemp185[0x12U] = 0U;
+        __Vtemp185[0x13U] = 0U;
+        VL_EXTEND_WW(640,639, __Vtemp186, __Vtemp185);
+        __Vtemp191[0U] = (7U & (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0U] 
                                 >> 1U));
-        __Vtemp196[1U] = 0U;
-        __Vtemp196[2U] = 0U;
-        __Vtemp196[3U] = 0U;
-        __Vtemp196[4U] = 0U;
-        __Vtemp196[5U] = 0U;
-        __Vtemp196[6U] = 0U;
-        __Vtemp196[7U] = 0U;
-        __Vtemp196[8U] = 0U;
-        __Vtemp196[9U] = 0U;
-        __Vtemp196[0xaU] = 0U;
-        __Vtemp196[0xbU] = 0U;
-        __Vtemp196[0xcU] = 0U;
-        __Vtemp196[0xdU] = 0U;
-        __Vtemp196[0xeU] = 0U;
-        __Vtemp196[0xfU] = 0U;
-        __Vtemp196[0x10U] = 0U;
-        __Vtemp196[0x11U] = 0U;
-        __Vtemp196[0x12U] = 0U;
-        __Vtemp196[0x13U] = 0U;
-        __Vtemp196[0x14U] = 0U;
-        __Vtemp196[0x15U] = 0U;
-        __Vtemp196[0x16U] = 0U;
-        __Vtemp196[0x17U] = 0U;
-        __Vtemp196[0x18U] = 0U;
-        __Vtemp196[0x19U] = 0U;
-        __Vtemp196[0x1aU] = 0U;
-        __Vtemp196[0x1bU] = 0U;
-        __Vtemp196[0x1cU] = 0U;
-        __Vtemp196[0x1dU] = 0U;
-        __Vtemp196[0x1eU] = 0U;
-        __Vtemp196[0x1fU] = 0U;
-        VL_EXTEND_WW(1024,1023, __Vtemp197, __Vtemp196);
+        __Vtemp191[1U] = 0U;
+        __Vtemp191[2U] = 0U;
+        __Vtemp191[3U] = 0U;
+        __Vtemp191[4U] = 0U;
+        __Vtemp191[5U] = 0U;
+        __Vtemp191[6U] = 0U;
+        __Vtemp191[7U] = 0U;
+        __Vtemp191[8U] = 0U;
+        __Vtemp191[9U] = 0U;
+        __Vtemp191[0xaU] = 0U;
+        __Vtemp191[0xbU] = 0U;
+        __Vtemp191[0xcU] = 0U;
+        __Vtemp191[0xdU] = 0U;
+        __Vtemp191[0xeU] = 0U;
+        __Vtemp191[0xfU] = 0U;
+        __Vtemp191[0x10U] = 0U;
+        __Vtemp191[0x11U] = 0U;
+        __Vtemp191[0x12U] = 0U;
+        __Vtemp191[0x13U] = 0U;
+        VL_EXTEND_WW(640,639, __Vtemp192, __Vtemp191);
         if (VL_UNLIKELY((((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
                             & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1))) 
                            & (~ (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -1901,65 +2085,53 @@ verbose&&done_reset
                                     == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source))))) 
                           & (~ (IData)(vlTOPp->reset))) 
                          & (~ (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_read) 
-                                == ((7U == (7U & __Vtemp179[0U]))
+                                == ((7U == (7U & __Vtemp174[0U]))
                                      ? 4U : ((6U == 
                                               (7U & 
-                                               __Vtemp185[0U]))
+                                               __Vtemp180[0U]))
                                               ? 4U : (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___GEN_46)))) 
                                | ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_read) 
                                   == ((7U == (7U & 
-                                              __Vtemp191[0U]))
+                                              __Vtemp186[0U]))
                                        ? 4U : ((6U 
                                                 == 
                                                 (7U 
-                                                 & __Vtemp197[0U]))
+                                                 & __Vtemp192[0U]))
                                                 ? 5U
                                                 : (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___GEN_46))))))))) {
             VL_FWRITEF(0x80000002U,"Assertion failed: 'D' channel contains improper opcode response (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:49 assert(cond, message)\n");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8007:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8207:11
 done_reset        
     ) {
-        VL_SHIFTR_WWI(1024,1024,11, __Vtemp200, vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes, 
+        VL_SHIFTR_WWI(640,640,11, __Vtemp195, vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes, 
                       ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source) 
                        << 2U));
-        __Vtemp203[0U] = (7U & (__Vtemp200[0U] >> 1U));
-        __Vtemp203[1U] = 0U;
-        __Vtemp203[2U] = 0U;
-        __Vtemp203[3U] = 0U;
-        __Vtemp203[4U] = 0U;
-        __Vtemp203[5U] = 0U;
-        __Vtemp203[6U] = 0U;
-        __Vtemp203[7U] = 0U;
-        __Vtemp203[8U] = 0U;
-        __Vtemp203[9U] = 0U;
-        __Vtemp203[0xaU] = 0U;
-        __Vtemp203[0xbU] = 0U;
-        __Vtemp203[0xcU] = 0U;
-        __Vtemp203[0xdU] = 0U;
-        __Vtemp203[0xeU] = 0U;
-        __Vtemp203[0xfU] = 0U;
-        __Vtemp203[0x10U] = 0U;
-        __Vtemp203[0x11U] = 0U;
-        __Vtemp203[0x12U] = 0U;
-        __Vtemp203[0x13U] = 0U;
-        __Vtemp203[0x14U] = 0U;
-        __Vtemp203[0x15U] = 0U;
-        __Vtemp203[0x16U] = 0U;
-        __Vtemp203[0x17U] = 0U;
-        __Vtemp203[0x18U] = 0U;
-        __Vtemp203[0x19U] = 0U;
-        __Vtemp203[0x1aU] = 0U;
-        __Vtemp203[0x1bU] = 0U;
-        __Vtemp203[0x1cU] = 0U;
-        __Vtemp203[0x1dU] = 0U;
-        __Vtemp203[0x1eU] = 0U;
-        __Vtemp203[0x1fU] = 0U;
-        VL_EXTEND_WW(1024,1023, __Vtemp204, __Vtemp203);
+        __Vtemp198[0U] = (7U & (__Vtemp195[0U] >> 1U));
+        __Vtemp198[1U] = 0U;
+        __Vtemp198[2U] = 0U;
+        __Vtemp198[3U] = 0U;
+        __Vtemp198[4U] = 0U;
+        __Vtemp198[5U] = 0U;
+        __Vtemp198[6U] = 0U;
+        __Vtemp198[7U] = 0U;
+        __Vtemp198[8U] = 0U;
+        __Vtemp198[9U] = 0U;
+        __Vtemp198[0xaU] = 0U;
+        __Vtemp198[0xbU] = 0U;
+        __Vtemp198[0xcU] = 0U;
+        __Vtemp198[0xdU] = 0U;
+        __Vtemp198[0xeU] = 0U;
+        __Vtemp198[0xfU] = 0U;
+        __Vtemp198[0x10U] = 0U;
+        __Vtemp198[0x11U] = 0U;
+        __Vtemp198[0x12U] = 0U;
+        __Vtemp198[0x13U] = 0U;
+        VL_EXTEND_WW(640,639, __Vtemp199, __Vtemp198);
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_size) 
-                          != (0xfU & __Vtemp204[0U])) 
+                          != (0xfU & __Vtemp199[0U])) 
                          & ((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
                               & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1))) 
                              & (~ (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -1967,51 +2139,39 @@ done_reset
                                    & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data) 
                                       == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source))))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8010: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8210: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 8010, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 8210, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8018:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8218:11
 verbose&&done_reset        
     ) {
-        VL_SHIFTR_WWI(1024,1024,11, __Vtemp207, vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes, 
+        VL_SHIFTR_WWI(640,640,11, __Vtemp202, vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes, 
                       ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source) 
                        << 2U));
-        __Vtemp210[0U] = (7U & (__Vtemp207[0U] >> 1U));
-        __Vtemp210[1U] = 0U;
-        __Vtemp210[2U] = 0U;
-        __Vtemp210[3U] = 0U;
-        __Vtemp210[4U] = 0U;
-        __Vtemp210[5U] = 0U;
-        __Vtemp210[6U] = 0U;
-        __Vtemp210[7U] = 0U;
-        __Vtemp210[8U] = 0U;
-        __Vtemp210[9U] = 0U;
-        __Vtemp210[0xaU] = 0U;
-        __Vtemp210[0xbU] = 0U;
-        __Vtemp210[0xcU] = 0U;
-        __Vtemp210[0xdU] = 0U;
-        __Vtemp210[0xeU] = 0U;
-        __Vtemp210[0xfU] = 0U;
-        __Vtemp210[0x10U] = 0U;
-        __Vtemp210[0x11U] = 0U;
-        __Vtemp210[0x12U] = 0U;
-        __Vtemp210[0x13U] = 0U;
-        __Vtemp210[0x14U] = 0U;
-        __Vtemp210[0x15U] = 0U;
-        __Vtemp210[0x16U] = 0U;
-        __Vtemp210[0x17U] = 0U;
-        __Vtemp210[0x18U] = 0U;
-        __Vtemp210[0x19U] = 0U;
-        __Vtemp210[0x1aU] = 0U;
-        __Vtemp210[0x1bU] = 0U;
-        __Vtemp210[0x1cU] = 0U;
-        __Vtemp210[0x1dU] = 0U;
-        __Vtemp210[0x1eU] = 0U;
-        __Vtemp210[0x1fU] = 0U;
-        VL_EXTEND_WW(1024,1023, __Vtemp211, __Vtemp210);
+        __Vtemp205[0U] = (7U & (__Vtemp202[0U] >> 1U));
+        __Vtemp205[1U] = 0U;
+        __Vtemp205[2U] = 0U;
+        __Vtemp205[3U] = 0U;
+        __Vtemp205[4U] = 0U;
+        __Vtemp205[5U] = 0U;
+        __Vtemp205[6U] = 0U;
+        __Vtemp205[7U] = 0U;
+        __Vtemp205[8U] = 0U;
+        __Vtemp205[9U] = 0U;
+        __Vtemp205[0xaU] = 0U;
+        __Vtemp205[0xbU] = 0U;
+        __Vtemp205[0xcU] = 0U;
+        __Vtemp205[0xdU] = 0U;
+        __Vtemp205[0xeU] = 0U;
+        __Vtemp205[0xfU] = 0U;
+        __Vtemp205[0x10U] = 0U;
+        __Vtemp205[0x11U] = 0U;
+        __Vtemp205[0x12U] = 0U;
+        __Vtemp205[0x13U] = 0U;
+        VL_EXTEND_WW(640,639, __Vtemp206, __Vtemp205);
         if (VL_UNLIKELY((((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
                             & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1))) 
                            & (~ (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
@@ -2020,12 +2180,12 @@ verbose&&done_reset
                                     == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source))))) 
                           & (~ (IData)(vlTOPp->reset))) 
                          & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_size) 
-                            != (0xfU & __Vtemp211[0U]))))) {
+                            != (0xfU & __Vtemp206[0U]))))) {
             VL_FWRITEF(0x80000002U,"Assertion failed: 'D' channel contains improper response size (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:49 assert(cond, message)\n");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8031:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8231:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((~ ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleIn_0_d_q__DOT__full) 
@@ -2037,13 +2197,13 @@ done_reset
                              & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data) 
                                 == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8034: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8234: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 8034, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 8234, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8042:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8242:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY((((((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
@@ -2059,210 +2219,289 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8053:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8253:11
 done_reset        
     ) {
-        __Vtemp212[0U] = 1U;
-        __Vtemp212[1U] = 0U;
-        __Vtemp212[2U] = 0U;
-        __Vtemp212[3U] = 0U;
-        __Vtemp212[4U] = 0U;
-        __Vtemp212[5U] = 0U;
-        __Vtemp212[6U] = 0U;
-        __Vtemp212[7U] = 0U;
-        VL_SHIFTL_WWI(256,256,8, __Vtemp213, __Vtemp212, (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source));
-        if (VL_UNLIKELY((1U & ((~ ((0U != ((((((((vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[0U] 
-                                                  ^ 
-                                                  (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
-                                                    & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
-                                                    ? 
-                                                   __Vtemp213[0U]
-                                                    : 0U)) 
-                                                 | (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[1U] 
-                                                    ^ 
-                                                    (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
-                                                      & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
-                                                      ? 
-                                                     __Vtemp213[1U]
-                                                      : 0U))) 
-                                                | (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[2U] 
-                                                   ^ 
-                                                   (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
-                                                     & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
-                                                     ? 
-                                                    __Vtemp213[2U]
-                                                     : 0U))) 
-                                               | (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[3U] 
-                                                  ^ 
-                                                  (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
-                                                    & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
-                                                    ? 
-                                                   __Vtemp213[3U]
-                                                    : 0U))) 
-                                              | (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[4U] 
-                                                 ^ 
-                                                 (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
-                                                   & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
-                                                   ? 
-                                                  __Vtemp213[4U]
-                                                   : 0U))) 
-                                             | (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[5U] 
-                                                ^ (
-                                                   ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
-                                                    & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
-                                                    ? 
-                                                   __Vtemp213[5U]
-                                                    : 0U))) 
-                                            | (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[6U] 
+        __Vtemp207[0U] = 1U;
+        __Vtemp207[1U] = 0U;
+        __Vtemp207[2U] = 0U;
+        __Vtemp207[3U] = 0U;
+        __Vtemp207[4U] = 0U;
+        __Vtemp207[5U] = 0U;
+        __Vtemp207[6U] = 0U;
+        __Vtemp207[7U] = 0U;
+        VL_SHIFTL_WWI(256,256,8, __Vtemp208, __Vtemp207, (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data));
+        __Vtemp213[0U] = 1U;
+        __Vtemp213[1U] = 0U;
+        __Vtemp213[2U] = 0U;
+        __Vtemp213[3U] = 0U;
+        __Vtemp213[4U] = 0U;
+        __Vtemp213[5U] = 0U;
+        __Vtemp213[6U] = 0U;
+        __Vtemp213[7U] = 0U;
+        VL_SHIFTL_WWI(256,256,8, __Vtemp214, __Vtemp213, (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source));
+        __Vtemp219[0U] = 1U;
+        __Vtemp219[1U] = 0U;
+        __Vtemp219[2U] = 0U;
+        __Vtemp219[3U] = 0U;
+        __Vtemp219[4U] = 0U;
+        __Vtemp219[5U] = 0U;
+        __Vtemp219[6U] = 0U;
+        __Vtemp219[7U] = 0U;
+        VL_SHIFTL_WWI(256,256,8, __Vtemp220, __Vtemp219, (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data));
+        if (VL_UNLIKELY((1U & ((~ ((0U != (((((((1U 
+                                                 & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                                                    & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))))
+                                                 ? 
+                                                __Vtemp208[0U]
+                                                 : 0U) 
                                                ^ (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
                                                    & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
                                                    ? 
-                                                  __Vtemp213[6U]
-                                                   : 0U))) 
-                                           | (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[7U] 
-                                              ^ (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
-                                                  & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
-                                                  ? 
-                                                 __Vtemp213[7U]
-                                                  : 0U)))) 
-                                   | (~ (IData)((0U 
-                                                 != 
-                                                 (((((((vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[0U] 
-                                                        | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[1U]) 
-                                                       | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[2U]) 
-                                                      | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[3U]) 
-                                                     | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[4U]) 
-                                                    | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[5U]) 
-                                                   | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[6U]) 
-                                                  | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[7U])))))) 
-                               & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8056: Assertion failed in %NTestHarness.ram.srams.monitor\n",
-                      64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 8056, "");
-        }
-    }
-    if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8064:11
-verbose&&done_reset        
-    ) {
-        __Vtemp217[0U] = 1U;
-        __Vtemp217[1U] = 0U;
-        __Vtemp217[2U] = 0U;
-        __Vtemp217[3U] = 0U;
-        __Vtemp217[4U] = 0U;
-        __Vtemp217[5U] = 0U;
-        __Vtemp217[6U] = 0U;
-        __Vtemp217[7U] = 0U;
-        VL_SHIFTL_WWI(256,256,8, __Vtemp218, __Vtemp217, (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source));
-        if (VL_UNLIKELY((1U & ((~ (IData)(vlTOPp->reset)) 
-                               & (~ ((0U != (((((((
-                                                   (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[0U] 
-                                                    ^ 
-                                                    (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
-                                                      & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
-                                                      ? 
-                                                     __Vtemp218[0U]
-                                                      : 0U)) 
-                                                   | (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[1U] 
-                                                      ^ 
-                                                      (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
-                                                        & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
-                                                        ? 
-                                                       __Vtemp218[1U]
-                                                        : 0U))) 
-                                                  | (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[2U] 
-                                                     ^ 
-                                                     (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
-                                                       & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
-                                                       ? 
-                                                      __Vtemp218[2U]
-                                                       : 0U))) 
-                                                 | (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[3U] 
-                                                    ^ 
-                                                    (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
-                                                      & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
-                                                      ? 
-                                                     __Vtemp218[3U]
-                                                      : 0U))) 
-                                                | (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[4U] 
-                                                   ^ 
-                                                   (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
-                                                     & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
-                                                     ? 
-                                                    __Vtemp218[4U]
-                                                     : 0U))) 
-                                               | (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[5U] 
-                                                  ^ 
-                                                  (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
-                                                    & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
-                                                    ? 
-                                                   __Vtemp218[5U]
-                                                    : 0U))) 
-                                              | (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[6U] 
+                                                  __Vtemp214[0U]
+                                                   : 0U)) 
+                                              | (((1U 
+                                                   & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                                                      & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))))
+                                                   ? 
+                                                  __Vtemp208[1U]
+                                                   : 0U) 
                                                  ^ 
                                                  (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
                                                    & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
                                                    ? 
-                                                  __Vtemp218[6U]
+                                                  __Vtemp214[1U]
                                                    : 0U))) 
-                                             | (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[7U] 
+                                             | (((1U 
+                                                  & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                                                     & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))))
+                                                  ? 
+                                                 __Vtemp208[2U]
+                                                  : 0U) 
                                                 ^ (
                                                    ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
                                                     & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
                                                     ? 
-                                                   __Vtemp218[7U]
+                                                   __Vtemp214[2U]
+                                                    : 0U))) 
+                                            | (((1U 
+                                                 & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                                                    & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))))
+                                                 ? 
+                                                __Vtemp208[3U]
+                                                 : 0U) 
+                                               ^ (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
+                                                   & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
+                                                   ? 
+                                                  __Vtemp214[3U]
+                                                   : 0U))) 
+                                           | (((1U 
+                                                & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                                                   & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))))
+                                                ? __Vtemp208[4U]
+                                                : 0U) 
+                                              ^ (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
+                                                  & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
+                                                  ? 
+                                                 __Vtemp214[4U]
+                                                  : 0U)))) 
+                                   | (~ (IData)((0U 
+                                                 != 
+                                                 ((((((1U 
+                                                       & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                                                          & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))))
+                                                       ? 
+                                                      __Vtemp220[0U]
+                                                       : 0U) 
+                                                     | ((1U 
+                                                         & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                                                            & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))))
+                                                         ? 
+                                                        __Vtemp220[1U]
+                                                         : 0U)) 
+                                                    | ((1U 
+                                                        & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                                                           & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))))
+                                                        ? 
+                                                       __Vtemp220[2U]
+                                                        : 0U)) 
+                                                   | ((1U 
+                                                       & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                                                          & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))))
+                                                       ? 
+                                                      __Vtemp220[3U]
+                                                       : 0U)) 
+                                                  | ((1U 
+                                                      & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                                                         & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))))
+                                                      ? 
+                                                     __Vtemp220[4U]
+                                                      : 0U))))))) 
+                               & (~ (IData)(vlTOPp->reset)))))) {
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8256: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+                      64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 8256, "");
+        }
+    }
+    if (
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8264:11
+verbose&&done_reset        
+    ) {
+        __Vtemp225[0U] = 1U;
+        __Vtemp225[1U] = 0U;
+        __Vtemp225[2U] = 0U;
+        __Vtemp225[3U] = 0U;
+        __Vtemp225[4U] = 0U;
+        __Vtemp225[5U] = 0U;
+        __Vtemp225[6U] = 0U;
+        __Vtemp225[7U] = 0U;
+        VL_SHIFTL_WWI(256,256,8, __Vtemp226, __Vtemp225, (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data));
+        __Vtemp231[0U] = 1U;
+        __Vtemp231[1U] = 0U;
+        __Vtemp231[2U] = 0U;
+        __Vtemp231[3U] = 0U;
+        __Vtemp231[4U] = 0U;
+        __Vtemp231[5U] = 0U;
+        __Vtemp231[6U] = 0U;
+        __Vtemp231[7U] = 0U;
+        VL_SHIFTL_WWI(256,256,8, __Vtemp232, __Vtemp231, (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source));
+        __Vtemp237[0U] = 1U;
+        __Vtemp237[1U] = 0U;
+        __Vtemp237[2U] = 0U;
+        __Vtemp237[3U] = 0U;
+        __Vtemp237[4U] = 0U;
+        __Vtemp237[5U] = 0U;
+        __Vtemp237[6U] = 0U;
+        __Vtemp237[7U] = 0U;
+        VL_SHIFTL_WWI(256,256,8, __Vtemp238, __Vtemp237, (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data));
+        if (VL_UNLIKELY((1U & ((~ (IData)(vlTOPp->reset)) 
+                               & (~ ((0U != (((((((1U 
+                                                   & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                                                      & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))))
+                                                   ? 
+                                                  __Vtemp226[0U]
+                                                   : 0U) 
+                                                 ^ 
+                                                 (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
+                                                   & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
+                                                   ? 
+                                                  __Vtemp232[0U]
+                                                   : 0U)) 
+                                                | (((1U 
+                                                     & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                                                        & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))))
+                                                     ? 
+                                                    __Vtemp226[1U]
+                                                     : 0U) 
+                                                   ^ 
+                                                   (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
+                                                     & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
+                                                     ? 
+                                                    __Vtemp232[1U]
+                                                     : 0U))) 
+                                               | (((1U 
+                                                    & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                                                       & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))))
+                                                    ? 
+                                                   __Vtemp226[2U]
+                                                    : 0U) 
+                                                  ^ 
+                                                  (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
+                                                    & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
+                                                    ? 
+                                                   __Vtemp232[2U]
+                                                    : 0U))) 
+                                              | (((1U 
+                                                   & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                                                      & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))))
+                                                   ? 
+                                                  __Vtemp226[3U]
+                                                   : 0U) 
+                                                 ^ 
+                                                 (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
+                                                   & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
+                                                   ? 
+                                                  __Vtemp232[3U]
+                                                   : 0U))) 
+                                             | (((1U 
+                                                  & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                                                     & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))))
+                                                  ? 
+                                                 __Vtemp226[4U]
+                                                  : 0U) 
+                                                ^ (
+                                                   ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full) 
+                                                    & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter_1)))
+                                                    ? 
+                                                   __Vtemp232[4U]
                                                     : 0U)))) 
                                      | (~ (IData)((0U 
                                                    != 
-                                                   (((((((vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[0U] 
-                                                          | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[1U]) 
-                                                         | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[2U]) 
-                                                        | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[3U]) 
-                                                       | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[4U]) 
-                                                      | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[5U]) 
-                                                     | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[6U]) 
-                                                    | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_set_wo_ready[7U])))))))))) {
+                                                   ((((((1U 
+                                                         & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                                                            & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))))
+                                                         ? 
+                                                        __Vtemp238[0U]
+                                                         : 0U) 
+                                                       | ((1U 
+                                                           & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                                                              & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))))
+                                                           ? 
+                                                          __Vtemp238[1U]
+                                                           : 0U)) 
+                                                      | ((1U 
+                                                          & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                                                             & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))))
+                                                          ? 
+                                                         __Vtemp238[2U]
+                                                          : 0U)) 
+                                                     | ((1U 
+                                                         & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                                                            & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))))
+                                                         ? 
+                                                        __Vtemp238[3U]
+                                                         : 0U)) 
+                                                    | ((1U 
+                                                        & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty)) 
+                                                           & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter_1))))
+                                                        ? 
+                                                       __Vtemp238[4U]
+                                                        : 0U))))))))))) {
             VL_FWRITEF(0x80000002U,"Assertion failed: 'A' and 'D' concurrent, despite minlatency 1 (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:49 assert(cond, message)\n");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8077:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8277:11
 done_reset        
     ) {
         if (VL_UNLIKELY((1U & ((~ (((~ (IData)((0U 
                                                 != 
-                                                (((((((vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[0U] 
-                                                       | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[1U]) 
-                                                      | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[2U]) 
-                                                     | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[3U]) 
-                                                    | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[4U]) 
-                                                   | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[5U]) 
-                                                  | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[6U]) 
-                                                 | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[7U])))) 
+                                                ((((vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[0U] 
+                                                    | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[1U]) 
+                                                   | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[2U]) 
+                                                  | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[3U]) 
+                                                 | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[4U])))) 
                                     | (0U == vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__plusarg_reader__DOT__myplus)) 
                                    | (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__watchdog 
                                       < vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__plusarg_reader__DOT__myplus))) 
                                & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8080: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8280: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 8080, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 8280, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8088:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8288:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY((1U & ((~ (IData)(vlTOPp->reset)) 
                                & (~ (((~ (IData)((0U 
                                                   != 
-                                                  (((((((vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[0U] 
-                                                         | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[1U]) 
-                                                        | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[2U]) 
-                                                       | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[3U]) 
-                                                      | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[4U]) 
-                                                     | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[5U]) 
-                                                    | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[6U]) 
-                                                   | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[7U])))) 
+                                                  ((((vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[0U] 
+                                                      | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[1U]) 
+                                                     | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[2U]) 
+                                                    | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[3U]) 
+                                                   | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[4U])))) 
                                       | (0U == vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__plusarg_reader__DOT__myplus)) 
                                      | (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__watchdog 
                                         < vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__plusarg_reader__DOT__myplus))))))) {
@@ -2270,43 +2509,37 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8149:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8349:11
 done_reset        
     ) {
         if (VL_UNLIKELY((1U & ((~ (((~ (IData)((0U 
                                                 != 
-                                                (((((((vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[0U] 
-                                                       | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[1U]) 
-                                                      | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[2U]) 
-                                                     | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[3U]) 
-                                                    | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[4U]) 
-                                                   | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[5U]) 
-                                                  | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[6U]) 
-                                                 | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[7U])))) 
+                                                ((((vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[0U] 
+                                                    | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[1U]) 
+                                                   | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[2U]) 
+                                                  | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[3U]) 
+                                                 | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[4U])))) 
                                     | (0U == vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__plusarg_reader_1__DOT__myplus)) 
                                    | (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__watchdog_1 
                                       < vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__plusarg_reader_1__DOT__myplus))) 
                                & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8152: Assertion failed in %NTestHarness.ram.srams.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8352: Assertion failed in %NTestHarness.ram.srams.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 8152, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 8352, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8160:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:8360:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY((1U & ((~ (IData)(vlTOPp->reset)) 
                                & (~ (((~ (IData)((0U 
                                                   != 
-                                                  (((((((vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[0U] 
-                                                         | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[1U]) 
-                                                        | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[2U]) 
-                                                       | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[3U]) 
-                                                      | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[4U]) 
-                                                     | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[5U]) 
-                                                    | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[6U]) 
-                                                   | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[7U])))) 
+                                                  ((((vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[0U] 
+                                                      | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[1U]) 
+                                                     | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[2U]) 
+                                                    | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[3U]) 
+                                                   | vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[4U])))) 
                                       | (0U == vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__plusarg_reader_1__DOT__myplus)) 
                                      | (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__watchdog_1 
                                         < vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__plusarg_reader_1__DOT__myplus))))))) {
@@ -2315,8 +2548,8 @@ verbose&&done_reset
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__63(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__63\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__62(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__62\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_opcode__v0 = 0U;
@@ -2328,7 +2561,7 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__63(VTestHarness__Syms* __restric
     vlTOPp->__Vdly__TestHarness__DOT__success_sim__DOT_____05Fin_valid_reg 
         = vlTOPp->TestHarness__DOT__success_sim__DOT_____05Fin_valid_reg;
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24013:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25089:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((~ ((0xcU >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
@@ -2338,13 +2571,13 @@ done_reset
                              & (6U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24016: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25092: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24016, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25092, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24024:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25100:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -2358,20 +2591,20 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24037:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25113:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
                           & (6U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                      ? 1U : 4U))) & 
                          (~ (IData)(vlTOPp->reset))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24040: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25116: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24040, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25116, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24048:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25124:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -2382,7 +2615,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24072:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25148:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((3U > (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
@@ -2390,13 +2623,13 @@ done_reset
                              & (6U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24075: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25151: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24075, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25151, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24083:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25159:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -2408,7 +2641,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24096:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25172:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (0xfffU & (vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address 
@@ -2419,13 +2652,13 @@ done_reset
                              & (6U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24099: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25175: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24099, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25175, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24107:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25183:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -2440,7 +2673,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24131:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25207:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (0xffU & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_mask)))) 
@@ -2448,13 +2681,13 @@ done_reset
                              & (6U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24134: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25210: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24134, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25210, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24142:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25218:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -2466,7 +2699,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24166:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25242:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((~ ((0xcU >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
@@ -2476,13 +2709,13 @@ done_reset
                              & (7U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24169: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25245: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24169, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25245, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24177:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25253:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -2496,20 +2729,20 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24190:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25266:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
                           & (7U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                      ? 1U : 4U))) & 
                          (~ (IData)(vlTOPp->reset))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24193: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25269: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24193, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25269, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24201:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25277:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -2520,7 +2753,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24225:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25301:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((3U > (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
@@ -2528,13 +2761,13 @@ done_reset
                              & (7U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24228: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25304: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24228, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25304, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24236:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25312:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -2546,7 +2779,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24249:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25325:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (0xfffU & (vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address 
@@ -2557,13 +2790,13 @@ done_reset
                              & (7U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24252: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25328: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24252, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25328, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24260:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25336:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -2578,20 +2811,20 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24284:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25360:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
                           & (7U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                      ? 1U : 4U))) & 
                          (~ (IData)(vlTOPp->reset))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24287: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25363: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24287, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25363, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24295:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25371:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -2602,7 +2835,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24308:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25384:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (0xffU & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_mask)))) 
@@ -2610,13 +2843,13 @@ done_reset
                              & (7U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24311: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25387: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24311, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25387, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24319:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25395:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -2628,7 +2861,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24343:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25419:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0xcU < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
@@ -2636,13 +2869,13 @@ done_reset
                              & (4U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24346: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25422: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24346, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25422, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24354:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25430:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -2654,7 +2887,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24367:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25443:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((~ ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT___T_398) 
@@ -2711,13 +2944,13 @@ done_reset
                              & (4U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24370: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25446: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24370, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25446, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24378:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25454:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -2779,7 +3012,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24402:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25478:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (0xfffU & (vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address 
@@ -2790,13 +3023,13 @@ done_reset
                              & (4U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24405: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25481: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24405, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25481, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24413:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25489:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -2811,7 +3044,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24437:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25513:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_mask) 
@@ -2820,13 +3053,13 @@ done_reset
                              & (4U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24440: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25516: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24440, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25516, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24448:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25524:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -2839,7 +3072,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24472:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25548:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((~ ((0xcU >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
@@ -2887,13 +3120,13 @@ done_reset
                              & (0U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24475: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25551: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24475, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25551, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24483:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25559:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -2947,7 +3180,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24507:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25583:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (0xfffU & (vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address 
@@ -2958,13 +3191,13 @@ done_reset
                              & (0U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24510: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25586: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24510, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25586, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24518:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25594:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -2979,7 +3212,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24542:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25618:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_mask) 
@@ -2988,13 +3221,13 @@ done_reset
                              & (0U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24545: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25621: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24545, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25621, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24553:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25629:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -3007,7 +3240,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24566:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25642:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((~ ((0xcU >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
@@ -3055,13 +3288,13 @@ done_reset
                              & (1U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24569: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25645: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24569, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25645, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24577:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25653:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -3115,7 +3348,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24601:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25677:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (0xfffU & (vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address 
@@ -3126,13 +3359,13 @@ done_reset
                              & (1U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24604: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25680: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24604, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25680, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24612:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25688:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -3147,7 +3380,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24636:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25712:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_mask) 
@@ -3156,13 +3389,13 @@ done_reset
                              & (1U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24639: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25715: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24639, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25715, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24647:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25723:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -3175,66 +3408,65 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24660:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25736:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((~ ((0xcU >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
-                             & (((3U >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
-                                 & (((((((VL_ULL(0) 
-                                          == (VL_ULL(0x1ffffb000) 
-                                              & (QData)((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))) 
+                             & ((3U >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
+                                & (((((((((VL_ULL(0) 
+                                           == (VL_ULL(0x1ffffb000) 
+                                               & (QData)((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))) 
+                                          | (VL_ULL(0) 
+                                             == (VL_ULL(0x1fffff000) 
+                                                 & (QData)((IData)(
+                                                                   (0x3000U 
+                                                                    ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                          | (VL_ULL(0) 
-                                            == (VL_ULL(0x1fffff000) 
+                                            == (VL_ULL(0x1fffef000) 
                                                 & (QData)((IData)(
-                                                                  (0x3000U 
+                                                                  (0x100000U 
                                                                    ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                         | (VL_ULL(0) 
-                                           == (VL_ULL(0x1fffef000) 
+                                           == (VL_ULL(0x1ffff0000) 
                                                & (QData)((IData)(
-                                                                 (0x100000U 
+                                                                 (0x2000000U 
                                                                   ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                        | (VL_ULL(0) 
-                                          == (VL_ULL(0x1ffff0000) 
+                                          == (VL_ULL(0x1fffff000) 
                                               & (QData)((IData)(
-                                                                (0x2000000U 
+                                                                (0x2010000U 
                                                                  ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                       | (VL_ULL(0) 
-                                         == (VL_ULL(0x1fffff000) 
+                                         == (VL_ULL(0x1fc000000) 
                                              & (QData)((IData)(
-                                                               (0x2010000U 
+                                                               (0xc000000U 
                                                                 ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                      | (VL_ULL(0) == 
-                                        (VL_ULL(0x1fc000000) 
+                                        (VL_ULL(0x1fffff000) 
                                          & (QData)((IData)(
-                                                           (0xc000000U 
+                                                           (0x10000000U 
                                                             ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                     | (VL_ULL(0) == 
                                        (VL_ULL(0x1fffff000) 
                                         & (QData)((IData)(
                                                           (0x54000000U 
-                                                           ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address))))))) 
-                                | ((4U >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
-                                   & ((VL_ULL(0) == 
-                                       (VL_ULL(0x1fffff000) 
-                                        & (QData)((IData)(
-                                                          (0x10000000U 
-                                                           ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address))))) 
-                                      | (VL_ULL(0) 
-                                         == (VL_ULL(0x1f0000000) 
-                                             & (QData)((IData)(
-                                                               (0x80000000U 
-                                                                ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))))))) 
+                                                           ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
+                                   | (VL_ULL(0) == 
+                                      (VL_ULL(0x1f0000000) 
+                                       & (QData)((IData)(
+                                                         (0x80000000U 
+                                                          ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address))))))))) 
                          & (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
                              & (2U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24663: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25739: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24663, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25739, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24671:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25747:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -3242,56 +3474,55 @@ verbose&&done_reset
                                       ? 1U : 4U))) 
                           & (~ (IData)(vlTOPp->reset))) 
                          & (~ ((0xcU >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
-                               & (((3U >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
-                                   & (((((((VL_ULL(0) 
-                                            == (VL_ULL(0x1ffffb000) 
-                                                & (QData)((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))) 
+                               & ((3U >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
+                                  & (((((((((VL_ULL(0) 
+                                             == (VL_ULL(0x1ffffb000) 
+                                                 & (QData)((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))) 
+                                            | (VL_ULL(0) 
+                                               == (VL_ULL(0x1fffff000) 
+                                                   & (QData)((IData)(
+                                                                     (0x3000U 
+                                                                      ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                            | (VL_ULL(0) 
-                                              == (VL_ULL(0x1fffff000) 
+                                              == (VL_ULL(0x1fffef000) 
                                                   & (QData)((IData)(
-                                                                    (0x3000U 
+                                                                    (0x100000U 
                                                                      ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                           | (VL_ULL(0) 
-                                             == (VL_ULL(0x1fffef000) 
+                                             == (VL_ULL(0x1ffff0000) 
                                                  & (QData)((IData)(
-                                                                   (0x100000U 
+                                                                   (0x2000000U 
                                                                     ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                          | (VL_ULL(0) 
-                                            == (VL_ULL(0x1ffff0000) 
+                                            == (VL_ULL(0x1fffff000) 
                                                 & (QData)((IData)(
-                                                                  (0x2000000U 
+                                                                  (0x2010000U 
                                                                    ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                         | (VL_ULL(0) 
-                                           == (VL_ULL(0x1fffff000) 
+                                           == (VL_ULL(0x1fc000000) 
                                                & (QData)((IData)(
-                                                                 (0x2010000U 
+                                                                 (0xc000000U 
                                                                   ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                        | (VL_ULL(0) 
-                                          == (VL_ULL(0x1fc000000) 
+                                          == (VL_ULL(0x1fffff000) 
                                               & (QData)((IData)(
-                                                                (0xc000000U 
+                                                                (0x10000000U 
                                                                  ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                       | (VL_ULL(0) 
                                          == (VL_ULL(0x1fffff000) 
                                              & (QData)((IData)(
                                                                (0x54000000U 
-                                                                ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address))))))) 
-                                  | ((4U >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
-                                     & ((VL_ULL(0) 
-                                         == (VL_ULL(0x1fffff000) 
-                                             & (QData)((IData)(
-                                                               (0x10000000U 
-                                                                ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address))))) 
-                                        | (VL_ULL(0) 
-                                           == (VL_ULL(0x1f0000000) 
-                                               & (QData)((IData)(
-                                                                 (0x80000000U 
-                                                                  ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address))))))))))))) {
+                                                                ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
+                                     | (VL_ULL(0) == 
+                                        (VL_ULL(0x1f0000000) 
+                                         & (QData)((IData)(
+                                                           (0x80000000U 
+                                                            ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))))))))) {
             VL_FWRITEF(0x80000002U,"Assertion failed: 'A' channel carries Arithmetic type which is unexpected using diplomatic parameters (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:42 assert(cond, message)\n");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24695:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25771:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (0xfffU & (vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address 
@@ -3302,13 +3533,13 @@ done_reset
                              & (2U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24698: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25774: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24698, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25774, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24706:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25782:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -3323,7 +3554,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24730:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25806:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_mask) 
@@ -3332,13 +3563,13 @@ done_reset
                              & (2U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24733: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25809: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24733, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25809, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24741:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25817:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -3351,66 +3582,65 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24754:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25830:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((~ ((0xcU >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
-                             & (((3U >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
-                                 & (((((((VL_ULL(0) 
-                                          == (VL_ULL(0x1ffffb000) 
-                                              & (QData)((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))) 
+                             & ((3U >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
+                                & (((((((((VL_ULL(0) 
+                                           == (VL_ULL(0x1ffffb000) 
+                                               & (QData)((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))) 
+                                          | (VL_ULL(0) 
+                                             == (VL_ULL(0x1fffff000) 
+                                                 & (QData)((IData)(
+                                                                   (0x3000U 
+                                                                    ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                          | (VL_ULL(0) 
-                                            == (VL_ULL(0x1fffff000) 
+                                            == (VL_ULL(0x1fffef000) 
                                                 & (QData)((IData)(
-                                                                  (0x3000U 
+                                                                  (0x100000U 
                                                                    ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                         | (VL_ULL(0) 
-                                           == (VL_ULL(0x1fffef000) 
+                                           == (VL_ULL(0x1ffff0000) 
                                                & (QData)((IData)(
-                                                                 (0x100000U 
+                                                                 (0x2000000U 
                                                                   ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                        | (VL_ULL(0) 
-                                          == (VL_ULL(0x1ffff0000) 
+                                          == (VL_ULL(0x1fffff000) 
                                               & (QData)((IData)(
-                                                                (0x2000000U 
+                                                                (0x2010000U 
                                                                  ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                       | (VL_ULL(0) 
-                                         == (VL_ULL(0x1fffff000) 
+                                         == (VL_ULL(0x1fc000000) 
                                              & (QData)((IData)(
-                                                               (0x2010000U 
+                                                               (0xc000000U 
                                                                 ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                      | (VL_ULL(0) == 
-                                        (VL_ULL(0x1fc000000) 
+                                        (VL_ULL(0x1fffff000) 
                                          & (QData)((IData)(
-                                                           (0xc000000U 
+                                                           (0x10000000U 
                                                             ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                     | (VL_ULL(0) == 
                                        (VL_ULL(0x1fffff000) 
                                         & (QData)((IData)(
                                                           (0x54000000U 
-                                                           ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address))))))) 
-                                | ((4U >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
-                                   & ((VL_ULL(0) == 
-                                       (VL_ULL(0x1fffff000) 
-                                        & (QData)((IData)(
-                                                          (0x10000000U 
-                                                           ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address))))) 
-                                      | (VL_ULL(0) 
-                                         == (VL_ULL(0x1f0000000) 
-                                             & (QData)((IData)(
-                                                               (0x80000000U 
-                                                                ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))))))) 
+                                                           ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
+                                   | (VL_ULL(0) == 
+                                      (VL_ULL(0x1f0000000) 
+                                       & (QData)((IData)(
+                                                         (0x80000000U 
+                                                          ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address))))))))) 
                          & (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
                              & (3U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24757: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25833: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24757, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25833, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24765:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25841:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -3418,56 +3648,55 @@ verbose&&done_reset
                                       ? 1U : 4U))) 
                           & (~ (IData)(vlTOPp->reset))) 
                          & (~ ((0xcU >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
-                               & (((3U >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
-                                   & (((((((VL_ULL(0) 
-                                            == (VL_ULL(0x1ffffb000) 
-                                                & (QData)((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))) 
+                               & ((3U >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
+                                  & (((((((((VL_ULL(0) 
+                                             == (VL_ULL(0x1ffffb000) 
+                                                 & (QData)((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))) 
+                                            | (VL_ULL(0) 
+                                               == (VL_ULL(0x1fffff000) 
+                                                   & (QData)((IData)(
+                                                                     (0x3000U 
+                                                                      ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                            | (VL_ULL(0) 
-                                              == (VL_ULL(0x1fffff000) 
+                                              == (VL_ULL(0x1fffef000) 
                                                   & (QData)((IData)(
-                                                                    (0x3000U 
+                                                                    (0x100000U 
                                                                      ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                           | (VL_ULL(0) 
-                                             == (VL_ULL(0x1fffef000) 
+                                             == (VL_ULL(0x1ffff0000) 
                                                  & (QData)((IData)(
-                                                                   (0x100000U 
+                                                                   (0x2000000U 
                                                                     ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                          | (VL_ULL(0) 
-                                            == (VL_ULL(0x1ffff0000) 
+                                            == (VL_ULL(0x1fffff000) 
                                                 & (QData)((IData)(
-                                                                  (0x2000000U 
+                                                                  (0x2010000U 
                                                                    ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                         | (VL_ULL(0) 
-                                           == (VL_ULL(0x1fffff000) 
+                                           == (VL_ULL(0x1fc000000) 
                                                & (QData)((IData)(
-                                                                 (0x2010000U 
+                                                                 (0xc000000U 
                                                                   ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                        | (VL_ULL(0) 
-                                          == (VL_ULL(0x1fc000000) 
+                                          == (VL_ULL(0x1fffff000) 
                                               & (QData)((IData)(
-                                                                (0xc000000U 
+                                                                (0x10000000U 
                                                                  ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
                                       | (VL_ULL(0) 
                                          == (VL_ULL(0x1fffff000) 
                                              & (QData)((IData)(
                                                                (0x54000000U 
-                                                                ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address))))))) 
-                                  | ((4U >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
-                                     & ((VL_ULL(0) 
-                                         == (VL_ULL(0x1fffff000) 
-                                             & (QData)((IData)(
-                                                               (0x10000000U 
-                                                                ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address))))) 
-                                        | (VL_ULL(0) 
-                                           == (VL_ULL(0x1f0000000) 
-                                               & (QData)((IData)(
-                                                                 (0x80000000U 
-                                                                  ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address))))))))))))) {
+                                                                ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))) 
+                                     | (VL_ULL(0) == 
+                                        (VL_ULL(0x1f0000000) 
+                                         & (QData)((IData)(
+                                                           (0x80000000U 
+                                                            ^ vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address)))))))))))) {
             VL_FWRITEF(0x80000002U,"Assertion failed: 'A' channel carries Logical type which is unexpected using diplomatic parameters (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:42 assert(cond, message)\n");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24789:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25865:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (0xfffU & (vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address 
@@ -3478,13 +3707,13 @@ done_reset
                              & (3U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24792: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25868: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24792, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25868, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24800:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25876:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -3499,7 +3728,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24824:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25900:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_mask) 
@@ -3508,13 +3737,13 @@ done_reset
                              & (3U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24827: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25903: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24827, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25903, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24835:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25911:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -3527,7 +3756,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24848:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25924:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((~ ((0xcU >= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size)) 
@@ -3538,13 +3767,13 @@ done_reset
                              & (5U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24851: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25927: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24851, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25927, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24859:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25935:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -3559,7 +3788,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24883:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25959:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != (0xfffU & (vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address 
@@ -3570,13 +3799,13 @@ done_reset
                              & (5U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24886: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25962: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24886, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25962, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24894:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25970:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -3591,7 +3820,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24918:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25994:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_mask) 
@@ -3600,13 +3829,13 @@ done_reset
                              & (5U == ((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
                                         ? 1U : 4U))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24921: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25997: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24921, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25997, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24929:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26005:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -3619,19 +3848,19 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24953:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26029:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((6U < (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data)) 
                          & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24956: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26032: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24956, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26032, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24964:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26040:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -3641,20 +3870,20 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24977:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26053:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_source_io_deq_bits_MPORT_data) 
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (6U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24980: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26056: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 24980, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26056, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:24988:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26064:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -3665,20 +3894,20 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25001:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26077:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((3U > (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_size_io_deq_bits_MPORT_data)) 
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (6U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25004: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26080: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25004, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26080, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25012:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26088:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -3689,7 +3918,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25025:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26101:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_param
@@ -3697,13 +3926,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (6U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25028: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26104: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25028, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26104, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25036:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26112:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -3715,7 +3944,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25049:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26125:11
 done_reset        
     ) {
         if (VL_UNLIKELY((vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_corrupt
@@ -3723,13 +3952,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (6U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25052: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26128: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25052, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26128, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25060:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26136:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -3741,7 +3970,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25073:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26149:11
 done_reset        
     ) {
         if (VL_UNLIKELY((vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_denied
@@ -3749,13 +3978,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (6U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25076: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26152: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25076, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26152, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25084:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26160:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -3767,20 +3996,20 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25097:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26173:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_source_io_deq_bits_MPORT_data) 
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (4U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25100: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26176: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25100, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26176, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25108:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26184:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -3791,20 +4020,20 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25132:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26208:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((3U > (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_size_io_deq_bits_MPORT_data)) 
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (4U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25135: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26211: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25135, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26211, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25143:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26219:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -3815,7 +4044,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25156:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26232:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((2U < vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_param
@@ -3823,13 +4052,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (4U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25159: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26235: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25159, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26235, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25167:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26243:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -3841,7 +4070,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25180:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26256:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((2U == vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_param
@@ -3849,13 +4078,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (4U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25183: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26259: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25183, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26259, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25191:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26267:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -3867,7 +4096,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25204:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26280:11
 done_reset        
     ) {
         if (VL_UNLIKELY((vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_corrupt
@@ -3875,13 +4104,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (4U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25207: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26283: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25207, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26283, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25215:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26291:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -3893,20 +4122,20 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25239:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26315:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_source_io_deq_bits_MPORT_data) 
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (5U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25242: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26318: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25242, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26318, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25250:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26326:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -3917,20 +4146,20 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25274:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26350:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((3U > (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_size_io_deq_bits_MPORT_data)) 
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (5U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25277: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26353: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25277, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26353, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25285:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26361:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -3941,7 +4170,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25298:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26374:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((2U < vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_param
@@ -3949,13 +4178,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (5U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25301: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26377: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25301, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26377, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25309:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26385:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -3967,7 +4196,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25322:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26398:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((2U == vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_param
@@ -3975,13 +4204,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (5U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25325: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26401: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25325, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26401, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25333:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26409:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -3993,7 +4222,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25346:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26422:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((~ ((~ vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_denied
@@ -4003,13 +4232,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (5U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25349: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26425: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25349, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26425, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25357:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26433:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4023,20 +4252,20 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25381:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26457:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_source_io_deq_bits_MPORT_data) 
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25384: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26460: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25384, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26460, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25392:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26468:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4047,7 +4276,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25405:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26481:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_param
@@ -4055,13 +4284,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25408: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26484: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25408, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26484, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25416:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26492:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4073,7 +4302,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25429:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26505:11
 done_reset        
     ) {
         if (VL_UNLIKELY((vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_corrupt
@@ -4081,13 +4310,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25432: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26508: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25432, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26508, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25440:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26516:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4099,20 +4328,20 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25464:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26540:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_source_io_deq_bits_MPORT_data) 
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (1U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25467: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26543: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25467, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26543, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25475:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26551:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4123,7 +4352,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25488:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26564:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_param
@@ -4131,13 +4360,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (1U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25491: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26567: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25491, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26567, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25499:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26575:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4149,7 +4378,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25512:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26588:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((~ ((~ vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_denied
@@ -4159,13 +4388,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (1U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25515: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26591: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25515, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26591, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25523:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26599:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4179,20 +4408,20 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25547:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26623:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_source_io_deq_bits_MPORT_data) 
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (2U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25550: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26626: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25550, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26626, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25558:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26634:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4203,7 +4432,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25571:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26647:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((0U != vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_param
@@ -4211,13 +4440,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (2U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25574: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26650: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25574, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26650, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25582:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26658:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4229,7 +4458,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25595:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26671:11
 done_reset        
     ) {
         if (VL_UNLIKELY((vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_corrupt
@@ -4237,13 +4466,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (2U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25598: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26674: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25598, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26674, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25606:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26682:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4255,7 +4484,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25663:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26739:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((((7U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state))
@@ -4263,13 +4492,13 @@ done_reset
                          & (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
                              & (0U != (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__a_first_counter))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25666: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26742: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25666, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26742, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25674:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26750:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -4281,7 +4510,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25698:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26774:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size) 
@@ -4289,13 +4518,13 @@ done_reset
                          & (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
                              & (0U != (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__a_first_counter))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25701: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26777: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25701, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26777, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25709:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26785:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -4307,7 +4536,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25733:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26809:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_address 
@@ -4315,13 +4544,13 @@ done_reset
                          & (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
                              & (0U != (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__a_first_counter))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25736: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26812: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25736, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26812, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25744:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26820:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -4333,7 +4562,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25757:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26833:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data) 
@@ -4341,13 +4570,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (0U != (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__d_first_counter))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25760: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26836: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25760, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26836, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25768:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26844:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4359,7 +4588,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25781:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26857:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_param
@@ -4368,13 +4597,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (0U != (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__d_first_counter))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25784: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26860: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25784, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26860, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25792:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26868:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4387,7 +4616,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25805:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26881:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_size_io_deq_bits_MPORT_data) 
@@ -4395,13 +4624,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (0U != (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__d_first_counter))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25808: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26884: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25808, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26884, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25816:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26892:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4413,7 +4642,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25829:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26905:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_source_io_deq_bits_MPORT_data) 
@@ -4421,13 +4650,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (0U != (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__d_first_counter))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25832: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26908: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25832, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26908, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25840:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26916:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4439,7 +4668,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25853:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26929:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_sink
@@ -4448,13 +4677,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (0U != (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__d_first_counter))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25856: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26932: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25856, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26932, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25864:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26940:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4467,7 +4696,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25877:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26953:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_denied
@@ -4476,13 +4705,13 @@ done_reset
                          & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                              & (0U != (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__d_first_counter))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25880: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26956: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25880, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26956, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25888:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26964:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4495,20 +4724,20 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25901:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26977:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__inflight) 
                          & (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT___a_first_T) 
                              & (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__a_first_counter_1))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25904: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26980: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25904, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26980, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25912:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26988:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT___a_first_T) 
@@ -4519,7 +4748,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25925:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27001:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((~ (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__inflight) 
@@ -4531,13 +4760,13 @@ done_reset
                               & (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__d_first_counter_1))) 
                              & (6U != (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25928: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27004: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25928, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 27004, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25936:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27012:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY((((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4553,7 +4782,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25949:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27025:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((~ (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data) 
@@ -4581,13 +4810,13 @@ done_reset
                                  & (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__a_first_counter_1))) 
                                 & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_source_io_deq_bits_MPORT_data)))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25952: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27028: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25952, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 27028, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25960:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27036:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4622,7 +4851,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25973:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27049:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_bits_size) 
@@ -4634,13 +4863,13 @@ done_reset
                                  & (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__a_first_counter_1))) 
                                 & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_source_io_deq_bits_MPORT_data)))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25976: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27052: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 25976, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 27052, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25984:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27060:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4656,7 +4885,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:25997:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27073:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((~ (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data) 
@@ -4681,13 +4910,13 @@ done_reset
                                     & (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__a_first_counter_1))) 
                                    & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_source_io_deq_bits_MPORT_data))))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26000: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27076: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26000, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 27076, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26008:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27084:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4720,7 +4949,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26021:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27097:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_size_io_deq_bits_MPORT_data) 
@@ -4739,13 +4968,13 @@ done_reset
                                                             == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__a_first_counter_1))) 
                                                         & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_source_io_deq_bits_MPORT_data))))) 
                                                    & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26024: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27100: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26024, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 27100, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26032:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27108:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4764,7 +4993,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26045:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27121:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((~ ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_d_ready)) 
@@ -4776,13 +5005,13 @@ done_reset
                               & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_source_io_deq_bits_MPORT_data))) 
                              & (6U != (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                             & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26048: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27124: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26048, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 27124, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26056:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27132:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4798,7 +5027,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26067:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27143:11
 done_reset        
     ) {
         if (VL_UNLIKELY((1U & ((~ (((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter_auto_out_a_valid) 
@@ -4816,13 +5045,13 @@ done_reset
                                                     ? 1U
                                                     : 0U)))) 
                                & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26070: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27146: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26070, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 27146, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26078:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27154:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY((1U & ((~ (IData)(vlTOPp->reset)) 
@@ -4843,7 +5072,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26091:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27167:11
 done_reset        
     ) {
         if (VL_UNLIKELY((1U & ((~ (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__inflight)) 
@@ -4851,13 +5080,13 @@ done_reset
                                    | (vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__watchdog 
                                       < vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__plusarg_reader__DOT__myplus))) 
                                & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26094: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27170: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26094, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 27170, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26102:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27178:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY((1U & ((~ (IData)(vlTOPp->reset)) 
@@ -4869,20 +5098,20 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26115:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27191:11
 done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
                            & (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__d_first_counter_2))) 
                           & (6U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                          & (~ (IData)(vlTOPp->reset))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26118: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27194: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26118, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 27194, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26126:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27202:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY(((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 
@@ -4893,7 +5122,7 @@ verbose&&done_reset
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26139:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27215:11
 done_reset        
     ) {
         if (VL_UNLIKELY((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_size_io_deq_bits_MPORT_data) 
@@ -4907,13 +5136,13 @@ done_reset
                                                     & (6U 
                                                        == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))) 
                                                    & (~ (IData)(vlTOPp->reset)))))) {
-            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26142: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
+            VL_WRITEF("[%0t] %%Error: chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27218: Assertion failed in %NTestHarness.ram.buffer_1.monitor\n",
                       64,VL_TIME_UNITED_Q(1000),vlSymsp->name());
-            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 26142, "");
+            VL_STOP_MT("/root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v", 27218, "");
         }
     }
     if (
-        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:26150:11
+        // $c function at /root/chipyard/sims/verilator/generated-src/chipyard.TestHarness.CustomGemminiSoCConfig/chipyard.TestHarness.CustomGemminiSoCConfig.harness.v:27226:11
 verbose&&done_reset        
     ) {
         if (VL_UNLIKELY((((((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__empty)) 

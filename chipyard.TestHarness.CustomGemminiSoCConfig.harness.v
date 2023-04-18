@@ -298,7 +298,7 @@ module Queue_5_inTestHarness(
   input  [1:0]  io_enq_bits_param,
   input  [3:0]  io_enq_bits_size,
   input         io_enq_bits_source,
-  input  [3:0]  io_enq_bits_sink,
+  input  [2:0]  io_enq_bits_sink,
   input         io_enq_bits_denied,
   input  [63:0] io_enq_bits_data,
   input         io_enq_bits_corrupt,
@@ -308,7 +308,7 @@ module Queue_5_inTestHarness(
   output [1:0]  io_deq_bits_param,
   output [3:0]  io_deq_bits_size,
   output        io_deq_bits_source,
-  output [3:0]  io_deq_bits_sink,
+  output [2:0]  io_deq_bits_sink,
   output        io_deq_bits_denied,
   output [63:0] io_deq_bits_data,
   output        io_deq_bits_corrupt
@@ -360,11 +360,11 @@ module Queue_5_inTestHarness(
   wire  ram_source_MPORT_addr; // @[Decoupled.scala 259:95]
   wire  ram_source_MPORT_mask; // @[Decoupled.scala 259:95]
   wire  ram_source_MPORT_en; // @[Decoupled.scala 259:95]
-  reg [3:0] ram_sink [0:1]; // @[Decoupled.scala 259:95]
+  reg [2:0] ram_sink [0:1]; // @[Decoupled.scala 259:95]
   wire  ram_sink_io_deq_bits_MPORT_en; // @[Decoupled.scala 259:95]
   wire  ram_sink_io_deq_bits_MPORT_addr; // @[Decoupled.scala 259:95]
-  wire [3:0] ram_sink_io_deq_bits_MPORT_data; // @[Decoupled.scala 259:95]
-  wire [3:0] ram_sink_MPORT_data; // @[Decoupled.scala 259:95]
+  wire [2:0] ram_sink_io_deq_bits_MPORT_data; // @[Decoupled.scala 259:95]
+  wire [2:0] ram_sink_MPORT_data; // @[Decoupled.scala 259:95]
   wire  ram_sink_MPORT_addr; // @[Decoupled.scala 259:95]
   wire  ram_sink_MPORT_mask; // @[Decoupled.scala 259:95]
   wire  ram_sink_MPORT_en; // @[Decoupled.scala 259:95]
@@ -557,7 +557,7 @@ initial begin
     ram_source[initvar] = _RAND_3[0:0];
   _RAND_4 = {1{`RANDOM}};
   for (initvar = 0; initvar < 2; initvar = initvar+1)
-    ram_sink[initvar] = _RAND_4[3:0];
+    ram_sink[initvar] = _RAND_4[2:0];
   _RAND_5 = {1{`RANDOM}};
   for (initvar = 0; initvar < 2; initvar = initvar+1)
     ram_denied[initvar] = _RAND_5[0:0];
@@ -2238,7 +2238,7 @@ end // initial
 `endif
 `endif // SYNTHESIS
 endmodule
-module TLMonitor_71_inTestHarness(
+module TLMonitor_68_inTestHarness(
   input         clock,
   input         reset,
   input         io_in_a_ready,
@@ -2256,7 +2256,7 @@ module TLMonitor_71_inTestHarness(
   input  [1:0]  io_in_d_bits_param,
   input  [3:0]  io_in_d_bits_size,
   input         io_in_d_bits_source,
-  input  [3:0]  io_in_d_bits_sink,
+  input  [2:0]  io_in_d_bits_sink,
   input         io_in_d_bits_denied,
   input         io_in_d_bits_corrupt
 );
@@ -2408,36 +2408,32 @@ module TLMonitor_71_inTestHarness(
   wire  _T_690 = _T_689 == 8'h0; // @[Monitor.scala 127:40]
   wire  _T_694 = io_in_a_bits_opcode == 3'h2; // @[Monitor.scala 130:25]
   wire  _T_702 = io_in_a_bits_size <= 4'h3; // @[Parameters.scala 92:42]
-  wire  _T_745 = _T_27 | _T_32 | _T_42 | _T_47 | _T_52 | _T_57 | _T_62; // @[Parameters.scala 671:42]
-  wire  _T_746 = _T_702 & _T_745; // @[Parameters.scala 670:56]
-  wire  _T_761 = io_in_a_bits_size <= 4'h4; // @[Parameters.scala 92:42]
-  wire  _T_774 = _T_82 | _T_87; // @[Parameters.scala 671:42]
-  wire  _T_775 = _T_761 & _T_774; // @[Parameters.scala 670:56]
-  wire  _T_778 = _T_746 | _T_775; // @[Parameters.scala 672:30]
-  wire  _T_779 = _T_20 & _T_778; // @[Monitor.scala 131:74]
-  wire  _T_789 = io_in_a_bits_param <= 3'h4; // @[Bundles.scala 138:33]
-  wire  _T_797 = io_in_a_bits_opcode == 3'h3; // @[Monitor.scala 138:25]
-  wire  _T_892 = io_in_a_bits_param <= 3'h3; // @[Bundles.scala 145:30]
-  wire  _T_900 = io_in_a_bits_opcode == 3'h5; // @[Monitor.scala 146:25]
-  wire  _T_981 = _T_400 & _T_89; // @[Parameters.scala 670:56]
-  wire  _T_984 = _T_398 | _T_981; // @[Parameters.scala 672:30]
-  wire  _T_985 = _T_20 & _T_984; // @[Monitor.scala 147:68]
-  wire  _T_995 = io_in_a_bits_param <= 3'h1; // @[Bundles.scala 158:28]
-  wire  _T_1007 = io_in_d_bits_opcode <= 3'h6; // @[Bundles.scala 42:24]
+  wire  _T_757 = _T_27 | _T_32 | _T_42 | _T_47 | _T_52 | _T_57 | _T_82 | _T_62 | _T_87; // @[Parameters.scala 671:42]
+  wire  _T_758 = _T_702 & _T_757; // @[Parameters.scala 670:56]
+  wire  _T_774 = _T_20 & _T_758; // @[Monitor.scala 131:74]
+  wire  _T_784 = io_in_a_bits_param <= 3'h4; // @[Bundles.scala 138:33]
+  wire  _T_792 = io_in_a_bits_opcode == 3'h3; // @[Monitor.scala 138:25]
+  wire  _T_882 = io_in_a_bits_param <= 3'h3; // @[Bundles.scala 145:30]
+  wire  _T_890 = io_in_a_bits_opcode == 3'h5; // @[Monitor.scala 146:25]
+  wire  _T_971 = _T_400 & _T_89; // @[Parameters.scala 670:56]
+  wire  _T_974 = _T_398 | _T_971; // @[Parameters.scala 672:30]
+  wire  _T_975 = _T_20 & _T_974; // @[Monitor.scala 147:68]
+  wire  _T_985 = io_in_a_bits_param <= 3'h1; // @[Bundles.scala 158:28]
+  wire  _T_997 = io_in_d_bits_opcode <= 3'h6; // @[Bundles.scala 42:24]
   wire  _source_ok_T_1 = ~io_in_d_bits_source; // @[Parameters.scala 46:9]
-  wire  _T_1011 = io_in_d_bits_opcode == 3'h6; // @[Monitor.scala 310:25]
-  wire  _T_1015 = io_in_d_bits_size >= 4'h3; // @[Monitor.scala 312:27]
-  wire  _T_1019 = io_in_d_bits_param == 2'h0; // @[Monitor.scala 313:28]
-  wire  _T_1023 = ~io_in_d_bits_corrupt; // @[Monitor.scala 314:15]
-  wire  _T_1027 = ~io_in_d_bits_denied; // @[Monitor.scala 315:15]
-  wire  _T_1031 = io_in_d_bits_opcode == 3'h4; // @[Monitor.scala 318:25]
-  wire  _T_1042 = io_in_d_bits_param <= 2'h2; // @[Bundles.scala 102:26]
-  wire  _T_1046 = io_in_d_bits_param != 2'h2; // @[Monitor.scala 323:28]
-  wire  _T_1059 = io_in_d_bits_opcode == 3'h5; // @[Monitor.scala 328:25]
-  wire  _T_1079 = _T_1027 | io_in_d_bits_corrupt; // @[Monitor.scala 334:30]
-  wire  _T_1088 = io_in_d_bits_opcode == 3'h0; // @[Monitor.scala 338:25]
-  wire  _T_1105 = io_in_d_bits_opcode == 3'h1; // @[Monitor.scala 346:25]
-  wire  _T_1123 = io_in_d_bits_opcode == 3'h2; // @[Monitor.scala 354:25]
+  wire  _T_1001 = io_in_d_bits_opcode == 3'h6; // @[Monitor.scala 310:25]
+  wire  _T_1005 = io_in_d_bits_size >= 4'h3; // @[Monitor.scala 312:27]
+  wire  _T_1009 = io_in_d_bits_param == 2'h0; // @[Monitor.scala 313:28]
+  wire  _T_1013 = ~io_in_d_bits_corrupt; // @[Monitor.scala 314:15]
+  wire  _T_1017 = ~io_in_d_bits_denied; // @[Monitor.scala 315:15]
+  wire  _T_1021 = io_in_d_bits_opcode == 3'h4; // @[Monitor.scala 318:25]
+  wire  _T_1032 = io_in_d_bits_param <= 2'h2; // @[Bundles.scala 102:26]
+  wire  _T_1036 = io_in_d_bits_param != 2'h2; // @[Monitor.scala 323:28]
+  wire  _T_1049 = io_in_d_bits_opcode == 3'h5; // @[Monitor.scala 328:25]
+  wire  _T_1069 = _T_1017 | io_in_d_bits_corrupt; // @[Monitor.scala 334:30]
+  wire  _T_1078 = io_in_d_bits_opcode == 3'h0; // @[Monitor.scala 338:25]
+  wire  _T_1095 = io_in_d_bits_opcode == 3'h1; // @[Monitor.scala 346:25]
+  wire  _T_1113 = io_in_d_bits_opcode == 3'h2; // @[Monitor.scala 354:25]
   wire  _a_first_T = io_in_a_ready & io_in_a_valid; // @[Decoupled.scala 50:35]
   wire [8:0] a_first_beats1_decode = is_aligned_mask[11:3]; // @[Edges.scala 219:59]
   wire  a_first_beats1_opdata = ~io_in_a_bits_opcode[2]; // @[Edges.scala 91:28]
@@ -2449,12 +2445,12 @@ module TLMonitor_71_inTestHarness(
   reg [3:0] size; // @[Monitor.scala 386:22]
   reg  source; // @[Monitor.scala 387:22]
   reg [31:0] address; // @[Monitor.scala 388:22]
-  wire  _T_1153 = io_in_a_valid & ~a_first; // @[Monitor.scala 389:19]
-  wire  _T_1154 = io_in_a_bits_opcode == opcode; // @[Monitor.scala 390:32]
-  wire  _T_1158 = io_in_a_bits_param == param; // @[Monitor.scala 391:32]
-  wire  _T_1162 = io_in_a_bits_size == size; // @[Monitor.scala 392:32]
-  wire  _T_1166 = io_in_a_bits_source == source; // @[Monitor.scala 393:32]
-  wire  _T_1170 = io_in_a_bits_address == address; // @[Monitor.scala 394:32]
+  wire  _T_1143 = io_in_a_valid & ~a_first; // @[Monitor.scala 389:19]
+  wire  _T_1144 = io_in_a_bits_opcode == opcode; // @[Monitor.scala 390:32]
+  wire  _T_1148 = io_in_a_bits_param == param; // @[Monitor.scala 391:32]
+  wire  _T_1152 = io_in_a_bits_size == size; // @[Monitor.scala 392:32]
+  wire  _T_1156 = io_in_a_bits_source == source; // @[Monitor.scala 393:32]
+  wire  _T_1160 = io_in_a_bits_address == address; // @[Monitor.scala 394:32]
   wire  _d_first_T = io_in_d_ready & io_in_d_valid; // @[Decoupled.scala 50:35]
   wire [26:0] _d_first_beats1_decode_T_1 = 27'hfff << io_in_d_bits_size; // @[package.scala 234:77]
   wire [11:0] _d_first_beats1_decode_T_3 = ~_d_first_beats1_decode_T_1[11:0]; // @[package.scala 234:46]
@@ -2467,15 +2463,15 @@ module TLMonitor_71_inTestHarness(
   reg [1:0] param_1; // @[Monitor.scala 536:22]
   reg [3:0] size_1; // @[Monitor.scala 537:22]
   reg  source_1; // @[Monitor.scala 538:22]
-  reg [3:0] sink; // @[Monitor.scala 539:22]
+  reg [2:0] sink; // @[Monitor.scala 539:22]
   reg  denied; // @[Monitor.scala 540:22]
-  wire  _T_1177 = io_in_d_valid & ~d_first; // @[Monitor.scala 541:19]
-  wire  _T_1178 = io_in_d_bits_opcode == opcode_1; // @[Monitor.scala 542:29]
-  wire  _T_1182 = io_in_d_bits_param == param_1; // @[Monitor.scala 543:29]
-  wire  _T_1186 = io_in_d_bits_size == size_1; // @[Monitor.scala 544:29]
-  wire  _T_1190 = io_in_d_bits_source == source_1; // @[Monitor.scala 545:29]
-  wire  _T_1194 = io_in_d_bits_sink == sink; // @[Monitor.scala 546:29]
-  wire  _T_1198 = io_in_d_bits_denied == denied; // @[Monitor.scala 547:29]
+  wire  _T_1167 = io_in_d_valid & ~d_first; // @[Monitor.scala 541:19]
+  wire  _T_1168 = io_in_d_bits_opcode == opcode_1; // @[Monitor.scala 542:29]
+  wire  _T_1172 = io_in_d_bits_param == param_1; // @[Monitor.scala 543:29]
+  wire  _T_1176 = io_in_d_bits_size == size_1; // @[Monitor.scala 544:29]
+  wire  _T_1180 = io_in_d_bits_source == source_1; // @[Monitor.scala 545:29]
+  wire  _T_1184 = io_in_d_bits_sink == sink; // @[Monitor.scala 546:29]
+  wire  _T_1188 = io_in_d_bits_denied == denied; // @[Monitor.scala 547:29]
   reg  inflight; // @[Monitor.scala 611:27]
   reg [3:0] inflight_opcodes; // @[Monitor.scala 613:35]
   reg [7:0] inflight_sizes; // @[Monitor.scala 615:33]
@@ -2498,10 +2494,10 @@ module TLMonitor_71_inTestHarness(
   wire [15:0] _GEN_75 = {{8'd0}, _a_size_lookup_T_1}; // @[Monitor.scala 638:91]
   wire [15:0] _a_size_lookup_T_6 = _GEN_75 & _a_size_lookup_T_5; // @[Monitor.scala 638:91]
   wire [15:0] _a_size_lookup_T_7 = {{1'd0}, _a_size_lookup_T_6[15:1]}; // @[Monitor.scala 638:144]
-  wire  _T_1204 = io_in_a_valid & a_first_1; // @[Monitor.scala 648:26]
+  wire  _T_1194 = io_in_a_valid & a_first_1; // @[Monitor.scala 648:26]
   wire [1:0] _a_set_wo_ready_T = 2'h1 << io_in_a_bits_source; // @[OneHot.scala 57:35]
   wire [1:0] _GEN_15 = io_in_a_valid & a_first_1 ? _a_set_wo_ready_T : 2'h0; // @[Monitor.scala 648:71 649:22]
-  wire  _T_1207 = _a_first_T & a_first_1; // @[Monitor.scala 652:27]
+  wire  _T_1197 = _a_first_T & a_first_1; // @[Monitor.scala 652:27]
   wire [3:0] _a_opcodes_set_interm_T = {io_in_a_bits_opcode, 1'h0}; // @[Monitor.scala 654:53]
   wire [3:0] _a_opcodes_set_interm_T_1 = _a_opcodes_set_interm_T | 4'h1; // @[Monitor.scala 654:61]
   wire [4:0] _a_sizes_set_interm_T = {io_in_a_bits_size, 1'h0}; // @[Monitor.scala 655:51]
@@ -2515,25 +2511,25 @@ module TLMonitor_71_inTestHarness(
   wire [4:0] a_sizes_set_interm = _a_first_T & a_first_1 ? _a_sizes_set_interm_T_1 : 5'h0; // @[Monitor.scala 652:72 655:28]
   wire [19:0] _GEN_2 = {{15'd0}, a_sizes_set_interm}; // @[Monitor.scala 657:52]
   wire [19:0] _a_sizes_set_T_1 = _GEN_2 << _a_sizes_set_T; // @[Monitor.scala 657:52]
-  wire  _T_1211 = ~(inflight >> io_in_a_bits_source); // @[Monitor.scala 658:17]
+  wire  _T_1201 = ~(inflight >> io_in_a_bits_source); // @[Monitor.scala 658:17]
   wire [1:0] _GEN_16 = _a_first_T & a_first_1 ? _a_set_wo_ready_T : 2'h0; // @[Monitor.scala 652:72 653:28]
   wire [18:0] _GEN_19 = _a_first_T & a_first_1 ? _a_opcodes_set_T_1 : 19'h0; // @[Monitor.scala 652:72 656:28]
   wire [19:0] _GEN_20 = _a_first_T & a_first_1 ? _a_sizes_set_T_1 : 20'h0; // @[Monitor.scala 652:72 657:28]
-  wire  _T_1215 = io_in_d_valid & d_first_1; // @[Monitor.scala 671:26]
-  wire  _T_1217 = ~_T_1011; // @[Monitor.scala 671:74]
-  wire  _T_1218 = io_in_d_valid & d_first_1 & ~_T_1011; // @[Monitor.scala 671:71]
+  wire  _T_1205 = io_in_d_valid & d_first_1; // @[Monitor.scala 671:26]
+  wire  _T_1207 = ~_T_1001; // @[Monitor.scala 671:74]
+  wire  _T_1208 = io_in_d_valid & d_first_1 & ~_T_1001; // @[Monitor.scala 671:71]
   wire [1:0] _d_clr_wo_ready_T = 2'h1 << io_in_d_bits_source; // @[OneHot.scala 57:35]
-  wire [1:0] _GEN_21 = io_in_d_valid & d_first_1 & ~_T_1011 ? _d_clr_wo_ready_T : 2'h0; // @[Monitor.scala 671:90 672:22]
+  wire [1:0] _GEN_21 = io_in_d_valid & d_first_1 & ~_T_1001 ? _d_clr_wo_ready_T : 2'h0; // @[Monitor.scala 671:90 672:22]
   wire [30:0] _GEN_3 = {{15'd0}, _a_opcode_lookup_T_5}; // @[Monitor.scala 677:76]
   wire [30:0] _d_opcodes_clr_T_5 = _GEN_3 << _a_opcode_lookup_T; // @[Monitor.scala 677:76]
   wire [30:0] _GEN_4 = {{15'd0}, _a_size_lookup_T_5}; // @[Monitor.scala 678:74]
   wire [30:0] _d_sizes_clr_T_5 = _GEN_4 << _a_size_lookup_T; // @[Monitor.scala 678:74]
-  wire [1:0] _GEN_22 = _d_first_T & d_first_1 & _T_1217 ? _d_clr_wo_ready_T : 2'h0; // @[Monitor.scala 675:91 676:21]
-  wire [30:0] _GEN_23 = _d_first_T & d_first_1 & _T_1217 ? _d_opcodes_clr_T_5 : 31'h0; // @[Monitor.scala 675:91 677:21]
-  wire [30:0] _GEN_24 = _d_first_T & d_first_1 & _T_1217 ? _d_sizes_clr_T_5 : 31'h0; // @[Monitor.scala 675:91 678:21]
+  wire [1:0] _GEN_22 = _d_first_T & d_first_1 & _T_1207 ? _d_clr_wo_ready_T : 2'h0; // @[Monitor.scala 675:91 676:21]
+  wire [30:0] _GEN_23 = _d_first_T & d_first_1 & _T_1207 ? _d_opcodes_clr_T_5 : 31'h0; // @[Monitor.scala 675:91 677:21]
+  wire [30:0] _GEN_24 = _d_first_T & d_first_1 & _T_1207 ? _d_sizes_clr_T_5 : 31'h0; // @[Monitor.scala 675:91 678:21]
   wire  _same_cycle_resp_T_2 = io_in_a_bits_source == io_in_d_bits_source; // @[Monitor.scala 681:113]
-  wire  same_cycle_resp = _T_1204 & io_in_a_bits_source == io_in_d_bits_source; // @[Monitor.scala 681:88]
-  wire  _T_1230 = inflight >> io_in_d_bits_source | same_cycle_resp; // @[Monitor.scala 682:49]
+  wire  same_cycle_resp = _T_1194 & io_in_a_bits_source == io_in_d_bits_source; // @[Monitor.scala 681:88]
+  wire  _T_1220 = inflight >> io_in_d_bits_source | same_cycle_resp; // @[Monitor.scala 682:49]
   wire [2:0] _GEN_27 = 3'h2 == io_in_a_bits_opcode ? 3'h1 : 3'h0; // @[Monitor.scala 685:{38,38}]
   wire [2:0] _GEN_28 = 3'h3 == io_in_a_bits_opcode ? 3'h1 : _GEN_27; // @[Monitor.scala 685:{38,38}]
   wire [2:0] _GEN_29 = 3'h4 == io_in_a_bits_opcode ? 3'h1 : _GEN_28; // @[Monitor.scala 685:{38,38}]
@@ -2542,9 +2538,9 @@ module TLMonitor_71_inTestHarness(
   wire [2:0] _GEN_32 = 3'h7 == io_in_a_bits_opcode ? 3'h4 : _GEN_31; // @[Monitor.scala 685:{38,38}]
   wire [2:0] _GEN_39 = 3'h6 == io_in_a_bits_opcode ? 3'h5 : _GEN_30; // @[Monitor.scala 686:{39,39}]
   wire [2:0] _GEN_40 = 3'h7 == io_in_a_bits_opcode ? 3'h4 : _GEN_39; // @[Monitor.scala 686:{39,39}]
-  wire  _T_1235 = io_in_d_bits_opcode == _GEN_40; // @[Monitor.scala 686:39]
-  wire  _T_1236 = io_in_d_bits_opcode == _GEN_32 | _T_1235; // @[Monitor.scala 685:77]
-  wire  _T_1240 = io_in_a_bits_size == io_in_d_bits_size; // @[Monitor.scala 687:36]
+  wire  _T_1225 = io_in_d_bits_opcode == _GEN_40; // @[Monitor.scala 686:39]
+  wire  _T_1226 = io_in_d_bits_opcode == _GEN_32 | _T_1225; // @[Monitor.scala 685:77]
+  wire  _T_1230 = io_in_a_bits_size == io_in_d_bits_size; // @[Monitor.scala 687:36]
   wire [3:0] a_opcode_lookup = _a_opcode_lookup_T_7[3:0];
   wire [2:0] _GEN_43 = 3'h2 == a_opcode_lookup[2:0] ? 3'h1 : 3'h0; // @[Monitor.scala 689:{38,38}]
   wire [2:0] _GEN_44 = 3'h3 == a_opcode_lookup[2:0] ? 3'h1 : _GEN_43; // @[Monitor.scala 689:{38,38}]
@@ -2554,16 +2550,16 @@ module TLMonitor_71_inTestHarness(
   wire [2:0] _GEN_48 = 3'h7 == a_opcode_lookup[2:0] ? 3'h4 : _GEN_47; // @[Monitor.scala 689:{38,38}]
   wire [2:0] _GEN_55 = 3'h6 == a_opcode_lookup[2:0] ? 3'h5 : _GEN_46; // @[Monitor.scala 690:{38,38}]
   wire [2:0] _GEN_56 = 3'h7 == a_opcode_lookup[2:0] ? 3'h4 : _GEN_55; // @[Monitor.scala 690:{38,38}]
-  wire  _T_1247 = io_in_d_bits_opcode == _GEN_56; // @[Monitor.scala 690:38]
-  wire  _T_1248 = io_in_d_bits_opcode == _GEN_48 | _T_1247; // @[Monitor.scala 689:72]
+  wire  _T_1237 = io_in_d_bits_opcode == _GEN_56; // @[Monitor.scala 690:38]
+  wire  _T_1238 = io_in_d_bits_opcode == _GEN_48 | _T_1237; // @[Monitor.scala 689:72]
   wire [7:0] a_size_lookup = _a_size_lookup_T_7[7:0];
   wire [7:0] _GEN_79 = {{4'd0}, io_in_d_bits_size}; // @[Monitor.scala 691:36]
-  wire  _T_1252 = _GEN_79 == a_size_lookup; // @[Monitor.scala 691:36]
-  wire  _T_1262 = _T_1215 & a_first_1 & io_in_a_valid & _same_cycle_resp_T_2 & _T_1217; // @[Monitor.scala 694:116]
-  wire  _T_1264 = ~io_in_d_ready | io_in_a_ready; // @[Monitor.scala 695:32]
+  wire  _T_1242 = _GEN_79 == a_size_lookup; // @[Monitor.scala 691:36]
+  wire  _T_1252 = _T_1205 & a_first_1 & io_in_a_valid & _same_cycle_resp_T_2 & _T_1207; // @[Monitor.scala 694:116]
+  wire  _T_1254 = ~io_in_d_ready | io_in_a_ready; // @[Monitor.scala 695:32]
   wire  a_set_wo_ready = _GEN_15[0];
   wire  d_clr_wo_ready = _GEN_21[0];
-  wire  _T_1271 = a_set_wo_ready != d_clr_wo_ready | ~(|a_set_wo_ready); // @[Monitor.scala 699:48]
+  wire  _T_1261 = a_set_wo_ready != d_clr_wo_ready | ~(|a_set_wo_ready); // @[Monitor.scala 699:48]
   wire  a_set = _GEN_16[0];
   wire  d_clr = _GEN_22[0];
   wire [3:0] a_opcodes_set = _GEN_19[3:0];
@@ -2577,7 +2573,7 @@ module TLMonitor_71_inTestHarness(
   wire [7:0] _inflight_sizes_T_1 = ~d_sizes_clr; // @[Monitor.scala 704:56]
   wire [7:0] _inflight_sizes_T_2 = _inflight_sizes_T & _inflight_sizes_T_1; // @[Monitor.scala 704:54]
   reg [31:0] watchdog; // @[Monitor.scala 706:27]
-  wire  _T_1280 = ~(|inflight) | plusarg_reader_out == 32'h0 | watchdog < plusarg_reader_out; // @[Monitor.scala 709:47]
+  wire  _T_1270 = ~(|inflight) | plusarg_reader_out == 32'h0 | watchdog < plusarg_reader_out; // @[Monitor.scala 709:47]
   wire [31:0] _watchdog_T_1 = watchdog + 32'h1; // @[Monitor.scala 711:26]
   reg [7:0] inflight_sizes_1; // @[Monitor.scala 725:35]
   reg [8:0] d_first_counter_2; // @[Edges.scala 228:27]
@@ -2587,11 +2583,11 @@ module TLMonitor_71_inTestHarness(
   wire [15:0] _GEN_83 = {{8'd0}, _c_size_lookup_T_1}; // @[Monitor.scala 747:93]
   wire [15:0] _c_size_lookup_T_6 = _GEN_83 & _a_size_lookup_T_5; // @[Monitor.scala 747:93]
   wire [15:0] _c_size_lookup_T_7 = {{1'd0}, _c_size_lookup_T_6[15:1]}; // @[Monitor.scala 747:146]
-  wire  _T_1306 = io_in_d_valid & d_first_2 & _T_1011; // @[Monitor.scala 779:71]
-  wire [30:0] _GEN_69 = _d_first_T & d_first_2 & _T_1011 ? _d_sizes_clr_T_5 : 31'h0; // @[Monitor.scala 783:90 786:21]
-  wire  _T_1314 = 1'h0 >> io_in_d_bits_source; // @[Monitor.scala 791:25]
+  wire  _T_1296 = io_in_d_valid & d_first_2 & _T_1001; // @[Monitor.scala 779:71]
+  wire [30:0] _GEN_69 = _d_first_T & d_first_2 & _T_1001 ? _d_sizes_clr_T_5 : 31'h0; // @[Monitor.scala 783:90 786:21]
+  wire  _T_1304 = 1'h0 >> io_in_d_bits_source; // @[Monitor.scala 791:25]
   wire [7:0] c_size_lookup = _c_size_lookup_T_7[7:0];
-  wire  _T_1324 = _GEN_79 == c_size_lookup; // @[Monitor.scala 795:36]
+  wire  _T_1314 = _GEN_79 == c_size_lookup; // @[Monitor.scala 795:36]
   wire [7:0] d_sizes_clr_1 = _GEN_69[7:0];
   wire [7:0] _inflight_sizes_T_4 = ~d_sizes_clr_1; // @[Monitor.scala 811:58]
   wire [7:0] _inflight_sizes_T_5 = inflight_sizes_1 & _inflight_sizes_T_4; // @[Monitor.scala 811:56]
@@ -3569,7 +3565,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_779 & (io_in_a_valid & _T_694 & ~reset)) begin
+        if (~_T_774 & (io_in_a_valid & _T_694 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -3580,7 +3576,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_694 & ~reset & ~_T_779) begin
+        if (io_in_a_valid & _T_694 & ~reset & ~_T_774) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel carries Arithmetic type which is unexpected using diplomatic parameters (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -3641,7 +3637,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_789 & (io_in_a_valid & _T_694 & ~reset)) begin
+        if (~_T_784 & (io_in_a_valid & _T_694 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -3652,7 +3648,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_694 & ~reset & ~_T_789) begin
+        if (io_in_a_valid & _T_694 & ~reset & ~_T_784) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel Arithmetic carries invalid opcode param (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -3689,7 +3685,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_779 & (io_in_a_valid & _T_797 & ~reset)) begin
+        if (~_T_774 & (io_in_a_valid & _T_792 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -3700,7 +3696,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_797 & ~reset & ~_T_779) begin
+        if (io_in_a_valid & _T_792 & ~reset & ~_T_774) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel carries Logical type which is unexpected using diplomatic parameters (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -3713,7 +3709,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_source_ok_T & (io_in_a_valid & _T_797 & ~reset)) begin
+        if (~_source_ok_T & (io_in_a_valid & _T_792 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -3724,7 +3720,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_797 & ~reset & _T_5) begin
+        if (io_in_a_valid & _T_792 & ~reset & _T_5) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel Logical carries invalid source ID (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -3737,7 +3733,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~is_aligned & (io_in_a_valid & _T_797 & ~reset)) begin
+        if (~is_aligned & (io_in_a_valid & _T_792 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -3748,7 +3744,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_797 & ~reset & ~is_aligned) begin
+        if (io_in_a_valid & _T_792 & ~reset & ~is_aligned) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel Logical address not aligned to size (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -3761,7 +3757,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_892 & (io_in_a_valid & _T_797 & ~reset)) begin
+        if (~_T_882 & (io_in_a_valid & _T_792 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -3772,7 +3768,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_797 & ~reset & ~_T_892) begin
+        if (io_in_a_valid & _T_792 & ~reset & ~_T_882) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel Logical carries invalid opcode param (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -3785,7 +3781,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_478 & (io_in_a_valid & _T_797 & ~reset)) begin
+        if (~_T_478 & (io_in_a_valid & _T_792 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -3796,7 +3792,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_797 & ~reset & ~_T_478) begin
+        if (io_in_a_valid & _T_792 & ~reset & ~_T_478) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel Logical contains invalid mask (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -3809,7 +3805,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_985 & (io_in_a_valid & _T_900 & ~reset)) begin
+        if (~_T_975 & (io_in_a_valid & _T_890 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -3820,7 +3816,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_900 & ~reset & ~_T_985) begin
+        if (io_in_a_valid & _T_890 & ~reset & ~_T_975) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel carries Hint type which is unexpected using diplomatic parameters (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -3833,7 +3829,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_source_ok_T & (io_in_a_valid & _T_900 & ~reset)) begin
+        if (~_source_ok_T & (io_in_a_valid & _T_890 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -3844,7 +3840,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_900 & ~reset & _T_5) begin
+        if (io_in_a_valid & _T_890 & ~reset & _T_5) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel Hint carries invalid source ID (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -3857,7 +3853,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~is_aligned & (io_in_a_valid & _T_900 & ~reset)) begin
+        if (~is_aligned & (io_in_a_valid & _T_890 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -3868,7 +3864,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_900 & ~reset & ~is_aligned) begin
+        if (io_in_a_valid & _T_890 & ~reset & ~is_aligned) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel Hint address not aligned to size (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -3881,7 +3877,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_995 & (io_in_a_valid & _T_900 & ~reset)) begin
+        if (~_T_985 & (io_in_a_valid & _T_890 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -3892,7 +3888,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_900 & ~reset & ~_T_995) begin
+        if (io_in_a_valid & _T_890 & ~reset & ~_T_985) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel Hint carries invalid opcode param (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -3905,7 +3901,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_478 & (io_in_a_valid & _T_900 & ~reset)) begin
+        if (~_T_478 & (io_in_a_valid & _T_890 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -3916,7 +3912,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_900 & ~reset & ~_T_478) begin
+        if (io_in_a_valid & _T_890 & ~reset & ~_T_478) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel Hint contains invalid mask (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -3929,7 +3925,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_191 & (io_in_a_valid & _T_900 & ~reset)) begin
+        if (~_T_191 & (io_in_a_valid & _T_890 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -3940,7 +3936,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_900 & ~reset & ~_T_191) begin
+        if (io_in_a_valid & _T_890 & ~reset & ~_T_191) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel Hint is corrupt (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -3953,7 +3949,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1007 & (io_in_d_valid & _T_2)) begin
+        if (~_T_997 & (io_in_d_valid & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -3964,7 +3960,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_2 & ~_T_1007) begin
+        if (io_in_d_valid & _T_2 & ~_T_997) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel has invalid opcode (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -3977,7 +3973,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_source_ok_T_1 & (io_in_d_valid & _T_1011 & _T_2)) begin
+        if (~_source_ok_T_1 & (io_in_d_valid & _T_1001 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -3988,7 +3984,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1011 & _T_2 & ~_source_ok_T_1) begin
+        if (io_in_d_valid & _T_1001 & _T_2 & ~_source_ok_T_1) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel ReleaseAck carries invalid source ID (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4001,7 +3997,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1015 & (io_in_d_valid & _T_1011 & _T_2)) begin
+        if (~_T_1005 & (io_in_d_valid & _T_1001 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4012,7 +4008,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1011 & _T_2 & ~_T_1015) begin
+        if (io_in_d_valid & _T_1001 & _T_2 & ~_T_1005) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel ReleaseAck smaller than a beat (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4025,7 +4021,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1019 & (io_in_d_valid & _T_1011 & _T_2)) begin
+        if (~_T_1009 & (io_in_d_valid & _T_1001 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4036,7 +4032,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1011 & _T_2 & ~_T_1019) begin
+        if (io_in_d_valid & _T_1001 & _T_2 & ~_T_1009) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel ReleaseeAck carries invalid param (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4049,7 +4045,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1023 & (io_in_d_valid & _T_1011 & _T_2)) begin
+        if (~_T_1013 & (io_in_d_valid & _T_1001 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4060,7 +4056,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1011 & _T_2 & ~_T_1023) begin
+        if (io_in_d_valid & _T_1001 & _T_2 & ~_T_1013) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel ReleaseAck is corrupt (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4073,7 +4069,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1027 & (io_in_d_valid & _T_1011 & _T_2)) begin
+        if (~_T_1017 & (io_in_d_valid & _T_1001 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4084,7 +4080,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1011 & _T_2 & ~_T_1027) begin
+        if (io_in_d_valid & _T_1001 & _T_2 & ~_T_1017) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel ReleaseAck is denied (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4097,7 +4093,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_source_ok_T_1 & (io_in_d_valid & _T_1031 & _T_2)) begin
+        if (~_source_ok_T_1 & (io_in_d_valid & _T_1021 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4108,7 +4104,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1031 & _T_2 & ~_source_ok_T_1) begin
+        if (io_in_d_valid & _T_1021 & _T_2 & ~_source_ok_T_1) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel Grant carries invalid source ID (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4121,7 +4117,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_1031 & _T_2)) begin
+        if (~1'h1 & (io_in_d_valid & _T_1021 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4132,7 +4128,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1015 & (io_in_d_valid & _T_1031 & _T_2)) begin
+        if (~_T_1005 & (io_in_d_valid & _T_1021 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4143,7 +4139,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1031 & _T_2 & ~_T_1015) begin
+        if (io_in_d_valid & _T_1021 & _T_2 & ~_T_1005) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel Grant smaller than a beat (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4156,7 +4152,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1042 & (io_in_d_valid & _T_1031 & _T_2)) begin
+        if (~_T_1032 & (io_in_d_valid & _T_1021 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4167,7 +4163,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1031 & _T_2 & ~_T_1042) begin
+        if (io_in_d_valid & _T_1021 & _T_2 & ~_T_1032) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel Grant carries invalid cap param (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4180,7 +4176,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1046 & (io_in_d_valid & _T_1031 & _T_2)) begin
+        if (~_T_1036 & (io_in_d_valid & _T_1021 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4191,7 +4187,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1031 & _T_2 & ~_T_1046) begin
+        if (io_in_d_valid & _T_1021 & _T_2 & ~_T_1036) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel Grant carries toN param (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4204,7 +4200,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1023 & (io_in_d_valid & _T_1031 & _T_2)) begin
+        if (~_T_1013 & (io_in_d_valid & _T_1021 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4215,7 +4211,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1031 & _T_2 & ~_T_1023) begin
+        if (io_in_d_valid & _T_1021 & _T_2 & ~_T_1013) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel Grant is corrupt (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4228,7 +4224,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_1031 & _T_2)) begin
+        if (~1'h1 & (io_in_d_valid & _T_1021 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4239,7 +4235,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_source_ok_T_1 & (io_in_d_valid & _T_1059 & _T_2)) begin
+        if (~_source_ok_T_1 & (io_in_d_valid & _T_1049 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4250,7 +4246,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1059 & _T_2 & ~_source_ok_T_1) begin
+        if (io_in_d_valid & _T_1049 & _T_2 & ~_source_ok_T_1) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel GrantData carries invalid source ID (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4263,7 +4259,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_1059 & _T_2)) begin
+        if (~1'h1 & (io_in_d_valid & _T_1049 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4274,7 +4270,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1015 & (io_in_d_valid & _T_1059 & _T_2)) begin
+        if (~_T_1005 & (io_in_d_valid & _T_1049 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4285,7 +4281,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1059 & _T_2 & ~_T_1015) begin
+        if (io_in_d_valid & _T_1049 & _T_2 & ~_T_1005) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel GrantData smaller than a beat (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4298,7 +4294,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1042 & (io_in_d_valid & _T_1059 & _T_2)) begin
+        if (~_T_1032 & (io_in_d_valid & _T_1049 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4309,7 +4305,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1059 & _T_2 & ~_T_1042) begin
+        if (io_in_d_valid & _T_1049 & _T_2 & ~_T_1032) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel GrantData carries invalid cap param (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4322,7 +4318,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1046 & (io_in_d_valid & _T_1059 & _T_2)) begin
+        if (~_T_1036 & (io_in_d_valid & _T_1049 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4333,7 +4329,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1059 & _T_2 & ~_T_1046) begin
+        if (io_in_d_valid & _T_1049 & _T_2 & ~_T_1036) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel GrantData carries toN param (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4346,7 +4342,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1079 & (io_in_d_valid & _T_1059 & _T_2)) begin
+        if (~_T_1069 & (io_in_d_valid & _T_1049 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4357,7 +4353,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1059 & _T_2 & ~_T_1079) begin
+        if (io_in_d_valid & _T_1049 & _T_2 & ~_T_1069) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel GrantData is denied but not corrupt (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4370,7 +4366,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_1059 & _T_2)) begin
+        if (~1'h1 & (io_in_d_valid & _T_1049 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4381,7 +4377,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_source_ok_T_1 & (io_in_d_valid & _T_1088 & _T_2)) begin
+        if (~_source_ok_T_1 & (io_in_d_valid & _T_1078 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4392,7 +4388,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1088 & _T_2 & ~_source_ok_T_1) begin
+        if (io_in_d_valid & _T_1078 & _T_2 & ~_source_ok_T_1) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel AccessAck carries invalid source ID (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4405,7 +4401,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1019 & (io_in_d_valid & _T_1088 & _T_2)) begin
+        if (~_T_1009 & (io_in_d_valid & _T_1078 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4416,7 +4412,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1088 & _T_2 & ~_T_1019) begin
+        if (io_in_d_valid & _T_1078 & _T_2 & ~_T_1009) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel AccessAck carries invalid param (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4429,7 +4425,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1023 & (io_in_d_valid & _T_1088 & _T_2)) begin
+        if (~_T_1013 & (io_in_d_valid & _T_1078 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4440,7 +4436,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1088 & _T_2 & ~_T_1023) begin
+        if (io_in_d_valid & _T_1078 & _T_2 & ~_T_1013) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel AccessAck is corrupt (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4453,7 +4449,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_1088 & _T_2)) begin
+        if (~1'h1 & (io_in_d_valid & _T_1078 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4464,7 +4460,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_source_ok_T_1 & (io_in_d_valid & _T_1105 & _T_2)) begin
+        if (~_source_ok_T_1 & (io_in_d_valid & _T_1095 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4475,7 +4471,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1105 & _T_2 & ~_source_ok_T_1) begin
+        if (io_in_d_valid & _T_1095 & _T_2 & ~_source_ok_T_1) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel AccessAckData carries invalid source ID (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4488,7 +4484,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1019 & (io_in_d_valid & _T_1105 & _T_2)) begin
+        if (~_T_1009 & (io_in_d_valid & _T_1095 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4499,7 +4495,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1105 & _T_2 & ~_T_1019) begin
+        if (io_in_d_valid & _T_1095 & _T_2 & ~_T_1009) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel AccessAckData carries invalid param (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4512,7 +4508,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1079 & (io_in_d_valid & _T_1105 & _T_2)) begin
+        if (~_T_1069 & (io_in_d_valid & _T_1095 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4523,7 +4519,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1105 & _T_2 & ~_T_1079) begin
+        if (io_in_d_valid & _T_1095 & _T_2 & ~_T_1069) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel AccessAckData is denied but not corrupt (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4536,7 +4532,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_1105 & _T_2)) begin
+        if (~1'h1 & (io_in_d_valid & _T_1095 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4547,7 +4543,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_source_ok_T_1 & (io_in_d_valid & _T_1123 & _T_2)) begin
+        if (~_source_ok_T_1 & (io_in_d_valid & _T_1113 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4558,7 +4554,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1123 & _T_2 & ~_source_ok_T_1) begin
+        if (io_in_d_valid & _T_1113 & _T_2 & ~_source_ok_T_1) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel HintAck carries invalid source ID (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4571,7 +4567,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1019 & (io_in_d_valid & _T_1123 & _T_2)) begin
+        if (~_T_1009 & (io_in_d_valid & _T_1113 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4582,7 +4578,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1123 & _T_2 & ~_T_1019) begin
+        if (io_in_d_valid & _T_1113 & _T_2 & ~_T_1009) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel HintAck carries invalid param (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4595,7 +4591,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1023 & (io_in_d_valid & _T_1123 & _T_2)) begin
+        if (~_T_1013 & (io_in_d_valid & _T_1113 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4606,7 +4602,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1123 & _T_2 & ~_T_1023) begin
+        if (io_in_d_valid & _T_1113 & _T_2 & ~_T_1013) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel HintAck is corrupt (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4619,7 +4615,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_1123 & _T_2)) begin
+        if (~1'h1 & (io_in_d_valid & _T_1113 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4663,7 +4659,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1154 & (_T_1153 & ~reset)) begin
+        if (~_T_1144 & (_T_1143 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -4674,7 +4670,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1153 & ~reset & ~_T_1154) begin
+        if (_T_1143 & ~reset & ~_T_1144) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel opcode changed within multibeat operation (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -4687,7 +4683,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1158 & (_T_1153 & ~reset)) begin
+        if (~_T_1148 & (_T_1143 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -4698,7 +4694,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1153 & ~reset & ~_T_1158) begin
+        if (_T_1143 & ~reset & ~_T_1148) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel param changed within multibeat operation (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -4711,7 +4707,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1162 & (_T_1153 & ~reset)) begin
+        if (~_T_1152 & (_T_1143 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -4722,7 +4718,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1153 & ~reset & ~_T_1162) begin
+        if (_T_1143 & ~reset & ~_T_1152) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel size changed within multibeat operation (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -4735,7 +4731,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1166 & (_T_1153 & ~reset)) begin
+        if (~_T_1156 & (_T_1143 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -4746,7 +4742,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1153 & ~reset & ~_T_1166) begin
+        if (_T_1143 & ~reset & ~_T_1156) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel source changed within multibeat operation (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -4759,7 +4755,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1170 & (_T_1153 & ~reset)) begin
+        if (~_T_1160 & (_T_1143 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -4770,7 +4766,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1153 & ~reset & ~_T_1170) begin
+        if (_T_1143 & ~reset & ~_T_1160) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel address changed with multibeat operation (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -4783,7 +4779,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1178 & (_T_1177 & _T_2)) begin
+        if (~_T_1168 & (_T_1167 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4794,7 +4790,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1177 & _T_2 & ~_T_1178) begin
+        if (_T_1167 & _T_2 & ~_T_1168) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel opcode changed within multibeat operation (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4807,7 +4803,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1182 & (_T_1177 & _T_2)) begin
+        if (~_T_1172 & (_T_1167 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4818,7 +4814,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1177 & _T_2 & ~_T_1182) begin
+        if (_T_1167 & _T_2 & ~_T_1172) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel param changed within multibeat operation (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4831,7 +4827,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1186 & (_T_1177 & _T_2)) begin
+        if (~_T_1176 & (_T_1167 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4842,7 +4838,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1177 & _T_2 & ~_T_1186) begin
+        if (_T_1167 & _T_2 & ~_T_1176) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel size changed within multibeat operation (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4855,7 +4851,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1190 & (_T_1177 & _T_2)) begin
+        if (~_T_1180 & (_T_1167 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4866,7 +4862,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1177 & _T_2 & ~_T_1190) begin
+        if (_T_1167 & _T_2 & ~_T_1180) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel source changed within multibeat operation (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4879,7 +4875,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1194 & (_T_1177 & _T_2)) begin
+        if (~_T_1184 & (_T_1167 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4890,7 +4886,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1177 & _T_2 & ~_T_1194) begin
+        if (_T_1167 & _T_2 & ~_T_1184) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel sink changed with multibeat operation (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4903,7 +4899,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1198 & (_T_1177 & _T_2)) begin
+        if (~_T_1188 & (_T_1167 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4914,7 +4910,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1177 & _T_2 & ~_T_1198) begin
+        if (_T_1167 & _T_2 & ~_T_1188) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel denied changed with multibeat operation (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4927,7 +4923,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1211 & (_T_1207 & ~reset)) begin
+        if (~_T_1201 & (_T_1197 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -4938,7 +4934,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1207 & ~reset & ~_T_1211) begin
+        if (_T_1197 & ~reset & ~_T_1201) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel re-used a source ID (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -4951,7 +4947,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1230 & (_T_1218 & _T_2)) begin
+        if (~_T_1220 & (_T_1208 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4962,7 +4958,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1218 & _T_2 & ~_T_1230) begin
+        if (_T_1208 & _T_2 & ~_T_1220) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel acknowledged for nothing inflight (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4975,7 +4971,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1236 & (_T_1218 & same_cycle_resp & _T_2)) begin
+        if (~_T_1226 & (_T_1208 & same_cycle_resp & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -4986,7 +4982,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1218 & same_cycle_resp & _T_2 & ~_T_1236) begin
+        if (_T_1208 & same_cycle_resp & _T_2 & ~_T_1226) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel contains improper opcode response (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -4999,7 +4995,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1240 & (_T_1218 & same_cycle_resp & _T_2)) begin
+        if (~_T_1230 & (_T_1208 & same_cycle_resp & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -5010,7 +5006,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1218 & same_cycle_resp & _T_2 & ~_T_1240) begin
+        if (_T_1208 & same_cycle_resp & _T_2 & ~_T_1230) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel contains improper response size (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -5023,7 +5019,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1248 & (_T_1218 & ~same_cycle_resp & _T_2)) begin
+        if (~_T_1238 & (_T_1208 & ~same_cycle_resp & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -5034,7 +5030,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1218 & ~same_cycle_resp & _T_2 & ~_T_1248) begin
+        if (_T_1208 & ~same_cycle_resp & _T_2 & ~_T_1238) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel contains improper opcode response (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -5047,7 +5043,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1252 & (_T_1218 & ~same_cycle_resp & _T_2)) begin
+        if (~_T_1242 & (_T_1208 & ~same_cycle_resp & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -5058,7 +5054,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1218 & ~same_cycle_resp & _T_2 & ~_T_1252) begin
+        if (_T_1208 & ~same_cycle_resp & _T_2 & ~_T_1242) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel contains improper response size (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -5071,7 +5067,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1264 & (_T_1262 & _T_2)) begin
+        if (~_T_1254 & (_T_1252 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -5082,7 +5078,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1262 & _T_2 & ~_T_1264) begin
+        if (_T_1252 & _T_2 & ~_T_1254) begin
           $fwrite(32'h80000002,"Assertion failed: ready check\n    at Monitor.scala:49 assert(cond, message)\n"); // @[Monitor.scala 49:11]
         end
     `ifdef PRINTF_COND
@@ -5093,7 +5089,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1271 & _T_2) begin
+        if (~_T_1261 & _T_2) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -5104,7 +5100,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_2 & ~_T_1271) begin
+        if (_T_2 & ~_T_1261) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' and 'D' concurrent, despite minlatency 6 (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -5117,7 +5113,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1280 & ~reset) begin
+        if (~_T_1270 & ~reset) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -5128,7 +5124,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (~reset & ~_T_1280) begin
+        if (~reset & ~_T_1270) begin
           $fwrite(32'h80000002,
             "Assertion failed: TileLink timeout expired (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -5141,7 +5137,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1314 & (_T_1306 & _T_2)) begin
+        if (~_T_1304 & (_T_1296 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -5152,7 +5148,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1306 & _T_2 & ~_T_1314) begin
+        if (_T_1296 & _T_2 & ~_T_1304) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel acknowledged for nothing inflight (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -5165,7 +5161,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1324 & (_T_1306 & _T_2)) begin
+        if (~_T_1314 & (_T_1296 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -5176,7 +5172,7 @@ module TLMonitor_71_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1306 & _T_2 & ~_T_1324) begin
+        if (_T_1296 & _T_2 & ~_T_1314) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel contains improper response size (connected at SerialAdapter.scala:467:25)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -5256,7 +5252,7 @@ initial begin
   _RAND_10 = {1{`RANDOM}};
   source_1 = _RAND_10[0:0];
   _RAND_11 = {1{`RANDOM}};
-  sink = _RAND_11[3:0];
+  sink = _RAND_11[2:0];
   _RAND_12 = {1{`RANDOM}};
   denied = _RAND_12[0:0];
   _RAND_13 = {1{`RANDOM}};
@@ -5302,7 +5298,7 @@ module TLSerdesser_1_inTestHarness(
   output [1:0]  auto_manager_in_d_bits_param,
   output [3:0]  auto_manager_in_d_bits_size,
   output        auto_manager_in_d_bits_source,
-  output [3:0]  auto_manager_in_d_bits_sink,
+  output [2:0]  auto_manager_in_d_bits_sink,
   output        auto_manager_in_d_bits_denied,
   output [63:0] auto_manager_in_d_bits_data,
   output        auto_manager_in_d_bits_corrupt,
@@ -5354,7 +5350,7 @@ module TLSerdesser_1_inTestHarness(
   wire [1:0] monitor_io_in_d_bits_param; // @[Nodes.scala 24:25]
   wire [3:0] monitor_io_in_d_bits_size; // @[Nodes.scala 24:25]
   wire  monitor_io_in_d_bits_source; // @[Nodes.scala 24:25]
-  wire [3:0] monitor_io_in_d_bits_sink; // @[Nodes.scala 24:25]
+  wire [2:0] monitor_io_in_d_bits_sink; // @[Nodes.scala 24:25]
   wire  monitor_io_in_d_bits_denied; // @[Nodes.scala 24:25]
   wire  monitor_io_in_d_bits_corrupt; // @[Nodes.scala 24:25]
   wire  outArb_clock; // @[Serdes.scala 619:24]
@@ -5453,7 +5449,7 @@ module TLSerdesser_1_inTestHarness(
     auto_client_out_a_ready; // @[Mux.scala 81:58]
   wire  _inDes_io_out_ready_T_5 = 3'h2 == inDes_io_out_bits_chanId ? 1'h0 : _inDes_io_out_ready_T_3; // @[Mux.scala 81:58]
   wire  _inDes_io_out_ready_T_7 = 3'h3 == inDes_io_out_bits_chanId ? auto_manager_in_d_ready : _inDes_io_out_ready_T_5; // @[Mux.scala 81:58]
-  TLMonitor_71_inTestHarness monitor ( // @[Nodes.scala 24:25]
+  TLMonitor_68_inTestHarness monitor ( // @[Nodes.scala 24:25]
     .clock(monitor_clock),
     .reset(monitor_reset),
     .io_in_a_ready(monitor_io_in_a_ready),
@@ -5555,7 +5551,7 @@ module TLSerdesser_1_inTestHarness(
   assign auto_manager_in_d_bits_param = inDes_io_out_bits_param[1:0]; // @[Serdes.scala 457:17 459:15]
   assign auto_manager_in_d_bits_size = inDes_io_out_bits_size; // @[Serdes.scala 457:17 460:15]
   assign auto_manager_in_d_bits_source = inDes_io_out_bits_source[0]; // @[Serdes.scala 457:17 461:15]
-  assign auto_manager_in_d_bits_sink = _bundleIn_0_d_bits_d_sink_T[3:0]; // @[Serdes.scala 457:17 465:17]
+  assign auto_manager_in_d_bits_sink = _bundleIn_0_d_bits_d_sink_T[2:0]; // @[Serdes.scala 457:17 465:17]
   assign auto_manager_in_d_bits_denied = inDes_io_out_bits_union[0]; // @[Serdes.scala 466:30]
   assign auto_manager_in_d_bits_data = inDes_io_out_bits_data; // @[Serdes.scala 457:17 462:15]
   assign auto_manager_in_d_bits_corrupt = inDes_io_out_bits_corrupt; // @[Serdes.scala 457:17 464:17]
@@ -5589,7 +5585,7 @@ module TLSerdesser_1_inTestHarness(
   assign monitor_io_in_d_bits_param = inDes_io_out_bits_param[1:0]; // @[Serdes.scala 457:17 459:15]
   assign monitor_io_in_d_bits_size = inDes_io_out_bits_size; // @[Serdes.scala 457:17 460:15]
   assign monitor_io_in_d_bits_source = inDes_io_out_bits_source[0]; // @[Serdes.scala 457:17 461:15]
-  assign monitor_io_in_d_bits_sink = _bundleIn_0_d_bits_d_sink_T[3:0]; // @[Serdes.scala 457:17 465:17]
+  assign monitor_io_in_d_bits_sink = _bundleIn_0_d_bits_d_sink_T[2:0]; // @[Serdes.scala 457:17 465:17]
   assign monitor_io_in_d_bits_denied = inDes_io_out_bits_union[0]; // @[Serdes.scala 466:30]
   assign monitor_io_in_d_bits_corrupt = inDes_io_out_bits_corrupt; // @[Serdes.scala 457:17 464:17]
   assign outArb_clock = clock;
@@ -5709,7 +5705,7 @@ end // initial
 `endif
 `endif // SYNTHESIS
 endmodule
-module TLMonitor_72_inTestHarness(
+module TLMonitor_69_inTestHarness(
   input         clock,
   input         reset,
   input         io_in_a_ready,
@@ -5738,20 +5734,21 @@ module TLMonitor_72_inTestHarness(
   reg [31:0] _RAND_7;
   reg [31:0] _RAND_8;
   reg [31:0] _RAND_9;
-  reg [255:0] _RAND_10;
-  reg [1023:0] _RAND_11;
-  reg [1023:0] _RAND_12;
+  reg [159:0] _RAND_10;
+  reg [639:0] _RAND_11;
+  reg [639:0] _RAND_12;
   reg [31:0] _RAND_13;
   reg [31:0] _RAND_14;
   reg [31:0] _RAND_15;
-  reg [255:0] _RAND_16;
-  reg [1023:0] _RAND_17;
+  reg [159:0] _RAND_16;
+  reg [639:0] _RAND_17;
   reg [31:0] _RAND_18;
   reg [31:0] _RAND_19;
 `endif // RANDOMIZE_REG_INIT
   wire [31:0] plusarg_reader_out; // @[PlusArg.scala 80:11]
   wire [31:0] plusarg_reader_1_out; // @[PlusArg.scala 80:11]
   wire  _T_2 = ~reset; // @[Monitor.scala 42:11]
+  wire  _source_ok_T_4 = io_in_a_bits_source <= 8'h9f; // @[Parameters.scala 57:20]
   wire [5:0] _is_aligned_mask_T_1 = 6'h7 << io_in_a_bits_size; // @[package.scala 234:77]
   wire [2:0] is_aligned_mask = ~_is_aligned_mask_T_1[2:0]; // @[package.scala 234:46]
   wire [28:0] _GEN_71 = {{26'd0}, is_aligned_mask}; // @[Edges.scala 20:16]
@@ -5798,6 +5795,7 @@ module TLMonitor_72_inTestHarness(
   wire  mask_eq_13 = mask_eq_5 & mask_bit_2; // @[Misc.scala 213:27]
   wire  mask_acc_13 = mask_acc_5 | mask_size_2 & mask_eq_13; // @[Misc.scala 214:29]
   wire [7:0] mask = {mask_acc_13,mask_acc_12,mask_acc_11,mask_acc_10,mask_acc_9,mask_acc_8,mask_acc_7,mask_acc_6}; // @[Cat.scala 31:58]
+  wire  _T_10 = ~_source_ok_T_4; // @[Monitor.scala 63:7]
   wire  _T_20 = io_in_a_bits_opcode == 3'h6; // @[Monitor.scala 81:25]
   wire [28:0] _T_33 = io_in_a_bits_address ^ 29'h10000000; // @[Parameters.scala 137:31]
   wire [29:0] _T_34 = {1'b0,$signed(_T_33)}; // @[Parameters.scala 137:49]
@@ -5813,6 +5811,7 @@ module TLMonitor_72_inTestHarness(
   wire  _T_183 = io_in_a_bits_param == 3'h0; // @[Monitor.scala 109:31]
   wire  _T_187 = io_in_a_bits_mask == mask; // @[Monitor.scala 110:30]
   wire  _T_195 = io_in_a_bits_opcode == 3'h0; // @[Monitor.scala 114:25]
+  wire  _T_218 = _source_ok_T_4 & _T_37; // @[Monitor.scala 115:71]
   wire  _T_236 = io_in_a_bits_opcode == 3'h1; // @[Monitor.scala 122:25]
   wire [7:0] _T_273 = ~mask; // @[Monitor.scala 127:33]
   wire [7:0] _T_274 = io_in_a_bits_mask & _T_273; // @[Monitor.scala 127:31]
@@ -5824,6 +5823,7 @@ module TLMonitor_72_inTestHarness(
   wire  _T_355 = io_in_a_bits_opcode == 3'h5; // @[Monitor.scala 146:25]
   wire  _T_385 = io_in_a_bits_param <= 3'h1; // @[Bundles.scala 158:28]
   wire  _T_397 = io_in_d_bits_opcode <= 3'h6; // @[Bundles.scala 42:24]
+  wire  _source_ok_T_10 = io_in_d_bits_source <= 8'h9f; // @[Parameters.scala 57:20]
   wire  _T_401 = io_in_d_bits_opcode == 3'h6; // @[Monitor.scala 310:25]
   wire  _T_405 = io_in_d_bits_size >= 2'h3; // @[Monitor.scala 312:27]
   wire  _T_421 = io_in_d_bits_opcode == 3'h4; // @[Monitor.scala 318:25]
@@ -5857,9 +5857,9 @@ module TLMonitor_72_inTestHarness(
   wire  _T_568 = io_in_d_bits_opcode == opcode_1; // @[Monitor.scala 542:29]
   wire  _T_576 = io_in_d_bits_size == size_1; // @[Monitor.scala 544:29]
   wire  _T_580 = io_in_d_bits_source == source_1; // @[Monitor.scala 545:29]
-  reg [255:0] inflight; // @[Monitor.scala 611:27]
-  reg [1023:0] inflight_opcodes; // @[Monitor.scala 613:35]
-  reg [1023:0] inflight_sizes; // @[Monitor.scala 615:33]
+  reg [159:0] inflight; // @[Monitor.scala 611:27]
+  reg [639:0] inflight_opcodes; // @[Monitor.scala 613:35]
+  reg [639:0] inflight_sizes; // @[Monitor.scala 615:33]
   reg  a_first_counter_1; // @[Edges.scala 228:27]
   wire  a_first_counter1_1 = a_first_counter_1 - 1'h1; // @[Edges.scala 229:28]
   wire  a_first_1 = ~a_first_counter_1; // @[Edges.scala 230:25]
@@ -5868,17 +5868,17 @@ module TLMonitor_72_inTestHarness(
   wire  d_first_1 = ~d_first_counter_1; // @[Edges.scala 230:25]
   wire [9:0] _GEN_72 = {io_in_d_bits_source, 2'h0}; // @[Monitor.scala 634:69]
   wire [10:0] _a_opcode_lookup_T = {{1'd0}, _GEN_72}; // @[Monitor.scala 634:69]
-  wire [1023:0] _a_opcode_lookup_T_1 = inflight_opcodes >> _a_opcode_lookup_T; // @[Monitor.scala 634:44]
+  wire [639:0] _a_opcode_lookup_T_1 = inflight_opcodes >> _a_opcode_lookup_T; // @[Monitor.scala 634:44]
   wire [15:0] _a_opcode_lookup_T_5 = 16'h10 - 16'h1; // @[Monitor.scala 609:57]
-  wire [1023:0] _GEN_73 = {{1008'd0}, _a_opcode_lookup_T_5}; // @[Monitor.scala 634:97]
-  wire [1023:0] _a_opcode_lookup_T_6 = _a_opcode_lookup_T_1 & _GEN_73; // @[Monitor.scala 634:97]
-  wire [1023:0] _a_opcode_lookup_T_7 = {{1'd0}, _a_opcode_lookup_T_6[1023:1]}; // @[Monitor.scala 634:152]
-  wire [1023:0] _a_size_lookup_T_1 = inflight_sizes >> _a_opcode_lookup_T; // @[Monitor.scala 638:40]
-  wire [1023:0] _a_size_lookup_T_6 = _a_size_lookup_T_1 & _GEN_73; // @[Monitor.scala 638:91]
-  wire [1023:0] _a_size_lookup_T_7 = {{1'd0}, _a_size_lookup_T_6[1023:1]}; // @[Monitor.scala 638:144]
+  wire [639:0] _GEN_73 = {{624'd0}, _a_opcode_lookup_T_5}; // @[Monitor.scala 634:97]
+  wire [639:0] _a_opcode_lookup_T_6 = _a_opcode_lookup_T_1 & _GEN_73; // @[Monitor.scala 634:97]
+  wire [639:0] _a_opcode_lookup_T_7 = {{1'd0}, _a_opcode_lookup_T_6[639:1]}; // @[Monitor.scala 634:152]
+  wire [639:0] _a_size_lookup_T_1 = inflight_sizes >> _a_opcode_lookup_T; // @[Monitor.scala 638:40]
+  wire [639:0] _a_size_lookup_T_6 = _a_size_lookup_T_1 & _GEN_73; // @[Monitor.scala 638:91]
+  wire [639:0] _a_size_lookup_T_7 = {{1'd0}, _a_size_lookup_T_6[639:1]}; // @[Monitor.scala 638:144]
   wire  _T_594 = io_in_a_valid & a_first_1; // @[Monitor.scala 648:26]
   wire [255:0] _a_set_wo_ready_T = 256'h1 << io_in_a_bits_source; // @[OneHot.scala 57:35]
-  wire [255:0] a_set_wo_ready = io_in_a_valid & a_first_1 ? _a_set_wo_ready_T : 256'h0; // @[Monitor.scala 648:71 649:22]
+  wire [255:0] _GEN_15 = io_in_a_valid & a_first_1 ? _a_set_wo_ready_T : 256'h0; // @[Monitor.scala 648:71 649:22]
   wire  _T_597 = a_first_done & a_first_1; // @[Monitor.scala 652:27]
   wire [3:0] _a_opcodes_set_interm_T = {io_in_a_bits_opcode, 1'h0}; // @[Monitor.scala 654:53]
   wire [3:0] _a_opcodes_set_interm_T_1 = _a_opcodes_set_interm_T | 4'h1; // @[Monitor.scala 654:61]
@@ -5892,23 +5892,23 @@ module TLMonitor_72_inTestHarness(
   wire [2:0] a_sizes_set_interm = a_first_done & a_first_1 ? _a_sizes_set_interm_T_1 : 3'h0; // @[Monitor.scala 652:72 655:28]
   wire [2049:0] _GEN_2 = {{2047'd0}, a_sizes_set_interm}; // @[Monitor.scala 657:52]
   wire [2049:0] _a_sizes_set_T_1 = _GEN_2 << _a_opcodes_set_T; // @[Monitor.scala 657:52]
-  wire [255:0] _T_599 = inflight >> io_in_a_bits_source; // @[Monitor.scala 658:26]
+  wire [159:0] _T_599 = inflight >> io_in_a_bits_source; // @[Monitor.scala 658:26]
   wire  _T_601 = ~_T_599[0]; // @[Monitor.scala 658:17]
-  wire [255:0] a_set = a_first_done & a_first_1 ? _a_set_wo_ready_T : 256'h0; // @[Monitor.scala 652:72 653:28]
+  wire [255:0] _GEN_16 = a_first_done & a_first_1 ? _a_set_wo_ready_T : 256'h0; // @[Monitor.scala 652:72 653:28]
   wire [2050:0] _GEN_19 = a_first_done & a_first_1 ? _a_opcodes_set_T_1 : 2051'h0; // @[Monitor.scala 652:72 656:28]
   wire [2049:0] _GEN_20 = a_first_done & a_first_1 ? _a_sizes_set_T_1 : 2050'h0; // @[Monitor.scala 652:72 657:28]
   wire  _T_605 = io_in_d_valid & d_first_1; // @[Monitor.scala 671:26]
   wire  _T_607 = ~_T_401; // @[Monitor.scala 671:74]
   wire  _T_608 = io_in_d_valid & d_first_1 & ~_T_401; // @[Monitor.scala 671:71]
   wire [255:0] _d_clr_wo_ready_T = 256'h1 << io_in_d_bits_source; // @[OneHot.scala 57:35]
-  wire [255:0] d_clr_wo_ready = io_in_d_valid & d_first_1 & ~_T_401 ? _d_clr_wo_ready_T : 256'h0; // @[Monitor.scala 671:90 672:22]
+  wire [255:0] _GEN_21 = io_in_d_valid & d_first_1 & ~_T_401 ? _d_clr_wo_ready_T : 256'h0; // @[Monitor.scala 671:90 672:22]
   wire [2062:0] _GEN_3 = {{2047'd0}, _a_opcode_lookup_T_5}; // @[Monitor.scala 677:76]
   wire [2062:0] _d_opcodes_clr_T_5 = _GEN_3 << _a_opcode_lookup_T; // @[Monitor.scala 677:76]
-  wire [255:0] d_clr = d_first_done & d_first_1 & _T_607 ? _d_clr_wo_ready_T : 256'h0; // @[Monitor.scala 675:91 676:21]
+  wire [255:0] _GEN_22 = d_first_done & d_first_1 & _T_607 ? _d_clr_wo_ready_T : 256'h0; // @[Monitor.scala 675:91 676:21]
   wire [2062:0] _GEN_23 = d_first_done & d_first_1 & _T_607 ? _d_opcodes_clr_T_5 : 2063'h0; // @[Monitor.scala 675:91 677:21]
   wire  _same_cycle_resp_T_2 = io_in_a_bits_source == io_in_d_bits_source; // @[Monitor.scala 681:113]
   wire  same_cycle_resp = _T_594 & io_in_a_bits_source == io_in_d_bits_source; // @[Monitor.scala 681:88]
-  wire [255:0] _T_618 = inflight >> io_in_d_bits_source; // @[Monitor.scala 682:25]
+  wire [159:0] _T_618 = inflight >> io_in_d_bits_source; // @[Monitor.scala 682:25]
   wire  _T_620 = _T_618[0] | same_cycle_resp; // @[Monitor.scala 682:49]
   wire [2:0] _GEN_27 = 3'h2 == io_in_a_bits_opcode ? 3'h1 : 3'h0; // @[Monitor.scala 685:{38,38}]
   wire [2:0] _GEN_28 = 3'h3 == io_in_a_bits_opcode ? 3'h1 : _GEN_27; // @[Monitor.scala 685:{38,38}]
@@ -5937,40 +5937,45 @@ module TLMonitor_72_inTestHarness(
   wire  _T_642 = _GEN_82 == a_size_lookup; // @[Monitor.scala 691:36]
   wire  _T_652 = _T_605 & a_first_1 & io_in_a_valid & _same_cycle_resp_T_2 & _T_607; // @[Monitor.scala 694:116]
   wire  _T_654 = ~io_in_d_ready | io_in_a_ready; // @[Monitor.scala 695:32]
+  wire [159:0] a_set_wo_ready = _GEN_15[159:0];
+  wire [159:0] d_clr_wo_ready = _GEN_21[159:0];
   wire  _T_661 = a_set_wo_ready != d_clr_wo_ready | ~(|a_set_wo_ready); // @[Monitor.scala 699:48]
-  wire [255:0] _inflight_T = inflight | a_set; // @[Monitor.scala 702:27]
-  wire [255:0] _inflight_T_1 = ~d_clr; // @[Monitor.scala 702:38]
-  wire [255:0] _inflight_T_2 = _inflight_T & _inflight_T_1; // @[Monitor.scala 702:36]
-  wire [1023:0] a_opcodes_set = _GEN_19[1023:0];
-  wire [1023:0] _inflight_opcodes_T = inflight_opcodes | a_opcodes_set; // @[Monitor.scala 703:43]
-  wire [1023:0] d_opcodes_clr = _GEN_23[1023:0];
-  wire [1023:0] _inflight_opcodes_T_1 = ~d_opcodes_clr; // @[Monitor.scala 703:62]
-  wire [1023:0] _inflight_opcodes_T_2 = _inflight_opcodes_T & _inflight_opcodes_T_1; // @[Monitor.scala 703:60]
-  wire [1023:0] a_sizes_set = _GEN_20[1023:0];
-  wire [1023:0] _inflight_sizes_T = inflight_sizes | a_sizes_set; // @[Monitor.scala 704:39]
-  wire [1023:0] _inflight_sizes_T_2 = _inflight_sizes_T & _inflight_opcodes_T_1; // @[Monitor.scala 704:54]
+  wire [159:0] a_set = _GEN_16[159:0];
+  wire [159:0] _inflight_T = inflight | a_set; // @[Monitor.scala 702:27]
+  wire [159:0] d_clr = _GEN_22[159:0];
+  wire [159:0] _inflight_T_1 = ~d_clr; // @[Monitor.scala 702:38]
+  wire [159:0] _inflight_T_2 = _inflight_T & _inflight_T_1; // @[Monitor.scala 702:36]
+  wire [639:0] a_opcodes_set = _GEN_19[639:0];
+  wire [639:0] _inflight_opcodes_T = inflight_opcodes | a_opcodes_set; // @[Monitor.scala 703:43]
+  wire [639:0] d_opcodes_clr = _GEN_23[639:0];
+  wire [639:0] _inflight_opcodes_T_1 = ~d_opcodes_clr; // @[Monitor.scala 703:62]
+  wire [639:0] _inflight_opcodes_T_2 = _inflight_opcodes_T & _inflight_opcodes_T_1; // @[Monitor.scala 703:60]
+  wire [639:0] a_sizes_set = _GEN_20[639:0];
+  wire [639:0] _inflight_sizes_T = inflight_sizes | a_sizes_set; // @[Monitor.scala 704:39]
+  wire [639:0] _inflight_sizes_T_2 = _inflight_sizes_T & _inflight_opcodes_T_1; // @[Monitor.scala 704:54]
   reg [31:0] watchdog; // @[Monitor.scala 706:27]
   wire  _T_670 = ~(|inflight) | plusarg_reader_out == 32'h0 | watchdog < plusarg_reader_out; // @[Monitor.scala 709:47]
   wire [31:0] _watchdog_T_1 = watchdog + 32'h1; // @[Monitor.scala 711:26]
-  reg [255:0] inflight_1; // @[Monitor.scala 723:35]
-  reg [1023:0] inflight_sizes_1; // @[Monitor.scala 725:35]
+  reg [159:0] inflight_1; // @[Monitor.scala 723:35]
+  reg [639:0] inflight_sizes_1; // @[Monitor.scala 725:35]
   reg  d_first_counter_2; // @[Edges.scala 228:27]
   wire  d_first_counter1_2 = d_first_counter_2 - 1'h1; // @[Edges.scala 229:28]
   wire  d_first_2 = ~d_first_counter_2; // @[Edges.scala 230:25]
-  wire [1023:0] _c_size_lookup_T_1 = inflight_sizes_1 >> _a_opcode_lookup_T; // @[Monitor.scala 747:42]
-  wire [1023:0] _c_size_lookup_T_6 = _c_size_lookup_T_1 & _GEN_73; // @[Monitor.scala 747:93]
-  wire [1023:0] _c_size_lookup_T_7 = {{1'd0}, _c_size_lookup_T_6[1023:1]}; // @[Monitor.scala 747:146]
+  wire [639:0] _c_size_lookup_T_1 = inflight_sizes_1 >> _a_opcode_lookup_T; // @[Monitor.scala 747:42]
+  wire [639:0] _c_size_lookup_T_6 = _c_size_lookup_T_1 & _GEN_73; // @[Monitor.scala 747:93]
+  wire [639:0] _c_size_lookup_T_7 = {{1'd0}, _c_size_lookup_T_6[639:1]}; // @[Monitor.scala 747:146]
   wire  _T_696 = io_in_d_valid & d_first_2 & _T_401; // @[Monitor.scala 779:71]
-  wire [255:0] d_clr_1 = d_first_done & d_first_2 & _T_401 ? _d_clr_wo_ready_T : 256'h0; // @[Monitor.scala 783:90 784:21]
+  wire [255:0] _GEN_67 = d_first_done & d_first_2 & _T_401 ? _d_clr_wo_ready_T : 256'h0; // @[Monitor.scala 783:90 784:21]
   wire [2062:0] _GEN_68 = d_first_done & d_first_2 & _T_401 ? _d_opcodes_clr_T_5 : 2063'h0; // @[Monitor.scala 783:90 785:21]
-  wire [255:0] _T_704 = inflight_1 >> io_in_d_bits_source; // @[Monitor.scala 791:25]
+  wire [159:0] _T_704 = inflight_1 >> io_in_d_bits_source; // @[Monitor.scala 791:25]
   wire [3:0] c_size_lookup = _c_size_lookup_T_7[3:0];
   wire  _T_714 = _GEN_82 == c_size_lookup; // @[Monitor.scala 795:36]
-  wire [255:0] _inflight_T_4 = ~d_clr_1; // @[Monitor.scala 809:46]
-  wire [255:0] _inflight_T_5 = inflight_1 & _inflight_T_4; // @[Monitor.scala 809:44]
-  wire [1023:0] d_opcodes_clr_1 = _GEN_68[1023:0];
-  wire [1023:0] _inflight_opcodes_T_4 = ~d_opcodes_clr_1; // @[Monitor.scala 810:62]
-  wire [1023:0] _inflight_sizes_T_5 = inflight_sizes_1 & _inflight_opcodes_T_4; // @[Monitor.scala 811:56]
+  wire [159:0] d_clr_1 = _GEN_67[159:0];
+  wire [159:0] _inflight_T_4 = ~d_clr_1; // @[Monitor.scala 809:46]
+  wire [159:0] _inflight_T_5 = inflight_1 & _inflight_T_4; // @[Monitor.scala 809:44]
+  wire [639:0] d_opcodes_clr_1 = _GEN_68[639:0];
+  wire [639:0] _inflight_opcodes_T_4 = ~d_opcodes_clr_1; // @[Monitor.scala 810:62]
+  wire [639:0] _inflight_sizes_T_5 = inflight_sizes_1 & _inflight_opcodes_T_4; // @[Monitor.scala 811:56]
   reg [31:0] watchdog_1; // @[Monitor.scala 813:27]
   wire  _T_739 = ~(|inflight_1) | plusarg_reader_1_out == 32'h0 | watchdog_1 < plusarg_reader_1_out; // @[Monitor.scala 816:47]
   wire [31:0] _watchdog_T_3 = watchdog_1 + 32'h1; // @[Monitor.scala 818:26]
@@ -6024,17 +6029,17 @@ module TLMonitor_72_inTestHarness(
       source_1 <= io_in_d_bits_source; // @[Monitor.scala 553:15]
     end
     if (reset) begin // @[Monitor.scala 611:27]
-      inflight <= 256'h0; // @[Monitor.scala 611:27]
+      inflight <= 160'h0; // @[Monitor.scala 611:27]
     end else begin
       inflight <= _inflight_T_2; // @[Monitor.scala 702:14]
     end
     if (reset) begin // @[Monitor.scala 613:35]
-      inflight_opcodes <= 1024'h0; // @[Monitor.scala 613:35]
+      inflight_opcodes <= 640'h0; // @[Monitor.scala 613:35]
     end else begin
       inflight_opcodes <= _inflight_opcodes_T_2; // @[Monitor.scala 703:22]
     end
     if (reset) begin // @[Monitor.scala 615:33]
-      inflight_sizes <= 1024'h0; // @[Monitor.scala 615:33]
+      inflight_sizes <= 640'h0; // @[Monitor.scala 615:33]
     end else begin
       inflight_sizes <= _inflight_sizes_T_2; // @[Monitor.scala 704:20]
     end
@@ -6064,12 +6069,12 @@ module TLMonitor_72_inTestHarness(
       watchdog <= _watchdog_T_1; // @[Monitor.scala 711:14]
     end
     if (reset) begin // @[Monitor.scala 723:35]
-      inflight_1 <= 256'h0; // @[Monitor.scala 723:35]
+      inflight_1 <= 160'h0; // @[Monitor.scala 723:35]
     end else begin
       inflight_1 <= _inflight_T_5; // @[Monitor.scala 809:22]
     end
     if (reset) begin // @[Monitor.scala 725:35]
-      inflight_sizes_1 <= 1024'h0; // @[Monitor.scala 725:35]
+      inflight_sizes_1 <= 640'h0; // @[Monitor.scala 725:35]
     end else begin
       inflight_sizes_1 <= _inflight_sizes_T_5; // @[Monitor.scala 811:22]
     end
@@ -6163,10 +6168,23 @@ module TLMonitor_72_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_20 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_20 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_20 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel AcquireBlock carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -6342,10 +6360,23 @@ module TLMonitor_72_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_82 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_82 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_82 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel AcquirePerm carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -6497,10 +6528,23 @@ module TLMonitor_72_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_148 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_148 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_148 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel carries Get type which master claims it can't emit (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -6532,10 +6576,23 @@ module TLMonitor_72_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_148 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_148 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_148 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Get carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -6639,7 +6696,7 @@ module TLMonitor_72_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_37 & (io_in_a_valid & _T_195 & ~reset)) begin
+        if (~_T_218 & (io_in_a_valid & _T_195 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -6650,7 +6707,7 @@ module TLMonitor_72_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_195 & ~reset & ~_T_37) begin
+        if (io_in_a_valid & _T_195 & ~reset & ~_T_218) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel carries PutFull type which is unexpected using diplomatic parameters (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -6663,10 +6720,23 @@ module TLMonitor_72_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_195 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_195 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_195 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel PutFull carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -6746,7 +6816,7 @@ module TLMonitor_72_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_37 & (io_in_a_valid & _T_236 & ~reset)) begin
+        if (~_T_218 & (io_in_a_valid & _T_236 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -6757,7 +6827,7 @@ module TLMonitor_72_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_236 & ~reset & ~_T_37) begin
+        if (io_in_a_valid & _T_236 & ~reset & ~_T_218) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel carries PutPartial type which is unexpected using diplomatic parameters (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -6770,10 +6840,23 @@ module TLMonitor_72_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_236 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_236 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_236 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel PutPartial carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -6877,10 +6960,23 @@ module TLMonitor_72_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_279 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_279 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_279 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Arithmetic carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -6984,10 +7080,23 @@ module TLMonitor_72_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_317 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_317 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_317 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Logical carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -7091,10 +7200,23 @@ module TLMonitor_72_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_355 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_355 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_355 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Hint carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -7222,10 +7344,23 @@ module TLMonitor_72_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_401 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_401 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_401 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel ReleaseAck carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -7290,10 +7425,23 @@ module TLMonitor_72_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_421 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_421 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_421 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel Grant carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -7393,10 +7541,23 @@ module TLMonitor_72_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_449 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_449 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_449 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel GrantData carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -7496,10 +7657,23 @@ module TLMonitor_72_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_478 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_478 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_478 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel AccessAck carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -7540,10 +7714,23 @@ module TLMonitor_72_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_495 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_495 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_495 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel AccessAckData carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -7584,10 +7771,23 @@ module TLMonitor_72_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_513 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_513 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_513 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel HintAck carries invalid source ID (connected at SerialAdapter.scala:463:31)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -8225,22 +8425,22 @@ initial begin
   size_1 = _RAND_8[1:0];
   _RAND_9 = {1{`RANDOM}};
   source_1 = _RAND_9[7:0];
-  _RAND_10 = {8{`RANDOM}};
-  inflight = _RAND_10[255:0];
-  _RAND_11 = {32{`RANDOM}};
-  inflight_opcodes = _RAND_11[1023:0];
-  _RAND_12 = {32{`RANDOM}};
-  inflight_sizes = _RAND_12[1023:0];
+  _RAND_10 = {5{`RANDOM}};
+  inflight = _RAND_10[159:0];
+  _RAND_11 = {20{`RANDOM}};
+  inflight_opcodes = _RAND_11[639:0];
+  _RAND_12 = {20{`RANDOM}};
+  inflight_sizes = _RAND_12[639:0];
   _RAND_13 = {1{`RANDOM}};
   a_first_counter_1 = _RAND_13[0:0];
   _RAND_14 = {1{`RANDOM}};
   d_first_counter_1 = _RAND_14[0:0];
   _RAND_15 = {1{`RANDOM}};
   watchdog = _RAND_15[31:0];
-  _RAND_16 = {8{`RANDOM}};
-  inflight_1 = _RAND_16[255:0];
-  _RAND_17 = {32{`RANDOM}};
-  inflight_sizes_1 = _RAND_17[1023:0];
+  _RAND_16 = {5{`RANDOM}};
+  inflight_1 = _RAND_16[159:0];
+  _RAND_17 = {20{`RANDOM}};
+  inflight_sizes_1 = _RAND_17[639:0];
   _RAND_18 = {1{`RANDOM}};
   d_first_counter_2 = _RAND_18[0:0];
   _RAND_19 = {1{`RANDOM}};
@@ -8377,7 +8577,7 @@ module TLRAM_inTestHarness(
     auto_in_a_bits_address[3]}; // @[Cat.scala 31:58]
   wire [4:0] index_hi = {auto_in_a_bits_address[11],auto_in_a_bits_address[10],auto_in_a_bits_address[9],
     auto_in_a_bits_address[8],auto_in_a_bits_address[7]}; // @[Cat.scala 31:58]
-  TLMonitor_72_inTestHarness monitor ( // @[Nodes.scala 24:25]
+  TLMonitor_69_inTestHarness monitor ( // @[Nodes.scala 24:25]
     .clock(monitor_clock),
     .reset(monitor_reset),
     .io_in_a_ready(monitor_io_in_a_ready),
@@ -8589,7 +8789,7 @@ end // initial
 `endif
 `endif // SYNTHESIS
 endmodule
-module TLMonitor_73_inTestHarness(
+module TLMonitor_70_inTestHarness(
   input         clock,
   input         reset,
   input         io_in_a_ready,
@@ -8616,9 +8816,9 @@ module TLMonitor_73_inTestHarness(
   reg [31:0] _RAND_6;
   reg [31:0] _RAND_7;
   reg [31:0] _RAND_8;
-  reg [255:0] _RAND_9;
-  reg [1023:0] _RAND_10;
-  reg [1023:0] _RAND_11;
+  reg [159:0] _RAND_9;
+  reg [639:0] _RAND_10;
+  reg [639:0] _RAND_11;
   reg [31:0] _RAND_12;
   reg [31:0] _RAND_13;
   reg [31:0] _RAND_14;
@@ -8626,6 +8826,7 @@ module TLMonitor_73_inTestHarness(
   wire [31:0] plusarg_reader_out; // @[PlusArg.scala 80:11]
   wire [31:0] plusarg_reader_1_out; // @[PlusArg.scala 80:11]
   wire  _T_2 = ~reset; // @[Monitor.scala 42:11]
+  wire  _source_ok_T_4 = io_in_a_bits_source <= 8'h9f; // @[Parameters.scala 57:20]
   wire [5:0] _is_aligned_mask_T_1 = 6'h7 << io_in_a_bits_size; // @[package.scala 234:77]
   wire [2:0] is_aligned_mask = ~_is_aligned_mask_T_1[2:0]; // @[package.scala 234:46]
   wire [17:0] _GEN_71 = {{15'd0}, is_aligned_mask}; // @[Edges.scala 20:16]
@@ -8672,6 +8873,7 @@ module TLMonitor_73_inTestHarness(
   wire  mask_eq_13 = mask_eq_5 & mask_bit_2; // @[Misc.scala 213:27]
   wire  mask_acc_13 = mask_acc_5 | mask_size_2 & mask_eq_13; // @[Misc.scala 214:29]
   wire [7:0] mask = {mask_acc_13,mask_acc_12,mask_acc_11,mask_acc_10,mask_acc_9,mask_acc_8,mask_acc_7,mask_acc_6}; // @[Cat.scala 31:58]
+  wire  _T_10 = ~_source_ok_T_4; // @[Monitor.scala 63:7]
   wire  _T_20 = io_in_a_bits_opcode == 3'h6; // @[Monitor.scala 81:25]
   wire [17:0] _T_33 = io_in_a_bits_address ^ 18'h20000; // @[Parameters.scala 137:31]
   wire [18:0] _T_34 = {1'b0,$signed(_T_33)}; // @[Parameters.scala 137:49]
@@ -8697,6 +8899,7 @@ module TLMonitor_73_inTestHarness(
   wire  _T_341 = io_in_a_bits_param <= 3'h3; // @[Bundles.scala 145:30]
   wire  _T_349 = io_in_a_bits_opcode == 3'h5; // @[Monitor.scala 146:25]
   wire  _T_379 = io_in_a_bits_param <= 3'h1; // @[Bundles.scala 158:28]
+  wire  _source_ok_T_10 = io_in_d_bits_source <= 8'h9f; // @[Parameters.scala 57:20]
   wire  a_first_done = io_in_a_ready & io_in_a_valid; // @[Decoupled.scala 50:35]
   reg  a_first_counter; // @[Edges.scala 228:27]
   wire  a_first_counter1 = a_first_counter - 1'h1; // @[Edges.scala 229:28]
@@ -8721,9 +8924,9 @@ module TLMonitor_73_inTestHarness(
   wire  _T_561 = io_in_d_valid & ~d_first; // @[Monitor.scala 541:19]
   wire  _T_570 = io_in_d_bits_size == size_1; // @[Monitor.scala 544:29]
   wire  _T_574 = io_in_d_bits_source == source_1; // @[Monitor.scala 545:29]
-  reg [255:0] inflight; // @[Monitor.scala 611:27]
-  reg [1023:0] inflight_opcodes; // @[Monitor.scala 613:35]
-  reg [1023:0] inflight_sizes; // @[Monitor.scala 615:33]
+  reg [159:0] inflight; // @[Monitor.scala 611:27]
+  reg [639:0] inflight_opcodes; // @[Monitor.scala 613:35]
+  reg [639:0] inflight_sizes; // @[Monitor.scala 615:33]
   reg  a_first_counter_1; // @[Edges.scala 228:27]
   wire  a_first_counter1_1 = a_first_counter_1 - 1'h1; // @[Edges.scala 229:28]
   wire  a_first_1 = ~a_first_counter_1; // @[Edges.scala 230:25]
@@ -8732,14 +8935,14 @@ module TLMonitor_73_inTestHarness(
   wire  d_first_1 = ~d_first_counter_1; // @[Edges.scala 230:25]
   wire [9:0] _GEN_72 = {io_in_d_bits_source, 2'h0}; // @[Monitor.scala 634:69]
   wire [10:0] _a_opcode_lookup_T = {{1'd0}, _GEN_72}; // @[Monitor.scala 634:69]
-  wire [1023:0] _a_opcode_lookup_T_1 = inflight_opcodes >> _a_opcode_lookup_T; // @[Monitor.scala 634:44]
+  wire [639:0] _a_opcode_lookup_T_1 = inflight_opcodes >> _a_opcode_lookup_T; // @[Monitor.scala 634:44]
   wire [15:0] _a_opcode_lookup_T_5 = 16'h10 - 16'h1; // @[Monitor.scala 609:57]
-  wire [1023:0] _GEN_73 = {{1008'd0}, _a_opcode_lookup_T_5}; // @[Monitor.scala 634:97]
-  wire [1023:0] _a_opcode_lookup_T_6 = _a_opcode_lookup_T_1 & _GEN_73; // @[Monitor.scala 634:97]
-  wire [1023:0] _a_opcode_lookup_T_7 = {{1'd0}, _a_opcode_lookup_T_6[1023:1]}; // @[Monitor.scala 634:152]
-  wire [1023:0] _a_size_lookup_T_1 = inflight_sizes >> _a_opcode_lookup_T; // @[Monitor.scala 638:40]
-  wire [1023:0] _a_size_lookup_T_6 = _a_size_lookup_T_1 & _GEN_73; // @[Monitor.scala 638:91]
-  wire [1023:0] _a_size_lookup_T_7 = {{1'd0}, _a_size_lookup_T_6[1023:1]}; // @[Monitor.scala 638:144]
+  wire [639:0] _GEN_73 = {{624'd0}, _a_opcode_lookup_T_5}; // @[Monitor.scala 634:97]
+  wire [639:0] _a_opcode_lookup_T_6 = _a_opcode_lookup_T_1 & _GEN_73; // @[Monitor.scala 634:97]
+  wire [639:0] _a_opcode_lookup_T_7 = {{1'd0}, _a_opcode_lookup_T_6[639:1]}; // @[Monitor.scala 634:152]
+  wire [639:0] _a_size_lookup_T_1 = inflight_sizes >> _a_opcode_lookup_T; // @[Monitor.scala 638:40]
+  wire [639:0] _a_size_lookup_T_6 = _a_size_lookup_T_1 & _GEN_73; // @[Monitor.scala 638:91]
+  wire [639:0] _a_size_lookup_T_7 = {{1'd0}, _a_size_lookup_T_6[639:1]}; // @[Monitor.scala 638:144]
   wire  _T_588 = io_in_a_valid & a_first_1; // @[Monitor.scala 648:26]
   wire [255:0] _a_set_wo_ready_T = 256'h1 << io_in_a_bits_source; // @[OneHot.scala 57:35]
   wire  _T_591 = a_first_done & a_first_1; // @[Monitor.scala 652:27]
@@ -8755,20 +8958,20 @@ module TLMonitor_73_inTestHarness(
   wire [2:0] a_sizes_set_interm = a_first_done & a_first_1 ? _a_sizes_set_interm_T_1 : 3'h0; // @[Monitor.scala 652:72 655:28]
   wire [2049:0] _GEN_2 = {{2047'd0}, a_sizes_set_interm}; // @[Monitor.scala 657:52]
   wire [2049:0] _a_sizes_set_T_1 = _GEN_2 << _a_opcodes_set_T; // @[Monitor.scala 657:52]
-  wire [255:0] _T_593 = inflight >> io_in_a_bits_source; // @[Monitor.scala 658:26]
+  wire [159:0] _T_593 = inflight >> io_in_a_bits_source; // @[Monitor.scala 658:26]
   wire  _T_595 = ~_T_593[0]; // @[Monitor.scala 658:17]
-  wire [255:0] a_set = a_first_done & a_first_1 ? _a_set_wo_ready_T : 256'h0; // @[Monitor.scala 652:72 653:28]
+  wire [255:0] _GEN_16 = a_first_done & a_first_1 ? _a_set_wo_ready_T : 256'h0; // @[Monitor.scala 652:72 653:28]
   wire [2050:0] _GEN_19 = a_first_done & a_first_1 ? _a_opcodes_set_T_1 : 2051'h0; // @[Monitor.scala 652:72 656:28]
   wire [2049:0] _GEN_20 = a_first_done & a_first_1 ? _a_sizes_set_T_1 : 2050'h0; // @[Monitor.scala 652:72 657:28]
   wire  _T_599 = io_in_d_valid & d_first_1; // @[Monitor.scala 671:26]
   wire [255:0] _d_clr_wo_ready_T = 256'h1 << io_in_d_bits_source; // @[OneHot.scala 57:35]
   wire [2062:0] _GEN_3 = {{2047'd0}, _a_opcode_lookup_T_5}; // @[Monitor.scala 677:76]
   wire [2062:0] _d_opcodes_clr_T_5 = _GEN_3 << _a_opcode_lookup_T; // @[Monitor.scala 677:76]
-  wire [255:0] d_clr = d_first_done & d_first_1 ? _d_clr_wo_ready_T : 256'h0; // @[Monitor.scala 675:91 676:21]
+  wire [255:0] _GEN_22 = d_first_done & d_first_1 ? _d_clr_wo_ready_T : 256'h0; // @[Monitor.scala 675:91 676:21]
   wire [2062:0] _GEN_23 = d_first_done & d_first_1 ? _d_opcodes_clr_T_5 : 2063'h0; // @[Monitor.scala 675:91 677:21]
   wire  _same_cycle_resp_T_2 = io_in_a_bits_source == io_in_d_bits_source; // @[Monitor.scala 681:113]
   wire  same_cycle_resp = _T_588 & io_in_a_bits_source == io_in_d_bits_source; // @[Monitor.scala 681:88]
-  wire [255:0] _T_612 = inflight >> io_in_d_bits_source; // @[Monitor.scala 682:25]
+  wire [159:0] _T_612 = inflight >> io_in_d_bits_source; // @[Monitor.scala 682:25]
   wire  _T_614 = _T_612[0] | same_cycle_resp; // @[Monitor.scala 682:49]
   wire [2:0] _GEN_27 = 3'h2 == io_in_a_bits_opcode ? 3'h1 : 3'h0; // @[Monitor.scala 685:{38,38}]
   wire [2:0] _GEN_28 = 3'h3 == io_in_a_bits_opcode ? 3'h1 : _GEN_27; // @[Monitor.scala 685:{38,38}]
@@ -8797,17 +9000,19 @@ module TLMonitor_73_inTestHarness(
   wire  _T_636 = _GEN_82 == a_size_lookup; // @[Monitor.scala 691:36]
   wire  _T_644 = _T_599 & a_first_1 & io_in_a_valid & _same_cycle_resp_T_2; // @[Monitor.scala 694:65]
   wire  _T_648 = ~io_in_d_ready | io_in_a_ready; // @[Monitor.scala 695:32]
-  wire [255:0] _inflight_T = inflight | a_set; // @[Monitor.scala 702:27]
-  wire [255:0] _inflight_T_1 = ~d_clr; // @[Monitor.scala 702:38]
-  wire [255:0] _inflight_T_2 = _inflight_T & _inflight_T_1; // @[Monitor.scala 702:36]
-  wire [1023:0] a_opcodes_set = _GEN_19[1023:0];
-  wire [1023:0] _inflight_opcodes_T = inflight_opcodes | a_opcodes_set; // @[Monitor.scala 703:43]
-  wire [1023:0] d_opcodes_clr = _GEN_23[1023:0];
-  wire [1023:0] _inflight_opcodes_T_1 = ~d_opcodes_clr; // @[Monitor.scala 703:62]
-  wire [1023:0] _inflight_opcodes_T_2 = _inflight_opcodes_T & _inflight_opcodes_T_1; // @[Monitor.scala 703:60]
-  wire [1023:0] a_sizes_set = _GEN_20[1023:0];
-  wire [1023:0] _inflight_sizes_T = inflight_sizes | a_sizes_set; // @[Monitor.scala 704:39]
-  wire [1023:0] _inflight_sizes_T_2 = _inflight_sizes_T & _inflight_opcodes_T_1; // @[Monitor.scala 704:54]
+  wire [159:0] a_set = _GEN_16[159:0];
+  wire [159:0] _inflight_T = inflight | a_set; // @[Monitor.scala 702:27]
+  wire [159:0] d_clr = _GEN_22[159:0];
+  wire [159:0] _inflight_T_1 = ~d_clr; // @[Monitor.scala 702:38]
+  wire [159:0] _inflight_T_2 = _inflight_T & _inflight_T_1; // @[Monitor.scala 702:36]
+  wire [639:0] a_opcodes_set = _GEN_19[639:0];
+  wire [639:0] _inflight_opcodes_T = inflight_opcodes | a_opcodes_set; // @[Monitor.scala 703:43]
+  wire [639:0] d_opcodes_clr = _GEN_23[639:0];
+  wire [639:0] _inflight_opcodes_T_1 = ~d_opcodes_clr; // @[Monitor.scala 703:62]
+  wire [639:0] _inflight_opcodes_T_2 = _inflight_opcodes_T & _inflight_opcodes_T_1; // @[Monitor.scala 703:60]
+  wire [639:0] a_sizes_set = _GEN_20[639:0];
+  wire [639:0] _inflight_sizes_T = inflight_sizes | a_sizes_set; // @[Monitor.scala 704:39]
+  wire [639:0] _inflight_sizes_T_2 = _inflight_sizes_T & _inflight_opcodes_T_1; // @[Monitor.scala 704:54]
   reg [31:0] watchdog; // @[Monitor.scala 706:27]
   wire  _T_657 = ~(|inflight) | plusarg_reader_out == 32'h0 | watchdog < plusarg_reader_out; // @[Monitor.scala 709:47]
   wire [31:0] _watchdog_T_1 = watchdog + 32'h1; // @[Monitor.scala 711:26]
@@ -8858,17 +9063,17 @@ module TLMonitor_73_inTestHarness(
       source_1 <= io_in_d_bits_source; // @[Monitor.scala 553:15]
     end
     if (reset) begin // @[Monitor.scala 611:27]
-      inflight <= 256'h0; // @[Monitor.scala 611:27]
+      inflight <= 160'h0; // @[Monitor.scala 611:27]
     end else begin
       inflight <= _inflight_T_2; // @[Monitor.scala 702:14]
     end
     if (reset) begin // @[Monitor.scala 613:35]
-      inflight_opcodes <= 1024'h0; // @[Monitor.scala 613:35]
+      inflight_opcodes <= 640'h0; // @[Monitor.scala 613:35]
     end else begin
       inflight_opcodes <= _inflight_opcodes_T_2; // @[Monitor.scala 703:22]
     end
     if (reset) begin // @[Monitor.scala 615:33]
-      inflight_sizes <= 1024'h0; // @[Monitor.scala 615:33]
+      inflight_sizes <= 640'h0; // @[Monitor.scala 615:33]
     end else begin
       inflight_sizes <= _inflight_sizes_T_2; // @[Monitor.scala 704:20]
     end
@@ -8971,10 +9176,23 @@ module TLMonitor_73_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_20 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_20 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_20 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel AcquireBlock carries invalid source ID (connected at SerialAdapter.scala:464:12)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -9150,10 +9368,23 @@ module TLMonitor_73_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_82 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_82 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_82 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel AcquirePerm carries invalid source ID (connected at SerialAdapter.scala:464:12)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -9305,10 +9536,23 @@ module TLMonitor_73_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_148 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_148 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_148 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel carries Get type which master claims it can't emit (connected at SerialAdapter.scala:464:12)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -9340,10 +9584,23 @@ module TLMonitor_73_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_148 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_148 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_148 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Get carries invalid source ID (connected at SerialAdapter.scala:464:12)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -9471,10 +9728,23 @@ module TLMonitor_73_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_195 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_195 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_195 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel PutFull carries invalid source ID (connected at SerialAdapter.scala:464:12)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -9578,10 +9848,23 @@ module TLMonitor_73_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_233 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_233 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_233 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel PutPartial carries invalid source ID (connected at SerialAdapter.scala:464:12)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -9685,10 +9968,23 @@ module TLMonitor_73_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_273 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_273 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_273 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Arithmetic carries invalid source ID (connected at SerialAdapter.scala:464:12)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -9792,10 +10088,23 @@ module TLMonitor_73_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_311 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_311 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_311 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Logical carries invalid source ID (connected at SerialAdapter.scala:464:12)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -9899,10 +10208,23 @@ module TLMonitor_73_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_349 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_349 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_349 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Hint carries invalid source ID (connected at SerialAdapter.scala:464:12)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -10017,10 +10339,23 @@ module TLMonitor_73_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel AccessAckData carries invalid source ID (connected at SerialAdapter.scala:464:12)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -10558,12 +10893,12 @@ initial begin
   size_1 = _RAND_7[1:0];
   _RAND_8 = {1{`RANDOM}};
   source_1 = _RAND_8[7:0];
-  _RAND_9 = {8{`RANDOM}};
-  inflight = _RAND_9[255:0];
-  _RAND_10 = {32{`RANDOM}};
-  inflight_opcodes = _RAND_10[1023:0];
-  _RAND_11 = {32{`RANDOM}};
-  inflight_sizes = _RAND_11[1023:0];
+  _RAND_9 = {5{`RANDOM}};
+  inflight = _RAND_9[159:0];
+  _RAND_10 = {20{`RANDOM}};
+  inflight_opcodes = _RAND_10[639:0];
+  _RAND_11 = {20{`RANDOM}};
+  inflight_sizes = _RAND_11[639:0];
   _RAND_12 = {1{`RANDOM}};
   a_first_counter_1 = _RAND_12[0:0];
   _RAND_13 = {1{`RANDOM}};
@@ -10616,7 +10951,7 @@ module TLROM_1_inTestHarness(
   wire [63:0] _GEN_1 = 2'h1 == index ? 64'h253734151073 : 64'h1f515130010051b; // @[BootROM.scala 51:{47,47}]
   wire [63:0] _GEN_2 = 2'h2 == index ? 64'h300520738005051b : _GEN_1; // @[BootROM.scala 51:{47,47}]
   wire [63:0] _GEN_3 = 2'h3 == index ? 64'h30200073f1402573 : _GEN_2; // @[BootROM.scala 51:{47,47}]
-  TLMonitor_73_inTestHarness monitor ( // @[Nodes.scala 24:25]
+  TLMonitor_70_inTestHarness monitor ( // @[Nodes.scala 24:25]
     .clock(monitor_clock),
     .reset(monitor_reset),
     .io_in_a_ready(monitor_io_in_a_ready),
@@ -10654,7 +10989,7 @@ module TLROM_1_inTestHarness(
   assign monitor_io_in_d_bits_size = auto_in_a_bits_size; // @[Nodes.scala 1210:84 LazyModule.scala 309:16]
   assign monitor_io_in_d_bits_source = auto_in_a_bits_source; // @[Nodes.scala 1210:84 LazyModule.scala 309:16]
 endmodule
-module TLMonitor_74_inTestHarness(
+module TLMonitor_71_inTestHarness(
   input         clock,
   input         reset,
   input         io_in_a_ready,
@@ -10704,6 +11039,7 @@ module TLMonitor_74_inTestHarness(
   wire [31:0] plusarg_reader_out; // @[PlusArg.scala 80:11]
   wire [31:0] plusarg_reader_1_out; // @[PlusArg.scala 80:11]
   wire  _T_2 = ~reset; // @[Monitor.scala 42:11]
+  wire  _source_ok_T_4 = io_in_a_bits_source <= 4'h9; // @[Parameters.scala 57:20]
   wire [12:0] _is_aligned_mask_T_1 = 13'h3f << io_in_a_bits_size; // @[package.scala 234:77]
   wire [5:0] is_aligned_mask = ~_is_aligned_mask_T_1[5:0]; // @[package.scala 234:46]
   wire [28:0] _GEN_71 = {{23'd0}, is_aligned_mask}; // @[Edges.scala 20:16]
@@ -10749,6 +11085,7 @@ module TLMonitor_74_inTestHarness(
   wire  mask_eq_13 = mask_eq_5 & mask_bit_2; // @[Misc.scala 213:27]
   wire  mask_acc_13 = mask_acc_5 | mask_size_2 & mask_eq_13; // @[Misc.scala 214:29]
   wire [7:0] mask = {mask_acc_13,mask_acc_12,mask_acc_11,mask_acc_10,mask_acc_9,mask_acc_8,mask_acc_7,mask_acc_6}; // @[Cat.scala 31:58]
+  wire  _T_10 = ~_source_ok_T_4; // @[Monitor.scala 63:7]
   wire  _T_20 = io_in_a_bits_opcode == 3'h6; // @[Monitor.scala 81:25]
   wire [28:0] _T_33 = io_in_a_bits_address ^ 29'h20000; // @[Parameters.scala 137:31]
   wire [29:0] _T_34 = {1'b0,$signed(_T_33)}; // @[Parameters.scala 137:49]
@@ -10772,6 +11109,7 @@ module TLMonitor_74_inTestHarness(
   wire  _T_217 = io_in_a_bits_mask == mask; // @[Monitor.scala 110:30]
   wire  _T_225 = io_in_a_bits_opcode == 3'h0; // @[Monitor.scala 114:25]
   wire  _T_246 = _T_188 & _T_42; // @[Parameters.scala 670:56]
+  wire  _T_256 = _source_ok_T_4 & _T_246; // @[Monitor.scala 115:71]
   wire  _T_274 = io_in_a_bits_opcode == 3'h1; // @[Monitor.scala 122:25]
   wire [7:0] _T_319 = ~mask; // @[Monitor.scala 127:33]
   wire [7:0] _T_320 = io_in_a_bits_mask & _T_319; // @[Monitor.scala 127:31]
@@ -10783,6 +11121,7 @@ module TLMonitor_74_inTestHarness(
   wire  _T_413 = io_in_a_bits_opcode == 3'h5; // @[Monitor.scala 146:25]
   wire  _T_449 = io_in_a_bits_param <= 3'h1; // @[Bundles.scala 158:28]
   wire  _T_461 = io_in_d_bits_opcode <= 3'h6; // @[Bundles.scala 42:24]
+  wire  _source_ok_T_10 = io_in_d_bits_source <= 4'h9; // @[Parameters.scala 57:20]
   wire  _T_465 = io_in_d_bits_opcode == 3'h6; // @[Monitor.scala 310:25]
   wire  _T_469 = io_in_d_bits_size >= 3'h3; // @[Monitor.scala 312:27]
   wire  _T_473 = io_in_d_bits_param == 2'h0; // @[Monitor.scala 313:28]
@@ -10834,9 +11173,9 @@ module TLMonitor_74_inTestHarness(
   wire  _T_644 = io_in_d_bits_source == source_1; // @[Monitor.scala 545:29]
   wire  _T_648 = io_in_d_bits_sink == sink; // @[Monitor.scala 546:29]
   wire  _T_652 = io_in_d_bits_denied == denied; // @[Monitor.scala 547:29]
-  reg [15:0] inflight; // @[Monitor.scala 611:27]
-  reg [63:0] inflight_opcodes; // @[Monitor.scala 613:35]
-  reg [63:0] inflight_sizes; // @[Monitor.scala 615:33]
+  reg [9:0] inflight; // @[Monitor.scala 611:27]
+  reg [39:0] inflight_opcodes; // @[Monitor.scala 613:35]
+  reg [39:0] inflight_sizes; // @[Monitor.scala 615:33]
   reg [2:0] a_first_counter_1; // @[Edges.scala 228:27]
   wire [2:0] a_first_counter1_1 = a_first_counter_1 - 3'h1; // @[Edges.scala 229:28]
   wire  a_first_1 = a_first_counter_1 == 3'h0; // @[Edges.scala 230:25]
@@ -10845,14 +11184,14 @@ module TLMonitor_74_inTestHarness(
   wire  d_first_1 = d_first_counter_1 == 3'h0; // @[Edges.scala 230:25]
   wire [5:0] _GEN_72 = {io_in_d_bits_source, 2'h0}; // @[Monitor.scala 634:69]
   wire [6:0] _a_opcode_lookup_T = {{1'd0}, _GEN_72}; // @[Monitor.scala 634:69]
-  wire [63:0] _a_opcode_lookup_T_1 = inflight_opcodes >> _a_opcode_lookup_T; // @[Monitor.scala 634:44]
+  wire [39:0] _a_opcode_lookup_T_1 = inflight_opcodes >> _a_opcode_lookup_T; // @[Monitor.scala 634:44]
   wire [15:0] _a_opcode_lookup_T_5 = 16'h10 - 16'h1; // @[Monitor.scala 609:57]
-  wire [63:0] _GEN_73 = {{48'd0}, _a_opcode_lookup_T_5}; // @[Monitor.scala 634:97]
-  wire [63:0] _a_opcode_lookup_T_6 = _a_opcode_lookup_T_1 & _GEN_73; // @[Monitor.scala 634:97]
-  wire [63:0] _a_opcode_lookup_T_7 = {{1'd0}, _a_opcode_lookup_T_6[63:1]}; // @[Monitor.scala 634:152]
-  wire [63:0] _a_size_lookup_T_1 = inflight_sizes >> _a_opcode_lookup_T; // @[Monitor.scala 638:40]
-  wire [63:0] _a_size_lookup_T_6 = _a_size_lookup_T_1 & _GEN_73; // @[Monitor.scala 638:91]
-  wire [63:0] _a_size_lookup_T_7 = {{1'd0}, _a_size_lookup_T_6[63:1]}; // @[Monitor.scala 638:144]
+  wire [39:0] _GEN_73 = {{24'd0}, _a_opcode_lookup_T_5}; // @[Monitor.scala 634:97]
+  wire [39:0] _a_opcode_lookup_T_6 = _a_opcode_lookup_T_1 & _GEN_73; // @[Monitor.scala 634:97]
+  wire [39:0] _a_opcode_lookup_T_7 = {{1'd0}, _a_opcode_lookup_T_6[39:1]}; // @[Monitor.scala 634:152]
+  wire [39:0] _a_size_lookup_T_1 = inflight_sizes >> _a_opcode_lookup_T; // @[Monitor.scala 638:40]
+  wire [39:0] _a_size_lookup_T_6 = _a_size_lookup_T_1 & _GEN_73; // @[Monitor.scala 638:91]
+  wire [39:0] _a_size_lookup_T_7 = {{1'd0}, _a_size_lookup_T_6[39:1]}; // @[Monitor.scala 638:144]
   wire  _T_658 = io_in_a_valid & a_first_1; // @[Monitor.scala 648:26]
   wire [15:0] _a_set_wo_ready_T = 16'h1 << io_in_a_bits_source; // @[OneHot.scala 57:35]
   wire  _T_661 = _a_first_T & a_first_1; // @[Monitor.scala 652:27]
@@ -10868,9 +11207,9 @@ module TLMonitor_74_inTestHarness(
   wire [3:0] a_sizes_set_interm = _a_first_T & a_first_1 ? _a_sizes_set_interm_T_1 : 4'h0; // @[Monitor.scala 652:72 655:28]
   wire [130:0] _GEN_2 = {{127'd0}, a_sizes_set_interm}; // @[Monitor.scala 657:52]
   wire [130:0] _a_sizes_set_T_1 = _GEN_2 << _a_opcodes_set_T; // @[Monitor.scala 657:52]
-  wire [15:0] _T_663 = inflight >> io_in_a_bits_source; // @[Monitor.scala 658:26]
+  wire [9:0] _T_663 = inflight >> io_in_a_bits_source; // @[Monitor.scala 658:26]
   wire  _T_665 = ~_T_663[0]; // @[Monitor.scala 658:17]
-  wire [15:0] a_set = _a_first_T & a_first_1 ? _a_set_wo_ready_T : 16'h0; // @[Monitor.scala 652:72 653:28]
+  wire [15:0] _GEN_16 = _a_first_T & a_first_1 ? _a_set_wo_ready_T : 16'h0; // @[Monitor.scala 652:72 653:28]
   wire [130:0] _GEN_19 = _a_first_T & a_first_1 ? _a_opcodes_set_T_1 : 131'h0; // @[Monitor.scala 652:72 656:28]
   wire [130:0] _GEN_20 = _a_first_T & a_first_1 ? _a_sizes_set_T_1 : 131'h0; // @[Monitor.scala 652:72 657:28]
   wire  _T_669 = io_in_d_valid & d_first_1; // @[Monitor.scala 671:26]
@@ -10879,11 +11218,11 @@ module TLMonitor_74_inTestHarness(
   wire [15:0] _d_clr_wo_ready_T = 16'h1 << io_in_d_bits_source; // @[OneHot.scala 57:35]
   wire [142:0] _GEN_3 = {{127'd0}, _a_opcode_lookup_T_5}; // @[Monitor.scala 677:76]
   wire [142:0] _d_opcodes_clr_T_5 = _GEN_3 << _a_opcode_lookup_T; // @[Monitor.scala 677:76]
-  wire [15:0] d_clr = _d_first_T & d_first_1 & _T_671 ? _d_clr_wo_ready_T : 16'h0; // @[Monitor.scala 675:91 676:21]
+  wire [15:0] _GEN_22 = _d_first_T & d_first_1 & _T_671 ? _d_clr_wo_ready_T : 16'h0; // @[Monitor.scala 675:91 676:21]
   wire [142:0] _GEN_23 = _d_first_T & d_first_1 & _T_671 ? _d_opcodes_clr_T_5 : 143'h0; // @[Monitor.scala 675:91 677:21]
   wire  _same_cycle_resp_T_2 = io_in_a_bits_source == io_in_d_bits_source; // @[Monitor.scala 681:113]
   wire  same_cycle_resp = _T_658 & io_in_a_bits_source == io_in_d_bits_source; // @[Monitor.scala 681:88]
-  wire [15:0] _T_682 = inflight >> io_in_d_bits_source; // @[Monitor.scala 682:25]
+  wire [9:0] _T_682 = inflight >> io_in_d_bits_source; // @[Monitor.scala 682:25]
   wire  _T_684 = _T_682[0] | same_cycle_resp; // @[Monitor.scala 682:49]
   wire [2:0] _GEN_27 = 3'h2 == io_in_a_bits_opcode ? 3'h1 : 3'h0; // @[Monitor.scala 685:{38,38}]
   wire [2:0] _GEN_28 = 3'h3 == io_in_a_bits_opcode ? 3'h1 : _GEN_27; // @[Monitor.scala 685:{38,38}]
@@ -10912,39 +11251,42 @@ module TLMonitor_74_inTestHarness(
   wire  _T_706 = _GEN_82 == a_size_lookup; // @[Monitor.scala 691:36]
   wire  _T_716 = _T_669 & a_first_1 & io_in_a_valid & _same_cycle_resp_T_2 & _T_671; // @[Monitor.scala 694:116]
   wire  _T_718 = ~io_in_d_ready | io_in_a_ready; // @[Monitor.scala 695:32]
-  wire [15:0] _inflight_T = inflight | a_set; // @[Monitor.scala 702:27]
-  wire [15:0] _inflight_T_1 = ~d_clr; // @[Monitor.scala 702:38]
-  wire [15:0] _inflight_T_2 = _inflight_T & _inflight_T_1; // @[Monitor.scala 702:36]
-  wire [63:0] a_opcodes_set = _GEN_19[63:0];
-  wire [63:0] _inflight_opcodes_T = inflight_opcodes | a_opcodes_set; // @[Monitor.scala 703:43]
-  wire [63:0] d_opcodes_clr = _GEN_23[63:0];
-  wire [63:0] _inflight_opcodes_T_1 = ~d_opcodes_clr; // @[Monitor.scala 703:62]
-  wire [63:0] _inflight_opcodes_T_2 = _inflight_opcodes_T & _inflight_opcodes_T_1; // @[Monitor.scala 703:60]
-  wire [63:0] a_sizes_set = _GEN_20[63:0];
-  wire [63:0] _inflight_sizes_T = inflight_sizes | a_sizes_set; // @[Monitor.scala 704:39]
-  wire [63:0] _inflight_sizes_T_2 = _inflight_sizes_T & _inflight_opcodes_T_1; // @[Monitor.scala 704:54]
+  wire [9:0] a_set = _GEN_16[9:0];
+  wire [9:0] _inflight_T = inflight | a_set; // @[Monitor.scala 702:27]
+  wire [9:0] d_clr = _GEN_22[9:0];
+  wire [9:0] _inflight_T_1 = ~d_clr; // @[Monitor.scala 702:38]
+  wire [9:0] _inflight_T_2 = _inflight_T & _inflight_T_1; // @[Monitor.scala 702:36]
+  wire [39:0] a_opcodes_set = _GEN_19[39:0];
+  wire [39:0] _inflight_opcodes_T = inflight_opcodes | a_opcodes_set; // @[Monitor.scala 703:43]
+  wire [39:0] d_opcodes_clr = _GEN_23[39:0];
+  wire [39:0] _inflight_opcodes_T_1 = ~d_opcodes_clr; // @[Monitor.scala 703:62]
+  wire [39:0] _inflight_opcodes_T_2 = _inflight_opcodes_T & _inflight_opcodes_T_1; // @[Monitor.scala 703:60]
+  wire [39:0] a_sizes_set = _GEN_20[39:0];
+  wire [39:0] _inflight_sizes_T = inflight_sizes | a_sizes_set; // @[Monitor.scala 704:39]
+  wire [39:0] _inflight_sizes_T_2 = _inflight_sizes_T & _inflight_opcodes_T_1; // @[Monitor.scala 704:54]
   reg [31:0] watchdog; // @[Monitor.scala 706:27]
   wire  _T_727 = ~(|inflight) | plusarg_reader_out == 32'h0 | watchdog < plusarg_reader_out; // @[Monitor.scala 709:47]
   wire [31:0] _watchdog_T_1 = watchdog + 32'h1; // @[Monitor.scala 711:26]
-  reg [15:0] inflight_1; // @[Monitor.scala 723:35]
-  reg [63:0] inflight_sizes_1; // @[Monitor.scala 725:35]
+  reg [9:0] inflight_1; // @[Monitor.scala 723:35]
+  reg [39:0] inflight_sizes_1; // @[Monitor.scala 725:35]
   reg [2:0] d_first_counter_2; // @[Edges.scala 228:27]
   wire [2:0] d_first_counter1_2 = d_first_counter_2 - 3'h1; // @[Edges.scala 229:28]
   wire  d_first_2 = d_first_counter_2 == 3'h0; // @[Edges.scala 230:25]
-  wire [63:0] _c_size_lookup_T_1 = inflight_sizes_1 >> _a_opcode_lookup_T; // @[Monitor.scala 747:42]
-  wire [63:0] _c_size_lookup_T_6 = _c_size_lookup_T_1 & _GEN_73; // @[Monitor.scala 747:93]
-  wire [63:0] _c_size_lookup_T_7 = {{1'd0}, _c_size_lookup_T_6[63:1]}; // @[Monitor.scala 747:146]
+  wire [39:0] _c_size_lookup_T_1 = inflight_sizes_1 >> _a_opcode_lookup_T; // @[Monitor.scala 747:42]
+  wire [39:0] _c_size_lookup_T_6 = _c_size_lookup_T_1 & _GEN_73; // @[Monitor.scala 747:93]
+  wire [39:0] _c_size_lookup_T_7 = {{1'd0}, _c_size_lookup_T_6[39:1]}; // @[Monitor.scala 747:146]
   wire  _T_753 = io_in_d_valid & d_first_2 & _T_465; // @[Monitor.scala 779:71]
-  wire [15:0] d_clr_1 = _d_first_T & d_first_2 & _T_465 ? _d_clr_wo_ready_T : 16'h0; // @[Monitor.scala 783:90 784:21]
+  wire [15:0] _GEN_67 = _d_first_T & d_first_2 & _T_465 ? _d_clr_wo_ready_T : 16'h0; // @[Monitor.scala 783:90 784:21]
   wire [142:0] _GEN_68 = _d_first_T & d_first_2 & _T_465 ? _d_opcodes_clr_T_5 : 143'h0; // @[Monitor.scala 783:90 785:21]
-  wire [15:0] _T_761 = inflight_1 >> io_in_d_bits_source; // @[Monitor.scala 791:25]
+  wire [9:0] _T_761 = inflight_1 >> io_in_d_bits_source; // @[Monitor.scala 791:25]
   wire [3:0] c_size_lookup = _c_size_lookup_T_7[3:0];
   wire  _T_771 = _GEN_82 == c_size_lookup; // @[Monitor.scala 795:36]
-  wire [15:0] _inflight_T_4 = ~d_clr_1; // @[Monitor.scala 809:46]
-  wire [15:0] _inflight_T_5 = inflight_1 & _inflight_T_4; // @[Monitor.scala 809:44]
-  wire [63:0] d_opcodes_clr_1 = _GEN_68[63:0];
-  wire [63:0] _inflight_opcodes_T_4 = ~d_opcodes_clr_1; // @[Monitor.scala 810:62]
-  wire [63:0] _inflight_sizes_T_5 = inflight_sizes_1 & _inflight_opcodes_T_4; // @[Monitor.scala 811:56]
+  wire [9:0] d_clr_1 = _GEN_67[9:0];
+  wire [9:0] _inflight_T_4 = ~d_clr_1; // @[Monitor.scala 809:46]
+  wire [9:0] _inflight_T_5 = inflight_1 & _inflight_T_4; // @[Monitor.scala 809:44]
+  wire [39:0] d_opcodes_clr_1 = _GEN_68[39:0];
+  wire [39:0] _inflight_opcodes_T_4 = ~d_opcodes_clr_1; // @[Monitor.scala 810:62]
+  wire [39:0] _inflight_sizes_T_5 = inflight_sizes_1 & _inflight_opcodes_T_4; // @[Monitor.scala 811:56]
   reg [31:0] watchdog_1; // @[Monitor.scala 813:27]
   wire  _T_791 = ~(|inflight_1) | plusarg_reader_1_out == 32'h0 | watchdog_1 < plusarg_reader_1_out; // @[Monitor.scala 816:47]
   wire [31:0] _watchdog_T_3 = watchdog_1 + 32'h1; // @[Monitor.scala 818:26]
@@ -11015,17 +11357,17 @@ module TLMonitor_74_inTestHarness(
       denied <= io_in_d_bits_denied; // @[Monitor.scala 555:15]
     end
     if (reset) begin // @[Monitor.scala 611:27]
-      inflight <= 16'h0; // @[Monitor.scala 611:27]
+      inflight <= 10'h0; // @[Monitor.scala 611:27]
     end else begin
       inflight <= _inflight_T_2; // @[Monitor.scala 702:14]
     end
     if (reset) begin // @[Monitor.scala 613:35]
-      inflight_opcodes <= 64'h0; // @[Monitor.scala 613:35]
+      inflight_opcodes <= 40'h0; // @[Monitor.scala 613:35]
     end else begin
       inflight_opcodes <= _inflight_opcodes_T_2; // @[Monitor.scala 703:22]
     end
     if (reset) begin // @[Monitor.scala 615:33]
-      inflight_sizes <= 64'h0; // @[Monitor.scala 615:33]
+      inflight_sizes <= 40'h0; // @[Monitor.scala 615:33]
     end else begin
       inflight_sizes <= _inflight_sizes_T_2; // @[Monitor.scala 704:20]
     end
@@ -11063,12 +11405,12 @@ module TLMonitor_74_inTestHarness(
       watchdog <= _watchdog_T_1; // @[Monitor.scala 711:14]
     end
     if (reset) begin // @[Monitor.scala 723:35]
-      inflight_1 <= 16'h0; // @[Monitor.scala 723:35]
+      inflight_1 <= 10'h0; // @[Monitor.scala 723:35]
     end else begin
       inflight_1 <= _inflight_T_5; // @[Monitor.scala 809:22]
     end
     if (reset) begin // @[Monitor.scala 725:35]
-      inflight_sizes_1 <= 64'h0; // @[Monitor.scala 725:35]
+      inflight_sizes_1 <= 40'h0; // @[Monitor.scala 725:35]
     end else begin
       inflight_sizes_1 <= _inflight_sizes_T_5; // @[Monitor.scala 811:22]
     end
@@ -11166,10 +11508,23 @@ module TLMonitor_74_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_20 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_20 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_20 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel AcquireBlock carries invalid source ID (connected at SerialAdapter.scala:465:8)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -11345,10 +11700,23 @@ module TLMonitor_74_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_94 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_94 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_94 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel AcquirePerm carries invalid source ID (connected at SerialAdapter.scala:465:8)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -11500,10 +11868,23 @@ module TLMonitor_74_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_172 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_172 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_172 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel carries Get type which master claims it can't emit (connected at SerialAdapter.scala:465:8)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -11535,10 +11916,23 @@ module TLMonitor_74_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_172 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_172 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_172 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Get carries invalid source ID (connected at SerialAdapter.scala:465:8)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -11642,7 +12036,7 @@ module TLMonitor_74_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_246 & (io_in_a_valid & _T_225 & ~reset)) begin
+        if (~_T_256 & (io_in_a_valid & _T_225 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -11653,7 +12047,7 @@ module TLMonitor_74_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_225 & ~reset & ~_T_246) begin
+        if (io_in_a_valid & _T_225 & ~reset & ~_T_256) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel carries PutFull type which is unexpected using diplomatic parameters (connected at SerialAdapter.scala:465:8)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -11666,10 +12060,23 @@ module TLMonitor_74_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_225 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_225 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_225 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel PutFull carries invalid source ID (connected at SerialAdapter.scala:465:8)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -11749,7 +12156,7 @@ module TLMonitor_74_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_246 & (io_in_a_valid & _T_274 & ~reset)) begin
+        if (~_T_256 & (io_in_a_valid & _T_274 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -11760,7 +12167,7 @@ module TLMonitor_74_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_274 & ~reset & ~_T_246) begin
+        if (io_in_a_valid & _T_274 & ~reset & ~_T_256) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel carries PutPartial type which is unexpected using diplomatic parameters (connected at SerialAdapter.scala:465:8)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -11773,10 +12180,23 @@ module TLMonitor_74_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_274 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_274 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_274 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel PutPartial carries invalid source ID (connected at SerialAdapter.scala:465:8)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -11880,10 +12300,23 @@ module TLMonitor_74_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_325 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_325 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_325 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Arithmetic carries invalid source ID (connected at SerialAdapter.scala:465:8)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -11987,10 +12420,23 @@ module TLMonitor_74_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_369 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_369 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_369 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Logical carries invalid source ID (connected at SerialAdapter.scala:465:8)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -12094,10 +12540,23 @@ module TLMonitor_74_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_413 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_413 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_413 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Hint carries invalid source ID (connected at SerialAdapter.scala:465:8)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -12225,10 +12684,23 @@ module TLMonitor_74_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_465 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_465 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_465 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel ReleaseAck carries invalid source ID (connected at SerialAdapter.scala:465:8)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -12332,10 +12804,23 @@ module TLMonitor_74_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_485 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_485 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_485 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel Grant carries invalid source ID (connected at SerialAdapter.scala:465:8)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -12487,10 +12972,23 @@ module TLMonitor_74_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_513 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_513 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_513 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel GrantData carries invalid source ID (connected at SerialAdapter.scala:465:8)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -12642,10 +13140,23 @@ module TLMonitor_74_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_542 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_542 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_542 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel AccessAck carries invalid source ID (connected at SerialAdapter.scala:465:8)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -12725,10 +13236,23 @@ module TLMonitor_74_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_559 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_559 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_559 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel AccessAckData carries invalid source ID (connected at SerialAdapter.scala:465:8)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -12808,10 +13332,23 @@ module TLMonitor_74_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_577 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_577 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_577 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel HintAck carries invalid source ID (connected at SerialAdapter.scala:465:8)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -13510,11 +14047,11 @@ initial begin
   _RAND_12 = {1{`RANDOM}};
   denied = _RAND_12[0:0];
   _RAND_13 = {1{`RANDOM}};
-  inflight = _RAND_13[15:0];
+  inflight = _RAND_13[9:0];
   _RAND_14 = {2{`RANDOM}};
-  inflight_opcodes = _RAND_14[63:0];
+  inflight_opcodes = _RAND_14[39:0];
   _RAND_15 = {2{`RANDOM}};
-  inflight_sizes = _RAND_15[63:0];
+  inflight_sizes = _RAND_15[39:0];
   _RAND_16 = {1{`RANDOM}};
   a_first_counter_1 = _RAND_16[2:0];
   _RAND_17 = {1{`RANDOM}};
@@ -13522,9 +14059,9 @@ initial begin
   _RAND_18 = {1{`RANDOM}};
   watchdog = _RAND_18[31:0];
   _RAND_19 = {1{`RANDOM}};
-  inflight_1 = _RAND_19[15:0];
+  inflight_1 = _RAND_19[9:0];
   _RAND_20 = {2{`RANDOM}};
-  inflight_sizes_1 = _RAND_20[63:0];
+  inflight_sizes_1 = _RAND_20[39:0];
   _RAND_21 = {1{`RANDOM}};
   d_first_counter_2 = _RAND_21[2:0];
   _RAND_22 = {1{`RANDOM}};
@@ -13684,7 +14221,7 @@ module TLXbar_11_inTestHarness(
   wire [2:0] _T_40 = muxStateEarly_1 ? auto_out_1_d_bits_size : 3'h0; // @[Mux.scala 27:73]
   wire [2:0] _T_45 = muxStateEarly_0 ? auto_out_0_d_bits_opcode : 3'h0; // @[Mux.scala 27:73]
   wire [2:0] _T_46 = muxStateEarly_1 ? 3'h1 : 3'h0; // @[Mux.scala 27:73]
-  TLMonitor_74_inTestHarness monitor ( // @[Nodes.scala 24:25]
+  TLMonitor_71_inTestHarness monitor ( // @[Nodes.scala 24:25]
     .clock(monitor_clock),
     .reset(monitor_reset),
     .io_in_a_ready(monitor_io_in_a_ready),
@@ -13914,7 +14451,7 @@ end // initial
 `endif
 `endif // SYNTHESIS
 endmodule
-module TLMonitor_75_inTestHarness(
+module TLMonitor_72_inTestHarness(
   input         clock,
   input         reset,
   input         io_in_a_ready,
@@ -13950,20 +14487,21 @@ module TLMonitor_75_inTestHarness(
   reg [31:0] _RAND_10;
   reg [31:0] _RAND_11;
   reg [31:0] _RAND_12;
-  reg [255:0] _RAND_13;
-  reg [1023:0] _RAND_14;
-  reg [1023:0] _RAND_15;
+  reg [159:0] _RAND_13;
+  reg [639:0] _RAND_14;
+  reg [639:0] _RAND_15;
   reg [31:0] _RAND_16;
   reg [31:0] _RAND_17;
   reg [31:0] _RAND_18;
-  reg [255:0] _RAND_19;
-  reg [1023:0] _RAND_20;
+  reg [159:0] _RAND_19;
+  reg [639:0] _RAND_20;
   reg [31:0] _RAND_21;
   reg [31:0] _RAND_22;
 `endif // RANDOMIZE_REG_INIT
   wire [31:0] plusarg_reader_out; // @[PlusArg.scala 80:11]
   wire [31:0] plusarg_reader_1_out; // @[PlusArg.scala 80:11]
   wire  _T_2 = ~reset; // @[Monitor.scala 42:11]
+  wire  _source_ok_T_4 = io_in_a_bits_source <= 8'h9f; // @[Parameters.scala 57:20]
   wire [5:0] _is_aligned_mask_T_1 = 6'h7 << io_in_a_bits_size; // @[package.scala 234:77]
   wire [2:0] is_aligned_mask = ~_is_aligned_mask_T_1[2:0]; // @[package.scala 234:46]
   wire [28:0] _GEN_71 = {{26'd0}, is_aligned_mask}; // @[Edges.scala 20:16]
@@ -14010,6 +14548,7 @@ module TLMonitor_75_inTestHarness(
   wire  mask_eq_13 = mask_eq_5 & mask_bit_2; // @[Misc.scala 213:27]
   wire  mask_acc_13 = mask_acc_5 | mask_size_2 & mask_eq_13; // @[Misc.scala 214:29]
   wire [7:0] mask = {mask_acc_13,mask_acc_12,mask_acc_11,mask_acc_10,mask_acc_9,mask_acc_8,mask_acc_7,mask_acc_6}; // @[Cat.scala 31:58]
+  wire  _T_10 = ~_source_ok_T_4; // @[Monitor.scala 63:7]
   wire  _T_20 = io_in_a_bits_opcode == 3'h6; // @[Monitor.scala 81:25]
   wire [28:0] _T_33 = io_in_a_bits_address ^ 29'h10000000; // @[Parameters.scala 137:31]
   wire [29:0] _T_34 = {1'b0,$signed(_T_33)}; // @[Parameters.scala 137:49]
@@ -14025,6 +14564,7 @@ module TLMonitor_75_inTestHarness(
   wire  _T_183 = io_in_a_bits_param == 3'h0; // @[Monitor.scala 109:31]
   wire  _T_187 = io_in_a_bits_mask == mask; // @[Monitor.scala 110:30]
   wire  _T_195 = io_in_a_bits_opcode == 3'h0; // @[Monitor.scala 114:25]
+  wire  _T_218 = _source_ok_T_4 & _T_37; // @[Monitor.scala 115:71]
   wire  _T_236 = io_in_a_bits_opcode == 3'h1; // @[Monitor.scala 122:25]
   wire [7:0] _T_273 = ~mask; // @[Monitor.scala 127:33]
   wire [7:0] _T_274 = io_in_a_bits_mask & _T_273; // @[Monitor.scala 127:31]
@@ -14036,6 +14576,7 @@ module TLMonitor_75_inTestHarness(
   wire  _T_355 = io_in_a_bits_opcode == 3'h5; // @[Monitor.scala 146:25]
   wire  _T_385 = io_in_a_bits_param <= 3'h1; // @[Bundles.scala 158:28]
   wire  _T_397 = io_in_d_bits_opcode <= 3'h6; // @[Bundles.scala 42:24]
+  wire  _source_ok_T_10 = io_in_d_bits_source <= 8'h9f; // @[Parameters.scala 57:20]
   wire  _T_401 = io_in_d_bits_opcode == 3'h6; // @[Monitor.scala 310:25]
   wire  _T_405 = io_in_d_bits_size >= 2'h3; // @[Monitor.scala 312:27]
   wire  _T_409 = io_in_d_bits_param == 2'h0; // @[Monitor.scala 313:28]
@@ -14081,9 +14622,9 @@ module TLMonitor_75_inTestHarness(
   wire  _T_580 = io_in_d_bits_source == source_1; // @[Monitor.scala 545:29]
   wire  _T_584 = io_in_d_bits_sink == sink; // @[Monitor.scala 546:29]
   wire  _T_588 = io_in_d_bits_denied == denied; // @[Monitor.scala 547:29]
-  reg [255:0] inflight; // @[Monitor.scala 611:27]
-  reg [1023:0] inflight_opcodes; // @[Monitor.scala 613:35]
-  reg [1023:0] inflight_sizes; // @[Monitor.scala 615:33]
+  reg [159:0] inflight; // @[Monitor.scala 611:27]
+  reg [639:0] inflight_opcodes; // @[Monitor.scala 613:35]
+  reg [639:0] inflight_sizes; // @[Monitor.scala 615:33]
   reg  a_first_counter_1; // @[Edges.scala 228:27]
   wire  a_first_counter1_1 = a_first_counter_1 - 1'h1; // @[Edges.scala 229:28]
   wire  a_first_1 = ~a_first_counter_1; // @[Edges.scala 230:25]
@@ -14092,17 +14633,17 @@ module TLMonitor_75_inTestHarness(
   wire  d_first_1 = ~d_first_counter_1; // @[Edges.scala 230:25]
   wire [9:0] _GEN_72 = {io_in_d_bits_source, 2'h0}; // @[Monitor.scala 634:69]
   wire [10:0] _a_opcode_lookup_T = {{1'd0}, _GEN_72}; // @[Monitor.scala 634:69]
-  wire [1023:0] _a_opcode_lookup_T_1 = inflight_opcodes >> _a_opcode_lookup_T; // @[Monitor.scala 634:44]
+  wire [639:0] _a_opcode_lookup_T_1 = inflight_opcodes >> _a_opcode_lookup_T; // @[Monitor.scala 634:44]
   wire [15:0] _a_opcode_lookup_T_5 = 16'h10 - 16'h1; // @[Monitor.scala 609:57]
-  wire [1023:0] _GEN_73 = {{1008'd0}, _a_opcode_lookup_T_5}; // @[Monitor.scala 634:97]
-  wire [1023:0] _a_opcode_lookup_T_6 = _a_opcode_lookup_T_1 & _GEN_73; // @[Monitor.scala 634:97]
-  wire [1023:0] _a_opcode_lookup_T_7 = {{1'd0}, _a_opcode_lookup_T_6[1023:1]}; // @[Monitor.scala 634:152]
-  wire [1023:0] _a_size_lookup_T_1 = inflight_sizes >> _a_opcode_lookup_T; // @[Monitor.scala 638:40]
-  wire [1023:0] _a_size_lookup_T_6 = _a_size_lookup_T_1 & _GEN_73; // @[Monitor.scala 638:91]
-  wire [1023:0] _a_size_lookup_T_7 = {{1'd0}, _a_size_lookup_T_6[1023:1]}; // @[Monitor.scala 638:144]
+  wire [639:0] _GEN_73 = {{624'd0}, _a_opcode_lookup_T_5}; // @[Monitor.scala 634:97]
+  wire [639:0] _a_opcode_lookup_T_6 = _a_opcode_lookup_T_1 & _GEN_73; // @[Monitor.scala 634:97]
+  wire [639:0] _a_opcode_lookup_T_7 = {{1'd0}, _a_opcode_lookup_T_6[639:1]}; // @[Monitor.scala 634:152]
+  wire [639:0] _a_size_lookup_T_1 = inflight_sizes >> _a_opcode_lookup_T; // @[Monitor.scala 638:40]
+  wire [639:0] _a_size_lookup_T_6 = _a_size_lookup_T_1 & _GEN_73; // @[Monitor.scala 638:91]
+  wire [639:0] _a_size_lookup_T_7 = {{1'd0}, _a_size_lookup_T_6[639:1]}; // @[Monitor.scala 638:144]
   wire  _T_594 = io_in_a_valid & a_first_1; // @[Monitor.scala 648:26]
   wire [255:0] _a_set_wo_ready_T = 256'h1 << io_in_a_bits_source; // @[OneHot.scala 57:35]
-  wire [255:0] a_set_wo_ready = io_in_a_valid & a_first_1 ? _a_set_wo_ready_T : 256'h0; // @[Monitor.scala 648:71 649:22]
+  wire [255:0] _GEN_15 = io_in_a_valid & a_first_1 ? _a_set_wo_ready_T : 256'h0; // @[Monitor.scala 648:71 649:22]
   wire  _T_597 = a_first_done & a_first_1; // @[Monitor.scala 652:27]
   wire [3:0] _a_opcodes_set_interm_T = {io_in_a_bits_opcode, 1'h0}; // @[Monitor.scala 654:53]
   wire [3:0] _a_opcodes_set_interm_T_1 = _a_opcodes_set_interm_T | 4'h1; // @[Monitor.scala 654:61]
@@ -14116,23 +14657,23 @@ module TLMonitor_75_inTestHarness(
   wire [2:0] a_sizes_set_interm = a_first_done & a_first_1 ? _a_sizes_set_interm_T_1 : 3'h0; // @[Monitor.scala 652:72 655:28]
   wire [2049:0] _GEN_2 = {{2047'd0}, a_sizes_set_interm}; // @[Monitor.scala 657:52]
   wire [2049:0] _a_sizes_set_T_1 = _GEN_2 << _a_opcodes_set_T; // @[Monitor.scala 657:52]
-  wire [255:0] _T_599 = inflight >> io_in_a_bits_source; // @[Monitor.scala 658:26]
+  wire [159:0] _T_599 = inflight >> io_in_a_bits_source; // @[Monitor.scala 658:26]
   wire  _T_601 = ~_T_599[0]; // @[Monitor.scala 658:17]
-  wire [255:0] a_set = a_first_done & a_first_1 ? _a_set_wo_ready_T : 256'h0; // @[Monitor.scala 652:72 653:28]
+  wire [255:0] _GEN_16 = a_first_done & a_first_1 ? _a_set_wo_ready_T : 256'h0; // @[Monitor.scala 652:72 653:28]
   wire [2050:0] _GEN_19 = a_first_done & a_first_1 ? _a_opcodes_set_T_1 : 2051'h0; // @[Monitor.scala 652:72 656:28]
   wire [2049:0] _GEN_20 = a_first_done & a_first_1 ? _a_sizes_set_T_1 : 2050'h0; // @[Monitor.scala 652:72 657:28]
   wire  _T_605 = io_in_d_valid & d_first_1; // @[Monitor.scala 671:26]
   wire  _T_607 = ~_T_401; // @[Monitor.scala 671:74]
   wire  _T_608 = io_in_d_valid & d_first_1 & ~_T_401; // @[Monitor.scala 671:71]
   wire [255:0] _d_clr_wo_ready_T = 256'h1 << io_in_d_bits_source; // @[OneHot.scala 57:35]
-  wire [255:0] d_clr_wo_ready = io_in_d_valid & d_first_1 & ~_T_401 ? _d_clr_wo_ready_T : 256'h0; // @[Monitor.scala 671:90 672:22]
+  wire [255:0] _GEN_21 = io_in_d_valid & d_first_1 & ~_T_401 ? _d_clr_wo_ready_T : 256'h0; // @[Monitor.scala 671:90 672:22]
   wire [2062:0] _GEN_3 = {{2047'd0}, _a_opcode_lookup_T_5}; // @[Monitor.scala 677:76]
   wire [2062:0] _d_opcodes_clr_T_5 = _GEN_3 << _a_opcode_lookup_T; // @[Monitor.scala 677:76]
-  wire [255:0] d_clr = d_first_done & d_first_1 & _T_607 ? _d_clr_wo_ready_T : 256'h0; // @[Monitor.scala 675:91 676:21]
+  wire [255:0] _GEN_22 = d_first_done & d_first_1 & _T_607 ? _d_clr_wo_ready_T : 256'h0; // @[Monitor.scala 675:91 676:21]
   wire [2062:0] _GEN_23 = d_first_done & d_first_1 & _T_607 ? _d_opcodes_clr_T_5 : 2063'h0; // @[Monitor.scala 675:91 677:21]
   wire  _same_cycle_resp_T_2 = io_in_a_bits_source == io_in_d_bits_source; // @[Monitor.scala 681:113]
   wire  same_cycle_resp = _T_594 & io_in_a_bits_source == io_in_d_bits_source; // @[Monitor.scala 681:88]
-  wire [255:0] _T_618 = inflight >> io_in_d_bits_source; // @[Monitor.scala 682:25]
+  wire [159:0] _T_618 = inflight >> io_in_d_bits_source; // @[Monitor.scala 682:25]
   wire  _T_620 = _T_618[0] | same_cycle_resp; // @[Monitor.scala 682:49]
   wire [2:0] _GEN_27 = 3'h2 == io_in_a_bits_opcode ? 3'h1 : 3'h0; // @[Monitor.scala 685:{38,38}]
   wire [2:0] _GEN_28 = 3'h3 == io_in_a_bits_opcode ? 3'h1 : _GEN_27; // @[Monitor.scala 685:{38,38}]
@@ -14161,40 +14702,45 @@ module TLMonitor_75_inTestHarness(
   wire  _T_642 = _GEN_82 == a_size_lookup; // @[Monitor.scala 691:36]
   wire  _T_652 = _T_605 & a_first_1 & io_in_a_valid & _same_cycle_resp_T_2 & _T_607; // @[Monitor.scala 694:116]
   wire  _T_654 = ~io_in_d_ready | io_in_a_ready; // @[Monitor.scala 695:32]
+  wire [159:0] a_set_wo_ready = _GEN_15[159:0];
+  wire [159:0] d_clr_wo_ready = _GEN_21[159:0];
   wire  _T_661 = a_set_wo_ready != d_clr_wo_ready | ~(|a_set_wo_ready); // @[Monitor.scala 699:48]
-  wire [255:0] _inflight_T = inflight | a_set; // @[Monitor.scala 702:27]
-  wire [255:0] _inflight_T_1 = ~d_clr; // @[Monitor.scala 702:38]
-  wire [255:0] _inflight_T_2 = _inflight_T & _inflight_T_1; // @[Monitor.scala 702:36]
-  wire [1023:0] a_opcodes_set = _GEN_19[1023:0];
-  wire [1023:0] _inflight_opcodes_T = inflight_opcodes | a_opcodes_set; // @[Monitor.scala 703:43]
-  wire [1023:0] d_opcodes_clr = _GEN_23[1023:0];
-  wire [1023:0] _inflight_opcodes_T_1 = ~d_opcodes_clr; // @[Monitor.scala 703:62]
-  wire [1023:0] _inflight_opcodes_T_2 = _inflight_opcodes_T & _inflight_opcodes_T_1; // @[Monitor.scala 703:60]
-  wire [1023:0] a_sizes_set = _GEN_20[1023:0];
-  wire [1023:0] _inflight_sizes_T = inflight_sizes | a_sizes_set; // @[Monitor.scala 704:39]
-  wire [1023:0] _inflight_sizes_T_2 = _inflight_sizes_T & _inflight_opcodes_T_1; // @[Monitor.scala 704:54]
+  wire [159:0] a_set = _GEN_16[159:0];
+  wire [159:0] _inflight_T = inflight | a_set; // @[Monitor.scala 702:27]
+  wire [159:0] d_clr = _GEN_22[159:0];
+  wire [159:0] _inflight_T_1 = ~d_clr; // @[Monitor.scala 702:38]
+  wire [159:0] _inflight_T_2 = _inflight_T & _inflight_T_1; // @[Monitor.scala 702:36]
+  wire [639:0] a_opcodes_set = _GEN_19[639:0];
+  wire [639:0] _inflight_opcodes_T = inflight_opcodes | a_opcodes_set; // @[Monitor.scala 703:43]
+  wire [639:0] d_opcodes_clr = _GEN_23[639:0];
+  wire [639:0] _inflight_opcodes_T_1 = ~d_opcodes_clr; // @[Monitor.scala 703:62]
+  wire [639:0] _inflight_opcodes_T_2 = _inflight_opcodes_T & _inflight_opcodes_T_1; // @[Monitor.scala 703:60]
+  wire [639:0] a_sizes_set = _GEN_20[639:0];
+  wire [639:0] _inflight_sizes_T = inflight_sizes | a_sizes_set; // @[Monitor.scala 704:39]
+  wire [639:0] _inflight_sizes_T_2 = _inflight_sizes_T & _inflight_opcodes_T_1; // @[Monitor.scala 704:54]
   reg [31:0] watchdog; // @[Monitor.scala 706:27]
   wire  _T_670 = ~(|inflight) | plusarg_reader_out == 32'h0 | watchdog < plusarg_reader_out; // @[Monitor.scala 709:47]
   wire [31:0] _watchdog_T_1 = watchdog + 32'h1; // @[Monitor.scala 711:26]
-  reg [255:0] inflight_1; // @[Monitor.scala 723:35]
-  reg [1023:0] inflight_sizes_1; // @[Monitor.scala 725:35]
+  reg [159:0] inflight_1; // @[Monitor.scala 723:35]
+  reg [639:0] inflight_sizes_1; // @[Monitor.scala 725:35]
   reg  d_first_counter_2; // @[Edges.scala 228:27]
   wire  d_first_counter1_2 = d_first_counter_2 - 1'h1; // @[Edges.scala 229:28]
   wire  d_first_2 = ~d_first_counter_2; // @[Edges.scala 230:25]
-  wire [1023:0] _c_size_lookup_T_1 = inflight_sizes_1 >> _a_opcode_lookup_T; // @[Monitor.scala 747:42]
-  wire [1023:0] _c_size_lookup_T_6 = _c_size_lookup_T_1 & _GEN_73; // @[Monitor.scala 747:93]
-  wire [1023:0] _c_size_lookup_T_7 = {{1'd0}, _c_size_lookup_T_6[1023:1]}; // @[Monitor.scala 747:146]
+  wire [639:0] _c_size_lookup_T_1 = inflight_sizes_1 >> _a_opcode_lookup_T; // @[Monitor.scala 747:42]
+  wire [639:0] _c_size_lookup_T_6 = _c_size_lookup_T_1 & _GEN_73; // @[Monitor.scala 747:93]
+  wire [639:0] _c_size_lookup_T_7 = {{1'd0}, _c_size_lookup_T_6[639:1]}; // @[Monitor.scala 747:146]
   wire  _T_696 = io_in_d_valid & d_first_2 & _T_401; // @[Monitor.scala 779:71]
-  wire [255:0] d_clr_1 = d_first_done & d_first_2 & _T_401 ? _d_clr_wo_ready_T : 256'h0; // @[Monitor.scala 783:90 784:21]
+  wire [255:0] _GEN_67 = d_first_done & d_first_2 & _T_401 ? _d_clr_wo_ready_T : 256'h0; // @[Monitor.scala 783:90 784:21]
   wire [2062:0] _GEN_68 = d_first_done & d_first_2 & _T_401 ? _d_opcodes_clr_T_5 : 2063'h0; // @[Monitor.scala 783:90 785:21]
-  wire [255:0] _T_704 = inflight_1 >> io_in_d_bits_source; // @[Monitor.scala 791:25]
+  wire [159:0] _T_704 = inflight_1 >> io_in_d_bits_source; // @[Monitor.scala 791:25]
   wire [3:0] c_size_lookup = _c_size_lookup_T_7[3:0];
   wire  _T_714 = _GEN_82 == c_size_lookup; // @[Monitor.scala 795:36]
-  wire [255:0] _inflight_T_4 = ~d_clr_1; // @[Monitor.scala 809:46]
-  wire [255:0] _inflight_T_5 = inflight_1 & _inflight_T_4; // @[Monitor.scala 809:44]
-  wire [1023:0] d_opcodes_clr_1 = _GEN_68[1023:0];
-  wire [1023:0] _inflight_opcodes_T_4 = ~d_opcodes_clr_1; // @[Monitor.scala 810:62]
-  wire [1023:0] _inflight_sizes_T_5 = inflight_sizes_1 & _inflight_opcodes_T_4; // @[Monitor.scala 811:56]
+  wire [159:0] d_clr_1 = _GEN_67[159:0];
+  wire [159:0] _inflight_T_4 = ~d_clr_1; // @[Monitor.scala 809:46]
+  wire [159:0] _inflight_T_5 = inflight_1 & _inflight_T_4; // @[Monitor.scala 809:44]
+  wire [639:0] d_opcodes_clr_1 = _GEN_68[639:0];
+  wire [639:0] _inflight_opcodes_T_4 = ~d_opcodes_clr_1; // @[Monitor.scala 810:62]
+  wire [639:0] _inflight_sizes_T_5 = inflight_sizes_1 & _inflight_opcodes_T_4; // @[Monitor.scala 811:56]
   reg [31:0] watchdog_1; // @[Monitor.scala 813:27]
   wire  _T_739 = ~(|inflight_1) | plusarg_reader_1_out == 32'h0 | watchdog_1 < plusarg_reader_1_out; // @[Monitor.scala 816:47]
   wire [31:0] _watchdog_T_3 = watchdog_1 + 32'h1; // @[Monitor.scala 818:26]
@@ -14257,17 +14803,17 @@ module TLMonitor_75_inTestHarness(
       denied <= io_in_d_bits_denied; // @[Monitor.scala 555:15]
     end
     if (reset) begin // @[Monitor.scala 611:27]
-      inflight <= 256'h0; // @[Monitor.scala 611:27]
+      inflight <= 160'h0; // @[Monitor.scala 611:27]
     end else begin
       inflight <= _inflight_T_2; // @[Monitor.scala 702:14]
     end
     if (reset) begin // @[Monitor.scala 613:35]
-      inflight_opcodes <= 1024'h0; // @[Monitor.scala 613:35]
+      inflight_opcodes <= 640'h0; // @[Monitor.scala 613:35]
     end else begin
       inflight_opcodes <= _inflight_opcodes_T_2; // @[Monitor.scala 703:22]
     end
     if (reset) begin // @[Monitor.scala 615:33]
-      inflight_sizes <= 1024'h0; // @[Monitor.scala 615:33]
+      inflight_sizes <= 640'h0; // @[Monitor.scala 615:33]
     end else begin
       inflight_sizes <= _inflight_sizes_T_2; // @[Monitor.scala 704:20]
     end
@@ -14297,12 +14843,12 @@ module TLMonitor_75_inTestHarness(
       watchdog <= _watchdog_T_1; // @[Monitor.scala 711:14]
     end
     if (reset) begin // @[Monitor.scala 723:35]
-      inflight_1 <= 256'h0; // @[Monitor.scala 723:35]
+      inflight_1 <= 160'h0; // @[Monitor.scala 723:35]
     end else begin
       inflight_1 <= _inflight_T_5; // @[Monitor.scala 809:22]
     end
     if (reset) begin // @[Monitor.scala 725:35]
-      inflight_sizes_1 <= 1024'h0; // @[Monitor.scala 725:35]
+      inflight_sizes_1 <= 640'h0; // @[Monitor.scala 725:35]
     end else begin
       inflight_sizes_1 <= _inflight_sizes_T_5; // @[Monitor.scala 811:22]
     end
@@ -14396,10 +14942,23 @@ module TLMonitor_75_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_20 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_20 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_20 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel AcquireBlock carries invalid source ID (connected at SerialAdapter.scala:463:45)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -14575,10 +15134,23 @@ module TLMonitor_75_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_82 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_82 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_82 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel AcquirePerm carries invalid source ID (connected at SerialAdapter.scala:463:45)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -14730,10 +15302,23 @@ module TLMonitor_75_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_148 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_148 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_148 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel carries Get type which master claims it can't emit (connected at SerialAdapter.scala:463:45)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -14765,10 +15350,23 @@ module TLMonitor_75_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_148 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_148 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_148 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Get carries invalid source ID (connected at SerialAdapter.scala:463:45)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -14872,7 +15470,7 @@ module TLMonitor_75_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_37 & (io_in_a_valid & _T_195 & ~reset)) begin
+        if (~_T_218 & (io_in_a_valid & _T_195 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -14883,7 +15481,7 @@ module TLMonitor_75_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_195 & ~reset & ~_T_37) begin
+        if (io_in_a_valid & _T_195 & ~reset & ~_T_218) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel carries PutFull type which is unexpected using diplomatic parameters (connected at SerialAdapter.scala:463:45)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -14896,10 +15494,23 @@ module TLMonitor_75_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_195 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_195 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_195 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel PutFull carries invalid source ID (connected at SerialAdapter.scala:463:45)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -14979,7 +15590,7 @@ module TLMonitor_75_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_37 & (io_in_a_valid & _T_236 & ~reset)) begin
+        if (~_T_218 & (io_in_a_valid & _T_236 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -14990,7 +15601,7 @@ module TLMonitor_75_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_236 & ~reset & ~_T_37) begin
+        if (io_in_a_valid & _T_236 & ~reset & ~_T_218) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel carries PutPartial type which is unexpected using diplomatic parameters (connected at SerialAdapter.scala:463:45)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -15003,10 +15614,23 @@ module TLMonitor_75_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_236 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_236 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_236 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel PutPartial carries invalid source ID (connected at SerialAdapter.scala:463:45)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -15110,10 +15734,23 @@ module TLMonitor_75_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_279 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_279 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_279 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Arithmetic carries invalid source ID (connected at SerialAdapter.scala:463:45)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -15217,10 +15854,23 @@ module TLMonitor_75_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_317 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_317 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_317 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Logical carries invalid source ID (connected at SerialAdapter.scala:463:45)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -15324,10 +15974,23 @@ module TLMonitor_75_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_355 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_355 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_355 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Hint carries invalid source ID (connected at SerialAdapter.scala:463:45)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -15455,10 +16118,23 @@ module TLMonitor_75_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_401 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_401 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_401 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel ReleaseAck carries invalid source ID (connected at SerialAdapter.scala:463:45)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -15562,10 +16238,23 @@ module TLMonitor_75_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_421 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_421 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_421 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel Grant carries invalid source ID (connected at SerialAdapter.scala:463:45)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -15717,10 +16406,23 @@ module TLMonitor_75_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_449 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_449 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_449 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel GrantData carries invalid source ID (connected at SerialAdapter.scala:463:45)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -15872,10 +16574,23 @@ module TLMonitor_75_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_478 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_478 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_478 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel AccessAck carries invalid source ID (connected at SerialAdapter.scala:463:45)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -15955,10 +16670,23 @@ module TLMonitor_75_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_495 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_495 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_495 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel AccessAckData carries invalid source ID (connected at SerialAdapter.scala:463:45)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -16038,10 +16766,23 @@ module TLMonitor_75_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_513 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_513 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_513 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel HintAck carries invalid source ID (connected at SerialAdapter.scala:463:45)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -16763,22 +17504,22 @@ initial begin
   sink = _RAND_11[0:0];
   _RAND_12 = {1{`RANDOM}};
   denied = _RAND_12[0:0];
-  _RAND_13 = {8{`RANDOM}};
-  inflight = _RAND_13[255:0];
-  _RAND_14 = {32{`RANDOM}};
-  inflight_opcodes = _RAND_14[1023:0];
-  _RAND_15 = {32{`RANDOM}};
-  inflight_sizes = _RAND_15[1023:0];
+  _RAND_13 = {5{`RANDOM}};
+  inflight = _RAND_13[159:0];
+  _RAND_14 = {20{`RANDOM}};
+  inflight_opcodes = _RAND_14[639:0];
+  _RAND_15 = {20{`RANDOM}};
+  inflight_sizes = _RAND_15[639:0];
   _RAND_16 = {1{`RANDOM}};
   a_first_counter_1 = _RAND_16[0:0];
   _RAND_17 = {1{`RANDOM}};
   d_first_counter_1 = _RAND_17[0:0];
   _RAND_18 = {1{`RANDOM}};
   watchdog = _RAND_18[31:0];
-  _RAND_19 = {8{`RANDOM}};
-  inflight_1 = _RAND_19[255:0];
-  _RAND_20 = {32{`RANDOM}};
-  inflight_sizes_1 = _RAND_20[1023:0];
+  _RAND_19 = {5{`RANDOM}};
+  inflight_1 = _RAND_19[159:0];
+  _RAND_20 = {20{`RANDOM}};
+  inflight_sizes_1 = _RAND_20[639:0];
   _RAND_21 = {1{`RANDOM}};
   d_first_counter_2 = _RAND_21[0:0];
   _RAND_22 = {1{`RANDOM}};
@@ -17475,7 +18216,7 @@ module TLBuffer_26_inTestHarness(
   wire  bundleIn_0_d_q_io_deq_bits_denied; // @[Decoupled.scala 361:21]
   wire [63:0] bundleIn_0_d_q_io_deq_bits_data; // @[Decoupled.scala 361:21]
   wire  bundleIn_0_d_q_io_deq_bits_corrupt; // @[Decoupled.scala 361:21]
-  TLMonitor_75_inTestHarness monitor ( // @[Nodes.scala 24:25]
+  TLMonitor_72_inTestHarness monitor ( // @[Nodes.scala 24:25]
     .clock(monitor_clock),
     .reset(monitor_reset),
     .io_in_a_ready(monitor_io_in_a_ready),
@@ -17602,7 +18343,7 @@ module TLBuffer_26_inTestHarness(
   assign bundleIn_0_d_q_io_enq_bits_data = auto_out_d_bits_data; // @[Nodes.scala 1207:84 LazyModule.scala 311:12]
   assign bundleIn_0_d_q_io_deq_ready = auto_in_d_ready; // @[Nodes.scala 1210:84 LazyModule.scala 309:16]
 endmodule
-module TLMonitor_76_inTestHarness(
+module TLMonitor_73_inTestHarness(
   input         clock,
   input         reset,
   input         io_in_a_ready,
@@ -17652,6 +18393,7 @@ module TLMonitor_76_inTestHarness(
   wire [31:0] plusarg_reader_out; // @[PlusArg.scala 80:11]
   wire [31:0] plusarg_reader_1_out; // @[PlusArg.scala 80:11]
   wire  _T_2 = ~reset; // @[Monitor.scala 42:11]
+  wire  _source_ok_T_4 = io_in_a_bits_source <= 4'h9; // @[Parameters.scala 57:20]
   wire [12:0] _is_aligned_mask_T_1 = 13'h3f << io_in_a_bits_size; // @[package.scala 234:77]
   wire [5:0] is_aligned_mask = ~_is_aligned_mask_T_1[5:0]; // @[package.scala 234:46]
   wire [28:0] _GEN_71 = {{23'd0}, is_aligned_mask}; // @[Edges.scala 20:16]
@@ -17697,6 +18439,7 @@ module TLMonitor_76_inTestHarness(
   wire  mask_eq_13 = mask_eq_5 & mask_bit_2; // @[Misc.scala 213:27]
   wire  mask_acc_13 = mask_acc_5 | mask_size_2 & mask_eq_13; // @[Misc.scala 214:29]
   wire [7:0] mask = {mask_acc_13,mask_acc_12,mask_acc_11,mask_acc_10,mask_acc_9,mask_acc_8,mask_acc_7,mask_acc_6}; // @[Cat.scala 31:58]
+  wire  _T_10 = ~_source_ok_T_4; // @[Monitor.scala 63:7]
   wire  _T_20 = io_in_a_bits_opcode == 3'h6; // @[Monitor.scala 81:25]
   wire [28:0] _T_33 = io_in_a_bits_address ^ 29'h10000000; // @[Parameters.scala 137:31]
   wire [29:0] _T_34 = {1'b0,$signed(_T_33)}; // @[Parameters.scala 137:49]
@@ -17714,6 +18457,7 @@ module TLMonitor_76_inTestHarness(
   wire  _T_183 = io_in_a_bits_param == 3'h0; // @[Monitor.scala 109:31]
   wire  _T_187 = io_in_a_bits_mask == mask; // @[Monitor.scala 110:30]
   wire  _T_195 = io_in_a_bits_opcode == 3'h0; // @[Monitor.scala 114:25]
+  wire  _T_218 = _source_ok_T_4 & _T_172; // @[Monitor.scala 115:71]
   wire  _T_236 = io_in_a_bits_opcode == 3'h1; // @[Monitor.scala 122:25]
   wire [7:0] _T_273 = ~mask; // @[Monitor.scala 127:33]
   wire [7:0] _T_274 = io_in_a_bits_mask & _T_273; // @[Monitor.scala 127:31]
@@ -17725,6 +18469,7 @@ module TLMonitor_76_inTestHarness(
   wire  _T_355 = io_in_a_bits_opcode == 3'h5; // @[Monitor.scala 146:25]
   wire  _T_385 = io_in_a_bits_param <= 3'h1; // @[Bundles.scala 158:28]
   wire  _T_397 = io_in_d_bits_opcode <= 3'h6; // @[Bundles.scala 42:24]
+  wire  _source_ok_T_10 = io_in_d_bits_source <= 4'h9; // @[Parameters.scala 57:20]
   wire  _T_401 = io_in_d_bits_opcode == 3'h6; // @[Monitor.scala 310:25]
   wire  _T_405 = io_in_d_bits_size >= 3'h3; // @[Monitor.scala 312:27]
   wire  _T_409 = io_in_d_bits_param == 2'h0; // @[Monitor.scala 313:28]
@@ -17776,9 +18521,9 @@ module TLMonitor_76_inTestHarness(
   wire  _T_580 = io_in_d_bits_source == source_1; // @[Monitor.scala 545:29]
   wire  _T_584 = io_in_d_bits_sink == sink; // @[Monitor.scala 546:29]
   wire  _T_588 = io_in_d_bits_denied == denied; // @[Monitor.scala 547:29]
-  reg [15:0] inflight; // @[Monitor.scala 611:27]
-  reg [63:0] inflight_opcodes; // @[Monitor.scala 613:35]
-  reg [63:0] inflight_sizes; // @[Monitor.scala 615:33]
+  reg [9:0] inflight; // @[Monitor.scala 611:27]
+  reg [39:0] inflight_opcodes; // @[Monitor.scala 613:35]
+  reg [39:0] inflight_sizes; // @[Monitor.scala 615:33]
   reg [2:0] a_first_counter_1; // @[Edges.scala 228:27]
   wire [2:0] a_first_counter1_1 = a_first_counter_1 - 3'h1; // @[Edges.scala 229:28]
   wire  a_first_1 = a_first_counter_1 == 3'h0; // @[Edges.scala 230:25]
@@ -17787,17 +18532,17 @@ module TLMonitor_76_inTestHarness(
   wire  d_first_1 = d_first_counter_1 == 3'h0; // @[Edges.scala 230:25]
   wire [5:0] _GEN_72 = {io_in_d_bits_source, 2'h0}; // @[Monitor.scala 634:69]
   wire [6:0] _a_opcode_lookup_T = {{1'd0}, _GEN_72}; // @[Monitor.scala 634:69]
-  wire [63:0] _a_opcode_lookup_T_1 = inflight_opcodes >> _a_opcode_lookup_T; // @[Monitor.scala 634:44]
+  wire [39:0] _a_opcode_lookup_T_1 = inflight_opcodes >> _a_opcode_lookup_T; // @[Monitor.scala 634:44]
   wire [15:0] _a_opcode_lookup_T_5 = 16'h10 - 16'h1; // @[Monitor.scala 609:57]
-  wire [63:0] _GEN_73 = {{48'd0}, _a_opcode_lookup_T_5}; // @[Monitor.scala 634:97]
-  wire [63:0] _a_opcode_lookup_T_6 = _a_opcode_lookup_T_1 & _GEN_73; // @[Monitor.scala 634:97]
-  wire [63:0] _a_opcode_lookup_T_7 = {{1'd0}, _a_opcode_lookup_T_6[63:1]}; // @[Monitor.scala 634:152]
-  wire [63:0] _a_size_lookup_T_1 = inflight_sizes >> _a_opcode_lookup_T; // @[Monitor.scala 638:40]
-  wire [63:0] _a_size_lookup_T_6 = _a_size_lookup_T_1 & _GEN_73; // @[Monitor.scala 638:91]
-  wire [63:0] _a_size_lookup_T_7 = {{1'd0}, _a_size_lookup_T_6[63:1]}; // @[Monitor.scala 638:144]
+  wire [39:0] _GEN_73 = {{24'd0}, _a_opcode_lookup_T_5}; // @[Monitor.scala 634:97]
+  wire [39:0] _a_opcode_lookup_T_6 = _a_opcode_lookup_T_1 & _GEN_73; // @[Monitor.scala 634:97]
+  wire [39:0] _a_opcode_lookup_T_7 = {{1'd0}, _a_opcode_lookup_T_6[39:1]}; // @[Monitor.scala 634:152]
+  wire [39:0] _a_size_lookup_T_1 = inflight_sizes >> _a_opcode_lookup_T; // @[Monitor.scala 638:40]
+  wire [39:0] _a_size_lookup_T_6 = _a_size_lookup_T_1 & _GEN_73; // @[Monitor.scala 638:91]
+  wire [39:0] _a_size_lookup_T_7 = {{1'd0}, _a_size_lookup_T_6[39:1]}; // @[Monitor.scala 638:144]
   wire  _T_594 = io_in_a_valid & a_first_1; // @[Monitor.scala 648:26]
   wire [15:0] _a_set_wo_ready_T = 16'h1 << io_in_a_bits_source; // @[OneHot.scala 57:35]
-  wire [15:0] a_set_wo_ready = io_in_a_valid & a_first_1 ? _a_set_wo_ready_T : 16'h0; // @[Monitor.scala 648:71 649:22]
+  wire [15:0] _GEN_15 = io_in_a_valid & a_first_1 ? _a_set_wo_ready_T : 16'h0; // @[Monitor.scala 648:71 649:22]
   wire  _T_597 = _a_first_T & a_first_1; // @[Monitor.scala 652:27]
   wire [3:0] _a_opcodes_set_interm_T = {io_in_a_bits_opcode, 1'h0}; // @[Monitor.scala 654:53]
   wire [3:0] _a_opcodes_set_interm_T_1 = _a_opcodes_set_interm_T | 4'h1; // @[Monitor.scala 654:61]
@@ -17811,23 +18556,23 @@ module TLMonitor_76_inTestHarness(
   wire [3:0] a_sizes_set_interm = _a_first_T & a_first_1 ? _a_sizes_set_interm_T_1 : 4'h0; // @[Monitor.scala 652:72 655:28]
   wire [130:0] _GEN_2 = {{127'd0}, a_sizes_set_interm}; // @[Monitor.scala 657:52]
   wire [130:0] _a_sizes_set_T_1 = _GEN_2 << _a_opcodes_set_T; // @[Monitor.scala 657:52]
-  wire [15:0] _T_599 = inflight >> io_in_a_bits_source; // @[Monitor.scala 658:26]
+  wire [9:0] _T_599 = inflight >> io_in_a_bits_source; // @[Monitor.scala 658:26]
   wire  _T_601 = ~_T_599[0]; // @[Monitor.scala 658:17]
-  wire [15:0] a_set = _a_first_T & a_first_1 ? _a_set_wo_ready_T : 16'h0; // @[Monitor.scala 652:72 653:28]
+  wire [15:0] _GEN_16 = _a_first_T & a_first_1 ? _a_set_wo_ready_T : 16'h0; // @[Monitor.scala 652:72 653:28]
   wire [130:0] _GEN_19 = _a_first_T & a_first_1 ? _a_opcodes_set_T_1 : 131'h0; // @[Monitor.scala 652:72 656:28]
   wire [130:0] _GEN_20 = _a_first_T & a_first_1 ? _a_sizes_set_T_1 : 131'h0; // @[Monitor.scala 652:72 657:28]
   wire  _T_605 = io_in_d_valid & d_first_1; // @[Monitor.scala 671:26]
   wire  _T_607 = ~_T_401; // @[Monitor.scala 671:74]
   wire  _T_608 = io_in_d_valid & d_first_1 & ~_T_401; // @[Monitor.scala 671:71]
   wire [15:0] _d_clr_wo_ready_T = 16'h1 << io_in_d_bits_source; // @[OneHot.scala 57:35]
-  wire [15:0] d_clr_wo_ready = io_in_d_valid & d_first_1 & ~_T_401 ? _d_clr_wo_ready_T : 16'h0; // @[Monitor.scala 671:90 672:22]
+  wire [15:0] _GEN_21 = io_in_d_valid & d_first_1 & ~_T_401 ? _d_clr_wo_ready_T : 16'h0; // @[Monitor.scala 671:90 672:22]
   wire [142:0] _GEN_3 = {{127'd0}, _a_opcode_lookup_T_5}; // @[Monitor.scala 677:76]
   wire [142:0] _d_opcodes_clr_T_5 = _GEN_3 << _a_opcode_lookup_T; // @[Monitor.scala 677:76]
-  wire [15:0] d_clr = _d_first_T & d_first_1 & _T_607 ? _d_clr_wo_ready_T : 16'h0; // @[Monitor.scala 675:91 676:21]
+  wire [15:0] _GEN_22 = _d_first_T & d_first_1 & _T_607 ? _d_clr_wo_ready_T : 16'h0; // @[Monitor.scala 675:91 676:21]
   wire [142:0] _GEN_23 = _d_first_T & d_first_1 & _T_607 ? _d_opcodes_clr_T_5 : 143'h0; // @[Monitor.scala 675:91 677:21]
   wire  _same_cycle_resp_T_2 = io_in_a_bits_source == io_in_d_bits_source; // @[Monitor.scala 681:113]
   wire  same_cycle_resp = _T_594 & io_in_a_bits_source == io_in_d_bits_source; // @[Monitor.scala 681:88]
-  wire [15:0] _T_618 = inflight >> io_in_d_bits_source; // @[Monitor.scala 682:25]
+  wire [9:0] _T_618 = inflight >> io_in_d_bits_source; // @[Monitor.scala 682:25]
   wire  _T_620 = _T_618[0] | same_cycle_resp; // @[Monitor.scala 682:49]
   wire [2:0] _GEN_27 = 3'h2 == io_in_a_bits_opcode ? 3'h1 : 3'h0; // @[Monitor.scala 685:{38,38}]
   wire [2:0] _GEN_28 = 3'h3 == io_in_a_bits_opcode ? 3'h1 : _GEN_27; // @[Monitor.scala 685:{38,38}]
@@ -17856,40 +18601,45 @@ module TLMonitor_76_inTestHarness(
   wire  _T_642 = _GEN_82 == a_size_lookup; // @[Monitor.scala 691:36]
   wire  _T_652 = _T_605 & a_first_1 & io_in_a_valid & _same_cycle_resp_T_2 & _T_607; // @[Monitor.scala 694:116]
   wire  _T_654 = ~io_in_d_ready | io_in_a_ready; // @[Monitor.scala 695:32]
+  wire [9:0] a_set_wo_ready = _GEN_15[9:0];
+  wire [9:0] d_clr_wo_ready = _GEN_21[9:0];
   wire  _T_661 = a_set_wo_ready != d_clr_wo_ready | ~(|a_set_wo_ready); // @[Monitor.scala 699:48]
-  wire [15:0] _inflight_T = inflight | a_set; // @[Monitor.scala 702:27]
-  wire [15:0] _inflight_T_1 = ~d_clr; // @[Monitor.scala 702:38]
-  wire [15:0] _inflight_T_2 = _inflight_T & _inflight_T_1; // @[Monitor.scala 702:36]
-  wire [63:0] a_opcodes_set = _GEN_19[63:0];
-  wire [63:0] _inflight_opcodes_T = inflight_opcodes | a_opcodes_set; // @[Monitor.scala 703:43]
-  wire [63:0] d_opcodes_clr = _GEN_23[63:0];
-  wire [63:0] _inflight_opcodes_T_1 = ~d_opcodes_clr; // @[Monitor.scala 703:62]
-  wire [63:0] _inflight_opcodes_T_2 = _inflight_opcodes_T & _inflight_opcodes_T_1; // @[Monitor.scala 703:60]
-  wire [63:0] a_sizes_set = _GEN_20[63:0];
-  wire [63:0] _inflight_sizes_T = inflight_sizes | a_sizes_set; // @[Monitor.scala 704:39]
-  wire [63:0] _inflight_sizes_T_2 = _inflight_sizes_T & _inflight_opcodes_T_1; // @[Monitor.scala 704:54]
+  wire [9:0] a_set = _GEN_16[9:0];
+  wire [9:0] _inflight_T = inflight | a_set; // @[Monitor.scala 702:27]
+  wire [9:0] d_clr = _GEN_22[9:0];
+  wire [9:0] _inflight_T_1 = ~d_clr; // @[Monitor.scala 702:38]
+  wire [9:0] _inflight_T_2 = _inflight_T & _inflight_T_1; // @[Monitor.scala 702:36]
+  wire [39:0] a_opcodes_set = _GEN_19[39:0];
+  wire [39:0] _inflight_opcodes_T = inflight_opcodes | a_opcodes_set; // @[Monitor.scala 703:43]
+  wire [39:0] d_opcodes_clr = _GEN_23[39:0];
+  wire [39:0] _inflight_opcodes_T_1 = ~d_opcodes_clr; // @[Monitor.scala 703:62]
+  wire [39:0] _inflight_opcodes_T_2 = _inflight_opcodes_T & _inflight_opcodes_T_1; // @[Monitor.scala 703:60]
+  wire [39:0] a_sizes_set = _GEN_20[39:0];
+  wire [39:0] _inflight_sizes_T = inflight_sizes | a_sizes_set; // @[Monitor.scala 704:39]
+  wire [39:0] _inflight_sizes_T_2 = _inflight_sizes_T & _inflight_opcodes_T_1; // @[Monitor.scala 704:54]
   reg [31:0] watchdog; // @[Monitor.scala 706:27]
   wire  _T_670 = ~(|inflight) | plusarg_reader_out == 32'h0 | watchdog < plusarg_reader_out; // @[Monitor.scala 709:47]
   wire [31:0] _watchdog_T_1 = watchdog + 32'h1; // @[Monitor.scala 711:26]
-  reg [15:0] inflight_1; // @[Monitor.scala 723:35]
-  reg [63:0] inflight_sizes_1; // @[Monitor.scala 725:35]
+  reg [9:0] inflight_1; // @[Monitor.scala 723:35]
+  reg [39:0] inflight_sizes_1; // @[Monitor.scala 725:35]
   reg [2:0] d_first_counter_2; // @[Edges.scala 228:27]
   wire [2:0] d_first_counter1_2 = d_first_counter_2 - 3'h1; // @[Edges.scala 229:28]
   wire  d_first_2 = d_first_counter_2 == 3'h0; // @[Edges.scala 230:25]
-  wire [63:0] _c_size_lookup_T_1 = inflight_sizes_1 >> _a_opcode_lookup_T; // @[Monitor.scala 747:42]
-  wire [63:0] _c_size_lookup_T_6 = _c_size_lookup_T_1 & _GEN_73; // @[Monitor.scala 747:93]
-  wire [63:0] _c_size_lookup_T_7 = {{1'd0}, _c_size_lookup_T_6[63:1]}; // @[Monitor.scala 747:146]
+  wire [39:0] _c_size_lookup_T_1 = inflight_sizes_1 >> _a_opcode_lookup_T; // @[Monitor.scala 747:42]
+  wire [39:0] _c_size_lookup_T_6 = _c_size_lookup_T_1 & _GEN_73; // @[Monitor.scala 747:93]
+  wire [39:0] _c_size_lookup_T_7 = {{1'd0}, _c_size_lookup_T_6[39:1]}; // @[Monitor.scala 747:146]
   wire  _T_696 = io_in_d_valid & d_first_2 & _T_401; // @[Monitor.scala 779:71]
-  wire [15:0] d_clr_1 = _d_first_T & d_first_2 & _T_401 ? _d_clr_wo_ready_T : 16'h0; // @[Monitor.scala 783:90 784:21]
+  wire [15:0] _GEN_67 = _d_first_T & d_first_2 & _T_401 ? _d_clr_wo_ready_T : 16'h0; // @[Monitor.scala 783:90 784:21]
   wire [142:0] _GEN_68 = _d_first_T & d_first_2 & _T_401 ? _d_opcodes_clr_T_5 : 143'h0; // @[Monitor.scala 783:90 785:21]
-  wire [15:0] _T_704 = inflight_1 >> io_in_d_bits_source; // @[Monitor.scala 791:25]
+  wire [9:0] _T_704 = inflight_1 >> io_in_d_bits_source; // @[Monitor.scala 791:25]
   wire [3:0] c_size_lookup = _c_size_lookup_T_7[3:0];
   wire  _T_714 = _GEN_82 == c_size_lookup; // @[Monitor.scala 795:36]
-  wire [15:0] _inflight_T_4 = ~d_clr_1; // @[Monitor.scala 809:46]
-  wire [15:0] _inflight_T_5 = inflight_1 & _inflight_T_4; // @[Monitor.scala 809:44]
-  wire [63:0] d_opcodes_clr_1 = _GEN_68[63:0];
-  wire [63:0] _inflight_opcodes_T_4 = ~d_opcodes_clr_1; // @[Monitor.scala 810:62]
-  wire [63:0] _inflight_sizes_T_5 = inflight_sizes_1 & _inflight_opcodes_T_4; // @[Monitor.scala 811:56]
+  wire [9:0] d_clr_1 = _GEN_67[9:0];
+  wire [9:0] _inflight_T_4 = ~d_clr_1; // @[Monitor.scala 809:46]
+  wire [9:0] _inflight_T_5 = inflight_1 & _inflight_T_4; // @[Monitor.scala 809:44]
+  wire [39:0] d_opcodes_clr_1 = _GEN_68[39:0];
+  wire [39:0] _inflight_opcodes_T_4 = ~d_opcodes_clr_1; // @[Monitor.scala 810:62]
+  wire [39:0] _inflight_sizes_T_5 = inflight_sizes_1 & _inflight_opcodes_T_4; // @[Monitor.scala 811:56]
   reg [31:0] watchdog_1; // @[Monitor.scala 813:27]
   wire  _T_739 = ~(|inflight_1) | plusarg_reader_1_out == 32'h0 | watchdog_1 < plusarg_reader_1_out; // @[Monitor.scala 816:47]
   wire [31:0] _watchdog_T_3 = watchdog_1 + 32'h1; // @[Monitor.scala 818:26]
@@ -17960,17 +18710,17 @@ module TLMonitor_76_inTestHarness(
       denied <= io_in_d_bits_denied; // @[Monitor.scala 555:15]
     end
     if (reset) begin // @[Monitor.scala 611:27]
-      inflight <= 16'h0; // @[Monitor.scala 611:27]
+      inflight <= 10'h0; // @[Monitor.scala 611:27]
     end else begin
       inflight <= _inflight_T_2; // @[Monitor.scala 702:14]
     end
     if (reset) begin // @[Monitor.scala 613:35]
-      inflight_opcodes <= 64'h0; // @[Monitor.scala 613:35]
+      inflight_opcodes <= 40'h0; // @[Monitor.scala 613:35]
     end else begin
       inflight_opcodes <= _inflight_opcodes_T_2; // @[Monitor.scala 703:22]
     end
     if (reset) begin // @[Monitor.scala 615:33]
-      inflight_sizes <= 64'h0; // @[Monitor.scala 615:33]
+      inflight_sizes <= 40'h0; // @[Monitor.scala 615:33]
     end else begin
       inflight_sizes <= _inflight_sizes_T_2; // @[Monitor.scala 704:20]
     end
@@ -18008,12 +18758,12 @@ module TLMonitor_76_inTestHarness(
       watchdog <= _watchdog_T_1; // @[Monitor.scala 711:14]
     end
     if (reset) begin // @[Monitor.scala 723:35]
-      inflight_1 <= 16'h0; // @[Monitor.scala 723:35]
+      inflight_1 <= 10'h0; // @[Monitor.scala 723:35]
     end else begin
       inflight_1 <= _inflight_T_5; // @[Monitor.scala 809:22]
     end
     if (reset) begin // @[Monitor.scala 725:35]
-      inflight_sizes_1 <= 64'h0; // @[Monitor.scala 725:35]
+      inflight_sizes_1 <= 40'h0; // @[Monitor.scala 725:35]
     end else begin
       inflight_sizes_1 <= _inflight_sizes_T_5; // @[Monitor.scala 811:22]
     end
@@ -18111,10 +18861,23 @@ module TLMonitor_76_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_20 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_20 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_20 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel AcquireBlock carries invalid source ID (connected at SerialAdapter.scala:463:102)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -18290,10 +19053,23 @@ module TLMonitor_76_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_82 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_82 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_82 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel AcquirePerm carries invalid source ID (connected at SerialAdapter.scala:463:102)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -18445,10 +19221,23 @@ module TLMonitor_76_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_148 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_148 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_148 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel carries Get type which master claims it can't emit (connected at SerialAdapter.scala:463:102)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -18480,10 +19269,23 @@ module TLMonitor_76_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_148 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_148 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_148 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Get carries invalid source ID (connected at SerialAdapter.scala:463:102)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -18587,7 +19389,7 @@ module TLMonitor_76_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_172 & (io_in_a_valid & _T_195 & ~reset)) begin
+        if (~_T_218 & (io_in_a_valid & _T_195 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -18598,7 +19400,7 @@ module TLMonitor_76_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_195 & ~reset & ~_T_172) begin
+        if (io_in_a_valid & _T_195 & ~reset & ~_T_218) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel carries PutFull type which is unexpected using diplomatic parameters (connected at SerialAdapter.scala:463:102)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -18611,10 +19413,23 @@ module TLMonitor_76_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_195 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_195 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_195 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel PutFull carries invalid source ID (connected at SerialAdapter.scala:463:102)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -18694,7 +19509,7 @@ module TLMonitor_76_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_172 & (io_in_a_valid & _T_236 & ~reset)) begin
+        if (~_T_218 & (io_in_a_valid & _T_236 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -18705,7 +19520,7 @@ module TLMonitor_76_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_236 & ~reset & ~_T_172) begin
+        if (io_in_a_valid & _T_236 & ~reset & ~_T_218) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel carries PutPartial type which is unexpected using diplomatic parameters (connected at SerialAdapter.scala:463:102)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -18718,10 +19533,23 @@ module TLMonitor_76_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_236 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_236 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_236 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel PutPartial carries invalid source ID (connected at SerialAdapter.scala:463:102)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -18825,10 +19653,23 @@ module TLMonitor_76_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_279 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_279 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_279 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Arithmetic carries invalid source ID (connected at SerialAdapter.scala:463:102)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -18932,10 +19773,23 @@ module TLMonitor_76_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_317 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_317 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_317 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Logical carries invalid source ID (connected at SerialAdapter.scala:463:102)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -19039,10 +19893,23 @@ module TLMonitor_76_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_355 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_355 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_355 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Hint carries invalid source ID (connected at SerialAdapter.scala:463:102)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -19170,10 +20037,23 @@ module TLMonitor_76_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_401 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_401 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_401 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel ReleaseAck carries invalid source ID (connected at SerialAdapter.scala:463:102)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -19277,10 +20157,23 @@ module TLMonitor_76_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_421 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_421 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_421 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel Grant carries invalid source ID (connected at SerialAdapter.scala:463:102)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -19432,10 +20325,23 @@ module TLMonitor_76_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_449 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_449 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_449 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel GrantData carries invalid source ID (connected at SerialAdapter.scala:463:102)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -19587,10 +20493,23 @@ module TLMonitor_76_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_478 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_478 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_478 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel AccessAck carries invalid source ID (connected at SerialAdapter.scala:463:102)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -19670,10 +20589,23 @@ module TLMonitor_76_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_495 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_495 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_495 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel AccessAckData carries invalid source ID (connected at SerialAdapter.scala:463:102)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -19753,10 +20685,23 @@ module TLMonitor_76_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_513 & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_513 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_513 & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel HintAck carries invalid source ID (connected at SerialAdapter.scala:463:102)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -20479,11 +21424,11 @@ initial begin
   _RAND_12 = {1{`RANDOM}};
   denied = _RAND_12[0:0];
   _RAND_13 = {1{`RANDOM}};
-  inflight = _RAND_13[15:0];
+  inflight = _RAND_13[9:0];
   _RAND_14 = {2{`RANDOM}};
-  inflight_opcodes = _RAND_14[63:0];
+  inflight_opcodes = _RAND_14[39:0];
   _RAND_15 = {2{`RANDOM}};
-  inflight_sizes = _RAND_15[63:0];
+  inflight_sizes = _RAND_15[39:0];
   _RAND_16 = {1{`RANDOM}};
   a_first_counter_1 = _RAND_16[2:0];
   _RAND_17 = {1{`RANDOM}};
@@ -20491,9 +21436,9 @@ initial begin
   _RAND_18 = {1{`RANDOM}};
   watchdog = _RAND_18[31:0];
   _RAND_19 = {1{`RANDOM}};
-  inflight_1 = _RAND_19[15:0];
+  inflight_1 = _RAND_19[9:0];
   _RAND_20 = {2{`RANDOM}};
-  inflight_sizes_1 = _RAND_20[63:0];
+  inflight_sizes_1 = _RAND_20[39:0];
   _RAND_21 = {1{`RANDOM}};
   d_first_counter_2 = _RAND_21[2:0];
   _RAND_22 = {1{`RANDOM}};
@@ -20506,7 +21451,7 @@ end // initial
 `endif
 `endif // SYNTHESIS
 endmodule
-module Repeater_11_inTestHarness(
+module Repeater_9_inTestHarness(
   input         clock,
   input         reset,
   input         io_repeat,
@@ -20807,7 +21752,7 @@ module TLFragmenter_10_inTestHarness(
   wire [28:0] _GEN_11 = {{23'd0}, _bundleOut_0_a_bits_address_T_5}; // @[Fragmenter.scala 304:49]
   wire [4:0] bundleOut_0_a_bits_source_hi = {repeater_io_deq_bits_source,aToggle}; // @[Cat.scala 31:58]
   wire  _T_9 = ~repeater_io_full; // @[Fragmenter.scala 309:17]
-  TLMonitor_76_inTestHarness monitor ( // @[Nodes.scala 24:25]
+  TLMonitor_73_inTestHarness monitor ( // @[Nodes.scala 24:25]
     .clock(monitor_clock),
     .reset(monitor_reset),
     .io_in_a_ready(monitor_io_in_a_ready),
@@ -20829,7 +21774,7 @@ module TLFragmenter_10_inTestHarness(
     .io_in_d_bits_denied(monitor_io_in_d_bits_denied),
     .io_in_d_bits_corrupt(monitor_io_in_d_bits_corrupt)
   );
-  Repeater_11_inTestHarness repeater ( // @[Fragmenter.scala 262:30]
+  Repeater_9_inTestHarness repeater ( // @[Fragmenter.scala 262:30]
     .clock(repeater_clock),
     .reset(repeater_reset),
     .io_repeat(repeater_io_repeat),
@@ -21048,7 +21993,7 @@ end // initial
 `endif
 `endif // SYNTHESIS
 endmodule
-module TLMonitor_77_inTestHarness(
+module TLMonitor_74_inTestHarness(
   input         clock,
   input         reset,
   input         io_in_a_ready,
@@ -21085,6 +22030,7 @@ module TLMonitor_77_inTestHarness(
   wire [31:0] plusarg_reader_out; // @[PlusArg.scala 80:11]
   wire [31:0] plusarg_reader_1_out; // @[PlusArg.scala 80:11]
   wire  _T_2 = ~reset; // @[Monitor.scala 42:11]
+  wire  _source_ok_T_4 = io_in_a_bits_source <= 4'h9; // @[Parameters.scala 57:20]
   wire [12:0] _is_aligned_mask_T_1 = 13'h3f << io_in_a_bits_size; // @[package.scala 234:77]
   wire [5:0] is_aligned_mask = ~_is_aligned_mask_T_1[5:0]; // @[package.scala 234:46]
   wire [17:0] _GEN_71 = {{12'd0}, is_aligned_mask}; // @[Edges.scala 20:16]
@@ -21130,6 +22076,7 @@ module TLMonitor_77_inTestHarness(
   wire  mask_eq_13 = mask_eq_5 & mask_bit_2; // @[Misc.scala 213:27]
   wire  mask_acc_13 = mask_acc_5 | mask_size_2 & mask_eq_13; // @[Misc.scala 214:29]
   wire [7:0] mask = {mask_acc_13,mask_acc_12,mask_acc_11,mask_acc_10,mask_acc_9,mask_acc_8,mask_acc_7,mask_acc_6}; // @[Cat.scala 31:58]
+  wire  _T_10 = ~_source_ok_T_4; // @[Monitor.scala 63:7]
   wire  _T_20 = io_in_a_bits_opcode == 3'h6; // @[Monitor.scala 81:25]
   wire [17:0] _T_33 = io_in_a_bits_address ^ 18'h20000; // @[Parameters.scala 137:31]
   wire [18:0] _T_34 = {1'b0,$signed(_T_33)}; // @[Parameters.scala 137:49]
@@ -21157,6 +22104,7 @@ module TLMonitor_77_inTestHarness(
   wire  _T_341 = io_in_a_bits_param <= 3'h3; // @[Bundles.scala 145:30]
   wire  _T_349 = io_in_a_bits_opcode == 3'h5; // @[Monitor.scala 146:25]
   wire  _T_379 = io_in_a_bits_param <= 3'h1; // @[Bundles.scala 158:28]
+  wire  _source_ok_T_10 = io_in_d_bits_source <= 4'h9; // @[Parameters.scala 57:20]
   wire  a_first_done = io_in_a_ready & io_in_a_valid; // @[Decoupled.scala 50:35]
   reg [2:0] a_first_counter; // @[Edges.scala 228:27]
   wire [2:0] a_first_counter1 = a_first_counter - 3'h1; // @[Edges.scala 229:28]
@@ -21184,9 +22132,9 @@ module TLMonitor_77_inTestHarness(
   wire  _T_561 = io_in_d_valid & ~d_first; // @[Monitor.scala 541:19]
   wire  _T_570 = io_in_d_bits_size == size_1; // @[Monitor.scala 544:29]
   wire  _T_574 = io_in_d_bits_source == source_1; // @[Monitor.scala 545:29]
-  reg [15:0] inflight; // @[Monitor.scala 611:27]
-  reg [63:0] inflight_opcodes; // @[Monitor.scala 613:35]
-  reg [63:0] inflight_sizes; // @[Monitor.scala 615:33]
+  reg [9:0] inflight; // @[Monitor.scala 611:27]
+  reg [39:0] inflight_opcodes; // @[Monitor.scala 613:35]
+  reg [39:0] inflight_sizes; // @[Monitor.scala 615:33]
   reg [2:0] a_first_counter_1; // @[Edges.scala 228:27]
   wire [2:0] a_first_counter1_1 = a_first_counter_1 - 3'h1; // @[Edges.scala 229:28]
   wire  a_first_1 = a_first_counter_1 == 3'h0; // @[Edges.scala 230:25]
@@ -21195,14 +22143,14 @@ module TLMonitor_77_inTestHarness(
   wire  d_first_1 = d_first_counter_1 == 3'h0; // @[Edges.scala 230:25]
   wire [5:0] _GEN_72 = {io_in_d_bits_source, 2'h0}; // @[Monitor.scala 634:69]
   wire [6:0] _a_opcode_lookup_T = {{1'd0}, _GEN_72}; // @[Monitor.scala 634:69]
-  wire [63:0] _a_opcode_lookup_T_1 = inflight_opcodes >> _a_opcode_lookup_T; // @[Monitor.scala 634:44]
+  wire [39:0] _a_opcode_lookup_T_1 = inflight_opcodes >> _a_opcode_lookup_T; // @[Monitor.scala 634:44]
   wire [15:0] _a_opcode_lookup_T_5 = 16'h10 - 16'h1; // @[Monitor.scala 609:57]
-  wire [63:0] _GEN_73 = {{48'd0}, _a_opcode_lookup_T_5}; // @[Monitor.scala 634:97]
-  wire [63:0] _a_opcode_lookup_T_6 = _a_opcode_lookup_T_1 & _GEN_73; // @[Monitor.scala 634:97]
-  wire [63:0] _a_opcode_lookup_T_7 = {{1'd0}, _a_opcode_lookup_T_6[63:1]}; // @[Monitor.scala 634:152]
-  wire [63:0] _a_size_lookup_T_1 = inflight_sizes >> _a_opcode_lookup_T; // @[Monitor.scala 638:40]
-  wire [63:0] _a_size_lookup_T_6 = _a_size_lookup_T_1 & _GEN_73; // @[Monitor.scala 638:91]
-  wire [63:0] _a_size_lookup_T_7 = {{1'd0}, _a_size_lookup_T_6[63:1]}; // @[Monitor.scala 638:144]
+  wire [39:0] _GEN_73 = {{24'd0}, _a_opcode_lookup_T_5}; // @[Monitor.scala 634:97]
+  wire [39:0] _a_opcode_lookup_T_6 = _a_opcode_lookup_T_1 & _GEN_73; // @[Monitor.scala 634:97]
+  wire [39:0] _a_opcode_lookup_T_7 = {{1'd0}, _a_opcode_lookup_T_6[39:1]}; // @[Monitor.scala 634:152]
+  wire [39:0] _a_size_lookup_T_1 = inflight_sizes >> _a_opcode_lookup_T; // @[Monitor.scala 638:40]
+  wire [39:0] _a_size_lookup_T_6 = _a_size_lookup_T_1 & _GEN_73; // @[Monitor.scala 638:91]
+  wire [39:0] _a_size_lookup_T_7 = {{1'd0}, _a_size_lookup_T_6[39:1]}; // @[Monitor.scala 638:144]
   wire  _T_588 = io_in_a_valid & a_first_1; // @[Monitor.scala 648:26]
   wire [15:0] _a_set_wo_ready_T = 16'h1 << io_in_a_bits_source; // @[OneHot.scala 57:35]
   wire  _T_591 = a_first_done & a_first_1; // @[Monitor.scala 652:27]
@@ -21218,20 +22166,20 @@ module TLMonitor_77_inTestHarness(
   wire [3:0] a_sizes_set_interm = a_first_done & a_first_1 ? _a_sizes_set_interm_T_1 : 4'h0; // @[Monitor.scala 652:72 655:28]
   wire [130:0] _GEN_2 = {{127'd0}, a_sizes_set_interm}; // @[Monitor.scala 657:52]
   wire [130:0] _a_sizes_set_T_1 = _GEN_2 << _a_opcodes_set_T; // @[Monitor.scala 657:52]
-  wire [15:0] _T_593 = inflight >> io_in_a_bits_source; // @[Monitor.scala 658:26]
+  wire [9:0] _T_593 = inflight >> io_in_a_bits_source; // @[Monitor.scala 658:26]
   wire  _T_595 = ~_T_593[0]; // @[Monitor.scala 658:17]
-  wire [15:0] a_set = a_first_done & a_first_1 ? _a_set_wo_ready_T : 16'h0; // @[Monitor.scala 652:72 653:28]
+  wire [15:0] _GEN_16 = a_first_done & a_first_1 ? _a_set_wo_ready_T : 16'h0; // @[Monitor.scala 652:72 653:28]
   wire [130:0] _GEN_19 = a_first_done & a_first_1 ? _a_opcodes_set_T_1 : 131'h0; // @[Monitor.scala 652:72 656:28]
   wire [130:0] _GEN_20 = a_first_done & a_first_1 ? _a_sizes_set_T_1 : 131'h0; // @[Monitor.scala 652:72 657:28]
   wire  _T_599 = io_in_d_valid & d_first_1; // @[Monitor.scala 671:26]
   wire [15:0] _d_clr_wo_ready_T = 16'h1 << io_in_d_bits_source; // @[OneHot.scala 57:35]
   wire [142:0] _GEN_3 = {{127'd0}, _a_opcode_lookup_T_5}; // @[Monitor.scala 677:76]
   wire [142:0] _d_opcodes_clr_T_5 = _GEN_3 << _a_opcode_lookup_T; // @[Monitor.scala 677:76]
-  wire [15:0] d_clr = _d_first_T & d_first_1 ? _d_clr_wo_ready_T : 16'h0; // @[Monitor.scala 675:91 676:21]
+  wire [15:0] _GEN_22 = _d_first_T & d_first_1 ? _d_clr_wo_ready_T : 16'h0; // @[Monitor.scala 675:91 676:21]
   wire [142:0] _GEN_23 = _d_first_T & d_first_1 ? _d_opcodes_clr_T_5 : 143'h0; // @[Monitor.scala 675:91 677:21]
   wire  _same_cycle_resp_T_2 = io_in_a_bits_source == io_in_d_bits_source; // @[Monitor.scala 681:113]
   wire  same_cycle_resp = _T_588 & io_in_a_bits_source == io_in_d_bits_source; // @[Monitor.scala 681:88]
-  wire [15:0] _T_612 = inflight >> io_in_d_bits_source; // @[Monitor.scala 682:25]
+  wire [9:0] _T_612 = inflight >> io_in_d_bits_source; // @[Monitor.scala 682:25]
   wire  _T_614 = _T_612[0] | same_cycle_resp; // @[Monitor.scala 682:49]
   wire [2:0] _GEN_27 = 3'h2 == io_in_a_bits_opcode ? 3'h1 : 3'h0; // @[Monitor.scala 685:{38,38}]
   wire [2:0] _GEN_28 = 3'h3 == io_in_a_bits_opcode ? 3'h1 : _GEN_27; // @[Monitor.scala 685:{38,38}]
@@ -21260,17 +22208,19 @@ module TLMonitor_77_inTestHarness(
   wire  _T_636 = _GEN_82 == a_size_lookup; // @[Monitor.scala 691:36]
   wire  _T_644 = _T_599 & a_first_1 & io_in_a_valid & _same_cycle_resp_T_2; // @[Monitor.scala 694:65]
   wire  _T_648 = ~io_in_d_ready | io_in_a_ready; // @[Monitor.scala 695:32]
-  wire [15:0] _inflight_T = inflight | a_set; // @[Monitor.scala 702:27]
-  wire [15:0] _inflight_T_1 = ~d_clr; // @[Monitor.scala 702:38]
-  wire [15:0] _inflight_T_2 = _inflight_T & _inflight_T_1; // @[Monitor.scala 702:36]
-  wire [63:0] a_opcodes_set = _GEN_19[63:0];
-  wire [63:0] _inflight_opcodes_T = inflight_opcodes | a_opcodes_set; // @[Monitor.scala 703:43]
-  wire [63:0] d_opcodes_clr = _GEN_23[63:0];
-  wire [63:0] _inflight_opcodes_T_1 = ~d_opcodes_clr; // @[Monitor.scala 703:62]
-  wire [63:0] _inflight_opcodes_T_2 = _inflight_opcodes_T & _inflight_opcodes_T_1; // @[Monitor.scala 703:60]
-  wire [63:0] a_sizes_set = _GEN_20[63:0];
-  wire [63:0] _inflight_sizes_T = inflight_sizes | a_sizes_set; // @[Monitor.scala 704:39]
-  wire [63:0] _inflight_sizes_T_2 = _inflight_sizes_T & _inflight_opcodes_T_1; // @[Monitor.scala 704:54]
+  wire [9:0] a_set = _GEN_16[9:0];
+  wire [9:0] _inflight_T = inflight | a_set; // @[Monitor.scala 702:27]
+  wire [9:0] d_clr = _GEN_22[9:0];
+  wire [9:0] _inflight_T_1 = ~d_clr; // @[Monitor.scala 702:38]
+  wire [9:0] _inflight_T_2 = _inflight_T & _inflight_T_1; // @[Monitor.scala 702:36]
+  wire [39:0] a_opcodes_set = _GEN_19[39:0];
+  wire [39:0] _inflight_opcodes_T = inflight_opcodes | a_opcodes_set; // @[Monitor.scala 703:43]
+  wire [39:0] d_opcodes_clr = _GEN_23[39:0];
+  wire [39:0] _inflight_opcodes_T_1 = ~d_opcodes_clr; // @[Monitor.scala 703:62]
+  wire [39:0] _inflight_opcodes_T_2 = _inflight_opcodes_T & _inflight_opcodes_T_1; // @[Monitor.scala 703:60]
+  wire [39:0] a_sizes_set = _GEN_20[39:0];
+  wire [39:0] _inflight_sizes_T = inflight_sizes | a_sizes_set; // @[Monitor.scala 704:39]
+  wire [39:0] _inflight_sizes_T_2 = _inflight_sizes_T & _inflight_opcodes_T_1; // @[Monitor.scala 704:54]
   reg [31:0] watchdog; // @[Monitor.scala 706:27]
   wire  _T_657 = ~(|inflight) | plusarg_reader_out == 32'h0 | watchdog < plusarg_reader_out; // @[Monitor.scala 709:47]
   wire [31:0] _watchdog_T_1 = watchdog + 32'h1; // @[Monitor.scala 711:26]
@@ -21321,17 +22271,17 @@ module TLMonitor_77_inTestHarness(
       source_1 <= io_in_d_bits_source; // @[Monitor.scala 553:15]
     end
     if (reset) begin // @[Monitor.scala 611:27]
-      inflight <= 16'h0; // @[Monitor.scala 611:27]
+      inflight <= 10'h0; // @[Monitor.scala 611:27]
     end else begin
       inflight <= _inflight_T_2; // @[Monitor.scala 702:14]
     end
     if (reset) begin // @[Monitor.scala 613:35]
-      inflight_opcodes <= 64'h0; // @[Monitor.scala 613:35]
+      inflight_opcodes <= 40'h0; // @[Monitor.scala 613:35]
     end else begin
       inflight_opcodes <= _inflight_opcodes_T_2; // @[Monitor.scala 703:22]
     end
     if (reset) begin // @[Monitor.scala 615:33]
-      inflight_sizes <= 64'h0; // @[Monitor.scala 615:33]
+      inflight_sizes <= 40'h0; // @[Monitor.scala 615:33]
     end else begin
       inflight_sizes <= _inflight_sizes_T_2; // @[Monitor.scala 704:20]
     end
@@ -21434,10 +22384,23 @@ module TLMonitor_77_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_20 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_20 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_20 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel AcquireBlock carries invalid source ID (connected at SerialAdapter.scala:464:69)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -21613,10 +22576,23 @@ module TLMonitor_77_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_82 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_82 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_82 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel AcquirePerm carries invalid source ID (connected at SerialAdapter.scala:464:69)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -21768,10 +22744,23 @@ module TLMonitor_77_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_148 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_148 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_148 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel carries Get type which master claims it can't emit (connected at SerialAdapter.scala:464:69)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -21803,10 +22792,23 @@ module TLMonitor_77_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_148 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_148 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_148 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Get carries invalid source ID (connected at SerialAdapter.scala:464:69)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -21934,10 +22936,23 @@ module TLMonitor_77_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_195 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_195 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_195 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel PutFull carries invalid source ID (connected at SerialAdapter.scala:464:69)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -22041,10 +23056,23 @@ module TLMonitor_77_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_233 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_233 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_233 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel PutPartial carries invalid source ID (connected at SerialAdapter.scala:464:69)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -22148,10 +23176,23 @@ module TLMonitor_77_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_273 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_273 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_273 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Arithmetic carries invalid source ID (connected at SerialAdapter.scala:464:69)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -22255,10 +23296,23 @@ module TLMonitor_77_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_311 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_311 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_311 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Logical carries invalid source ID (connected at SerialAdapter.scala:464:69)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -22362,10 +23416,23 @@ module TLMonitor_77_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_349 & ~reset)) begin
+        if (~_source_ok_T_4 & (io_in_a_valid & _T_349 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_a_valid & _T_349 & ~reset & _T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'A' channel Hint carries invalid source ID (connected at SerialAdapter.scala:464:69)\n    at Monitor.scala:42 assert(cond, message)\n"
+            ); // @[Monitor.scala 42:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -22480,10 +23547,23 @@ module TLMonitor_77_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_2)) begin
+        if (~_source_ok_T_10 & (io_in_d_valid & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
+      end
+    `endif
+    `endif // SYNTHESIS
+    `ifndef SYNTHESIS
+    `ifdef PRINTF_COND
+      if (`PRINTF_COND) begin
+    `endif
+        if (io_in_d_valid & _T_2 & ~_source_ok_T_10) begin
+          $fwrite(32'h80000002,
+            "Assertion failed: 'D' channel AccessAckData carries invalid source ID (connected at SerialAdapter.scala:464:69)\n    at Monitor.scala:49 assert(cond, message)\n"
+            ); // @[Monitor.scala 49:11]
+        end
+    `ifdef PRINTF_COND
       end
     `endif
     `endif // SYNTHESIS
@@ -23022,11 +24102,11 @@ initial begin
   _RAND_8 = {1{`RANDOM}};
   source_1 = _RAND_8[3:0];
   _RAND_9 = {1{`RANDOM}};
-  inflight = _RAND_9[15:0];
+  inflight = _RAND_9[9:0];
   _RAND_10 = {2{`RANDOM}};
-  inflight_opcodes = _RAND_10[63:0];
+  inflight_opcodes = _RAND_10[39:0];
   _RAND_11 = {2{`RANDOM}};
-  inflight_sizes = _RAND_11[63:0];
+  inflight_sizes = _RAND_11[39:0];
   _RAND_12 = {1{`RANDOM}};
   a_first_counter_1 = _RAND_12[2:0];
   _RAND_13 = {1{`RANDOM}};
@@ -23041,7 +24121,7 @@ end // initial
 `endif
 `endif // SYNTHESIS
 endmodule
-module Repeater_12_inTestHarness(
+module Repeater_10_inTestHarness(
   input         clock,
   input         reset,
   input         io_repeat,
@@ -23316,7 +24396,7 @@ module TLFragmenter_11_inTestHarness(
   wire [17:0] _GEN_10 = {{12'd0}, _bundleOut_0_a_bits_address_T_5}; // @[Fragmenter.scala 304:49]
   wire [4:0] bundleOut_0_a_bits_source_hi = {repeater_io_deq_bits_source,aToggle}; // @[Cat.scala 31:58]
   wire  _T_9 = ~repeater_io_full; // @[Fragmenter.scala 309:17]
-  TLMonitor_77_inTestHarness monitor ( // @[Nodes.scala 24:25]
+  TLMonitor_74_inTestHarness monitor ( // @[Nodes.scala 24:25]
     .clock(monitor_clock),
     .reset(monitor_reset),
     .io_in_a_ready(monitor_io_in_a_ready),
@@ -23333,7 +24413,7 @@ module TLFragmenter_11_inTestHarness(
     .io_in_d_bits_size(monitor_io_in_d_bits_size),
     .io_in_d_bits_source(monitor_io_in_d_bits_source)
   );
-  Repeater_12_inTestHarness repeater ( // @[Fragmenter.scala 262:30]
+  Repeater_10_inTestHarness repeater ( // @[Fragmenter.scala 262:30]
     .clock(repeater_clock),
     .reset(repeater_reset),
     .io_repeat(repeater_io_repeat),
@@ -23529,7 +24609,7 @@ end // initial
 `endif
 `endif // SYNTHESIS
 endmodule
-module TLMonitor_78_inTestHarness(
+module TLMonitor_75_inTestHarness(
   input         clock,
   input         reset,
   input         io_in_a_ready,
@@ -23544,7 +24624,7 @@ module TLMonitor_78_inTestHarness(
   input  [1:0]  io_in_d_bits_param,
   input  [3:0]  io_in_d_bits_size,
   input         io_in_d_bits_source,
-  input  [3:0]  io_in_d_bits_sink,
+  input  [2:0]  io_in_d_bits_sink,
   input         io_in_d_bits_denied,
   input         io_in_d_bits_corrupt
 );
@@ -23687,33 +24767,29 @@ module TLMonitor_78_inTestHarness(
   wire  _T_690 = _T_689 == 8'h0; // @[Monitor.scala 127:40]
   wire  _T_694 = io_in_a_bits_opcode == 3'h2; // @[Monitor.scala 130:25]
   wire  _T_702 = io_in_a_bits_size <= 4'h3; // @[Parameters.scala 92:42]
-  wire  _T_745 = _T_27 | _T_32 | _T_42 | _T_47 | _T_52 | _T_57 | _T_62; // @[Parameters.scala 671:42]
-  wire  _T_746 = _T_702 & _T_745; // @[Parameters.scala 670:56]
-  wire  _T_761 = io_in_a_bits_size <= 4'h4; // @[Parameters.scala 92:42]
-  wire  _T_774 = _T_82 | _T_87; // @[Parameters.scala 671:42]
-  wire  _T_775 = _T_761 & _T_774; // @[Parameters.scala 670:56]
-  wire  _T_778 = _T_746 | _T_775; // @[Parameters.scala 672:30]
-  wire  _T_779 = _T_17 & _T_778; // @[Monitor.scala 131:74]
-  wire  _T_797 = io_in_a_bits_opcode == 3'h3; // @[Monitor.scala 138:25]
-  wire  _T_900 = io_in_a_bits_opcode == 3'h5; // @[Monitor.scala 146:25]
-  wire  _T_981 = _T_400 & _T_89; // @[Parameters.scala 670:56]
-  wire  _T_984 = _T_398 | _T_981; // @[Parameters.scala 672:30]
-  wire  _T_985 = _T_17 & _T_984; // @[Monitor.scala 147:68]
-  wire  _T_1007 = io_in_d_bits_opcode <= 3'h6; // @[Bundles.scala 42:24]
+  wire  _T_757 = _T_27 | _T_32 | _T_42 | _T_47 | _T_52 | _T_57 | _T_82 | _T_62 | _T_87; // @[Parameters.scala 671:42]
+  wire  _T_758 = _T_702 & _T_757; // @[Parameters.scala 670:56]
+  wire  _T_774 = _T_17 & _T_758; // @[Monitor.scala 131:74]
+  wire  _T_792 = io_in_a_bits_opcode == 3'h3; // @[Monitor.scala 138:25]
+  wire  _T_890 = io_in_a_bits_opcode == 3'h5; // @[Monitor.scala 146:25]
+  wire  _T_971 = _T_400 & _T_89; // @[Parameters.scala 670:56]
+  wire  _T_974 = _T_398 | _T_971; // @[Parameters.scala 672:30]
+  wire  _T_975 = _T_17 & _T_974; // @[Monitor.scala 147:68]
+  wire  _T_997 = io_in_d_bits_opcode <= 3'h6; // @[Bundles.scala 42:24]
   wire  _source_ok_T_1 = ~io_in_d_bits_source; // @[Parameters.scala 46:9]
-  wire  _T_1011 = io_in_d_bits_opcode == 3'h6; // @[Monitor.scala 310:25]
-  wire  _T_1015 = io_in_d_bits_size >= 4'h3; // @[Monitor.scala 312:27]
-  wire  _T_1019 = io_in_d_bits_param == 2'h0; // @[Monitor.scala 313:28]
-  wire  _T_1023 = ~io_in_d_bits_corrupt; // @[Monitor.scala 314:15]
-  wire  _T_1027 = ~io_in_d_bits_denied; // @[Monitor.scala 315:15]
-  wire  _T_1031 = io_in_d_bits_opcode == 3'h4; // @[Monitor.scala 318:25]
-  wire  _T_1042 = io_in_d_bits_param <= 2'h2; // @[Bundles.scala 102:26]
-  wire  _T_1046 = io_in_d_bits_param != 2'h2; // @[Monitor.scala 323:28]
-  wire  _T_1059 = io_in_d_bits_opcode == 3'h5; // @[Monitor.scala 328:25]
-  wire  _T_1079 = _T_1027 | io_in_d_bits_corrupt; // @[Monitor.scala 334:30]
-  wire  _T_1088 = io_in_d_bits_opcode == 3'h0; // @[Monitor.scala 338:25]
-  wire  _T_1105 = io_in_d_bits_opcode == 3'h1; // @[Monitor.scala 346:25]
-  wire  _T_1123 = io_in_d_bits_opcode == 3'h2; // @[Monitor.scala 354:25]
+  wire  _T_1001 = io_in_d_bits_opcode == 3'h6; // @[Monitor.scala 310:25]
+  wire  _T_1005 = io_in_d_bits_size >= 4'h3; // @[Monitor.scala 312:27]
+  wire  _T_1009 = io_in_d_bits_param == 2'h0; // @[Monitor.scala 313:28]
+  wire  _T_1013 = ~io_in_d_bits_corrupt; // @[Monitor.scala 314:15]
+  wire  _T_1017 = ~io_in_d_bits_denied; // @[Monitor.scala 315:15]
+  wire  _T_1021 = io_in_d_bits_opcode == 3'h4; // @[Monitor.scala 318:25]
+  wire  _T_1032 = io_in_d_bits_param <= 2'h2; // @[Bundles.scala 102:26]
+  wire  _T_1036 = io_in_d_bits_param != 2'h2; // @[Monitor.scala 323:28]
+  wire  _T_1049 = io_in_d_bits_opcode == 3'h5; // @[Monitor.scala 328:25]
+  wire  _T_1069 = _T_1017 | io_in_d_bits_corrupt; // @[Monitor.scala 334:30]
+  wire  _T_1078 = io_in_d_bits_opcode == 3'h0; // @[Monitor.scala 338:25]
+  wire  _T_1095 = io_in_d_bits_opcode == 3'h1; // @[Monitor.scala 346:25]
+  wire  _T_1113 = io_in_d_bits_opcode == 3'h2; // @[Monitor.scala 354:25]
   wire  _a_first_T = io_in_a_ready & io_in_a_valid; // @[Decoupled.scala 50:35]
   wire [8:0] a_first_beats1_decode = is_aligned_mask[11:3]; // @[Edges.scala 219:59]
   wire  a_first_beats1_opdata = ~io_in_a_bits_opcode[2]; // @[Edges.scala 91:28]
@@ -23723,10 +24799,10 @@ module TLMonitor_78_inTestHarness(
   reg [2:0] opcode; // @[Monitor.scala 384:22]
   reg [3:0] size; // @[Monitor.scala 386:22]
   reg [31:0] address; // @[Monitor.scala 388:22]
-  wire  _T_1153 = io_in_a_valid & ~a_first; // @[Monitor.scala 389:19]
-  wire  _T_1154 = io_in_a_bits_opcode == opcode; // @[Monitor.scala 390:32]
-  wire  _T_1162 = io_in_a_bits_size == size; // @[Monitor.scala 392:32]
-  wire  _T_1170 = io_in_a_bits_address == address; // @[Monitor.scala 394:32]
+  wire  _T_1143 = io_in_a_valid & ~a_first; // @[Monitor.scala 389:19]
+  wire  _T_1144 = io_in_a_bits_opcode == opcode; // @[Monitor.scala 390:32]
+  wire  _T_1152 = io_in_a_bits_size == size; // @[Monitor.scala 392:32]
+  wire  _T_1160 = io_in_a_bits_address == address; // @[Monitor.scala 394:32]
   wire  _d_first_T = io_in_d_ready & io_in_d_valid; // @[Decoupled.scala 50:35]
   wire [26:0] _d_first_beats1_decode_T_1 = 27'hfff << io_in_d_bits_size; // @[package.scala 234:77]
   wire [11:0] _d_first_beats1_decode_T_3 = ~_d_first_beats1_decode_T_1[11:0]; // @[package.scala 234:46]
@@ -23739,15 +24815,15 @@ module TLMonitor_78_inTestHarness(
   reg [1:0] param_1; // @[Monitor.scala 536:22]
   reg [3:0] size_1; // @[Monitor.scala 537:22]
   reg  source_1; // @[Monitor.scala 538:22]
-  reg [3:0] sink; // @[Monitor.scala 539:22]
+  reg [2:0] sink; // @[Monitor.scala 539:22]
   reg  denied; // @[Monitor.scala 540:22]
-  wire  _T_1177 = io_in_d_valid & ~d_first; // @[Monitor.scala 541:19]
-  wire  _T_1178 = io_in_d_bits_opcode == opcode_1; // @[Monitor.scala 542:29]
-  wire  _T_1182 = io_in_d_bits_param == param_1; // @[Monitor.scala 543:29]
-  wire  _T_1186 = io_in_d_bits_size == size_1; // @[Monitor.scala 544:29]
-  wire  _T_1190 = io_in_d_bits_source == source_1; // @[Monitor.scala 545:29]
-  wire  _T_1194 = io_in_d_bits_sink == sink; // @[Monitor.scala 546:29]
-  wire  _T_1198 = io_in_d_bits_denied == denied; // @[Monitor.scala 547:29]
+  wire  _T_1167 = io_in_d_valid & ~d_first; // @[Monitor.scala 541:19]
+  wire  _T_1168 = io_in_d_bits_opcode == opcode_1; // @[Monitor.scala 542:29]
+  wire  _T_1172 = io_in_d_bits_param == param_1; // @[Monitor.scala 543:29]
+  wire  _T_1176 = io_in_d_bits_size == size_1; // @[Monitor.scala 544:29]
+  wire  _T_1180 = io_in_d_bits_source == source_1; // @[Monitor.scala 545:29]
+  wire  _T_1184 = io_in_d_bits_sink == sink; // @[Monitor.scala 546:29]
+  wire  _T_1188 = io_in_d_bits_denied == denied; // @[Monitor.scala 547:29]
   reg  inflight; // @[Monitor.scala 611:27]
   reg [3:0] inflight_opcodes; // @[Monitor.scala 613:35]
   reg [7:0] inflight_sizes; // @[Monitor.scala 615:33]
@@ -23770,9 +24846,9 @@ module TLMonitor_78_inTestHarness(
   wire [15:0] _GEN_75 = {{8'd0}, _a_size_lookup_T_1}; // @[Monitor.scala 638:91]
   wire [15:0] _a_size_lookup_T_6 = _GEN_75 & _a_size_lookup_T_5; // @[Monitor.scala 638:91]
   wire [15:0] _a_size_lookup_T_7 = {{1'd0}, _a_size_lookup_T_6[15:1]}; // @[Monitor.scala 638:144]
-  wire  _T_1204 = io_in_a_valid & a_first_1; // @[Monitor.scala 648:26]
+  wire  _T_1194 = io_in_a_valid & a_first_1; // @[Monitor.scala 648:26]
   wire [1:0] _GEN_15 = io_in_a_valid & a_first_1 ? 2'h1 : 2'h0; // @[Monitor.scala 648:71 649:22]
-  wire  _T_1207 = _a_first_T & a_first_1; // @[Monitor.scala 652:27]
+  wire  _T_1197 = _a_first_T & a_first_1; // @[Monitor.scala 652:27]
   wire [3:0] _a_opcodes_set_interm_T = {io_in_a_bits_opcode, 1'h0}; // @[Monitor.scala 654:53]
   wire [3:0] _a_opcodes_set_interm_T_1 = _a_opcodes_set_interm_T | 4'h1; // @[Monitor.scala 654:61]
   wire [4:0] _a_sizes_set_interm_T = {io_in_a_bits_size, 1'h0}; // @[Monitor.scala 655:51]
@@ -23781,24 +24857,24 @@ module TLMonitor_78_inTestHarness(
   wire [18:0] _a_opcodes_set_T_1 = {{15'd0}, a_opcodes_set_interm}; // @[Monitor.scala 656:54]
   wire [4:0] a_sizes_set_interm = _a_first_T & a_first_1 ? _a_sizes_set_interm_T_1 : 5'h0; // @[Monitor.scala 652:72 655:28]
   wire [19:0] _a_sizes_set_T_1 = {{15'd0}, a_sizes_set_interm}; // @[Monitor.scala 657:52]
-  wire  _T_1211 = ~inflight; // @[Monitor.scala 658:17]
+  wire  _T_1201 = ~inflight; // @[Monitor.scala 658:17]
   wire [1:0] _GEN_16 = _a_first_T & a_first_1 ? 2'h1 : 2'h0; // @[Monitor.scala 652:72 653:28]
   wire [18:0] _GEN_19 = _a_first_T & a_first_1 ? _a_opcodes_set_T_1 : 19'h0; // @[Monitor.scala 652:72 656:28]
   wire [19:0] _GEN_20 = _a_first_T & a_first_1 ? _a_sizes_set_T_1 : 20'h0; // @[Monitor.scala 652:72 657:28]
-  wire  _T_1215 = io_in_d_valid & d_first_1; // @[Monitor.scala 671:26]
-  wire  _T_1217 = ~_T_1011; // @[Monitor.scala 671:74]
-  wire  _T_1218 = io_in_d_valid & d_first_1 & ~_T_1011; // @[Monitor.scala 671:71]
+  wire  _T_1205 = io_in_d_valid & d_first_1; // @[Monitor.scala 671:26]
+  wire  _T_1207 = ~_T_1001; // @[Monitor.scala 671:74]
+  wire  _T_1208 = io_in_d_valid & d_first_1 & ~_T_1001; // @[Monitor.scala 671:71]
   wire [1:0] _d_clr_wo_ready_T = 2'h1 << io_in_d_bits_source; // @[OneHot.scala 57:35]
-  wire [1:0] _GEN_21 = io_in_d_valid & d_first_1 & ~_T_1011 ? _d_clr_wo_ready_T : 2'h0; // @[Monitor.scala 671:90 672:22]
+  wire [1:0] _GEN_21 = io_in_d_valid & d_first_1 & ~_T_1001 ? _d_clr_wo_ready_T : 2'h0; // @[Monitor.scala 671:90 672:22]
   wire [30:0] _GEN_1 = {{15'd0}, _a_opcode_lookup_T_5}; // @[Monitor.scala 677:76]
   wire [30:0] _d_opcodes_clr_T_5 = _GEN_1 << _a_opcode_lookup_T; // @[Monitor.scala 677:76]
   wire [30:0] _GEN_2 = {{15'd0}, _a_size_lookup_T_5}; // @[Monitor.scala 678:74]
   wire [30:0] _d_sizes_clr_T_5 = _GEN_2 << _a_size_lookup_T; // @[Monitor.scala 678:74]
-  wire [1:0] _GEN_22 = _d_first_T & d_first_1 & _T_1217 ? _d_clr_wo_ready_T : 2'h0; // @[Monitor.scala 675:91 676:21]
-  wire [30:0] _GEN_23 = _d_first_T & d_first_1 & _T_1217 ? _d_opcodes_clr_T_5 : 31'h0; // @[Monitor.scala 675:91 677:21]
-  wire [30:0] _GEN_24 = _d_first_T & d_first_1 & _T_1217 ? _d_sizes_clr_T_5 : 31'h0; // @[Monitor.scala 675:91 678:21]
-  wire  same_cycle_resp = _T_1204 & _source_ok_T_1; // @[Monitor.scala 681:88]
-  wire  _T_1230 = inflight >> io_in_d_bits_source | same_cycle_resp; // @[Monitor.scala 682:49]
+  wire [1:0] _GEN_22 = _d_first_T & d_first_1 & _T_1207 ? _d_clr_wo_ready_T : 2'h0; // @[Monitor.scala 675:91 676:21]
+  wire [30:0] _GEN_23 = _d_first_T & d_first_1 & _T_1207 ? _d_opcodes_clr_T_5 : 31'h0; // @[Monitor.scala 675:91 677:21]
+  wire [30:0] _GEN_24 = _d_first_T & d_first_1 & _T_1207 ? _d_sizes_clr_T_5 : 31'h0; // @[Monitor.scala 675:91 678:21]
+  wire  same_cycle_resp = _T_1194 & _source_ok_T_1; // @[Monitor.scala 681:88]
+  wire  _T_1220 = inflight >> io_in_d_bits_source | same_cycle_resp; // @[Monitor.scala 682:49]
   wire [2:0] _GEN_27 = 3'h2 == io_in_a_bits_opcode ? 3'h1 : 3'h0; // @[Monitor.scala 685:{38,38}]
   wire [2:0] _GEN_28 = 3'h3 == io_in_a_bits_opcode ? 3'h1 : _GEN_27; // @[Monitor.scala 685:{38,38}]
   wire [2:0] _GEN_29 = 3'h4 == io_in_a_bits_opcode ? 3'h1 : _GEN_28; // @[Monitor.scala 685:{38,38}]
@@ -23807,9 +24883,9 @@ module TLMonitor_78_inTestHarness(
   wire [2:0] _GEN_32 = 3'h7 == io_in_a_bits_opcode ? 3'h4 : _GEN_31; // @[Monitor.scala 685:{38,38}]
   wire [2:0] _GEN_39 = 3'h6 == io_in_a_bits_opcode ? 3'h5 : _GEN_30; // @[Monitor.scala 686:{39,39}]
   wire [2:0] _GEN_40 = 3'h7 == io_in_a_bits_opcode ? 3'h4 : _GEN_39; // @[Monitor.scala 686:{39,39}]
-  wire  _T_1235 = io_in_d_bits_opcode == _GEN_40; // @[Monitor.scala 686:39]
-  wire  _T_1236 = io_in_d_bits_opcode == _GEN_32 | _T_1235; // @[Monitor.scala 685:77]
-  wire  _T_1240 = io_in_a_bits_size == io_in_d_bits_size; // @[Monitor.scala 687:36]
+  wire  _T_1225 = io_in_d_bits_opcode == _GEN_40; // @[Monitor.scala 686:39]
+  wire  _T_1226 = io_in_d_bits_opcode == _GEN_32 | _T_1225; // @[Monitor.scala 685:77]
+  wire  _T_1230 = io_in_a_bits_size == io_in_d_bits_size; // @[Monitor.scala 687:36]
   wire [3:0] a_opcode_lookup = _a_opcode_lookup_T_7[3:0];
   wire [2:0] _GEN_43 = 3'h2 == a_opcode_lookup[2:0] ? 3'h1 : 3'h0; // @[Monitor.scala 689:{38,38}]
   wire [2:0] _GEN_44 = 3'h3 == a_opcode_lookup[2:0] ? 3'h1 : _GEN_43; // @[Monitor.scala 689:{38,38}]
@@ -23819,16 +24895,16 @@ module TLMonitor_78_inTestHarness(
   wire [2:0] _GEN_48 = 3'h7 == a_opcode_lookup[2:0] ? 3'h4 : _GEN_47; // @[Monitor.scala 689:{38,38}]
   wire [2:0] _GEN_55 = 3'h6 == a_opcode_lookup[2:0] ? 3'h5 : _GEN_46; // @[Monitor.scala 690:{38,38}]
   wire [2:0] _GEN_56 = 3'h7 == a_opcode_lookup[2:0] ? 3'h4 : _GEN_55; // @[Monitor.scala 690:{38,38}]
-  wire  _T_1247 = io_in_d_bits_opcode == _GEN_56; // @[Monitor.scala 690:38]
-  wire  _T_1248 = io_in_d_bits_opcode == _GEN_48 | _T_1247; // @[Monitor.scala 689:72]
+  wire  _T_1237 = io_in_d_bits_opcode == _GEN_56; // @[Monitor.scala 690:38]
+  wire  _T_1238 = io_in_d_bits_opcode == _GEN_48 | _T_1237; // @[Monitor.scala 689:72]
   wire [7:0] a_size_lookup = _a_size_lookup_T_7[7:0];
   wire [7:0] _GEN_78 = {{4'd0}, io_in_d_bits_size}; // @[Monitor.scala 691:36]
-  wire  _T_1252 = _GEN_78 == a_size_lookup; // @[Monitor.scala 691:36]
-  wire  _T_1262 = _T_1215 & a_first_1 & io_in_a_valid & _source_ok_T_1 & _T_1217; // @[Monitor.scala 694:116]
-  wire  _T_1264 = ~io_in_d_ready | io_in_a_ready; // @[Monitor.scala 695:32]
+  wire  _T_1242 = _GEN_78 == a_size_lookup; // @[Monitor.scala 691:36]
+  wire  _T_1252 = _T_1205 & a_first_1 & io_in_a_valid & _source_ok_T_1 & _T_1207; // @[Monitor.scala 694:116]
+  wire  _T_1254 = ~io_in_d_ready | io_in_a_ready; // @[Monitor.scala 695:32]
   wire  a_set_wo_ready = _GEN_15[0];
   wire  d_clr_wo_ready = _GEN_21[0];
-  wire  _T_1271 = a_set_wo_ready != d_clr_wo_ready | ~(|a_set_wo_ready); // @[Monitor.scala 699:48]
+  wire  _T_1261 = a_set_wo_ready != d_clr_wo_ready | ~(|a_set_wo_ready); // @[Monitor.scala 699:48]
   wire  a_set = _GEN_16[0];
   wire  d_clr = _GEN_22[0];
   wire [3:0] a_opcodes_set = _GEN_19[3:0];
@@ -23842,7 +24918,7 @@ module TLMonitor_78_inTestHarness(
   wire [7:0] _inflight_sizes_T_1 = ~d_sizes_clr; // @[Monitor.scala 704:56]
   wire [7:0] _inflight_sizes_T_2 = _inflight_sizes_T & _inflight_sizes_T_1; // @[Monitor.scala 704:54]
   reg [31:0] watchdog; // @[Monitor.scala 706:27]
-  wire  _T_1280 = ~(|inflight) | plusarg_reader_out == 32'h0 | watchdog < plusarg_reader_out; // @[Monitor.scala 709:47]
+  wire  _T_1270 = ~(|inflight) | plusarg_reader_out == 32'h0 | watchdog < plusarg_reader_out; // @[Monitor.scala 709:47]
   wire [31:0] _watchdog_T_1 = watchdog + 32'h1; // @[Monitor.scala 711:26]
   reg [7:0] inflight_sizes_1; // @[Monitor.scala 725:35]
   reg [8:0] d_first_counter_2; // @[Edges.scala 228:27]
@@ -23852,11 +24928,11 @@ module TLMonitor_78_inTestHarness(
   wire [15:0] _GEN_82 = {{8'd0}, _c_size_lookup_T_1}; // @[Monitor.scala 747:93]
   wire [15:0] _c_size_lookup_T_6 = _GEN_82 & _a_size_lookup_T_5; // @[Monitor.scala 747:93]
   wire [15:0] _c_size_lookup_T_7 = {{1'd0}, _c_size_lookup_T_6[15:1]}; // @[Monitor.scala 747:146]
-  wire  _T_1306 = io_in_d_valid & d_first_2 & _T_1011; // @[Monitor.scala 779:71]
-  wire [30:0] _GEN_69 = _d_first_T & d_first_2 & _T_1011 ? _d_sizes_clr_T_5 : 31'h0; // @[Monitor.scala 783:90 786:21]
-  wire  _T_1314 = 1'h0 >> io_in_d_bits_source; // @[Monitor.scala 791:25]
+  wire  _T_1296 = io_in_d_valid & d_first_2 & _T_1001; // @[Monitor.scala 779:71]
+  wire [30:0] _GEN_69 = _d_first_T & d_first_2 & _T_1001 ? _d_sizes_clr_T_5 : 31'h0; // @[Monitor.scala 783:90 786:21]
+  wire  _T_1304 = 1'h0 >> io_in_d_bits_source; // @[Monitor.scala 791:25]
   wire [7:0] c_size_lookup = _c_size_lookup_T_7[7:0];
-  wire  _T_1324 = _GEN_78 == c_size_lookup; // @[Monitor.scala 795:36]
+  wire  _T_1314 = _GEN_78 == c_size_lookup; // @[Monitor.scala 795:36]
   wire [7:0] d_sizes_clr_1 = _GEN_69[7:0];
   wire [7:0] _inflight_sizes_T_4 = ~d_sizes_clr_1; // @[Monitor.scala 811:58]
   wire [7:0] _inflight_sizes_T_5 = inflight_sizes_1 & _inflight_sizes_T_4; // @[Monitor.scala 811:56]
@@ -24659,7 +25735,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_779 & (io_in_a_valid & _T_694 & ~reset)) begin
+        if (~_T_774 & (io_in_a_valid & _T_694 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -24670,7 +25746,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_694 & ~reset & ~_T_779) begin
+        if (io_in_a_valid & _T_694 & ~reset & ~_T_774) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel carries Arithmetic type which is unexpected using diplomatic parameters (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -24753,7 +25829,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_779 & (io_in_a_valid & _T_797 & ~reset)) begin
+        if (~_T_774 & (io_in_a_valid & _T_792 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -24764,7 +25840,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_797 & ~reset & ~_T_779) begin
+        if (io_in_a_valid & _T_792 & ~reset & ~_T_774) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel carries Logical type which is unexpected using diplomatic parameters (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -24777,7 +25853,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_797 & ~reset)) begin
+        if (~1'h1 & (io_in_a_valid & _T_792 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -24788,7 +25864,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~is_aligned & (io_in_a_valid & _T_797 & ~reset)) begin
+        if (~is_aligned & (io_in_a_valid & _T_792 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -24799,7 +25875,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_797 & ~reset & ~is_aligned) begin
+        if (io_in_a_valid & _T_792 & ~reset & ~is_aligned) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel Logical address not aligned to size (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -24812,7 +25888,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_797 & ~reset)) begin
+        if (~1'h1 & (io_in_a_valid & _T_792 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -24823,7 +25899,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_478 & (io_in_a_valid & _T_797 & ~reset)) begin
+        if (~_T_478 & (io_in_a_valid & _T_792 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -24834,7 +25910,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_797 & ~reset & ~_T_478) begin
+        if (io_in_a_valid & _T_792 & ~reset & ~_T_478) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel Logical contains invalid mask (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -24847,7 +25923,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_985 & (io_in_a_valid & _T_900 & ~reset)) begin
+        if (~_T_975 & (io_in_a_valid & _T_890 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -24858,7 +25934,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_900 & ~reset & ~_T_985) begin
+        if (io_in_a_valid & _T_890 & ~reset & ~_T_975) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel carries Hint type which is unexpected using diplomatic parameters (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -24871,7 +25947,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_900 & ~reset)) begin
+        if (~1'h1 & (io_in_a_valid & _T_890 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -24882,7 +25958,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~is_aligned & (io_in_a_valid & _T_900 & ~reset)) begin
+        if (~is_aligned & (io_in_a_valid & _T_890 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -24893,7 +25969,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_900 & ~reset & ~is_aligned) begin
+        if (io_in_a_valid & _T_890 & ~reset & ~is_aligned) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel Hint address not aligned to size (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -24906,7 +25982,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_900 & ~reset)) begin
+        if (~1'h1 & (io_in_a_valid & _T_890 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -24917,7 +25993,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_478 & (io_in_a_valid & _T_900 & ~reset)) begin
+        if (~_T_478 & (io_in_a_valid & _T_890 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -24928,7 +26004,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_a_valid & _T_900 & ~reset & ~_T_478) begin
+        if (io_in_a_valid & _T_890 & ~reset & ~_T_478) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel Hint contains invalid mask (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -24941,7 +26017,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_a_valid & _T_900 & ~reset)) begin
+        if (~1'h1 & (io_in_a_valid & _T_890 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -24952,7 +26028,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1007 & (io_in_d_valid & _T_2)) begin
+        if (~_T_997 & (io_in_d_valid & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -24963,7 +26039,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_2 & ~_T_1007) begin
+        if (io_in_d_valid & _T_2 & ~_T_997) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel has invalid opcode (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -24976,7 +26052,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_source_ok_T_1 & (io_in_d_valid & _T_1011 & _T_2)) begin
+        if (~_source_ok_T_1 & (io_in_d_valid & _T_1001 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -24987,7 +26063,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1011 & _T_2 & ~_source_ok_T_1) begin
+        if (io_in_d_valid & _T_1001 & _T_2 & ~_source_ok_T_1) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel ReleaseAck carries invalid source ID (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25000,7 +26076,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1015 & (io_in_d_valid & _T_1011 & _T_2)) begin
+        if (~_T_1005 & (io_in_d_valid & _T_1001 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25011,7 +26087,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1011 & _T_2 & ~_T_1015) begin
+        if (io_in_d_valid & _T_1001 & _T_2 & ~_T_1005) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel ReleaseAck smaller than a beat (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25024,7 +26100,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1019 & (io_in_d_valid & _T_1011 & _T_2)) begin
+        if (~_T_1009 & (io_in_d_valid & _T_1001 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25035,7 +26111,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1011 & _T_2 & ~_T_1019) begin
+        if (io_in_d_valid & _T_1001 & _T_2 & ~_T_1009) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel ReleaseeAck carries invalid param (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25048,7 +26124,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1023 & (io_in_d_valid & _T_1011 & _T_2)) begin
+        if (~_T_1013 & (io_in_d_valid & _T_1001 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25059,7 +26135,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1011 & _T_2 & ~_T_1023) begin
+        if (io_in_d_valid & _T_1001 & _T_2 & ~_T_1013) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel ReleaseAck is corrupt (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25072,7 +26148,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1027 & (io_in_d_valid & _T_1011 & _T_2)) begin
+        if (~_T_1017 & (io_in_d_valid & _T_1001 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25083,7 +26159,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1011 & _T_2 & ~_T_1027) begin
+        if (io_in_d_valid & _T_1001 & _T_2 & ~_T_1017) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel ReleaseAck is denied (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25096,7 +26172,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_source_ok_T_1 & (io_in_d_valid & _T_1031 & _T_2)) begin
+        if (~_source_ok_T_1 & (io_in_d_valid & _T_1021 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25107,7 +26183,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1031 & _T_2 & ~_source_ok_T_1) begin
+        if (io_in_d_valid & _T_1021 & _T_2 & ~_source_ok_T_1) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel Grant carries invalid source ID (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25120,7 +26196,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_1031 & _T_2)) begin
+        if (~1'h1 & (io_in_d_valid & _T_1021 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25131,7 +26207,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1015 & (io_in_d_valid & _T_1031 & _T_2)) begin
+        if (~_T_1005 & (io_in_d_valid & _T_1021 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25142,7 +26218,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1031 & _T_2 & ~_T_1015) begin
+        if (io_in_d_valid & _T_1021 & _T_2 & ~_T_1005) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel Grant smaller than a beat (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25155,7 +26231,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1042 & (io_in_d_valid & _T_1031 & _T_2)) begin
+        if (~_T_1032 & (io_in_d_valid & _T_1021 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25166,7 +26242,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1031 & _T_2 & ~_T_1042) begin
+        if (io_in_d_valid & _T_1021 & _T_2 & ~_T_1032) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel Grant carries invalid cap param (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25179,7 +26255,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1046 & (io_in_d_valid & _T_1031 & _T_2)) begin
+        if (~_T_1036 & (io_in_d_valid & _T_1021 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25190,7 +26266,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1031 & _T_2 & ~_T_1046) begin
+        if (io_in_d_valid & _T_1021 & _T_2 & ~_T_1036) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel Grant carries toN param (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25203,7 +26279,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1023 & (io_in_d_valid & _T_1031 & _T_2)) begin
+        if (~_T_1013 & (io_in_d_valid & _T_1021 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25214,7 +26290,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1031 & _T_2 & ~_T_1023) begin
+        if (io_in_d_valid & _T_1021 & _T_2 & ~_T_1013) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel Grant is corrupt (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25227,7 +26303,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_1031 & _T_2)) begin
+        if (~1'h1 & (io_in_d_valid & _T_1021 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25238,7 +26314,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_source_ok_T_1 & (io_in_d_valid & _T_1059 & _T_2)) begin
+        if (~_source_ok_T_1 & (io_in_d_valid & _T_1049 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25249,7 +26325,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1059 & _T_2 & ~_source_ok_T_1) begin
+        if (io_in_d_valid & _T_1049 & _T_2 & ~_source_ok_T_1) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel GrantData carries invalid source ID (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25262,7 +26338,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_1059 & _T_2)) begin
+        if (~1'h1 & (io_in_d_valid & _T_1049 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25273,7 +26349,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1015 & (io_in_d_valid & _T_1059 & _T_2)) begin
+        if (~_T_1005 & (io_in_d_valid & _T_1049 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25284,7 +26360,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1059 & _T_2 & ~_T_1015) begin
+        if (io_in_d_valid & _T_1049 & _T_2 & ~_T_1005) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel GrantData smaller than a beat (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25297,7 +26373,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1042 & (io_in_d_valid & _T_1059 & _T_2)) begin
+        if (~_T_1032 & (io_in_d_valid & _T_1049 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25308,7 +26384,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1059 & _T_2 & ~_T_1042) begin
+        if (io_in_d_valid & _T_1049 & _T_2 & ~_T_1032) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel GrantData carries invalid cap param (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25321,7 +26397,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1046 & (io_in_d_valid & _T_1059 & _T_2)) begin
+        if (~_T_1036 & (io_in_d_valid & _T_1049 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25332,7 +26408,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1059 & _T_2 & ~_T_1046) begin
+        if (io_in_d_valid & _T_1049 & _T_2 & ~_T_1036) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel GrantData carries toN param (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25345,7 +26421,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1079 & (io_in_d_valid & _T_1059 & _T_2)) begin
+        if (~_T_1069 & (io_in_d_valid & _T_1049 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25356,7 +26432,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1059 & _T_2 & ~_T_1079) begin
+        if (io_in_d_valid & _T_1049 & _T_2 & ~_T_1069) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel GrantData is denied but not corrupt (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25369,7 +26445,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_1059 & _T_2)) begin
+        if (~1'h1 & (io_in_d_valid & _T_1049 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25380,7 +26456,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_source_ok_T_1 & (io_in_d_valid & _T_1088 & _T_2)) begin
+        if (~_source_ok_T_1 & (io_in_d_valid & _T_1078 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25391,7 +26467,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1088 & _T_2 & ~_source_ok_T_1) begin
+        if (io_in_d_valid & _T_1078 & _T_2 & ~_source_ok_T_1) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel AccessAck carries invalid source ID (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25404,7 +26480,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1019 & (io_in_d_valid & _T_1088 & _T_2)) begin
+        if (~_T_1009 & (io_in_d_valid & _T_1078 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25415,7 +26491,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1088 & _T_2 & ~_T_1019) begin
+        if (io_in_d_valid & _T_1078 & _T_2 & ~_T_1009) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel AccessAck carries invalid param (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25428,7 +26504,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1023 & (io_in_d_valid & _T_1088 & _T_2)) begin
+        if (~_T_1013 & (io_in_d_valid & _T_1078 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25439,7 +26515,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1088 & _T_2 & ~_T_1023) begin
+        if (io_in_d_valid & _T_1078 & _T_2 & ~_T_1013) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel AccessAck is corrupt (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25452,7 +26528,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_1088 & _T_2)) begin
+        if (~1'h1 & (io_in_d_valid & _T_1078 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25463,7 +26539,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_source_ok_T_1 & (io_in_d_valid & _T_1105 & _T_2)) begin
+        if (~_source_ok_T_1 & (io_in_d_valid & _T_1095 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25474,7 +26550,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1105 & _T_2 & ~_source_ok_T_1) begin
+        if (io_in_d_valid & _T_1095 & _T_2 & ~_source_ok_T_1) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel AccessAckData carries invalid source ID (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25487,7 +26563,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1019 & (io_in_d_valid & _T_1105 & _T_2)) begin
+        if (~_T_1009 & (io_in_d_valid & _T_1095 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25498,7 +26574,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1105 & _T_2 & ~_T_1019) begin
+        if (io_in_d_valid & _T_1095 & _T_2 & ~_T_1009) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel AccessAckData carries invalid param (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25511,7 +26587,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1079 & (io_in_d_valid & _T_1105 & _T_2)) begin
+        if (~_T_1069 & (io_in_d_valid & _T_1095 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25522,7 +26598,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1105 & _T_2 & ~_T_1079) begin
+        if (io_in_d_valid & _T_1095 & _T_2 & ~_T_1069) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel AccessAckData is denied but not corrupt (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25535,7 +26611,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_1105 & _T_2)) begin
+        if (~1'h1 & (io_in_d_valid & _T_1095 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25546,7 +26622,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_source_ok_T_1 & (io_in_d_valid & _T_1123 & _T_2)) begin
+        if (~_source_ok_T_1 & (io_in_d_valid & _T_1113 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25557,7 +26633,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1123 & _T_2 & ~_source_ok_T_1) begin
+        if (io_in_d_valid & _T_1113 & _T_2 & ~_source_ok_T_1) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel HintAck carries invalid source ID (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25570,7 +26646,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1019 & (io_in_d_valid & _T_1123 & _T_2)) begin
+        if (~_T_1009 & (io_in_d_valid & _T_1113 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25581,7 +26657,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1123 & _T_2 & ~_T_1019) begin
+        if (io_in_d_valid & _T_1113 & _T_2 & ~_T_1009) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel HintAck carries invalid param (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25594,7 +26670,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1023 & (io_in_d_valid & _T_1123 & _T_2)) begin
+        if (~_T_1013 & (io_in_d_valid & _T_1113 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25605,7 +26681,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (io_in_d_valid & _T_1123 & _T_2 & ~_T_1023) begin
+        if (io_in_d_valid & _T_1113 & _T_2 & ~_T_1013) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel HintAck is corrupt (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25618,7 +26694,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (io_in_d_valid & _T_1123 & _T_2)) begin
+        if (~1'h1 & (io_in_d_valid & _T_1113 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25662,7 +26738,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1154 & (_T_1153 & ~reset)) begin
+        if (~_T_1144 & (_T_1143 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -25673,7 +26749,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1153 & ~reset & ~_T_1154) begin
+        if (_T_1143 & ~reset & ~_T_1144) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel opcode changed within multibeat operation (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -25686,7 +26762,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (_T_1153 & ~reset)) begin
+        if (~1'h1 & (_T_1143 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -25697,7 +26773,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1162 & (_T_1153 & ~reset)) begin
+        if (~_T_1152 & (_T_1143 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -25708,7 +26784,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1153 & ~reset & ~_T_1162) begin
+        if (_T_1143 & ~reset & ~_T_1152) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel size changed within multibeat operation (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -25721,7 +26797,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~1'h1 & (_T_1153 & ~reset)) begin
+        if (~1'h1 & (_T_1143 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -25732,7 +26808,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1170 & (_T_1153 & ~reset)) begin
+        if (~_T_1160 & (_T_1143 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -25743,7 +26819,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1153 & ~reset & ~_T_1170) begin
+        if (_T_1143 & ~reset & ~_T_1160) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel address changed with multibeat operation (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -25756,7 +26832,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1178 & (_T_1177 & _T_2)) begin
+        if (~_T_1168 & (_T_1167 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25767,7 +26843,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1177 & _T_2 & ~_T_1178) begin
+        if (_T_1167 & _T_2 & ~_T_1168) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel opcode changed within multibeat operation (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25780,7 +26856,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1182 & (_T_1177 & _T_2)) begin
+        if (~_T_1172 & (_T_1167 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25791,7 +26867,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1177 & _T_2 & ~_T_1182) begin
+        if (_T_1167 & _T_2 & ~_T_1172) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel param changed within multibeat operation (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25804,7 +26880,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1186 & (_T_1177 & _T_2)) begin
+        if (~_T_1176 & (_T_1167 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25815,7 +26891,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1177 & _T_2 & ~_T_1186) begin
+        if (_T_1167 & _T_2 & ~_T_1176) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel size changed within multibeat operation (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25828,7 +26904,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1190 & (_T_1177 & _T_2)) begin
+        if (~_T_1180 & (_T_1167 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25839,7 +26915,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1177 & _T_2 & ~_T_1190) begin
+        if (_T_1167 & _T_2 & ~_T_1180) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel source changed within multibeat operation (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25852,7 +26928,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1194 & (_T_1177 & _T_2)) begin
+        if (~_T_1184 & (_T_1167 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25863,7 +26939,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1177 & _T_2 & ~_T_1194) begin
+        if (_T_1167 & _T_2 & ~_T_1184) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel sink changed with multibeat operation (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25876,7 +26952,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1198 & (_T_1177 & _T_2)) begin
+        if (~_T_1188 & (_T_1167 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25887,7 +26963,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1177 & _T_2 & ~_T_1198) begin
+        if (_T_1167 & _T_2 & ~_T_1188) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel denied changed with multibeat operation (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25900,7 +26976,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1211 & (_T_1207 & ~reset)) begin
+        if (~_T_1201 & (_T_1197 & ~reset)) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -25911,7 +26987,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1207 & ~reset & ~_T_1211) begin
+        if (_T_1197 & ~reset & ~_T_1201) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' channel re-used a source ID (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -25924,7 +27000,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1230 & (_T_1218 & _T_2)) begin
+        if (~_T_1220 & (_T_1208 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25935,7 +27011,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1218 & _T_2 & ~_T_1230) begin
+        if (_T_1208 & _T_2 & ~_T_1220) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel acknowledged for nothing inflight (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25948,7 +27024,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1236 & (_T_1218 & same_cycle_resp & _T_2)) begin
+        if (~_T_1226 & (_T_1208 & same_cycle_resp & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25959,7 +27035,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1218 & same_cycle_resp & _T_2 & ~_T_1236) begin
+        if (_T_1208 & same_cycle_resp & _T_2 & ~_T_1226) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel contains improper opcode response (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25972,7 +27048,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1240 & (_T_1218 & same_cycle_resp & _T_2)) begin
+        if (~_T_1230 & (_T_1208 & same_cycle_resp & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -25983,7 +27059,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1218 & same_cycle_resp & _T_2 & ~_T_1240) begin
+        if (_T_1208 & same_cycle_resp & _T_2 & ~_T_1230) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel contains improper response size (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -25996,7 +27072,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1248 & (_T_1218 & ~same_cycle_resp & _T_2)) begin
+        if (~_T_1238 & (_T_1208 & ~same_cycle_resp & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -26007,7 +27083,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1218 & ~same_cycle_resp & _T_2 & ~_T_1248) begin
+        if (_T_1208 & ~same_cycle_resp & _T_2 & ~_T_1238) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel contains improper opcode response (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -26020,7 +27096,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1252 & (_T_1218 & ~same_cycle_resp & _T_2)) begin
+        if (~_T_1242 & (_T_1208 & ~same_cycle_resp & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -26031,7 +27107,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1218 & ~same_cycle_resp & _T_2 & ~_T_1252) begin
+        if (_T_1208 & ~same_cycle_resp & _T_2 & ~_T_1242) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel contains improper response size (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -26044,7 +27120,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1264 & (_T_1262 & _T_2)) begin
+        if (~_T_1254 & (_T_1252 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -26055,7 +27131,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1262 & _T_2 & ~_T_1264) begin
+        if (_T_1252 & _T_2 & ~_T_1254) begin
           $fwrite(32'h80000002,"Assertion failed: ready check\n    at Monitor.scala:49 assert(cond, message)\n"); // @[Monitor.scala 49:11]
         end
     `ifdef PRINTF_COND
@@ -26066,7 +27142,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1271 & _T_2) begin
+        if (~_T_1261 & _T_2) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -26077,7 +27153,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_2 & ~_T_1271) begin
+        if (_T_2 & ~_T_1261) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'A' and 'D' concurrent, despite minlatency 8 (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -26090,7 +27166,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1280 & ~reset) begin
+        if (~_T_1270 & ~reset) begin
           $fatal; // @[Monitor.scala 42:11]
         end
     `ifdef STOP_COND
@@ -26101,7 +27177,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (~reset & ~_T_1280) begin
+        if (~reset & ~_T_1270) begin
           $fwrite(32'h80000002,
             "Assertion failed: TileLink timeout expired (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:42 assert(cond, message)\n"
             ); // @[Monitor.scala 42:11]
@@ -26114,7 +27190,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1314 & (_T_1306 & _T_2)) begin
+        if (~_T_1304 & (_T_1296 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -26125,7 +27201,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1306 & _T_2 & ~_T_1314) begin
+        if (_T_1296 & _T_2 & ~_T_1304) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel acknowledged for nothing inflight (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -26138,7 +27214,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef STOP_COND
       if (`STOP_COND) begin
     `endif
-        if (~_T_1324 & (_T_1306 & _T_2)) begin
+        if (~_T_1314 & (_T_1296 & _T_2)) begin
           $fatal; // @[Monitor.scala 49:11]
         end
     `ifdef STOP_COND
@@ -26149,7 +27225,7 @@ module TLMonitor_78_inTestHarness(
     `ifdef PRINTF_COND
       if (`PRINTF_COND) begin
     `endif
-        if (_T_1306 & _T_2 & ~_T_1324) begin
+        if (_T_1296 & _T_2 & ~_T_1314) begin
           $fwrite(32'h80000002,
             "Assertion failed: 'D' channel contains improper response size (connected at SerialAdapter.scala:467:39)\n    at Monitor.scala:49 assert(cond, message)\n"
             ); // @[Monitor.scala 49:11]
@@ -26225,7 +27301,7 @@ initial begin
   _RAND_8 = {1{`RANDOM}};
   source_1 = _RAND_8[0:0];
   _RAND_9 = {1{`RANDOM}};
-  sink = _RAND_9[3:0];
+  sink = _RAND_9[2:0];
   _RAND_10 = {1{`RANDOM}};
   denied = _RAND_10[0:0];
   _RAND_11 = {1{`RANDOM}};
@@ -26281,7 +27357,7 @@ module TLBuffer_27_inTestHarness(
   input  [1:0]  auto_out_d_bits_param,
   input  [3:0]  auto_out_d_bits_size,
   input         auto_out_d_bits_source,
-  input  [3:0]  auto_out_d_bits_sink,
+  input  [2:0]  auto_out_d_bits_sink,
   input         auto_out_d_bits_denied,
   input  [63:0] auto_out_d_bits_data,
   input         auto_out_d_bits_corrupt
@@ -26300,7 +27376,7 @@ module TLBuffer_27_inTestHarness(
   wire [1:0] monitor_io_in_d_bits_param; // @[Nodes.scala 24:25]
   wire [3:0] monitor_io_in_d_bits_size; // @[Nodes.scala 24:25]
   wire  monitor_io_in_d_bits_source; // @[Nodes.scala 24:25]
-  wire [3:0] monitor_io_in_d_bits_sink; // @[Nodes.scala 24:25]
+  wire [2:0] monitor_io_in_d_bits_sink; // @[Nodes.scala 24:25]
   wire  monitor_io_in_d_bits_denied; // @[Nodes.scala 24:25]
   wire  monitor_io_in_d_bits_corrupt; // @[Nodes.scala 24:25]
   wire  bundleOut_0_a_q_clock; // @[Decoupled.scala 361:21]
@@ -26330,7 +27406,7 @@ module TLBuffer_27_inTestHarness(
   wire [1:0] bundleIn_0_d_q_io_enq_bits_param; // @[Decoupled.scala 361:21]
   wire [3:0] bundleIn_0_d_q_io_enq_bits_size; // @[Decoupled.scala 361:21]
   wire  bundleIn_0_d_q_io_enq_bits_source; // @[Decoupled.scala 361:21]
-  wire [3:0] bundleIn_0_d_q_io_enq_bits_sink; // @[Decoupled.scala 361:21]
+  wire [2:0] bundleIn_0_d_q_io_enq_bits_sink; // @[Decoupled.scala 361:21]
   wire  bundleIn_0_d_q_io_enq_bits_denied; // @[Decoupled.scala 361:21]
   wire [63:0] bundleIn_0_d_q_io_enq_bits_data; // @[Decoupled.scala 361:21]
   wire  bundleIn_0_d_q_io_enq_bits_corrupt; // @[Decoupled.scala 361:21]
@@ -26340,11 +27416,11 @@ module TLBuffer_27_inTestHarness(
   wire [1:0] bundleIn_0_d_q_io_deq_bits_param; // @[Decoupled.scala 361:21]
   wire [3:0] bundleIn_0_d_q_io_deq_bits_size; // @[Decoupled.scala 361:21]
   wire  bundleIn_0_d_q_io_deq_bits_source; // @[Decoupled.scala 361:21]
-  wire [3:0] bundleIn_0_d_q_io_deq_bits_sink; // @[Decoupled.scala 361:21]
+  wire [2:0] bundleIn_0_d_q_io_deq_bits_sink; // @[Decoupled.scala 361:21]
   wire  bundleIn_0_d_q_io_deq_bits_denied; // @[Decoupled.scala 361:21]
   wire [63:0] bundleIn_0_d_q_io_deq_bits_data; // @[Decoupled.scala 361:21]
   wire  bundleIn_0_d_q_io_deq_bits_corrupt; // @[Decoupled.scala 361:21]
-  TLMonitor_78_inTestHarness monitor ( // @[Nodes.scala 24:25]
+  TLMonitor_75_inTestHarness monitor ( // @[Nodes.scala 24:25]
     .clock(monitor_clock),
     .reset(monitor_reset),
     .io_in_a_ready(monitor_io_in_a_ready),
@@ -26512,7 +27588,7 @@ module SerialRAM_inTestHarness(
   wire [1:0] serdesser_auto_manager_in_d_bits_param; // @[SerialAdapter.scala 447:29]
   wire [3:0] serdesser_auto_manager_in_d_bits_size; // @[SerialAdapter.scala 447:29]
   wire  serdesser_auto_manager_in_d_bits_source; // @[SerialAdapter.scala 447:29]
-  wire [3:0] serdesser_auto_manager_in_d_bits_sink; // @[SerialAdapter.scala 447:29]
+  wire [2:0] serdesser_auto_manager_in_d_bits_sink; // @[SerialAdapter.scala 447:29]
   wire  serdesser_auto_manager_in_d_bits_denied; // @[SerialAdapter.scala 447:29]
   wire [63:0] serdesser_auto_manager_in_d_bits_data; // @[SerialAdapter.scala 447:29]
   wire  serdesser_auto_manager_in_d_bits_corrupt; // @[SerialAdapter.scala 447:29]
@@ -26770,7 +27846,7 @@ module SerialRAM_inTestHarness(
   wire [1:0] buffer_1_auto_out_d_bits_param; // @[Buffer.scala 68:28]
   wire [3:0] buffer_1_auto_out_d_bits_size; // @[Buffer.scala 68:28]
   wire  buffer_1_auto_out_d_bits_source; // @[Buffer.scala 68:28]
-  wire [3:0] buffer_1_auto_out_d_bits_sink; // @[Buffer.scala 68:28]
+  wire [2:0] buffer_1_auto_out_d_bits_sink; // @[Buffer.scala 68:28]
   wire  buffer_1_auto_out_d_bits_denied; // @[Buffer.scala 68:28]
   wire [63:0] buffer_1_auto_out_d_bits_data; // @[Buffer.scala 68:28]
   wire  buffer_1_auto_out_d_bits_corrupt; // @[Buffer.scala 68:28]

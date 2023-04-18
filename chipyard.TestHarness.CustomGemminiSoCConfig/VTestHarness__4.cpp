@@ -7,8 +7,8 @@
 
 #include "verilated_dpi.h"
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__72(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__72\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__71(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__71\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->__Vdly__TestHarness__DOT__SimJTAG__DOT__init_done_sticky 
@@ -55,30 +55,6 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__72(VTestHarness__Syms* __restric
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x12U]);
     vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x13U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x13U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x14U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x14U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x15U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x15U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x16U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x16U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x17U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x17U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x18U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x18U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x19U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x19U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x1aU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x1aU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x1bU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x1bU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x1cU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x1cU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x1dU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x1dU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x1eU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x1eU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x1fU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x1fU]);
     if (vlTOPp->reset) {
         vlTOPp->TestHarness__DOT__uart_sim_0__DOT__txSlackCount = 0U;
     } else {
@@ -133,30 +109,6 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__72(VTestHarness__Syms* __restric
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_opcodes_T_2[0x12U]);
     vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_opcodes[0x13U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_opcodes_T_2[0x13U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_opcodes[0x14U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_opcodes_T_2[0x14U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_opcodes[0x15U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_opcodes_T_2[0x15U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_opcodes[0x16U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_opcodes_T_2[0x16U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_opcodes[0x17U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_opcodes_T_2[0x17U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_opcodes[0x18U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_opcodes_T_2[0x18U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_opcodes[0x19U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_opcodes_T_2[0x19U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_opcodes[0x1aU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_opcodes_T_2[0x1aU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_opcodes[0x1bU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_opcodes_T_2[0x1bU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_opcodes[0x1cU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_opcodes_T_2[0x1cU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_opcodes[0x1dU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_opcodes_T_2[0x1dU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_opcodes[0x1eU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_opcodes_T_2[0x1eU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_opcodes[0x1fU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_opcodes_T_2[0x1fU]);
     vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_opcodes[0U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_opcodes_T_2[0U]);
     vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_opcodes[1U] 
@@ -197,30 +149,6 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__72(VTestHarness__Syms* __restric
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_opcodes_T_2[0x12U]);
     vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_opcodes[0x13U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_opcodes_T_2[0x13U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_opcodes[0x14U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_opcodes_T_2[0x14U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_opcodes[0x15U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_opcodes_T_2[0x15U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_opcodes[0x16U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_opcodes_T_2[0x16U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_opcodes[0x17U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_opcodes_T_2[0x17U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_opcodes[0x18U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_opcodes_T_2[0x18U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_opcodes[0x19U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_opcodes_T_2[0x19U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_opcodes[0x1aU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_opcodes_T_2[0x1aU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_opcodes[0x1bU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_opcodes_T_2[0x1bU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_opcodes[0x1cU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_opcodes_T_2[0x1cU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_opcodes[0x1dU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_opcodes_T_2[0x1dU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_opcodes[0x1eU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_opcodes_T_2[0x1eU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_opcodes[0x1fU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_opcodes_T_2[0x1fU]);
     vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_opcodes[0U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_opcodes_T_2[0U]);
     vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_opcodes[1U] 
@@ -261,30 +189,6 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__72(VTestHarness__Syms* __restric
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_opcodes_T_2[0x12U]);
     vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_opcodes[0x13U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_opcodes_T_2[0x13U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_opcodes[0x14U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_opcodes_T_2[0x14U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_opcodes[0x15U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_opcodes_T_2[0x15U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_opcodes[0x16U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_opcodes_T_2[0x16U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_opcodes[0x17U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_opcodes_T_2[0x17U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_opcodes[0x18U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_opcodes_T_2[0x18U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_opcodes[0x19U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_opcodes_T_2[0x19U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_opcodes[0x1aU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_opcodes_T_2[0x1aU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_opcodes[0x1bU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_opcodes_T_2[0x1bU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_opcodes[0x1cU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_opcodes_T_2[0x1cU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_opcodes[0x1dU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_opcodes_T_2[0x1dU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_opcodes[0x1eU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_opcodes_T_2[0x1eU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_opcodes[0x1fU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_opcodes_T_2[0x1fU]);
     vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__inflight_opcodes 
         = ((IData)(vlTOPp->reset) ? 0U : (IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT___inflight_opcodes_T_2));
     vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__inflight_opcodes 
@@ -308,8 +212,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__72(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__73(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__73\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__72(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__72\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (vlTOPp->reset) {
@@ -380,8 +284,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__73(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__74(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__74\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__73(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__73\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__mem_RW0_en) 
@@ -444,8 +348,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__74(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__75(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__75\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__74(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__74\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if ((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__mem_RW0_en) 
@@ -510,8 +414,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__75(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__76(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__76\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__75(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__75\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if ((((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__mem_RW0_en) 
@@ -579,8 +483,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__76(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__77(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__77\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__76(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__76\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (vlTOPp->reset) {
@@ -616,6 +520,14 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__77(VTestHarness__Syms* __restric
         vlTOPp->__Vdlyvdim0__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_mask__v0 
             = vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__value;
     }
+    if (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__full)) 
+         & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__repeater_io_deq_valid))) {
+        vlTOPp->__Vdlyvval__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source__v0 
+            = vlTOPp->TestHarness__DOT__ram__DOT__fragmenter_auto_out_a_bits_source;
+        vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source__v0 = 1U;
+        vlTOPp->__Vdlyvdim0__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source__v0 
+            = vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__value;
+    }
     if (vlTOPp->reset) {
         vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__maybe_full = 0U;
     } else {
@@ -633,14 +545,6 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__77(VTestHarness__Syms* __restric
         vlTOPp->__Vdlyvdim0__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode__v0 
             = vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__value;
     }
-    if (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__full)) 
-         & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__repeater_io_deq_valid))) {
-        vlTOPp->__Vdlyvval__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source__v0 
-            = vlTOPp->TestHarness__DOT__ram__DOT__fragmenter_auto_out_a_bits_source;
-        vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source__v0 = 1U;
-        vlTOPp->__Vdlyvdim0__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source__v0 
-            = vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__value;
-    }
     if (vlTOPp->reset) {
         vlTOPp->__Vdly__TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__value = 0U;
     } else {
@@ -651,8 +555,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__77(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__78(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__78\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__77(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__77\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (vlTOPp->reset) {
@@ -713,8 +617,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__78(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__79(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__79\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__78(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__78\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__full)) 
@@ -762,8 +666,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__79(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__80(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__80\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__79(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__79\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (vlTOPp->TestHarness__DOT__ram__DOT__fragmenter_1__DOT___T_7) {
@@ -812,8 +716,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__80(VTestHarness__Syms* __restric
                                                     : 0U)))));
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__81(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__81\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__80(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__80\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Variables
     // Begin mtask footprint all: 
@@ -895,8 +799,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__81(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__82(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__82\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__81(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__81\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if ((0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter_1__DOT__gennum))) {
@@ -985,8 +889,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__82(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__83(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__83\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__82(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__82\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT___T_7) {
@@ -1054,8 +958,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__83(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__84(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__84\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__83(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__83\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__full)) 
@@ -1079,9 +983,9 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__84(VTestHarness__Syms* __restric
     if (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__full)) 
          & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser_auto_manager_in_d_valid))) {
         vlTOPp->__Vdlyvval__TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_sink__v0 
-            = (0xfU & ((vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[1U] 
-                        << 0x1eU) | (vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[0U] 
-                                     >> 2U)));
+            = (7U & ((vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[1U] 
+                      << 0x1eU) | (vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[0U] 
+                                   >> 2U)));
         vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_sink__v0 = 1U;
         vlTOPp->__Vdlyvdim0__TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_sink__v0 
             = vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__value;
@@ -1118,8 +1022,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__84(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__85(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__85\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__84(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__84\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__full)) 
@@ -1140,13 +1044,6 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__85(VTestHarness__Syms* __restric
         vlTOPp->__Vdlyvdim0__TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_source__v0 
             = vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__value;
     }
-    if (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__repeater__DOT___T) 
-         & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__repeater_io_repeat))) {
-        vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__repeater__DOT__saved_address 
-            = (0x1fffffffU & ((vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[3U] 
-                               << 0x16U) | (vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[2U] 
-                                            >> 0xaU)));
-    }
     if (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__full)) 
          & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__repeater_io_deq_valid))) {
         vlTOPp->__Vdlyvval__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_data__v0 
@@ -1158,6 +1055,13 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__85(VTestHarness__Syms* __restric
         vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_data__v0 = 1U;
         vlTOPp->__Vdlyvdim0__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_data__v0 
             = vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__value;
+    }
+    if (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__repeater__DOT___T) 
+         & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__repeater_io_repeat))) {
+        vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__repeater__DOT__saved_address 
+            = (0x1fffffffU & ((vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[3U] 
+                               << 0x16U) | (vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[2U] 
+                                            >> 0xaU)));
     }
     if (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__repeater__DOT___T) 
          & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__repeater_io_repeat))) {
@@ -1180,8 +1084,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__85(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__86(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__86\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__85(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__85\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter_1__DOT__repeater__DOT___T) 
@@ -1249,8 +1153,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__86(VTestHarness__Syms* __restric
                                                     : 0U)))));
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__87(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__87\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__86(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__86\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__full)) 
@@ -1298,8 +1202,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__87(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__90(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__90\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__89(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__89\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Variables
     // Begin mtask footprint all: 
@@ -1337,8 +1241,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__90(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__91(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__91\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__90(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__90\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_corrupt__v0) {
@@ -1363,8 +1267,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__91(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__92(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__92\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__91(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__91\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__srams__DOT__mem__DOT__mem_ext_0__DOT__mem_0_2__DOT__ram__v0) {
@@ -1398,13 +1302,13 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__92(VTestHarness__Syms* __restric
         vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_mask[vlTOPp->__Vdlyvdim0__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_mask__v0] 
             = vlTOPp->__Vdlyvval__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_mask__v0;
     }
-    if (vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode__v0) {
-        vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode[vlTOPp->__Vdlyvdim0__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode__v0] 
-            = vlTOPp->__Vdlyvval__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode__v0;
-    }
     if (vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source__v0) {
         vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source[vlTOPp->__Vdlyvdim0__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source__v0] 
             = vlTOPp->__Vdlyvval__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source__v0;
+    }
+    if (vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode__v0) {
+        vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode[vlTOPp->__Vdlyvdim0__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode__v0] 
+            = vlTOPp->__Vdlyvval__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode__v0;
     }
     if (vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_size__v0) {
         vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_size[vlTOPp->__Vdlyvdim0__TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_size__v0] 
@@ -1412,8 +1316,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__92(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__93(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__93\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__92(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__92\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_address__v0) {
@@ -1444,12 +1348,6 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__93(VTestHarness__Syms* __restric
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_T_5[3U]);
     vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[4U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_T_5[4U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[5U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_T_5[5U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[6U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_T_5[6U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[7U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_T_5[7U]);
     vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes[0U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_2[0U]);
     vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes[1U] 
@@ -1490,30 +1388,6 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__93(VTestHarness__Syms* __restric
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_2[0x12U]);
     vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes[0x13U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_2[0x13U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes[0x14U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_2[0x14U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes[0x15U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_2[0x15U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes[0x16U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_2[0x16U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes[0x17U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_2[0x17U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes[0x18U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_2[0x18U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes[0x19U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_2[0x19U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes[0x1aU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_2[0x1aU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes[0x1bU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_2[0x1bU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes[0x1cU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_2[0x1cU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes[0x1dU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_2[0x1dU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes[0x1eU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_2[0x1eU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes[0x1fU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_2[0x1fU]);
     vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[0U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_T_2[0U]);
     vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[1U] 
@@ -1524,12 +1398,6 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__93(VTestHarness__Syms* __restric
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_T_2[3U]);
     vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[4U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_T_2[4U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[5U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_T_2[5U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[6U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_T_2[6U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight[7U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_T_2[7U]);
     vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__watchdog_1 
         = ((IData)(vlTOPp->reset) ? 0U : ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_done)
                                            ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___watchdog_T_3));
@@ -1544,8 +1412,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__93(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__94(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__94\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__93(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__93\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__watchdog 
@@ -1563,13 +1431,13 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__94(VTestHarness__Syms* __restric
     }
     if (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_done) 
          & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter)))) {
-        vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__opcode 
-            = vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data;
+        vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__source 
+            = vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data;
     }
     if (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_done) 
          & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter)))) {
-        vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__source 
-            = vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data;
+        vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__opcode 
+            = vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data;
     }
     if (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_done) 
          & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter)))) {
@@ -1604,8 +1472,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__94(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__95(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__95\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__94(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__94\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_opcode__v0) {
@@ -1642,8 +1510,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__95(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__96(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__96\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__95(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__95\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT___d_first_T) 
@@ -1697,8 +1565,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__96(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__97(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__97\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__96(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__96\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer__DOT__bundleIn_0_d_q__DOT__ram_corrupt__v0) {
@@ -1723,8 +1591,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__97(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__98(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__98\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__97(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__97\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_corrupt__v0) {
@@ -1765,8 +1633,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__98(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__99(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__99\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__98(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__98\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_corrupt__v0) {
@@ -1801,12 +1669,6 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__99(VTestHarness__Syms* __restric
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_T_5[3U]);
     vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_1[4U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_T_5[4U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_1[5U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_T_5[5U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_1[6U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_T_5[6U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_1[7U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_T_5[7U]);
     vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes_1[0U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_5[0U]);
     vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes_1[1U] 
@@ -1847,30 +1709,6 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__99(VTestHarness__Syms* __restric
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_5[0x12U]);
     vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes_1[0x13U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_5[0x13U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes_1[0x14U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_5[0x14U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes_1[0x15U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_5[0x15U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes_1[0x16U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_5[0x16U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes_1[0x17U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_5[0x17U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes_1[0x18U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_5[0x18U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes_1[0x19U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_5[0x19U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes_1[0x1aU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_5[0x1aU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes_1[0x1bU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_5[0x1bU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes_1[0x1cU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_5[0x1cU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes_1[0x1dU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_5[0x1dU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes_1[0x1eU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_5[0x1eU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes_1[0x1fU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_5[0x1fU]);
     vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes[0U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_2[0U]);
     vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes[1U] 
@@ -1911,30 +1749,6 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__99(VTestHarness__Syms* __restric
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_2[0x12U]);
     vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes[0x13U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_2[0x13U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes[0x14U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_2[0x14U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes[0x15U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_2[0x15U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes[0x16U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_2[0x16U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes[0x17U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_2[0x17U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes[0x18U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_2[0x18U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes[0x19U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_2[0x19U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes[0x1aU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_2[0x1aU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes[0x1bU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_2[0x1bU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes[0x1cU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_2[0x1cU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes[0x1dU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_2[0x1dU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes[0x1eU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_2[0x1eU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight_sizes[0x1fU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_sizes_T_2[0x1fU]);
     vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight[0U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_T_2[0U]);
     vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight[1U] 
@@ -1945,12 +1759,6 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__99(VTestHarness__Syms* __restric
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_T_2[3U]);
     vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight[4U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_T_2[4U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight[5U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_T_2[5U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight[6U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_T_2[6U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__inflight[7U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT___inflight_T_2[7U]);
     if (vlTOPp->reset) {
         vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__a_first_counter_1 = 0U;
     } else {
@@ -1970,8 +1778,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__99(VTestHarness__Syms* __restric
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__100(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__100\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__99(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__99\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (vlTOPp->reset) {
@@ -2033,8 +1841,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__100(VTestHarness__Syms* __restri
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__101(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__101\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__100(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__100\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__d_first_done) 
@@ -2062,12 +1870,6 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__101(VTestHarness__Syms* __restri
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_T_2[3U]);
     vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight[4U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_T_2[4U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight[5U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_T_2[5U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight[6U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_T_2[6U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight[7U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_T_2[7U]);
     vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_sizes[0U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_sizes_T_2[0U]);
     vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_sizes[1U] 
@@ -2108,30 +1910,6 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__101(VTestHarness__Syms* __restri
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_sizes_T_2[0x12U]);
     vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_sizes[0x13U] 
         = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_sizes_T_2[0x13U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_sizes[0x14U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_sizes_T_2[0x14U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_sizes[0x15U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_sizes_T_2[0x15U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_sizes[0x16U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_sizes_T_2[0x16U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_sizes[0x17U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_sizes_T_2[0x17U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_sizes[0x18U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_sizes_T_2[0x18U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_sizes[0x19U] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_sizes_T_2[0x19U]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_sizes[0x1aU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_sizes_T_2[0x1aU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_sizes[0x1bU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_sizes_T_2[0x1bU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_sizes[0x1cU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_sizes_T_2[0x1cU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_sizes[0x1dU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_sizes_T_2[0x1dU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_sizes[0x1eU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_sizes_T_2[0x1eU]);
-    vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__inflight_sizes[0x1fU] 
-        = ((IData)(vlTOPp->reset) ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT___inflight_sizes_T_2[0x1fU]);
     if (vlTOPp->reset) {
         vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__a_first_counter_1 = 0U;
     } else {
@@ -2161,8 +1939,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__101(VTestHarness__Syms* __restri
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__102(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__102\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__101(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__101\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__rom__DOT__monitor__DOT__a_first_done) 
@@ -2219,8 +1997,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__102(VTestHarness__Syms* __restri
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__103(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__103\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__102(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__102\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->TestHarness__DOT__ram__DOT__fragmenter_1__DOT__monitor__DOT__watchdog 
@@ -2275,8 +2053,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__103(VTestHarness__Syms* __restri
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__104(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__104\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__103(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__103\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter_1__DOT__monitor__DOT__a_first_done) 
@@ -2329,8 +2107,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__104(VTestHarness__Syms* __restri
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__105(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__105\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__104(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__104\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT___d_first_T) 
@@ -2388,8 +2166,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__105(VTestHarness__Syms* __restri
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__106(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__106\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__105(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__105\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT___a_first_T) 
@@ -2434,8 +2212,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__106(VTestHarness__Syms* __restri
                                            ? 0U : vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT___watchdog_T_1));
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__107(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__107\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__106(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__106\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (vlTOPp->reset) {
@@ -2491,8 +2269,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__107(VTestHarness__Syms* __restri
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__108(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__108\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__107(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__107\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT___d_first_T) 
@@ -2551,8 +2329,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__108(VTestHarness__Syms* __restri
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__109(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__109\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__108(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__108\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__inflight_sizes_1 
@@ -2606,8 +2384,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__109(VTestHarness__Syms* __restri
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__110(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__110\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__109(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__109\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT___d_first_T) 
@@ -2637,9 +2415,9 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__110(VTestHarness__Syms* __restri
     if (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT___d_first_T) 
          & (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__d_first_counter)))) {
         vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__sink 
-            = (0xfU & ((vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[1U] 
-                        << 0x1eU) | (vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[0U] 
-                                     >> 2U)));
+            = (7U & ((vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[1U] 
+                      << 0x1eU) | (vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[0U] 
+                                   >> 2U)));
     }
     if (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT___d_first_T) 
          & (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__d_first_counter)))) {
@@ -2691,38 +2469,14 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__110(VTestHarness__Syms* __restri
         = vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x12U];
     vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x13U] 
         = vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x13U];
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x14U] 
-        = vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x14U];
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x15U] 
-        = vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x15U];
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x16U] 
-        = vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x16U];
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x17U] 
-        = vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x17U];
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x18U] 
-        = vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x18U];
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x19U] 
-        = vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x19U];
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x1aU] 
-        = vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x1aU];
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x1bU] 
-        = vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x1bU];
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x1cU] 
-        = vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x1cU];
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x1dU] 
-        = vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x1dU];
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x1eU] 
-        = vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x1eU];
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_sizes_T_5[0x1fU] 
-        = vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_sizes_1[0x1fU];
     vlTOPp->TestHarness__DOT__uart_sim_0__DOT___wrap_value_T_5 
         = (3U & ((IData)(1U) + (IData)(vlTOPp->TestHarness__DOT__uart_sim_0__DOT__txSlackCount)));
     vlTOPp->TestHarness__DOT__uart_sim_0__DOT___wrap_value_T_1 
         = (7U & ((IData)(1U) + (IData)(vlTOPp->TestHarness__DOT__uart_sim_0__DOT__txDataIdx)));
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__111(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__111\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__110(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__110\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->TestHarness__DOT__uart_sim_0__DOT___wrap_value_T_9 
@@ -2791,8 +2545,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__111(VTestHarness__Syms* __restri
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__112(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__112\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__111(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__111\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Variables
     // Begin mtask footprint all: 
@@ -2843,8 +2597,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__112(VTestHarness__Syms* __restri
         = (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__merged_bits_last_counter_1));
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__113(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__113\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__112(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__112\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (vlTOPp->__Vdlyvset__TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_param__v0) {
@@ -2892,8 +2646,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__113(VTestHarness__Syms* __restri
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__114(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__114\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__113(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__113\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__addr_size 
@@ -2961,8 +2715,8 @@ verbose&&done_reset
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__115(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__115\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__114(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__114\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (vlTOPp->reset) {
@@ -3001,8 +2755,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__115(VTestHarness__Syms* __restri
         = vlTOPp->__Vdly__TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__value_1;
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__116(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__116\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__115(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__115\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__REG) {
@@ -3070,8 +2824,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__116(VTestHarness__Syms* __restri
                                                  : (IData)(vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT___beatsLeft_T_4))));
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__117(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__117\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__116(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__116\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (vlTOPp->reset) {
@@ -3133,8 +2887,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__117(VTestHarness__Syms* __restri
                                          & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__repeater__DOT___GEN_0)));
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__118(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__118\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__117(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__117\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (((IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__repeater__DOT___T) 
@@ -3162,8 +2916,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__118(VTestHarness__Syms* __restri
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__119(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__119\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__118(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__118\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (((IData)(vlTOPp->TestHarness__DOT__bits_out_queue__DOT__sink__DOT__source_valid__DOT__io_out_source_valid_0__DOT__output_chain__DOT__sync_0) 
@@ -3188,8 +2942,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__119(VTestHarness__Syms* __restri
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__121(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__121\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__120(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__120\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleIn_0_d_q__DOT__ram_param_io_deq_bits_MPORT_data 
@@ -3206,8 +2960,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__121(VTestHarness__Syms* __restri
         [vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__value_1];
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__122(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__122\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__121(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__121\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data 
@@ -3238,16 +2992,10 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__122(VTestHarness__Syms* __restri
         = vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[3U];
     vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_T_5[4U] 
         = vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[4U];
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_T_5[5U] 
-        = vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[5U];
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_T_5[6U] 
-        = vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[6U];
-    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___inflight_T_5[7U] 
-        = vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_1[7U];
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__123(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__123\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__122(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__122\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___watchdog_T_3 
@@ -3308,8 +3056,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__123(VTestHarness__Syms* __restri
            == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__value_1));
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__124(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__124\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__123(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__123\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__empty 
@@ -3361,8 +3109,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__124(VTestHarness__Syms* __restri
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__125(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__125\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__124(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__124\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__mem__DOT__mem_ext_0_RW0_rdata 
@@ -3399,8 +3147,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__125(VTestHarness__Syms* __restri
                  - (IData)(1U)));
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__126(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__126\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__125(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__125\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__monitor__DOT__a_first_1 
@@ -3460,8 +3208,8 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__126(VTestHarness__Syms* __restri
     }
 }
 
-VL_INLINE_OPT void VTestHarness::_sequent__TOP__127(VTestHarness__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__127\n"); );
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__126(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__126\n"); );
     VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (vlTOPp->reset) {
@@ -3517,4 +3265,477 @@ VL_INLINE_OPT void VTestHarness::_sequent__TOP__127(VTestHarness__Syms* __restri
                     ? 0U : (IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter_1__DOT__monitor__DOT__a_first_counter1));
         }
     }
+}
+
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__127(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__127\n"); );
+    VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT___watchdog_T_3 
+        = ((IData)(1U) + vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__watchdog_1);
+    vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT___watchdog_T_1 
+        = ((IData)(1U) + vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__watchdog);
+    vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__d_first_counter1_2 
+        = (7U & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__d_first_counter_2) 
+                 - (IData)(1U)));
+    vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__d_first_2 
+        = (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__d_first_counter_2));
+    vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__d_first_counter1_1 
+        = (7U & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__d_first_counter_1) 
+                 - (IData)(1U)));
+    vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__d_first_1 
+        = (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__d_first_counter_1));
+    if (vlTOPp->reset) {
+        vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__d_first_counter = 0U;
+    } else {
+        if (vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT___d_first_T) {
+            vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__d_first_counter 
+                = (7U & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__d_first)
+                          ? ((1U & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor_io_in_d_bits_opcode))
+                              ? (~ (0x3ffU & (((IData)(0x3fU) 
+                                               << (IData)(vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor_io_in_d_bits_size)) 
+                                              >> 3U)))
+                              : 0U) : (IData)(vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__d_first_counter1)));
+        }
+    }
+    vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__a_first_counter1_1 
+        = (7U & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__a_first_counter_1) 
+                 - (IData)(1U)));
+    vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__a_first_1 
+        = (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__a_first_counter_1));
+    if (vlTOPp->reset) {
+        vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__a_first_counter = 0U;
+    } else {
+        if (vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT___a_first_T) {
+            vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__a_first_counter 
+                = (7U & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__a_first)
+                          ? ((0x800000U & vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[3U])
+                              ? 0U : (~ (0x3ffU & (
+                                                   ((IData)(0x3fU) 
+                                                    << 
+                                                    (7U 
+                                                     & (vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[3U] 
+                                                        >> 0xeU))) 
+                                                   >> 3U))))
+                          : (IData)(vlTOPp->TestHarness__DOT__ram__DOT__xbar__DOT__monitor__DOT__a_first_counter1)));
+        }
+    }
+    vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT___watchdog_T_3 
+        = ((IData)(1U) + vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__watchdog_1);
+    vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT___watchdog_T_1 
+        = ((IData)(1U) + vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__watchdog);
+}
+
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__128(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__128\n"); );
+    VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__d_first_counter1_2 
+        = (7U & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__d_first_counter_2) 
+                 - (IData)(1U)));
+    vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__d_first_2 
+        = (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__d_first_counter_2));
+    vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__d_first_counter1_1 
+        = (7U & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__d_first_counter_1) 
+                 - (IData)(1U)));
+    vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__d_first_1 
+        = (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__d_first_counter_1));
+    if (vlTOPp->reset) {
+        vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__d_first_counter = 0U;
+    } else {
+        if (vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT___d_first_T) {
+            vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__d_first_counter 
+                = (7U & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__d_first)
+                          ? ((1U & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data))
+                              ? (~ (0x3ffU & (((IData)(0x3fU) 
+                                               << (IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor_io_in_d_bits_size)) 
+                                              >> 3U)))
+                              : 0U) : (IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__d_first_counter1)));
+        }
+    }
+    vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__a_first_counter1_1 
+        = (7U & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__a_first_counter_1) 
+                 - (IData)(1U)));
+    vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__a_first_1 
+        = (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__a_first_counter_1));
+    if (vlTOPp->reset) {
+        vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__a_first_counter = 0U;
+    } else {
+        if (vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT___a_first_T) {
+            vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__a_first_counter 
+                = (7U & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__a_first)
+                          ? ((0x800000U & vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[3U])
+                              ? 0U : (~ (0x3ffU & (
+                                                   ((IData)(0x3fU) 
+                                                    << 
+                                                    (7U 
+                                                     & (vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[3U] 
+                                                        >> 0xeU))) 
+                                                   >> 3U))))
+                          : (IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__monitor__DOT__a_first_counter1)));
+        }
+    }
+    vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT___watchdog_T_1 
+        = ((IData)(1U) + vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__watchdog);
+    vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT___T_89 
+        = (((VL_ULL(0) == (VL_ULL(0x1ffff0000) & (QData)((IData)(
+                                                                 (0x20000U 
+                                                                  ^ vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data))))) 
+            | (VL_ULL(0) == (VL_ULL(0x1fffff000) & (QData)((IData)(
+                                                                   (0x10000000U 
+                                                                    ^ vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data)))))) 
+           | (VL_ULL(0) == (VL_ULL(0x1f0000000) & (QData)((IData)(
+                                                                  (0x80000000U 
+                                                                   ^ vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data))))));
+}
+
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__129(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__129\n"); );
+    VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__mask_eq_2 
+        = (1U & ((~ (vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
+                     >> 2U)) & (~ (vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
+                                   >> 1U))));
+    vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__mask_eq_3 
+        = (1U & ((~ (vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
+                     >> 2U)) & (vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
+                                >> 1U)));
+    vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__mask_eq_4 
+        = (1U & ((vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
+                  >> 2U) & (~ (vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
+                               >> 1U))));
+    vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__mask_eq_5 
+        = (1U & ((vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
+                  >> 2U) & (vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
+                            >> 1U)));
+    if (vlTOPp->reset) {
+        vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__a_first_counter = 0U;
+    } else {
+        if (vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT___a_first_T) {
+            vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__a_first_counter 
+                = (0x1ffU & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__a_first)
+                              ? ((4U & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))
+                                  ? 0U : (~ (0xffffffU 
+                                             & (((IData)(0xfffU) 
+                                                 << (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_size_io_deq_bits_MPORT_data)) 
+                                                >> 3U))))
+                              : (IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__a_first_counter1)));
+        }
+    }
+    vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__d_first_counter1_2 
+        = (0x1ffU & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__d_first_counter_2) 
+                     - (IData)(1U)));
+    vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__d_first_2 
+        = (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__d_first_counter_2));
+    if (vlTOPp->reset) {
+        vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__d_first_counter = 0U;
+    } else {
+        if (vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT___d_first_T) {
+            vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__d_first_counter 
+                = (0x1ffU & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__d_first)
+                              ? ((0x200000U & vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[3U])
+                                  ? (~ (0xffffffU & 
+                                        (((IData)(0xfffU) 
+                                          << (0xfU 
+                                              & (vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[3U] 
+                                                 >> 0xeU))) 
+                                         >> 3U))) : 0U)
+                              : (IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__d_first_counter1)));
+        }
+    }
+}
+
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__130(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__130\n"); );
+    VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    if (vlTOPp->reset) {
+        vlTOPp->TestHarness__DOT__uart_sim_0__DOT__txBaudCount = 0U;
+    } else {
+        if (vlTOPp->TestHarness__DOT__uart_sim_0__DOT___T_3) {
+            vlTOPp->TestHarness__DOT__uart_sim_0__DOT__txBaudCount 
+                = ((IData)(vlTOPp->TestHarness__DOT__uart_sim_0__DOT__wrap_wrap_1)
+                    ? 0U : (IData)(vlTOPp->TestHarness__DOT__uart_sim_0__DOT___wrap_value_T_3));
+        }
+    }
+    vlTOPp->TestHarness__DOT__uart_sim_0__DOT__txfifo__DOT___value_T_1 
+        = (0x7fU & ((IData)(1U) + (IData)(vlTOPp->TestHarness__DOT__uart_sim_0__DOT__txfifo__DOT__enq_ptr_value)));
+    vlTOPp->TestHarness__DOT__uart_sim_0__DOT__rxfifo__DOT___value_T_1 
+        = (0x7fU & ((IData)(1U) + (IData)(vlTOPp->TestHarness__DOT__uart_sim_0__DOT__rxfifo__DOT__enq_ptr_value)));
+    vlTOPp->TestHarness__DOT__uart_sim_0__DOT__rxfifo__DOT__ptr_match 
+        = ((IData)(vlTOPp->TestHarness__DOT__uart_sim_0__DOT__rxfifo__DOT__enq_ptr_value) 
+           == (IData)(vlTOPp->TestHarness__DOT__uart_sim_0__DOT__rxfifo__DOT__deq_ptr_value));
+    if (vlTOPp->reset) {
+        vlTOPp->TestHarness__DOT__uart_sim_0__DOT__txfifo__DOT__deq_ptr_value = 0U;
+    } else {
+        if (vlTOPp->TestHarness__DOT__uart_sim_0__DOT__txfifo__DOT__do_deq) {
+            vlTOPp->TestHarness__DOT__uart_sim_0__DOT__txfifo__DOT__deq_ptr_value 
+                = vlTOPp->TestHarness__DOT__uart_sim_0__DOT__txfifo__DOT___value_T_3;
+        }
+    }
+    vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__outSer__DOT___wrap_value_T_1 
+        = (3U & ((IData)(1U) + (IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__outSer__DOT__sendCount)));
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data 
+        = vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode
+        [vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__value_1];
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source_io_deq_bits_MPORT_data 
+        = vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_source
+        [vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__value_1];
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_size_io_deq_bits_MPORT_data 
+        = vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_size
+        [vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__value_1];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__mask_eq_2 
+        = (1U & ((~ (vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
+                     >> 2U)) & (~ (vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
+                                   >> 1U))));
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__mask_eq_3 
+        = (1U & ((~ (vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
+                     >> 2U)) & (vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
+                                >> 1U)));
+}
+
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__131(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__131\n"); );
+    VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__mask_eq_4 
+        = (1U & ((vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
+                  >> 2U) & (~ (vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
+                               >> 1U))));
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__mask_eq_5 
+        = (1U & ((vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
+                  >> 2U) & (vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
+                            >> 1U)));
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty 
+        = ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ptr_match) 
+           & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__maybe_full)));
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__full 
+        = ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ptr_match) 
+           & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__maybe_full));
+    vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__outArb__DOT___GEN_56 
+        = (1U & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__outArb__DOT__locked)) 
+                 | (IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__outArb__DOT__locked)));
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__d_first_counter1_1 
+        = (0x1ffU & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__d_first_counter_1) 
+                     - (IData)(1U)));
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__d_first_1 
+        = (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__d_first_counter_1));
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__a_first_counter1_1 
+        = (0x1ffU & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__a_first_counter_1) 
+                     - (IData)(1U)));
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__a_first_1 
+        = (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__a_first_counter_1));
+    if (((0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__state)) 
+         & (IData)(vlTOPp->TestHarness__DOT__success_sim__DOT_____05Fin_valid_reg))) {
+        vlTOPp->TestHarness__DOT__ram__DOT__adapter__DOT__cmd 
+            = vlTOPp->TestHarness__DOT__success_sim__DOT_____05Fin_bits_reg;
+    }
+    if (vlTOPp->reset) {
+        vlTOPp->TestHarness__DOT__ram__DOT__fragmenter_1__DOT__acknum = 0U;
+    } else {
+        if (vlTOPp->TestHarness__DOT__ram__DOT__fragmenter_1__DOT___T_7) {
+            vlTOPp->TestHarness__DOT__ram__DOT__fragmenter_1__DOT__acknum 
+                = (7U & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter_1__DOT__dFirst)
+                          ? (IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter_1_auto_out_a_bits_source)
+                          : (IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter_1__DOT___acknum_T_1)));
+        }
+    }
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_size_io_deq_bits_MPORT_data 
+        = vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_size
+        [vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__value_1];
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data 
+        = vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_opcode
+        [vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__value_1];
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT___a_opcode_lookup_T_1 
+        = (0xfU & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__inflight_opcodes) 
+                   >> ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ram_source_io_deq_bits_MPORT_data) 
+                       << 2U)));
+}
+
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__132(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__132\n"); );
+    VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__full 
+        = ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__ptr_match) 
+           & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleIn_0_d_q__DOT__maybe_full));
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__REG 
+        = ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__wen)) 
+           & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT___T_18));
+    if (vlTOPp->reset) {
+        vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__acknum = 0U;
+    } else {
+        if (vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT___T_7) {
+            vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__acknum 
+                = (7U & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__dFirst)
+                          ? (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleIn_0_d_q__DOT__ram_source_io_deq_bits_MPORT_data)
+                          : (IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT___acknum_T_1)));
+        }
+    }
+    vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__a_first_counter1_1 
+        = (0x1ffU & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__a_first_counter_1) 
+                     - (IData)(1U)));
+    vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__a_first_1 
+        = (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__a_first_counter_1));
+    vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__d_first_counter1_1 
+        = (0x1ffU & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__d_first_counter_1) 
+                     - (IData)(1U)));
+    vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__d_first_1 
+        = (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__monitor__DOT__d_first_counter_1));
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleIn_0_d_q__DOT__do_enq 
+        = ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleIn_0_d_q__DOT__full)) 
+           & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full));
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_done 
+        = ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleIn_0_d_q__DOT__full)) 
+           & (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full));
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor_io_in_a_ready 
+        = (1U & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full)) 
+                 | (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleIn_0_d_q__DOT__full))));
+    vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___wrap_value_T_1 
+        = (3U & ((IData)(1U) + (IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT__recvCount)));
+}
+
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__133(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__133\n"); );
+    VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Variables
+    // Begin mtask footprint all: 
+    WData/*639:0*/ __Vtemp458[20];
+    // Body
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleIn_0_d_q__DOT__ram_opcode_io_deq_bits_MPORT_data 
+        = vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleIn_0_d_q__DOT__ram_opcode
+        [vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleIn_0_d_q__DOT__value_1];
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data 
+        = vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_opcode
+        [vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__value_1];
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_size_io_deq_bits_MPORT_data 
+        = vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__ram_size
+        [vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__bundleOut_0_a_q__DOT__value_1];
+    vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[0U] 
+        = vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT__data_0;
+    vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[1U] 
+        = vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT__data_1;
+    vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[2U] 
+        = (IData)((((QData)((IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT__data_3)) 
+                    << 0x20U) | (QData)((IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT__data_2))));
+    vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT___io_out_bits_T[3U] 
+        = (IData)(((((QData)((IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT__data_3)) 
+                     << 0x20U) | (QData)((IData)(vlTOPp->TestHarness__DOT__ram__DOT__serdesser__DOT__inDes__DOT__data_2))) 
+                   >> 0x20U));
+    vlTOPp->TestHarness__DOT__uart_sim_0__DOT__rxfifo__DOT__full 
+        = ((IData)(vlTOPp->TestHarness__DOT__uart_sim_0__DOT__rxfifo__DOT__ptr_match) 
+           & (IData)(vlTOPp->TestHarness__DOT__uart_sim_0__DOT__rxfifo__DOT__maybe_full));
+    vlTOPp->TestHarness__DOT__uart_sim_0__DOT__rxfifo__DOT__empty 
+        = ((IData)(vlTOPp->TestHarness__DOT__uart_sim_0__DOT__rxfifo__DOT__ptr_match) 
+           & (~ (IData)(vlTOPp->TestHarness__DOT__uart_sim_0__DOT__rxfifo__DOT__maybe_full)));
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___GEN_30 
+        = ((5U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))
+            ? 2U : ((4U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))
+                     ? 1U : ((3U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))
+                              ? 1U : ((2U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_opcode_io_deq_bits_MPORT_data))
+                                       ? 1U : 0U))));
+    VL_SHIFTR_WWI(640,640,11, __Vtemp458, vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__inflight_opcodes, 
+                  ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_source) 
+                   << 2U));
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0U] 
+        = __Vtemp458[0U];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[1U] 
+        = __Vtemp458[1U];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[2U] 
+        = __Vtemp458[2U];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[3U] 
+        = __Vtemp458[3U];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[4U] 
+        = __Vtemp458[4U];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[5U] 
+        = __Vtemp458[5U];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[6U] 
+        = __Vtemp458[6U];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[7U] 
+        = __Vtemp458[7U];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[8U] 
+        = __Vtemp458[8U];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[9U] 
+        = __Vtemp458[9U];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0xaU] 
+        = __Vtemp458[0xaU];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0xbU] 
+        = __Vtemp458[0xbU];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0xcU] 
+        = __Vtemp458[0xcU];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0xdU] 
+        = __Vtemp458[0xdU];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0xeU] 
+        = __Vtemp458[0xeU];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0xfU] 
+        = __Vtemp458[0xfU];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0x10U] 
+        = __Vtemp458[0x10U];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0x11U] 
+        = __Vtemp458[0x11U];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0x12U] 
+        = __Vtemp458[0x12U];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT___a_opcode_lookup_T_1[0x13U] 
+        = __Vtemp458[0x13U];
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter1 
+        = (1U & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter) 
+                 - (IData)(1U)));
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first 
+        = (1U & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__d_first_counter)));
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__mask_acc 
+        = (1U & ((3U <= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_size_io_deq_bits_MPORT_data)) 
+                 | (1U & ((((IData)(1U) << (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_size_io_deq_bits_MPORT_data)) 
+                           >> 2U) & (~ (vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
+                                        >> 2U))))));
+}
+
+VL_INLINE_OPT void VTestHarness::_sequent__TOP__134(VTestHarness__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VTestHarness::_sequent__TOP__134\n"); );
+    VTestHarness* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__mask_acc_1 
+        = (1U & ((3U <= (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_size_io_deq_bits_MPORT_data)) 
+                 | (1U & ((((IData)(1U) << (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_size_io_deq_bits_MPORT_data)) 
+                           >> 2U) & (vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__ram_address_io_deq_bits_MPORT_data 
+                                     >> 2U)))));
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter1 
+        = (1U & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter) 
+                 - (IData)(1U)));
+    vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first 
+        = (1U & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__monitor__DOT__a_first_counter)));
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__do_deq 
+        = (1U & (((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__srams__DOT__r_full)) 
+                  | (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleIn_0_d_q__DOT__full))) 
+                 & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__empty))));
+    vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__repeater_io_enq_ready 
+        = (1U & ((~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer__DOT__bundleOut_0_a_q__DOT__full)) 
+                 & (~ (IData)(vlTOPp->TestHarness__DOT__ram__DOT__fragmenter__DOT__repeater__DOT__full))));
+    vlTOPp->TestHarness__DOT__success_sim__DOT_____05Fin_bits_reg 
+        = vlTOPp->__Vdly__TestHarness__DOT__success_sim__DOT_____05Fin_bits_reg;
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__d_first_counter1 
+        = (0x1ffU & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__d_first_counter) 
+                     - (IData)(1U)));
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__d_first 
+        = (0U == (IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT__d_first_counter));
+    vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT___GEN_46 
+        = ((5U == (7U & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT___a_opcode_lookup_T_1) 
+                         >> 1U))) ? 2U : ((4U == (7U 
+                                                  & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT___a_opcode_lookup_T_1) 
+                                                     >> 1U)))
+                                           ? 1U : (
+                                                   (3U 
+                                                    == 
+                                                    (7U 
+                                                     & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT___a_opcode_lookup_T_1) 
+                                                        >> 1U)))
+                                                    ? 1U
+                                                    : 
+                                                   ((2U 
+                                                     == 
+                                                     (7U 
+                                                      & ((IData)(vlTOPp->TestHarness__DOT__ram__DOT__buffer_1__DOT__monitor__DOT___a_opcode_lookup_T_1) 
+                                                         >> 1U)))
+                                                     ? 1U
+                                                     : 0U))));
 }

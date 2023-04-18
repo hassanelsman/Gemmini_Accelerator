@@ -69,7 +69,7 @@
 			next-level-cache = <&L13 &L17 &L18>;
 			reg = <0x2010000 0x1000>;
 			reg-names = "control";
-			sifive,mshr-count = <12>;
+			sifive,mshr-count = <7>;
 		};
 		L8: clint@2000000 {
 			compatible = "riscv,clint0";

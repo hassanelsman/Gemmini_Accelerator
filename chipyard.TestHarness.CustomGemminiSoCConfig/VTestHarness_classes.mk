@@ -168,21 +168,6 @@ VM_CLASSES_FAST += \
 	VTestHarness__142 \
 	VTestHarness__143 \
 	VTestHarness__144 \
-	VTestHarness__145 \
-	VTestHarness__146 \
-	VTestHarness__147 \
-	VTestHarness__148 \
-	VTestHarness__149 \
-	VTestHarness__150 \
-	VTestHarness__151 \
-	VTestHarness__152 \
-	VTestHarness__153 \
-	VTestHarness__154 \
-	VTestHarness__155 \
-	VTestHarness__156 \
-	VTestHarness__157 \
-	VTestHarness__158 \
-	VTestHarness__159 \
 	VTestHarness___024unit \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization
@@ -246,18 +231,6 @@ VM_CLASSES_SLOW += \
 	VTestHarness__56__Slow \
 	VTestHarness__57__Slow \
 	VTestHarness__58__Slow \
-	VTestHarness__59__Slow \
-	VTestHarness__60__Slow \
-	VTestHarness__61__Slow \
-	VTestHarness__62__Slow \
-	VTestHarness__63__Slow \
-	VTestHarness__64__Slow \
-	VTestHarness__65__Slow \
-	VTestHarness__66__Slow \
-	VTestHarness__67__Slow \
-	VTestHarness__68__Slow \
-	VTestHarness__69__Slow \
-	VTestHarness__70__Slow \
 	VTestHarness___024unit__Slow \
 
 # Generated support classes, fast-path, compile with highest optimization

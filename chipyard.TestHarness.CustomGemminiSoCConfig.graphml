@@ -451,7 +451,7 @@ a:BufferParams:0, b:BufferParams:0, c:BufferParams:0, d:BufferParams:0, e:Buffer
                       <data key="n"><y:ShapeNode><y:Shape type="ellipse"/><y:Fill color="#FFCC00" transparent="false"/></y:ShapeNode></data>
                       <data key="d">On Output Edge:
 
-Master Name = TLSourceShrinker
+Master Name = L2 InclusiveCache
 visibility = List(AddressSet(0x0, ~0x0))
 emits = acquireT = TransferSizes[1, 4096]
 acquireB = TransferSizes[1, 4096]
@@ -463,7 +463,7 @@ putPartial = TransferSizes[1, 4096]
 hint = TransferSizes[1, 4096]
 
 
-sourceId = IdRange(0,16)
+sourceId = IdRange(0,10)
 
 
 Slave Port Beatbytes = 8
@@ -500,7 +500,7 @@ hint = TransferSizes[0, 0]
 
 On Input Edge:
 
-Master Name = TLSourceShrinker
+Master Name = L2 InclusiveCache
 visibility = List(AddressSet(0x0, ~0x0))
 emits = acquireT = TransferSizes[1, 4096]
 acquireB = TransferSizes[1, 4096]
@@ -512,7 +512,7 @@ putPartial = TransferSizes[1, 4096]
 hint = TransferSizes[1, 4096]
 
 
-sourceId = IdRange(0,16)
+sourceId = IdRange(0,10)
 
 
 Slave Port Beatbytes = 8
@@ -560,7 +560,7 @@ a:BufferParams:2, b:BufferParams:2, c:BufferParams:2, d:BufferParams:2, e:Buffer
 
 On Input Edge:
 
-Master Name = TLSourceShrinker
+Master Name = L2 InclusiveCache
 visibility = List(AddressSet(0x0, ~0x0))
 emits = acquireT = TransferSizes[1, 4096]
 acquireB = TransferSizes[1, 4096]
@@ -572,7 +572,7 @@ putPartial = TransferSizes[1, 4096]
 hint = TransferSizes[1, 4096]
 
 
-sourceId = IdRange(0,16)
+sourceId = IdRange(0,10)
 
 
 Slave Port Beatbytes = 8
@@ -763,8 +763,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -776,8 +776,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -2015,7 +2015,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,16)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 2
 
 Slave Name = error
@@ -2152,8 +2152,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -2165,8 +2165,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -2232,7 +2232,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(2,3)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 2
 
 Slave Name = error
@@ -2369,8 +2369,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -2382,8 +2382,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -2438,7 +2438,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,16)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 4
 
 Slave Name = error
@@ -2575,8 +2575,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -2588,8 +2588,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -2655,7 +2655,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(2,3)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 4
 
 Slave Name = error
@@ -2792,8 +2792,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -2805,8 +2805,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -2984,7 +2984,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,1)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 4
 
 Slave Name = error
@@ -3121,8 +3121,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -3134,8 +3134,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -3216,7 +3216,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,16)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 4
 
 Slave Name = error
@@ -3353,8 +3353,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -3366,8 +3366,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -3422,7 +3422,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,16)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 6
 
 Slave Name = error
@@ -3559,8 +3559,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -3572,8 +3572,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -3622,7 +3622,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,16)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 6
 
 Slave Name = error
@@ -3759,8 +3759,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -3772,8 +3772,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -3814,7 +3814,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,16)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 8
 
 Slave Name = error
@@ -3951,8 +3951,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -3964,8 +3964,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -4014,7 +4014,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,16)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 6
 
 Slave Name = error
@@ -4151,8 +4151,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -4164,8 +4164,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -4206,7 +4206,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,16)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 8
 
 Slave Name = error
@@ -4343,8 +4343,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -4356,8 +4356,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -4406,7 +4406,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,16)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 8
 
 Slave Name = error
@@ -4543,8 +4543,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -4556,8 +4556,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -4613,7 +4613,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,16)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 8
 
 Slave Name = error
@@ -4750,8 +4750,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -4763,8 +4763,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -4832,7 +4832,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,16)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 6
 
 Slave Name = error
@@ -4969,8 +4969,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -4982,8 +4982,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -5024,7 +5024,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,16)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 6
 
 Slave Name = error
@@ -5161,8 +5161,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -5174,8 +5174,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -5213,7 +5213,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,16)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 6
 
 Slave Name = error
@@ -5350,8 +5350,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -5363,8 +5363,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -5431,7 +5431,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(1,2)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 4
 
 Slave Name = error
@@ -5568,8 +5568,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -5581,8 +5581,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -5740,7 +5740,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(2,3)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 4
 
 Slave Name = error
@@ -5877,8 +5877,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -5890,8 +5890,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -5946,7 +5946,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(1,2)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 4
 
 Slave Name = error
@@ -6083,8 +6083,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -6096,8 +6096,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -6135,7 +6135,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,1)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 4
 
 Slave Name = error
@@ -6272,8 +6272,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -6285,8 +6285,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -6369,7 +6369,7 @@ putPartial = TransferSizes[1, 4096]
 hint = TransferSizes[1, 4096]
 
 
-sourceId = IdRange(0,20)
+sourceId = IdRange(0,10)
 
 
 Slave Port Beatbytes = 8
@@ -6431,7 +6431,7 @@ putPartial = TransferSizes[1, 4096]
 hint = TransferSizes[1, 4096]
 
 
-sourceId = IdRange(0,20)
+sourceId = IdRange(0,10)
 
 
 Slave Port Beatbytes = 8
@@ -6512,7 +6512,7 @@ putPartial = TransferSizes[1, 4096]
 hint = TransferSizes[1, 4096]
 
 
-sourceId = IdRange(0,20)
+sourceId = IdRange(0,10)
 
 
 Slave Port Beatbytes = 8
@@ -6574,7 +6574,7 @@ putPartial = TransferSizes[1, 4096]
 hint = TransferSizes[1, 4096]
 
 
-sourceId = IdRange(0,10)
+sourceId = IdRange(0,5)
 
 
 Slave Port Beatbytes = 8
@@ -6714,15 +6714,15 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(34,35)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 2
 
 Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -6734,8 +6734,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -6832,15 +6832,15 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(34,35)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 2
 
 Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -6852,8 +6852,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -6951,7 +6951,7 @@ putPartial = TransferSizes[1, 4096]
 hint = TransferSizes[1, 4096]
 
 
-sourceId = IdRange(0,10)
+sourceId = IdRange(0,5)
 
 
 Slave Port Beatbytes = 8
@@ -7072,15 +7072,15 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(34,35)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 2
 
 Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -7092,8 +7092,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -7169,7 +7169,7 @@ hint = TransferSizes[1, 64]
 </data>
                 </node>
                 <node id="177">
-                  <data key="n"><y:ShapeNode><y:NodeLabel modelName="sides" modelPosition="w" rotationAngle="270.0">coupler_to_port_named_serial_tl_mem</y:NodeLabel><y:BorderStyle type="line"/></y:ShapeNode></data>
+                  <data key="n"><y:ShapeNode><y:NodeLabel modelName="sides" modelPosition="w" rotationAngle="270.0">coupler_to_port_named_serial_tl_mem</y:NodeLabel><y:BorderStyle type="dotted"/></y:ShapeNode></data>
                   <data key="d">TLInterconnectCoupler_19 (TestHarness.chiptop.system.subsystem_mbus.coupler_to_port_named_serial_tl_mem)</data>
                   <graph id="177::" edgedefault="directed">
                     <node id="177::1">
@@ -7194,107 +7194,12 @@ hint = TransferSizes[1, 64]
                       </graph>
                     </node>
                     <node id="179">
-                      <data key="n"><y:ShapeNode><y:NodeLabel modelName="sides" modelPosition="w" rotationAngle="270.0">shrinker</y:NodeLabel><y:BorderStyle type="line"/></y:ShapeNode></data>
+                      <data key="n"><y:ShapeNode><y:NodeLabel modelName="sides" modelPosition="w" rotationAngle="270.0">shrinker</y:NodeLabel><y:BorderStyle type="dotted"/></y:ShapeNode></data>
                       <data key="d">TLSourceShrinker_1 (TestHarness.chiptop.system.subsystem_mbus.coupler_to_port_named_serial_tl_mem.shrinker)</data>
                       <graph id="179::" edgedefault="directed">
                         <node id="179::0">
-                          <data key="n"><y:ShapeNode><y:Shape type="ellipse"/><y:Fill color="#FFCC00" transparent="false"/></y:ShapeNode></data>
-                          <data key="d">On Output Edge:
-
-Master Name = TLSourceShrinker
-visibility = List(AddressSet(0x0, ~0x0))
-emits = acquireT = TransferSizes[1, 4096]
-acquireB = TransferSizes[1, 4096]
-arithmetic = TransferSizes[1, 4096]
-logical = TransferSizes[1, 4096]
-get = TransferSizes[1, 4096]
-putFull = TransferSizes[1, 4096]
-putPartial = TransferSizes[1, 4096]
-hint = TransferSizes[1, 4096]
-
-
-sourceId = IdRange(0,16)
-
-
-Slave Port Beatbytes = 8
-Slave Port MinLatency = 2
-
-Slave Name = serdesser
-Slave Address = List(AddressSet(0x10000000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[0, 0]
-logical = TransferSizes[0, 0]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = serdesser
-Slave Address = List(AddressSet(0x20000, 0xffff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[0, 0]
-logical = TransferSizes[0, 0]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[0, 0]
-putPartial = TransferSizes[0, 0]
-hint = TransferSizes[0, 0]
-
-
-
-
----------------------------------------------
-
-On Input Edge:
-
-Master Name = L2 InclusiveCache
-visibility = List(AddressSet(0x0, ~0x0))
-emits = acquireT = TransferSizes[1, 4096]
-acquireB = TransferSizes[1, 4096]
-arithmetic = TransferSizes[1, 4096]
-logical = TransferSizes[1, 4096]
-get = TransferSizes[1, 4096]
-putFull = TransferSizes[1, 4096]
-putPartial = TransferSizes[1, 4096]
-hint = TransferSizes[1, 4096]
-
-
-sourceId = IdRange(0,20)
-
-
-Slave Port Beatbytes = 8
-Slave Port MinLatency = 2
-
-Slave Name = serdesser
-Slave Address = List(AddressSet(0x10000000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[0, 0]
-logical = TransferSizes[0, 0]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = serdesser
-Slave Address = List(AddressSet(0x20000, 0xffff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[0, 0]
-logical = TransferSizes[0, 0]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[0, 0]
-putPartial = TransferSizes[0, 0]
-hint = TransferSizes[0, 0]
-
-
-
-, 
+                          <data key="n"><y:ShapeNode><y:Shape type="ellipse"/><y:Fill color="#FFCC00" transparent="true"/></y:ShapeNode></data>
+                          <data key="d">, 
 </data>
                         </node>
                       </graph>
@@ -7387,7 +7292,7 @@ putPartial = TransferSizes[1, 4096]
 hint = TransferSizes[1, 4096]
 
 
-sourceId = IdRange(0,20)
+sourceId = IdRange(0,10)
 
 
 Slave Port Beatbytes = 8
@@ -7420,7 +7325,7 @@ putPartial = TransferSizes[1, 4096]
 hint = TransferSizes[1, 4096]
 
 
-sourceId = IdRange(0,20)
+sourceId = IdRange(0,10)
 
 
 Slave Port Beatbytes = 8
@@ -7469,7 +7374,7 @@ putPartial = TransferSizes[1, 4096]
 hint = TransferSizes[1, 4096]
 
 
-sourceId = IdRange(0,20)
+sourceId = IdRange(0,10)
 
 
 Slave Port Beatbytes = 8
@@ -7502,7 +7407,7 @@ putPartial = TransferSizes[1, 4096]
 hint = TransferSizes[1, 4096]
 
 
-sourceId = IdRange(0,20)
+sourceId = IdRange(0,10)
 
 
 Slave Port Beatbytes = 8
@@ -7559,7 +7464,7 @@ putPartial = TransferSizes[1, 4096]
 hint = TransferSizes[1, 4096]
 
 
-sourceId = IdRange(0,20)
+sourceId = IdRange(0,10)
 
 
 Slave Port Beatbytes = 8
@@ -7621,7 +7526,7 @@ putPartial = TransferSizes[1, 4096]
 hint = TransferSizes[1, 4096]
 
 
-sourceId = IdRange(0,20)
+sourceId = IdRange(0,10)
 
 
 Slave Port Beatbytes = 8
@@ -7691,7 +7596,7 @@ putPartial = TransferSizes[1, 4096]
 hint = TransferSizes[1, 4096]
 
 
-sourceId = IdRange(0,20)
+sourceId = IdRange(0,10)
 
 
 Slave Port Beatbytes = 8
@@ -7724,7 +7629,7 @@ putPartial = TransferSizes[1, 4096]
 hint = TransferSizes[1, 4096]
 
 
-sourceId = IdRange(0,20)
+sourceId = IdRange(0,10)
 
 
 Slave Port Beatbytes = 8
@@ -7773,7 +7678,7 @@ putPartial = TransferSizes[1, 4096]
 hint = TransferSizes[1, 4096]
 
 
-sourceId = IdRange(0,20)
+sourceId = IdRange(0,10)
 
 
 Slave Port Beatbytes = 8
@@ -13532,8 +13437,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -13545,8 +13450,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -13724,8 +13629,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -13737,8 +13642,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -13926,8 +13831,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -13939,8 +13844,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -14118,8 +14023,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -14131,8 +14036,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -16188,7 +16093,7 @@ hint = TransferSizes[0, 0]
                   </graph>
                 </node>
                 <node id="70">
-                  <data key="n"><y:ShapeNode><y:NodeLabel modelName="sides" modelPosition="w" rotationAngle="270.0">coupler_from_bus_named_subsystem_fbus</y:NodeLabel><y:BorderStyle type="line"/></y:ShapeNode></data>
+                  <data key="n"><y:ShapeNode><y:NodeLabel modelName="sides" modelPosition="w" rotationAngle="270.0">coupler_from_bus_named_subsystem_fbus</y:NodeLabel><y:BorderStyle type="dotted"/></y:ShapeNode></data>
                   <data key="d">TLInterconnectCoupler_1 (TestHarness.chiptop.system.subsystem_sbus.coupler_from_bus_named_subsystem_fbus)</data>
                   <graph id="70::" edgedefault="directed">
                     <node id="70::1">
@@ -16197,393 +16102,12 @@ hint = TransferSizes[0, 0]
 </data>
                     </node>
                     <node id="71">
-                      <data key="n"><y:ShapeNode><y:NodeLabel modelName="sides" modelPosition="w" rotationAngle="270.0">widget</y:NodeLabel><y:BorderStyle type="line"/></y:ShapeNode></data>
+                      <data key="n"><y:ShapeNode><y:NodeLabel modelName="sides" modelPosition="w" rotationAngle="270.0">widget</y:NodeLabel><y:BorderStyle type="dotted"/></y:ShapeNode></data>
                       <data key="d">TLWidthWidget_1 (TestHarness.chiptop.system.subsystem_sbus.coupler_from_bus_named_subsystem_fbus.widget)</data>
                       <graph id="71::" edgedefault="directed">
                         <node id="71::0">
-                          <data key="n"><y:ShapeNode><y:Shape type="ellipse"/><y:Fill color="#FFCC00" transparent="false"/></y:ShapeNode></data>
-                          <data key="d">On Output Edge:
-
-Master Name = serial-tl
-visibility = List(AddressSet(0x0, ~0x0))
-emits = acquireT = TransferSizes[1, 4096]
-acquireB = TransferSizes[1, 4096]
-arithmetic = TransferSizes[1, 4096]
-logical = TransferSizes[1, 4096]
-get = TransferSizes[1, 4096]
-putFull = TransferSizes[1, 4096]
-putPartial = TransferSizes[1, 4096]
-hint = TransferSizes[1, 4096]
-
-
-sourceId = IdRange(0,1)
-
-
-Slave Port Beatbytes = 16
-Slave Port MinLatency = 2
-
-Slave Name = error
-Slave Address = List(AddressSet(0x3000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 4096]
-putFull = TransferSizes[1, 4096]
-putPartial = TransferSizes[1, 4096]
-hint = TransferSizes[1, 4096]
-
-
-
-Slave Name = l2
-Slave Address = List(AddressSet(0x2010000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = subsystem_pbus
-Slave Address = List(AddressSet(0x4000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = uart_0
-Slave Address = List(AddressSet(0x54000000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = plic
-Slave Address = List(AddressSet(0xc000000, 0x3ffffff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = clint
-Slave Address = List(AddressSet(0x2000000, 0xffff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = dmInner
-Slave Address = List(AddressSet(0x0, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = bootrom
-Slave Address = List(AddressSet(0x10000, 0xffff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[0, 0]
-logical = TransferSizes[0, 0]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[0, 0]
-putPartial = TransferSizes[0, 0]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = tileClockGater
-Slave Address = List(AddressSet(0x100000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = tileResetSetter
-Slave Address = List(AddressSet(0x110000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = system
-Slave Address = List(AddressSet(0x80000000, 0xfffffff))
-supports = acquireT = TransferSizes[64, 64]
-acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[1, 64]
-
-
-
-Slave Name = serdesser
-Slave Address = List(AddressSet(0x10000000, 0xfff))
-supports = acquireT = TransferSizes[64, 64]
-acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[1, 64]
-
-
-
-Slave Name = serdesser
-Slave Address = List(AddressSet(0x20000, 0xffff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[0, 0]
-logical = TransferSizes[0, 0]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[0, 0]
-putPartial = TransferSizes[0, 0]
-hint = TransferSizes[1, 64]
-
-
-
-
----------------------------------------------
-
-On Input Edge:
-
-Master Name = serial-tl
-visibility = List(AddressSet(0x0, ~0x0))
-emits = acquireT = TransferSizes[1, 4096]
-acquireB = TransferSizes[1, 4096]
-arithmetic = TransferSizes[1, 4096]
-logical = TransferSizes[1, 4096]
-get = TransferSizes[1, 4096]
-putFull = TransferSizes[1, 4096]
-putPartial = TransferSizes[1, 4096]
-hint = TransferSizes[1, 4096]
-
-
-sourceId = IdRange(0,1)
-
-
-Slave Port Beatbytes = 8
-Slave Port MinLatency = 2
-
-Slave Name = error
-Slave Address = List(AddressSet(0x3000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 4096]
-putFull = TransferSizes[1, 4096]
-putPartial = TransferSizes[1, 4096]
-hint = TransferSizes[1, 4096]
-
-
-
-Slave Name = l2
-Slave Address = List(AddressSet(0x2010000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = subsystem_pbus
-Slave Address = List(AddressSet(0x4000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = uart_0
-Slave Address = List(AddressSet(0x54000000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = plic
-Slave Address = List(AddressSet(0xc000000, 0x3ffffff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = clint
-Slave Address = List(AddressSet(0x2000000, 0xffff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = dmInner
-Slave Address = List(AddressSet(0x0, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = bootrom
-Slave Address = List(AddressSet(0x10000, 0xffff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[0, 0]
-logical = TransferSizes[0, 0]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[0, 0]
-putPartial = TransferSizes[0, 0]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = tileClockGater
-Slave Address = List(AddressSet(0x100000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = tileResetSetter
-Slave Address = List(AddressSet(0x110000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = system
-Slave Address = List(AddressSet(0x80000000, 0xfffffff))
-supports = acquireT = TransferSizes[64, 64]
-acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[1, 64]
-
-
-
-Slave Name = serdesser
-Slave Address = List(AddressSet(0x10000000, 0xfff))
-supports = acquireT = TransferSizes[64, 64]
-acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[1, 64]
-
-
-
-Slave Name = serdesser
-Slave Address = List(AddressSet(0x20000, 0xffff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[0, 0]
-logical = TransferSizes[0, 0]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[0, 0]
-putPartial = TransferSizes[0, 0]
-hint = TransferSizes[1, 64]
-
-
-
-, 
+                          <data key="n"><y:ShapeNode><y:Shape type="ellipse"/><y:Fill color="#FFCC00" transparent="true"/></y:ShapeNode></data>
+                          <data key="d">, 
 </data>
                         </node>
                       </graph>
@@ -16591,7 +16115,7 @@ hint = TransferSizes[1, 64]
                   </graph>
                 </node>
                 <node id="64">
-                  <data key="n"><y:ShapeNode><y:NodeLabel modelName="sides" modelPosition="w" rotationAngle="270.0">coupler_to_bus_named_subsystem_cbus</y:NodeLabel><y:BorderStyle type="line"/></y:ShapeNode></data>
+                  <data key="n"><y:ShapeNode><y:NodeLabel modelName="sides" modelPosition="w" rotationAngle="270.0">coupler_to_bus_named_subsystem_cbus</y:NodeLabel><y:BorderStyle type="dotted"/></y:ShapeNode></data>
                   <data key="d">TLInterconnectCoupler (TestHarness.chiptop.system.subsystem_sbus.coupler_to_bus_named_subsystem_cbus)</data>
                   <graph id="64::" edgedefault="directed">
                     <node id="64::0">
@@ -16600,455 +16124,12 @@ hint = TransferSizes[1, 64]
 </data>
                     </node>
                     <node id="66">
-                      <data key="n"><y:ShapeNode><y:NodeLabel modelName="sides" modelPosition="w" rotationAngle="270.0">widget</y:NodeLabel><y:BorderStyle type="line"/></y:ShapeNode></data>
+                      <data key="n"><y:ShapeNode><y:NodeLabel modelName="sides" modelPosition="w" rotationAngle="270.0">widget</y:NodeLabel><y:BorderStyle type="dotted"/></y:ShapeNode></data>
                       <data key="d">TLWidthWidget (TestHarness.chiptop.system.subsystem_sbus.coupler_to_bus_named_subsystem_cbus.widget)</data>
                       <graph id="66::" edgedefault="directed">
                         <node id="66::0">
-                          <data key="n"><y:ShapeNode><y:Shape type="ellipse"/><y:Fill color="#FFCC00" transparent="false"/></y:ShapeNode></data>
-                          <data key="d">On Output Edge:
-
-Master Name = serial-tl
-visibility = List(AddressSet(0x0, ~0x0))
-emits = acquireT = TransferSizes[1, 4096]
-acquireB = TransferSizes[1, 4096]
-arithmetic = TransferSizes[1, 4096]
-logical = TransferSizes[1, 4096]
-get = TransferSizes[1, 4096]
-putFull = TransferSizes[1, 4096]
-putPartial = TransferSizes[1, 4096]
-hint = TransferSizes[1, 4096]
-
-
-sourceId = IdRange(36,37)
-
-Master Name = stream-reader
-visibility = List(AddressSet(0x0, ~0x0))
-emits = acquireT = TransferSizes[1, 4096]
-acquireB = TransferSizes[1, 4096]
-arithmetic = TransferSizes[1, 4096]
-logical = TransferSizes[1, 4096]
-get = TransferSizes[1, 4096]
-putFull = TransferSizes[1, 4096]
-putPartial = TransferSizes[1, 4096]
-hint = TransferSizes[1, 4096]
-
-
-sourceId = IdRange(16,32)
-
-Master Name = stream-writer
-visibility = List(AddressSet(0x0, ~0x0))
-emits = acquireT = TransferSizes[1, 4096]
-acquireB = TransferSizes[1, 4096]
-arithmetic = TransferSizes[1, 4096]
-logical = TransferSizes[1, 4096]
-get = TransferSizes[1, 4096]
-putFull = TransferSizes[1, 4096]
-putPartial = TransferSizes[1, 4096]
-hint = TransferSizes[1, 4096]
-
-
-sourceId = IdRange(0,16)
-
-Master Name = Core 0 DCache
-visibility = List(AddressSet(0x0, ~0x0))
-emits = acquireT = TransferSizes[1, 4096]
-acquireB = TransferSizes[1, 4096]
-arithmetic = TransferSizes[1, 4096]
-logical = TransferSizes[1, 4096]
-get = TransferSizes[1, 4096]
-putFull = TransferSizes[1, 4096]
-putPartial = TransferSizes[1, 4096]
-hint = TransferSizes[1, 4096]
-
-
-sourceId = IdRange(32,33)
-
-Master Name = Core 0 DCache MMIO
-visibility = List(AddressSet(0x0, ~0x0))
-emits = acquireT = TransferSizes[1, 4096]
-acquireB = TransferSizes[1, 4096]
-arithmetic = TransferSizes[1, 4096]
-logical = TransferSizes[1, 4096]
-get = TransferSizes[1, 4096]
-putFull = TransferSizes[1, 4096]
-putPartial = TransferSizes[1, 4096]
-hint = TransferSizes[1, 4096]
-
-
-sourceId = IdRange(33,34)
-
-Master Name = Core 0 ICache
-visibility = List(AddressSet(0x0, ~0x0))
-emits = acquireT = TransferSizes[1, 4096]
-acquireB = TransferSizes[1, 4096]
-arithmetic = TransferSizes[1, 4096]
-logical = TransferSizes[1, 4096]
-get = TransferSizes[1, 4096]
-putFull = TransferSizes[1, 4096]
-putPartial = TransferSizes[1, 4096]
-hint = TransferSizes[1, 4096]
-
-
-sourceId = IdRange(34,35)
-
-
-Slave Port Beatbytes = 8
-Slave Port MinLatency = 2
-
-Slave Name = error
-Slave Address = List(AddressSet(0x3000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 4096]
-putFull = TransferSizes[1, 4096]
-putPartial = TransferSizes[1, 4096]
-hint = TransferSizes[1, 4096]
-
-
-
-Slave Name = l2
-Slave Address = List(AddressSet(0x2010000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = subsystem_pbus
-Slave Address = List(AddressSet(0x4000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = uart_0
-Slave Address = List(AddressSet(0x54000000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = plic
-Slave Address = List(AddressSet(0xc000000, 0x3ffffff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = clint
-Slave Address = List(AddressSet(0x2000000, 0xffff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = dmInner
-Slave Address = List(AddressSet(0x0, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = bootrom
-Slave Address = List(AddressSet(0x10000, 0xffff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[0, 0]
-logical = TransferSizes[0, 0]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[0, 0]
-putPartial = TransferSizes[0, 0]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = tileClockGater
-Slave Address = List(AddressSet(0x100000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = tileResetSetter
-Slave Address = List(AddressSet(0x110000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-
----------------------------------------------
-
-On Input Edge:
-
-Master Name = serial-tl
-visibility = List(AddressSet(0x0, ~0x0))
-emits = acquireT = TransferSizes[1, 4096]
-acquireB = TransferSizes[1, 4096]
-arithmetic = TransferSizes[1, 4096]
-logical = TransferSizes[1, 4096]
-get = TransferSizes[1, 4096]
-putFull = TransferSizes[1, 4096]
-putPartial = TransferSizes[1, 4096]
-hint = TransferSizes[1, 4096]
-
-
-sourceId = IdRange(36,37)
-
-Master Name = stream-reader
-visibility = List(AddressSet(0x0, ~0x0))
-emits = acquireT = TransferSizes[1, 4096]
-acquireB = TransferSizes[1, 4096]
-arithmetic = TransferSizes[1, 4096]
-logical = TransferSizes[1, 4096]
-get = TransferSizes[1, 4096]
-putFull = TransferSizes[1, 4096]
-putPartial = TransferSizes[1, 4096]
-hint = TransferSizes[1, 4096]
-
-
-sourceId = IdRange(16,32)
-
-Master Name = stream-writer
-visibility = List(AddressSet(0x0, ~0x0))
-emits = acquireT = TransferSizes[1, 4096]
-acquireB = TransferSizes[1, 4096]
-arithmetic = TransferSizes[1, 4096]
-logical = TransferSizes[1, 4096]
-get = TransferSizes[1, 4096]
-putFull = TransferSizes[1, 4096]
-putPartial = TransferSizes[1, 4096]
-hint = TransferSizes[1, 4096]
-
-
-sourceId = IdRange(0,16)
-
-Master Name = Core 0 DCache
-visibility = List(AddressSet(0x0, ~0x0))
-emits = acquireT = TransferSizes[1, 4096]
-acquireB = TransferSizes[1, 4096]
-arithmetic = TransferSizes[1, 4096]
-logical = TransferSizes[1, 4096]
-get = TransferSizes[1, 4096]
-putFull = TransferSizes[1, 4096]
-putPartial = TransferSizes[1, 4096]
-hint = TransferSizes[1, 4096]
-
-
-sourceId = IdRange(32,33)
-
-Master Name = Core 0 DCache MMIO
-visibility = List(AddressSet(0x0, ~0x0))
-emits = acquireT = TransferSizes[1, 4096]
-acquireB = TransferSizes[1, 4096]
-arithmetic = TransferSizes[1, 4096]
-logical = TransferSizes[1, 4096]
-get = TransferSizes[1, 4096]
-putFull = TransferSizes[1, 4096]
-putPartial = TransferSizes[1, 4096]
-hint = TransferSizes[1, 4096]
-
-
-sourceId = IdRange(33,34)
-
-Master Name = Core 0 ICache
-visibility = List(AddressSet(0x0, ~0x0))
-emits = acquireT = TransferSizes[1, 4096]
-acquireB = TransferSizes[1, 4096]
-arithmetic = TransferSizes[1, 4096]
-logical = TransferSizes[1, 4096]
-get = TransferSizes[1, 4096]
-putFull = TransferSizes[1, 4096]
-putPartial = TransferSizes[1, 4096]
-hint = TransferSizes[1, 4096]
-
-
-sourceId = IdRange(34,35)
-
-
-Slave Port Beatbytes = 16
-Slave Port MinLatency = 2
-
-Slave Name = error
-Slave Address = List(AddressSet(0x3000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 4096]
-putFull = TransferSizes[1, 4096]
-putPartial = TransferSizes[1, 4096]
-hint = TransferSizes[1, 4096]
-
-
-
-Slave Name = l2
-Slave Address = List(AddressSet(0x2010000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = subsystem_pbus
-Slave Address = List(AddressSet(0x4000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = uart_0
-Slave Address = List(AddressSet(0x54000000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = plic
-Slave Address = List(AddressSet(0xc000000, 0x3ffffff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = clint
-Slave Address = List(AddressSet(0x2000000, 0xffff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = dmInner
-Slave Address = List(AddressSet(0x0, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = bootrom
-Slave Address = List(AddressSet(0x10000, 0xffff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[0, 0]
-logical = TransferSizes[0, 0]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[0, 0]
-putPartial = TransferSizes[0, 0]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = tileClockGater
-Slave Address = List(AddressSet(0x100000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-Slave Name = tileResetSetter
-Slave Address = List(AddressSet(0x110000, 0xfff))
-supports = acquireT = TransferSizes[0, 0]
-acquireB = TransferSizes[0, 0]
-arithmetic = TransferSizes[1, 8]
-logical = TransferSizes[1, 8]
-get = TransferSizes[1, 64]
-putFull = TransferSizes[1, 64]
-putPartial = TransferSizes[1, 64]
-hint = TransferSizes[0, 0]
-
-
-
-, 
+                          <data key="n"><y:ShapeNode><y:Shape type="ellipse"/><y:Fill color="#FFCC00" transparent="true"/></y:ShapeNode></data>
+                          <data key="d">, 
 </data>
                         </node>
                       </graph>
@@ -17078,7 +16159,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,1)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 2
 
 Slave Name = error
@@ -17215,8 +16296,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -17228,8 +16309,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -17281,7 +16362,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,16)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 2
 
 Slave Name = error
@@ -17418,8 +16499,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -17431,8 +16512,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -17498,7 +16579,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(2,3)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 2
 
 Slave Name = error
@@ -17635,8 +16716,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -17648,8 +16729,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -17690,7 +16771,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,1)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 2
 
 Slave Name = error
@@ -17827,8 +16908,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -17840,8 +16921,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -17893,7 +16974,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,16)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 2
 
 Slave Name = error
@@ -18030,8 +17111,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -18043,8 +17124,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -18110,7 +17191,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(2,3)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 2
 
 Slave Name = error
@@ -18247,8 +17328,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -18260,8 +17341,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -18380,7 +17461,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(34,35)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 2
 
 Slave Name = error
@@ -18600,15 +17681,15 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(34,35)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 2
 
 Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -18620,8 +17701,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -18662,7 +17743,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,1)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 2
 
 Slave Name = error
@@ -18799,8 +17880,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -18812,8 +17893,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -18865,7 +17946,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(0,16)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 2
 
 Slave Name = error
@@ -19002,8 +18083,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -19015,8 +18096,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -19082,7 +18163,7 @@ hint = TransferSizes[1, 4096]
 sourceId = IdRange(2,3)
 
 
-Slave Port Beatbytes = 16
+Slave Port Beatbytes = 8
 Slave Port MinLatency = 2
 
 Slave Name = error
@@ -19219,8 +18300,8 @@ Slave Name = system
 Slave Address = List(AddressSet(0x80000000, 0xfffffff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -19232,8 +18313,8 @@ Slave Name = serdesser
 Slave Address = List(AddressSet(0x10000000, 0xfff))
 supports = acquireT = TransferSizes[64, 64]
 acquireB = TransferSizes[64, 64]
-arithmetic = TransferSizes[1, 16]
-logical = TransferSizes[1, 16]
+arithmetic = TransferSizes[1, 8]
+logical = TransferSizes[1, 8]
 get = TransferSizes[1, 64]
 putFull = TransferSizes[1, 64]
 putPartial = TransferSizes[1, 64]
@@ -19391,8 +18472,8 @@ hint = TransferSizes[1, 64]
     <edge target="78::7" source="146::0"><data key="e"><y:PolyLineEdge><y:Arrows source="standard" target="none"/><y:LineStyle color="#ff00ff" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">1</y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge target="78::6" source="144::0"><data key="e"><y:PolyLineEdge><y:Arrows source="standard" target="none"/><y:LineStyle color="#ff00ff" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">1</y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge target="78::5" source="142::0"><data key="e"><y:PolyLineEdge><y:Arrows source="standard" target="none"/><y:LineStyle color="#ff00ff" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">2</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="78::3" target="134::3"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="78::3" target="134::3"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="78::3" target="134::3"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="78::3" target="134::3"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="78::0" target="80::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#00cc00" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0"></y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge target="155::0" source="78::12"><data key="e"><y:PolyLineEdge><y:Arrows source="standard" target="none"/><y:LineStyle color="#ff00ff" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">1</y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge target="153::0" source="78::11"><data key="e"><y:PolyLineEdge><y:Arrows source="standard" target="none"/><y:LineStyle color="#ff00ff" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">1</y:EdgeLabel></y:PolyLineEdge></data></edge>
@@ -19401,10 +18482,10 @@ hint = TransferSizes[1, 64]
     <edge target="144::0" source="81::14"><data key="e"><y:PolyLineEdge><y:Arrows source="standard" target="none"/><y:LineStyle color="#0000ff" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">1</y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge target="142::0" source="81::14"><data key="e"><y:PolyLineEdge><y:Arrows source="standard" target="none"/><y:LineStyle color="#0000ff" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">2</y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge target="141::0" source="81::14"><data key="e"><y:PolyLineEdge><y:Arrows source="standard" target="none"/><y:LineStyle color="#0000ff" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">1</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="136::0" target="78::3"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="136::0" target="78::3"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="135::0" target="136::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="135::0" target="136::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="136::0" target="78::3"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="136::0" target="78::3"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="135::0" target="136::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="135::0" target="136::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="80::0" target="79::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#00cc00" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0"></y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge target="81::18" source="153::0"><data key="e"><y:PolyLineEdge><y:Arrows source="standard" target="none"/><y:LineStyle color="#0000ff" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">1</y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge target="81::17" source="155::0"><data key="e"><y:PolyLineEdge><y:Arrows source="standard" target="none"/><y:LineStyle color="#0000ff" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">1</y:EdgeLabel></y:PolyLineEdge></data></edge>
@@ -19419,17 +18500,17 @@ hint = TransferSizes[1, 64]
     <edge source="81::6" target="87::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#cccc00" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0"></y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="81::4" target="86::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#cccc00" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0"></y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="81::2" target="85::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#cccc00" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0"></y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="81::0" target="135::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="81::0" target="135::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="103::0" target="82::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="94::0" target="81::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="101::0" target="94::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="100::0" target="95::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="99::0" target="95::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="98::0" target="100::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="97::0" target="99::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="95::0" target="101::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="92::0" target="82::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="81::0" target="135::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="81::0" target="135::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="103::0" target="82::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="94::0" target="81::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="101::0" target="94::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="100::0" target="95::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="99::0" target="95::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="98::0" target="100::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="97::0" target="99::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="95::0" target="101::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="92::0" target="82::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="90::0" target="81::10"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#cccc00" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0"></y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="89::0" target="156::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#cccc00" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0"></y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="89::0" target="2::22"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#cccc00" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0"></y:EdgeLabel></y:PolyLineEdge></data></edge>
@@ -19438,15 +18519,15 @@ hint = TransferSizes[1, 64]
     <edge source="86::0" target="102::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#cccc00" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0"></y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="85::0" target="81::1"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#cccc00" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0"></y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge target="84::0" source="81::15"><data key="e"><y:PolyLineEdge><y:Arrows source="standard" target="none"/><y:LineStyle color="#0000ff" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">5</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="82::0" target="81::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="82::0" target="81::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="75::0" target="41::1"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="77::0" target="75::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="63::0" target="77::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="62::0" target="55::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="62::0" target="55::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="58::0" target="63::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="57::0" target="58::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="56::0" target="54::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="55::0" target="56::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="56::0" target="54::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="55::0" target="56::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="54::0" target="57::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="52::0" target="49::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#00cc00" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0"></y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="51::0" target="52::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#00cc00" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0"></y:EdgeLabel></y:PolyLineEdge></data></edge>
@@ -19542,22 +18623,22 @@ hint = TransferSizes[1, 64]
     <edge source="15::0" target="183::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#00cc00" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0"></y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="14::0" target="15::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#00cc00" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0"></y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="13::0" target="14::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#00cc00" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0"></y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="134::3" target="134::1"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="134::3" target="134::1"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="134::1" target="134::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="134::1" target="134::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="134::0" target="11::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="134::0" target="11::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="74::0" target="62::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="134::3" target="134::1"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="134::3" target="134::1"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="134::1" target="134::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="134::1" target="134::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="134::0" target="11::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="134::0" target="11::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="74::0" target="62::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge target="70::1" source="71::0"><data key="e"><y:PolyLineEdge><y:Arrows source="standard" target="none"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="71::0" target="11::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="71::0" target="11::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="64::0" target="28::1"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="66::0" target="64::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="11::0" target="10::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="11::0" target="10::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="11::0" target="10::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="10::0" target="66::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
-    <edge source="10::0" target="74::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">128</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="11::0" target="10::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="11::0" target="10::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="11::0" target="10::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="10::0" target="66::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
+    <edge source="10::0" target="74::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#000000" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0">64</y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="8::0" target="5::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#00cc00" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0"></y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="8::0" target="3::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#00cc00" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0"></y:EdgeLabel></y:PolyLineEdge></data></edge>
     <edge source="8::0" target="78::0"><data key="e"><y:PolyLineEdge><y:Arrows source="none" target="standard"/><y:LineStyle color="#00cc00" type="line" width="1.0"/><y:EdgeLabel modelName="centered" rotationAngle="270.0"></y:EdgeLabel></y:PolyLineEdge></data></edge>
